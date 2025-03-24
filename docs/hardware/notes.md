@@ -1,5 +1,4 @@
-# wing 
-- The wing I will use is the S1223 (s1223-il)
-
-# ground effect 
-- flying wing air foil better in ground effect
+﻿# wing 
+- The wing I will use is the NACA 6412 
+# ESP32_C3
+- antenna mount IPEX
