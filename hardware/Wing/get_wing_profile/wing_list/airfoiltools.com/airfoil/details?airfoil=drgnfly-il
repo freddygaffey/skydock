@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V1CCJ4RLRS"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-V1CCJ4RLRS');</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1">
+<meta name="robots" content="all" />
+<meta name="keywords" content="drgnfly-il,DRAGONFLY CANARD,Dragonfly Canard airfoil,airfoil,aerofoil, airfoil camber, airfoil thickness" />
+<meta name="description" content="Details of airfoil (aerofoil)(drgnfly-il) DRAGONFLY CANARD Dragonfly Canard airfoil" />
+<link rel="apple-touch-icon" sizes="57x57" href="http://airfoiltools.com/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="http://airfoiltools.com/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://airfoiltools.com/apple-touch-icon-114x114.png" />
+<link rel="stylesheet" type="text/css" href="/css/screen.css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="/css/ie.css" media="screen, projection" />
+<![endif]-->
+
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" href="/css/form.css" />
+<link rel="stylesheet" type="text/css" href="/assets/a9c046ed/jquery.fancybox-1.3.4.css" />
+<style type="text/css">
+/*<![CDATA[*/
+table.details {width:800px;vertical-align:top;margin:0px;}
+table.details td {vertical-align:top;text-align:left;font-size:0.8em;}
+table.details td.cell1 {width:280px;}
+table.details td.cell2, table.details pre {width:190px;}
+table.details td.cell3 {width:190px;}
+table.details td.cell4 {width:140px;}
+table.details td.cell1h, table.details td.cell2h, table.details td.cell3h, table.details td.cell4h {font-size:1.0em;}
+table.details div.parsererror {color: red; }
+
+/*]]>*/
+</style>
+<style type="text/css">
+/*<![CDATA[*/
+table.similar {padding:0;margin:0px;border:0px;font-size:0.8em;width:400px	;}
+table.similar td {padding:1px;margin:0px;border:0px;}
+table.similar td.c1 {width:220px;}
+table.similar td.c2 {width:80px;}
+table.similar td.c3 {width:80px;}
+
+/*]]>*/
+</style>
+<style type="text/css">
+/*<![CDATA[*/
+table.polar, table.range {width:750px;vertical-align:top;margin:auto;}
+table.range {border:1px solid black;padding:7px;margin:7px auto 3px auto;}
+table.polar td, table.range  td, table.range  input[type=text],table.range select {vertical-align:top;text-align:left;font-size:0.8em;padding:2px;}
+table.polar th, table.range  th  {vertical-align:top;text-align:left;font-size:1.0em;padding:2px;}
+table.polar .cell0 {width:5%;vertical-align:middle;font-size:1em;}
+table.polar .cell1 {width:15%;}
+table.polar .cell2 {width:10%;text-align:right;padding-right:0px;;}
+table.polar .cell3 {width:9%;text-align:right;padding-right:10px;;}
+table.polar .cell4 {width:20%;}
+table.polar .cell5 {width:15%;}
+table.polar .cell6 {width:15%;}
+table.polar .cell7 {width:9%;}
+table.polar tr.row0 {background-color:#f0f0f0;}
+
+/*]]>*/
+</style>
+<!--[if lt IE 9]><script src="/assets/195f7690/svg.js" data-path="/assets/195f7690" type="text/javascript" ></script><![endif]-->
+<script type="text/javascript" src="/assets/780cfc96/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/a9c046ed/jquery.fancybox-1.3.4.pack.js"></script>
+<script type="text/javascript" src="/assets/a9c046ed/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+function refreshiframe() {
+var on = [];
+  $("input.polaractive").each(function (i) {
+    if (this.checked) {
+      on.push(this.id);
+    }
+  });
+  var url='/polar/plot?a='+on;
+  $("#polarIframe").attr('src',url);
+}
+
+/*]]>*/
+</script>
+<title>DRAGONFLY CANARD (drgnfly-il)</title>
+	
+
+
+</head>
+<body>
+<div id="cookies" style="display:none;width:1026px;background:#ddbbbb;margin:auto;text-align:center;"></div>
+<div style="width:1024px;margin:auto;background:white; border: 1px solid #000000;">
+	<div style="width:100%;height:75px;color:#ffffff;background:#303090;padding:0px;margin:0px;border:0px">
+
+		<div style="display:inline-block;float:left;padding:0 0 0 20px;text-align:left;">
+		<span style="font-size:23pt;">Airfoil Tools</span><br/><span style="font-size:1.1em;padding:0 30px 0 0;">Search 1638 airfoils</span>
+<a href="http://plus.google.com/105890010939518182070?prsrc=3" rel="publisher" style="text-decoration:none;"><img src="http://ssl.gstatic.com/images/icons/gplus-32.png" alt="Google+" style="border:0;width:21px;height:21px;"/></a>
+<a href="https://twitter.com/share" class="twitter-share-button"  data-url="http://airfoiltools.com/index">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2FAirfoilTools.com&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+		</div>
+		<div style="display:inline-block;float:right;padding:8px;padding-top:4px;margin:0px;border:0px;text-align:left;">
+		<div style="font-size:0.9em;height:33px;width:360px">
+		You have 0 airfoils loaded.<br/>Your Reynold number range is 50,000 to 1,000,000. (<a href="/userairfoil/index">set</a>)		</div>
+		<form action="http://airfoiltools.com/site/search" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-2601928470036827:5136476429" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="30" />
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+		</div>
+	</div>
+<table>
+<tr><td class="mmenu" style="vertical-align:top;">
+
+<nav>
+<h3 class="mmenu">Applications</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/search/index"><b>Airfoil database search</b></a></li>
+<li class="mmenu"><a href="/userairfoil/index"><b>My airfoils</b></a></li>
+<li class="mmenu"><a href="/plotter/index"><b>Airfoil plotter</b></a></li>
+<li class="mmenu"><a href="/compare/index"><b>Airfoil comparison</b></a></li>
+<li class="mmenu"><a href="/calculator/reynoldsnumber"><b>Reynolds number calc</b></a></li>
+<li class="mmenu"><a href="/airfoil/naca4digit"><b>NACA 4 digit generator</b></a></li>
+<li class="mmenu"><a href="/airfoil/naca5digit"><b>NACA 5 digit generator</b></a></li>
+</ul>
+<h3 class="mmenu">Information</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/airfoil/index"><b>Airfoil data</b></a></li>
+<li class="mmenu"><a href="/polar/index"><b>Lift/drag polars</b></a></li>
+<li class="mmenu"><a href="/airfoil/generated"><b>Generated airfoil shapes</b></a></li>
+</ul>
+<h3 class="mmenu">Searches</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/search/index?m%5BmaxCamber%5D=0&amp;m%5Bsort%5D=5"><b>Symmetrical airfoils</b></a></li>
+<li class="mmenu"><a href="/search/index?m%5Bgrp%5D=naca4d&amp;m%5Bsort%5D=1"><b>NACA 4 digit airfoils</b></a></li>
+<li class="mmenu"><a href="/search/index?m%5Bgrp%5D=naca5d&amp;m%5Bsort%5D=1"><b>NACA 5 digit airfoils</b></a></li>
+<li class="mmenu"><a href="/search/index?m%5Bgrp%5D=naca6&amp;m%5Bsort%5D=1"><b>NACA 6 series airfoils</b></a></li>
+</ul>
+<h3 class="mmenu">Airfoils A to Z</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/search/list?page=a&amp;no=0"><b>A</b> a18 to avistar (88)</a></li>
+<li class="mmenu"><a href="/search/list?page=b&amp;no=0"><b>B</b> b29root to bw3 (22)</a></li>
+<li class="mmenu"><a href="/search/list?page=c&amp;no=0"><b>C</b> c141a to curtisc72 (40)</a></li>
+<li class="mmenu"><a href="/search/list?page=d&amp;no=0"><b>D</b> dae11 to du861372 (28)</a></li>
+<li class="mmenu"><a href="/search/list?page=e&amp;no=0"><b>E</b> e1098 to esa40 (209)</a></li>
+<li class="mmenu"><a href="/search/list?page=f&amp;no=0"><b>F</b> falcon to fxs21158 (121)</a></li>
+<li class="mmenu"><a href="/search/list?page=g&amp;no=0"><b>G</b> geminism to gu255118 (419)</a></li>
+<li class="mmenu"><a href="/search/list?page=h&amp;no=0"><b>H</b> hh02 to ht23 (63)</a></li>
+<li class="mmenu"><a href="/search/list?page=i&amp;no=0"><b>I</b> isa571 to isa962 (4)</a></li>
+<li class="mmenu"><a href="/search/list?page=j&amp;no=0"><b>J</b> j5012 to joukowsk0021 (7)</a></li>
+<li class="mmenu"><a href="/search/list?page=k&amp;no=0"><b>K</b> k1 to kenmar (11)</a></li>
+<li class="mmenu"><a href="/search/list?page=l&amp;no=0"><b>L</b> l1003 to lwk80150k25 (24)</a></li>
+<li class="mmenu"><a href="/search/list?page=m&amp;no=0"><b>M</b> m1 to mue139 (95)</a></li>
+<li class="mmenu"><a href="/search/list?page=n&amp;no=0"><b>N</b> n0009sm to nplx (174)</a></li>
+<li class="mmenu"><a href="/search/list?page=o&amp;no=0"><b>O</b> oa206 to oaf139 (9)</a></li>
+<li class="mmenu"><a href="/search/list?page=p&amp;no=0"><b>P</b> p51droot to pw98mod (16)</a></li>
+<li class="mmenu"><a href="/search/list?page=r&amp;no=0"><b>R</b> r1046 to rhodesg36 (63)</a></li>
+<li class="mmenu"><a href="/search/list?page=s&amp;no=0"><b>S</b> s1010 to supermarine371ii (176)</a></li>
+<li class="mmenu"><a href="/search/list?page=t&amp;no=0"><b>T</b> tempest1 to tsagi8 (8)</a></li>
+<li class="mmenu"><a href="/search/list?page=u&amp;no=0"><b>U</b> ua2 to usnps4 (36)</a></li>
+<li class="mmenu"><a href="/search/list?page=v&amp;no=0"><b>V</b> v13006 to vr9 (17)</a></li>
+<li class="mmenu"><a href="/search/list?page=w&amp;no=0"><b>W</b> waspsm to whitcomb (4)</a></li>
+<li class="mmenu"><a href="/search/list?page=y&amp;no=0"><b>Y</b> ys900 to ys930 (3)</a></li>
+<li class="mmenu"><a href="/search/airfoils">List of all airfoils</a></li>
+</ul>
+<h3 class="mmenu">Site</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/index">Home</a></li>
+<li class="mmenu"><a href="/site/contact">Contact</a></li>
+<li class="mmenu"><a href="/site/privacy">Privacy Policy</a></li>
+</ul>
+</nav>
+<div style="width:30px;height:80px;">&nbsp;</div><script type="text/javascript"><!--
+google_ad_client = "pub-2601928470036827";
+google_ad_slot = "8324848737";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</td><td class="content" style="vertical-align:top;">
+	<div id="content">
+	
+<h1>DRAGONFLY CANARD (drgnfly-il)</h1><h2>DRAGONFLY CANARD - Dragonfly Canard airfoil</h2>
+<p>
+
+</p>
+<div class="centerad">
+<script type="text/javascript"><!--
+google_ad_client = "pub-2601928470036827";
+google_ad_slot = "3945031462";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<br/>
+<!--[if !IE]>-->
+<object width="800" height="192" data="?r=msvg/svg/raw&amp;name=MAirfoilDetailsForm&amp;z=18939" type="image/svg+xml"><!--<![endif]-->
+<!--[if lt IE 9]>
+<object width="800" height="192" src="?r=msvg/svg/raw&amp;name=MAirfoilDetailsForm&amp;z=18939" classid="image/svg+xml"><![endif]-->
+<!--[if gte IE 9]>
+<object width="800" height="192" data="?r=msvg/svg/raw&amp;name=MAirfoilDetailsForm&amp;z=18939" type="image/svg+xml"><![endif]-->
+Airfoil drgnfly-il
+</object>
+
+
+<table class="details">
+<tr>
+<td class="cell1h" ><b>Details</b></td>
+<td class="cell2h"><b>Dat file</b></td>
+<td class="cell3h"><b>Parser</b></td>
+<td class="cell4h">&nbsp;</td>
+</tr>
+<tr>
+<td  class="cell1">
+(drgnfly-il) DRAGONFLY CANARD<br />Dragonfly Canard airfoil<br />Max thickness 19.3% at 37.6% chord.<br />Max camber 6.6% at 40.9% chord<br />Source <a rel="nofollow" target="_blank" onclick="_gaq.push([&#039;_trackEvent&#039;,&#039;external&#039;,&#039;https://m-selig.ae.illinois.edu/ads/coord_database.html&#039;, &#039;&#039;]);return true;" href="https://m-selig.ae.illinois.edu/ads/coord_database.html">UIUC Airfoil Coordinates Database</a><br /><a rel="nofollow" target="_blank" onclick="_gaq.push([&#039;_trackEvent&#039;,&#039;external&#039;,&#039;https://m-selig.ae.illinois.edu/ads/coord/drgnfly.dat&#039;, &#039;&#039;]);return true;" href="https://m-selig.ae.illinois.edu/ads/coord/drgnfly.dat">Source dat file</a><br />The dat file is in Lednicer format<br /></td>
+<td  class="cell2">
+
+<pre style="height:100px;overflow:auto;text-align:left;background-color:#ddd">
+DRAGONFLY CANARD
+      74.0      67.0
+ 
+ 0.0000000 0.0000000
+ 0.0001457 0.0020791
+ 0.0005989 0.0043226
+ 0.0013409 0.0066716
+ 0.0023466 0.0091410
+ 0.0036141 0.0117609
+ 0.0051572 0.0145612
+ 0.0070160 0.0175760
+ 0.0092433 0.0208453
+ 0.0119110 0.0244164
+ 0.0151171 0.0283474
+ 0.0189834 0.0327004
+ 0.0236648 0.0375507
+ 0.0293351 0.0429706
+ 0.0361713 0.0490064
+ 0.0443123 0.0556434
+ 0.0538113 0.0627835
+ 0.0646016 0.0702568
+ 0.0765326 0.0778690
+ 0.0894156 0.0854478
+ 0.1030717 0.0928688
+ 0.1173461 0.1000490
+ 0.1321090 0.1069300
+ 0.1472595 0.1134707
+ 0.1627235 0.1196449
+ 0.1784441 0.1254346
+ 0.1943784 0.1308288
+ 0.2104903 0.1358162
+ 0.2267510 0.1403919
+ 0.2431323 0.1445470
+ 0.2596113 0.1482752
+ 0.2761710 0.1515715
+ 0.2927934 0.1544291
+ 0.3094666 0.1568438
+ 0.3261755 0.1588125
+ 0.3428982 0.1603344
+ 0.3596047 0.1614033
+ 0.3762569 0.1620161
+ 0.3928149 0.1621598
+ 0.4092597 0.1618164
+ 0.4256004 0.1609678
+ 0.4418859 0.1595972
+ 0.4581774 0.1577047
+ 0.4745027 0.1553063
+ 0.4908638 0.1524111
+ 0.5072857 0.1490139
+ 0.5238335 0.1451140
+ 0.5405811 0.1407256
+ 0.5575834 0.1358796
+ 0.5748784 0.1306111
+ 0.5925030 0.1249652
+ 0.6104801 0.1189999
+ 0.6287965 0.1127943
+ 0.6473631 0.1064491
+ 0.6660159 0.1000650
+ 0.6846015 0.0937368
+ 0.7030689 0.0875234
+ 0.7214391 0.0814578
+ 0.7397921 0.0755411
+ 0.7582108 0.0697446
+ 0.7767314 0.0640372
+ 0.7953659 0.0584011
+ 0.8141143 0.0528190
+ 0.8329656 0.0472762
+ 0.8518957 0.0417615
+ 0.8708630 0.0362789
+ 0.8898250 0.0308382
+ 0.9087250 0.0254544
+ 0.9274510 0.0201603
+ 0.9457506 0.0150235
+ 0.9631459 0.0101742
+ 0.9789165 0.0058041
+ 0.9923993 0.0020880
+ 1.0000000 0.0000000
+ 
+ 0.0000000 0.0000000
+ 0.0001805 -.0021814
+ 0.0007254 -.0043563
+ 0.0016289 -.0065105
+ 0.0028783 -.0086312
+ 0.0044806 -.0106863
+ 0.0064676 -.0126248
+ 0.0088683 -.0143915
+ 0.0117057 -.0159566
+ 0.0150096 -.0173100
+ 0.0188391 -.0184784
+ 0.0232904 -.0195358
+ 0.0285087 -.0206030
+ 0.0346850 -.0217715
+ 0.0420663 -.0230410
+ 0.0509365 -.0243420
+ 0.0616005 -.0256040
+ 0.0743312 -.0267916
+ 0.0891285 -.0279337
+ 0.1055755 -.0289830
+ 0.1231631 -.0298795
+ 0.1414954 -.0306087
+ 0.1603064 -.0311991
+ 0.1794002 -.0316631
+ 0.1986707 -.0320168
+ 0.2180541 -.0322683
+ 0.2375143 -.0324307
+ 0.2570233 -.0325080
+ 0.2765712 -.0325062
+ 0.2961400 -.0324295
+ 0.3157297 -.0322787
+ 0.3353333 -.0320599
+ 0.3549327 -.0317761
+ 0.3744961 -.0314273
+ 0.3939943 -.0309987
+ 0.4134563 -.0304722
+ 0.4329322 -.0298456
+ 0.4524549 -.0291260
+ 0.4720535 -.0283253
+ 0.4917410 -.0274584
+ 0.5115053 -.0265464
+ 0.5313196 -.0256013
+ 0.5511649 -.0246262
+ 0.5710391 -.0236260
+ 0.5909453 -.0226027
+ 0.6108834 -.0215655
+ 0.6308455 -.0205211
+ 0.6508187 -.0194718
+ 0.6707878 -.0184254
+ 0.6907469 -.0173861
+ 0.7106941 -.0163568
+ 0.7306303 -.0153385
+ 0.7505585 -.0143333
+ 0.7704768 -.0133430
+ 0.7903870 -.0123678
+ 0.8102773 -.0114096
+ 0.8301386 -.0104724
+ 0.8499590 -.0095623
+ 0.8697084 -.0086753
+ 0.8892588 -.0077757
+ 0.9084961 -.0068145
+ 0.9273193 -.0057571
+ 0.9455405 -.0045867
+ 0.9628015 -.0033160
+ 0.9785467 -.0020097
+ 0.9921971 -.0007620
+ 1.0000000 0.0000000
+</pre>
+
+</td>
+<td  class="cell3">
+No parser warnings</td>
+<td  class="cell4">
+<a href="/plotter/index?airfoil=drgnfly-il">Send to airfoil plotter</a><br /><a href="/compare/add?airfoil=drgnfly-il">Add to comparison</a><br /><a target="_blank" href="/airfoil/lednicerdatfile?airfoil=drgnfly-il">Lednicer format dat file</a><br /><a target="_blank" href="/airfoil/seligdatfile?airfoil=drgnfly-il">Selig format dat file</a><br /></td>
+</tr>
+</table>
+
+<table class="spage" style="width:780px;border:1px solid #000;margin:auto;padding:4px;"><tr><td id="simlist" style="padding:10px 25px;;"><h2>Similar airfoils</h2><table class="similar"><tr><td class="c1">NACA 6-H-20 AIRFOIL</td><td class="c2"><a rel="alternate" href="/images/airfoil/n6h20-il_l.png">Preview</a></td><td class="c3"><a href="/airfoil/details?airfoil=n6h20-il">Details</a></td></tr>
+<tr><td class="c1">UNIVERSITY OF GLASGOW GU25-5(11)8</td><td class="c2"><a rel="alternate" href="/images/airfoil/gu255118-il_l.png">Preview</a></td><td class="c3"><a href="/airfoil/details?airfoil=gu255118-il">Details</a></td></tr>
+<tr><td class="c1">RONCZ 1046 VOYAGER CANARD AIRFOIL</td><td class="c2"><a rel="alternate" href="/images/airfoil/r1046-il_l.png">Preview</a></td><td class="c3"><a href="/airfoil/details?airfoil=r1046-il">Details</a></td></tr>
+<tr><td class="c1">UA(2)-180 smoothed</td><td class="c2"><a rel="alternate" href="/images/airfoil/ua2-180sm-il_l.png">Preview</a></td><td class="c3"><a href="/airfoil/details?airfoil=ua2-180sm-il">Details</a></td></tr>
+<tr><td class="c1">GOE 384 AIRFOIL</td><td class="c2"><a rel="alternate" href="/images/airfoil/goe384-il_l.png">Preview</a></td><td class="c3"><a href="/airfoil/details?airfoil=goe384-il">Details</a></td></tr>
+<tr><td class="c1">GOE 614 AIRFOIL</td><td class="c2"><a rel="alternate" href="/images/airfoil/goe614-il_l.png">Preview</a></td><td class="c3"><a href="/airfoil/details?airfoil=goe614-il">Details</a></td></tr>
+<tr><td class="c1">GOE 625 AIRFOIL</td><td class="c2"><a rel="alternate" href="/images/airfoil/goe625-il_l.png">Preview</a></td><td class="c3"><a href="/airfoil/details?airfoil=goe625-il">Details</a></td></tr>
+<tr><td class="c1">GOE 798 AIRFOIL</td><td class="c2"><a rel="alternate" href="/images/airfoil/goe798-il_l.png">Preview</a></td><td class="c3"><a href="/airfoil/details?airfoil=goe798-il">Details</a></td></tr>
+<tr><td class="c1">GOE 382 AIRFOIL</td><td class="c2"><a rel="alternate" href="/images/airfoil/goe382-il_l.png">Preview</a></td><td class="c3"><a href="/airfoil/details?airfoil=goe382-il">Details</a></td></tr>
+<tr><td class="c1">UA(2)-180 (University of</td><td class="c2"><a rel="alternate" href="/images/airfoil/ua2-180-il_l.png">Preview</a></td><td class="c3"><a href="/airfoil/details?airfoil=ua2-180-il">Details</a></td></tr>
+</table>
+</td>
+<td><script type="text/javascript"><!--
+google_ad_client = "pub-2601928470036827";
+google_ad_slot = "1103705950";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</td>
+</tr>
+</table>
+<h2 id="polars">Polars for DRAGONFLY CANARD (drgnfly-il)</h2><table class="polar"><tr><th class="cell0">Plot</th><th class="cell1">Airfoil</th><th class="cell2">Reynolds #</th><th class="cell3">Ncrit</th><th class="cell4">Max Cl/Cd</th><th class="cell5">Description</th><th class="cell6">Source</th><th class="cell7">&nbsp;</th></tr><tr class="row0"><td class="cell0"><span style="background-color:#4bb2c5;">&nbsp;&nbsp;&nbsp;</span><input class="polaractive" id="xf-drgnfly-il-50000_4bb2c5" checked="checked" type="checkbox" value="1" name="active" /></td><td class="cell1">drgnfly-il</td><td class="cell2">50,000</td><td class="cell3">9</td><td class="cell4">3.9 at &alpha;=12.5&deg;</td><td class="cell5">Mach=0 Ncrit=9</td><td class="cell6"><a href="?r=polar/index/#xfoil">Xfoil prediction</a></td><td class="cell7"><a href="/polar/details?polar=xf-drgnfly-il-50000">Details</a></td></tr>
+<tr class="row0"><td class="cell0"><span style="background-color:#c5b47f;">&nbsp;&nbsp;&nbsp;</span><input class="polaractive" id="xf-drgnfly-il-50000-n5_c5b47f" type="checkbox" value="1" name="active" /></td><td class="cell1">drgnfly-il</td><td class="cell2">50,000</td><td class="cell3">5</td><td class="cell4">5.8 at &alpha;=14.5&deg;</td><td class="cell5">Mach=0 Ncrit=5</td><td class="cell6"><a href="?r=polar/index/#xfoil">Xfoil prediction</a></td><td class="cell7"><a href="/polar/details?polar=xf-drgnfly-il-50000-n5">Details</a></td></tr>
+<tr class="row1"><td class="cell0"><span style="background-color:#EAA228;">&nbsp;&nbsp;&nbsp;</span><input class="polaractive" id="xf-drgnfly-il-100000_EAA228" checked="checked" type="checkbox" value="1" name="active" /></td><td class="cell1">drgnfly-il</td><td class="cell2">100,000</td><td class="cell3">9</td><td class="cell4">4.7 at &alpha;=13.25&deg;</td><td class="cell5">Mach=0 Ncrit=9</td><td class="cell6"><a href="?r=polar/index/#xfoil">Xfoil prediction</a></td><td class="cell7"><a href="/polar/details?polar=xf-drgnfly-il-100000">Details</a></td></tr>
+<tr class="row1"><td class="cell0"><span style="background-color:#579575;">&nbsp;&nbsp;&nbsp;</span><input class="polaractive" id="xf-drgnfly-il-100000-n5_579575" type="checkbox" value="1" name="active" /></td><td class="cell1">drgnfly-il</td><td class="cell2">100,000</td><td class="cell3">5</td><td class="cell4">8.4 at &alpha;=9.75&deg;</td><td class="cell5">Mach=0 Ncrit=5</td><td class="cell6"><a href="?r=polar/index/#xfoil">Xfoil prediction</a></td><td class="cell7"><a href="/polar/details?polar=xf-drgnfly-il-100000-n5">Details</a></td></tr>
+<tr class="row0"><td class="cell0"><span style="background-color:#839557;">&nbsp;&nbsp;&nbsp;</span><input class="polaractive" id="xf-drgnfly-il-200000_839557" checked="checked" type="checkbox" value="1" name="active" /></td><td class="cell1">drgnfly-il</td><td class="cell2">200,000</td><td class="cell3">9</td><td class="cell4">8.8 at &alpha;=13.25&deg;</td><td class="cell5">Mach=0 Ncrit=9</td><td class="cell6"><a href="?r=polar/index/#xfoil">Xfoil prediction</a></td><td class="cell7"><a href="/polar/details?polar=xf-drgnfly-il-200000">Details</a></td></tr>
+<tr class="row0"><td class="cell0"><span style="background-color:#958c12;">&nbsp;&nbsp;&nbsp;</span><input class="polaractive" id="xf-drgnfly-il-200000-n5_958c12" type="checkbox" value="1" name="active" /></td><td class="cell1">drgnfly-il</td><td class="cell2">200,000</td><td class="cell3">5</td><td class="cell4">45.8 at &alpha;=2.25&deg;</td><td class="cell5">Mach=0 Ncrit=5</td><td class="cell6"><a href="?r=polar/index/#xfoil">Xfoil prediction</a></td><td class="cell7"><a href="/polar/details?polar=xf-drgnfly-il-200000-n5">Details</a></td></tr>
+<tr class="row1"><td class="cell0"><span style="background-color:#953579;">&nbsp;&nbsp;&nbsp;</span><input class="polaractive" id="xf-drgnfly-il-500000_953579" checked="checked" type="checkbox" value="1" name="active" /></td><td class="cell1">drgnfly-il</td><td class="cell2">500,000</td><td class="cell3">9</td><td class="cell4">87.8 at &alpha;=8.25&deg;</td><td class="cell5">Mach=0 Ncrit=9</td><td class="cell6"><a href="?r=polar/index/#xfoil">Xfoil prediction</a></td><td class="cell7"><a href="/polar/details?polar=xf-drgnfly-il-500000">Details</a></td></tr>
+<tr class="row1"><td class="cell0"><span style="background-color:#4b5de4;">&nbsp;&nbsp;&nbsp;</span><input class="polaractive" id="xf-drgnfly-il-500000-n5_4b5de4" type="checkbox" value="1" name="active" /></td><td class="cell1">drgnfly-il</td><td class="cell2">500,000</td><td class="cell3">5</td><td class="cell4">104.7 at &alpha;=6.5&deg;</td><td class="cell5">Mach=0 Ncrit=5</td><td class="cell6"><a href="?r=polar/index/#xfoil">Xfoil prediction</a></td><td class="cell7"><a href="/polar/details?polar=xf-drgnfly-il-500000-n5">Details</a></td></tr>
+<tr class="row0"><td class="cell0"><span style="background-color:#d8b83f;">&nbsp;&nbsp;&nbsp;</span><input class="polaractive" id="xf-drgnfly-il-1000000_d8b83f" checked="checked" type="checkbox" value="1" name="active" /></td><td class="cell1">drgnfly-il</td><td class="cell2">1,000,000</td><td class="cell3">9</td><td class="cell4">144.6 at &alpha;=9.25&deg;</td><td class="cell5">Mach=0 Ncrit=9</td><td class="cell6"><a href="?r=polar/index/#xfoil">Xfoil prediction</a></td><td class="cell7"><a href="/polar/details?polar=xf-drgnfly-il-1000000">Details</a></td></tr>
+<tr class="row0"><td class="cell0"><span style="background-color:#ff5800;">&nbsp;&nbsp;&nbsp;</span><input class="polaractive" id="xf-drgnfly-il-1000000-n5_ff5800" type="checkbox" value="1" name="active" /></td><td class="cell1">drgnfly-il</td><td class="cell2">1,000,000</td><td class="cell3">5</td><td class="cell4">149.1 at &alpha;=7.5&deg;</td><td class="cell5">Mach=0 Ncrit=5</td><td class="cell6"><a href="?r=polar/index/#xfoil">Xfoil prediction</a></td><td class="cell7"><a href="/polar/details?polar=xf-drgnfly-il-1000000-n5">Details</a></td></tr>
+<tr><td colspan="2"><input onclick="refreshiframe();" name="yt0" type="button" value="Update plots" /></td><td colspan="6"><a href="/calculator/reynoldsnumber">Reynolds number calculator</a></td></tr>
+</table>
+
+<form id="range" action="/userairfoil/index" method="post">
+
+<table class="range"><tr><th colspan="2">Set Reynolds number and Ncrit range</th><th>Low</th><th>High</th></tr>
+<tr><td rowspan="2"><input type="submit" name="yt1" value="Update Range" /><input name="MUserAirfoilRecord[redirect]" id="MUserAirfoilRecord_redirect" type="hidden" value="/airfoil/details?airfoil=drgnfly-il#polars" /></td><td>Reynolds Number</td><td><select size="1" name="MUserAirfoilRecord[lowRe]" id="MUserAirfoilRecord_lowRe">
+<option value="50000" selected="selected">50,000</option>
+<option value="100000">100,000</option>
+<option value="200000">200,000</option>
+<option value="500000">500,000</option>
+<option value="1000000">1,000,000</option>
+<option value="2000000">2,000,000</option>
+<option value="5000000">5,000,000</option>
+</select></td><td><select size="1" name="MUserAirfoilRecord[hiRe]" id="MUserAirfoilRecord_hiRe">
+<option value="50000">50,000</option>
+<option value="100000">100,000</option>
+<option value="200000">200,000</option>
+<option value="500000">500,000</option>
+<option value="1000000" selected="selected">1,000,000</option>
+<option value="2000000">2,000,000</option>
+<option value="5000000">5,000,000</option>
+</select></td></tr>
+<tr><td>NCrit</td><td><select size="1" name="MUserAirfoilRecord[lowNcrit]" id="MUserAirfoilRecord_lowNcrit">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7" selected="selected">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select></td><td><select size="1" name="MUserAirfoilRecord[hiNcrit]" id="MUserAirfoilRecord_hiNcrit">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9" selected="selected">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select></td></tr>
+</table>
+
+</form>
+
+<iframe id="polarIframe" src="/polar/plot?a=xf-drgnfly-il-50000_4bb2c5%2Cxf-drgnfly-il-100000_EAA228%2Cxf-drgnfly-il-200000_839557%2Cxf-drgnfly-il-500000_953579%2Cxf-drgnfly-il-1000000_d8b83f&amp;v=1743664643
+" scrolling="no" width="810" height="1245" frameborder="0"></iframe>
+<br />
+<div class="centerad"><script type="text/javascript"><!--
+google_ad_client = "pub-2601928470036827";
+google_ad_slot = "5338384101";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div><!-- content -->
+
+</td></tr>
+</table>	
+	<div class="clear"></div>
+
+	<div id="footer">
+		Copyright &copy; 2025 All Rights Reserved.<br/>
+		No content or images on this web site should be reproduced without permission.<br/>
+		
+	</div><!-- footer -->
+
+</div><!-- page -->
+
+<script type="text/javascript">
+/*<![CDATA[*/
+jQuery(function($) {
+
+			$('a[rel=alternate]').fancybox({'titlePosition':'inside','overlayColor':'#337','overlayOpacity':'0.25'});
+		
+});
+/*]]>*/
+</script>
+</body>
+</html>

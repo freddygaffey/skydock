@@ -1,0 +1,2213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V1CCJ4RLRS"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-V1CCJ4RLRS');</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1">
+<meta name="robots" content="all" />
+<meta name="keywords" content="fx601001-il,FX 60-100 (126) AIRFOIL,airfoil,plotter,coordinate,airfoil print,airfoil printer, airfoil plan, aerofoil plotter,chord, pitch, angle of attack,wing rib,foam core," />
+<meta name="description" content="Airfoil (aerofoil) plot of FX 60-100 (126) AIRFOIL with ajustable chord width, camber and thickness and full size print out" />
+<link rel="apple-touch-icon" sizes="57x57" href="http://airfoiltools.com/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="http://airfoiltools.com/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://airfoiltools.com/apple-touch-icon-114x114.png" />
+<link rel="stylesheet" type="text/css" href="/css/screen.css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="/css/ie.css" media="screen, projection" />
+<![endif]-->
+
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" href="/css/form.css" />
+<style type="text/css">
+/*<![CDATA[*/
+td.dataTableValue select {width: 210px;}
+td.dataTableTitle {width: 110px; }div.parsererror {color: red; }
+/*]]>*/
+</style>
+<style type="text/css">
+/*<![CDATA[*/
+div.errorMessage {color: red;}
+
+/*]]>*/
+</style>
+<!--[if lt IE 9]><script src="/assets/195f7690/svg.js" data-path="/assets/195f7690" type="text/javascript" ></script><![endif]-->
+<script type="text/javascript" src="/assets/780cfc96/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/780cfc96/jquery.yiiactiveform.js"></script>
+<title>Airfoil plotter (fx601001-il)</title>
+	
+
+
+</head>
+<body>
+<div id="cookies" style="display:none;width:1026px;background:#ddbbbb;margin:auto;text-align:center;"></div>
+<div style="width:1024px;margin:auto;background:white; border: 1px solid #000000;">
+	<div style="width:100%;height:75px;color:#ffffff;background:#303090;padding:0px;margin:0px;border:0px">
+
+		<div style="display:inline-block;float:left;padding:0 0 0 20px;text-align:left;">
+		<span style="font-size:23pt;">Airfoil Tools</span><br/><span style="font-size:1.1em;padding:0 30px 0 0;">Search 1638 airfoils</span>
+<a href="http://plus.google.com/105890010939518182070?prsrc=3" rel="publisher" style="text-decoration:none;"><img src="http://ssl.gstatic.com/images/icons/gplus-32.png" alt="Google+" style="border:0;width:21px;height:21px;"/></a>
+<a href="https://twitter.com/share" class="twitter-share-button"  data-url="http://airfoiltools.com/index">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2FAirfoilTools.com&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+		</div>
+		<div style="display:inline-block;float:right;padding:8px;padding-top:4px;margin:0px;border:0px;text-align:left;">
+		<div style="font-size:0.9em;height:33px;width:360px">
+		You have 6 airfoils loaded.<br/>Your Reynold number range is 50,000 to 1,000,000. (<a href="/userairfoil/index">set</a>)		</div>
+		<form action="http://airfoiltools.com/site/search" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-2601928470036827:5136476429" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="30" />
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+		</div>
+	</div>
+<table>
+<tr><td class="mmenu" style="vertical-align:top;">
+
+<nav>
+<h3 class="mmenu">Applications</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/search/index"><b>Airfoil database search</b></a></li>
+<li class="mmenu"><a href="/userairfoil/index"><b>My airfoils</b></a></li>
+<li class="mmenu"><a href="/plotter/index"><b>Airfoil plotter</b></a></li>
+<li class="mmenu"><a href="/compare/index"><b>Airfoil comparison</b></a></li>
+<li class="mmenu"><a href="/calculator/reynoldsnumber"><b>Reynolds number calc</b></a></li>
+<li class="mmenu"><a href="/airfoil/naca4digit"><b>NACA 4 digit generator</b></a></li>
+<li class="mmenu"><a href="/airfoil/naca5digit"><b>NACA 5 digit generator</b></a></li>
+</ul>
+<h3 class="mmenu">Information</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/airfoil/index"><b>Airfoil data</b></a></li>
+<li class="mmenu"><a href="/polar/index"><b>Lift/drag polars</b></a></li>
+<li class="mmenu"><a href="/airfoil/generated"><b>Generated airfoil shapes</b></a></li>
+</ul>
+<h3 class="mmenu">Searches</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/search/index?m%5BmaxCamber%5D=0&amp;m%5Bsort%5D=5"><b>Symmetrical airfoils</b></a></li>
+<li class="mmenu"><a href="/search/index?m%5Bgrp%5D=naca4d&amp;m%5Bsort%5D=1"><b>NACA 4 digit airfoils</b></a></li>
+<li class="mmenu"><a href="/search/index?m%5Bgrp%5D=naca5d&amp;m%5Bsort%5D=1"><b>NACA 5 digit airfoils</b></a></li>
+<li class="mmenu"><a href="/search/index?m%5Bgrp%5D=naca6&amp;m%5Bsort%5D=1"><b>NACA 6 series airfoils</b></a></li>
+</ul>
+<h3 class="mmenu">Airfoils A to Z</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/search/list?page=a&amp;no=0"><b>A</b> a18 to avistar (88)</a></li>
+<li class="mmenu"><a href="/search/list?page=b&amp;no=0"><b>B</b> b29root to bw3 (22)</a></li>
+<li class="mmenu"><a href="/search/list?page=c&amp;no=0"><b>C</b> c141a to curtisc72 (40)</a></li>
+<li class="mmenu"><a href="/search/list?page=d&amp;no=0"><b>D</b> dae11 to du861372 (28)</a></li>
+<li class="mmenu"><a href="/search/list?page=e&amp;no=0"><b>E</b> e1098 to esa40 (209)</a></li>
+<li class="mmenu"><a href="/search/list?page=f&amp;no=0"><b>F</b> falcon to fxs21158 (121)</a></li>
+<li class="mmenu"><a href="/search/list?page=g&amp;no=0"><b>G</b> geminism to gu255118 (419)</a></li>
+<li class="mmenu"><a href="/search/list?page=h&amp;no=0"><b>H</b> hh02 to ht23 (63)</a></li>
+<li class="mmenu"><a href="/search/list?page=i&amp;no=0"><b>I</b> isa571 to isa962 (4)</a></li>
+<li class="mmenu"><a href="/search/list?page=j&amp;no=0"><b>J</b> j5012 to joukowsk0021 (7)</a></li>
+<li class="mmenu"><a href="/search/list?page=k&amp;no=0"><b>K</b> k1 to kenmar (11)</a></li>
+<li class="mmenu"><a href="/search/list?page=l&amp;no=0"><b>L</b> l1003 to lwk80150k25 (24)</a></li>
+<li class="mmenu"><a href="/search/list?page=m&amp;no=0"><b>M</b> m1 to mue139 (95)</a></li>
+<li class="mmenu"><a href="/search/list?page=n&amp;no=0"><b>N</b> n0009sm to nplx (174)</a></li>
+<li class="mmenu"><a href="/search/list?page=o&amp;no=0"><b>O</b> oa206 to oaf139 (9)</a></li>
+<li class="mmenu"><a href="/search/list?page=p&amp;no=0"><b>P</b> p51droot to pw98mod (16)</a></li>
+<li class="mmenu"><a href="/search/list?page=r&amp;no=0"><b>R</b> r1046 to rhodesg36 (63)</a></li>
+<li class="mmenu"><a href="/search/list?page=s&amp;no=0"><b>S</b> s1010 to supermarine371ii (176)</a></li>
+<li class="mmenu"><a href="/search/list?page=t&amp;no=0"><b>T</b> tempest1 to tsagi8 (8)</a></li>
+<li class="mmenu"><a href="/search/list?page=u&amp;no=0"><b>U</b> ua2 to usnps4 (36)</a></li>
+<li class="mmenu"><a href="/search/list?page=v&amp;no=0"><b>V</b> v13006 to vr9 (17)</a></li>
+<li class="mmenu"><a href="/search/list?page=w&amp;no=0"><b>W</b> waspsm to whitcomb (4)</a></li>
+<li class="mmenu"><a href="/search/list?page=y&amp;no=0"><b>Y</b> ys900 to ys930 (3)</a></li>
+<li class="mmenu"><a href="/search/airfoils">List of all airfoils</a></li>
+</ul>
+<h3 class="mmenu">Site</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/index">Home</a></li>
+<li class="mmenu"><a href="/site/contact">Contact</a></li>
+<li class="mmenu"><a href="/site/privacy">Privacy Policy</a></li>
+</ul>
+</nav>
+<div style="width:30px;height:20px;">&nbsp;</div><script type="text/javascript"><!--
+google_ad_client = "pub-2601928470036827";
+google_ad_slot = "9159224601";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</td><td class="content" style="vertical-align:top;">
+	<div id="content">
+	
+<h1>Airfoil plotter (fx601001-il)</h1><h2>FX 60-100 (126) AIRFOIL - Wortmann FX 60-100 (126) airfoil</h2>
+<p>
+Plot and print the shape of an airfoil (aerofoil) for your specific chord width and transformation.
+The dat file data can either be loaded from the
+<a href="/search/index">airfoil database</a>or your own airfoils which can be entered
+<a href="/userairfoil/index">here</a>and they will appear in the list of airfoils in the form below.
+</p>
+<div class="centerad">
+<script type="text/javascript"><!--
+google_ad_client = "pub-2601928470036827";
+google_ad_slot = "6374239708";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<br/>
+<!--[if !IE]>-->
+<object width="800" height="158" data="?r=msvg/svg/raw&amp;name=MAirfoilPlotterForm&amp;z=59891" type="image/svg+xml"><!--<![endif]-->
+<!--[if lt IE 9]>
+<object width="800" height="158" src="?r=msvg/svg/raw&amp;name=MAirfoilPlotterForm&amp;z=59891" classid="image/svg+xml"><![endif]-->
+<!--[if gte IE 9]>
+<object width="800" height="158" data="?r=msvg/svg/raw&amp;name=MAirfoilPlotterForm&amp;z=59891" type="image/svg+xml"><![endif]-->
+Airfoil plot  (fx601001-il)
+</object>
+<div class="center">
+<table style="width:90%;text-align:left;margin:auto;"><tr><td style="width:50%"><a target="_blank" rel="nofollow" href="?r=msvg/svg/all&amp;name=MAirfoilPlotterForm">Open full size plan in new window</a></td>
+<td style="width:50%"><a target="_blank" rel="nofollow" href="?r=msvg/svg/pages&amp;name=MAirfoilPlotterForm">Open paginated plan in new window for multi page printing</a></td>
+</tr>
+<tr><td style="width:50%"><a target="_blank" rel="nofollow" href="/plotter/tocsv">CSV file of coordinates</a></td>
+<td style="width:50%"><a target="_blank" rel="nofollow" href="/plotter/svg">SVG image as text file</a></td>
+</tr>
+<tr><td style="width:50%"><a href="/plotter/todefault">Restore defaults</a></td>
+<td style="width:50%"><a target="_blank" rel="nofollow" href="/plotter/topdf">Download PDF file</a></td>
+</tr>
+</table></div>
+<div style="width:100%;margin:auto;text-align:center;">
+
+<form id="design-form" action="/plotter/index" method="post"><table style="width:600px;margin:auto;" class="dataTable"><tr class="dataTableRow"><td class="dataTableTitle"><label for="MAirfoilPlotterForm_airfoilKey">Airfoil</label></td><td class="dataTableValue"><select id="sfselect" onchange="" name="MAirfoilPlotterForm[airfoilKey]">
+<optgroup label="My airfoils">
+<option value="user-000">user-000 - NACA 2412 Airfoil M=2.0% P=40.0% T=12.0%</option>
+<option value="user-001">user-001 - NACA 2412 Airfoil M=2.0% P=40.0% T=12.0%</option>
+<option value="user-002">user-002 - NACA 2412 Airfoil M=2.0% P=40.0% T=12.0%</option>
+<option value="user-003">user-003 - NACA 24012 Airfoil cl=0.30 T=12.0% P=20.0%</option>
+<option value="user-004">user-004 - NACA 24012 Airfoil cl=0.30 T=12.0% P=20.0%</option>
+<option value="user-005">user-005 - NACA 24012 Airfoil cl=0.30 T=12.0% P=20.0%</option>
+</optgroup>
+<optgroup label="Search airfoils">
+<option value="2032c-il">2032c-il - 20-32C AIRFOIL</option>
+<option value="a18-il">a18-il - A18 (original)</option>
+<option value="a18sm-il">a18sm-il - A18 (smoothed)</option>
+<option value="a63a108c-il">a63a108c-il - NASA/AMES 63A108 MOD C AIRFOIL</option>
+<option value="ag03-il">ag03-il - AG03 (flat aft bottom)</option>
+<option value="ag04-il">ag04-il - AG04</option>
+<option value="ag08-il">ag08-il - AG08</option>
+<option value="ag09-il">ag09-il - AG09</option>
+<option value="ag10-il">ag10-il - AG10</option>
+<option value="ag11-il">ag11-il - AG11</option>
+<option value="ag12-il">ag12-il - AG12</option>
+<option value="ag13-il">ag13-il - AG13</option>
+<option value="ag14-il">ag14-il - AG14</option>
+<option value="ag16-il">ag16-il - AG16</option>
+<option value="ag17-il">ag17-il - AG17</option>
+<option value="ag18-il">ag18-il - AG18</option>
+<option value="ag19-il">ag19-il - AG19</option>
+<option value="ag24-il">ag24-il - AG24 Bubble Dancer DLG by Mark Drela</option>
+<option value="ag25-il">ag25-il - AG25 Bubble Dancer DLG by Mark Drela</option>
+<option value="ag26-il">ag26-il - AG26 Bubble Dancer DLG by Mark Drela</option>
+<option value="ag27-il">ag27-il - AG27 Bubble Dancer DLG by Mark Drela</option>
+<option value="ag35-il">ag35-il - AG35</option>
+<option value="ag36-il">ag36-il - AG36</option>
+<option value="ag37-il">ag37-il - AG37</option>
+<option value="ag38-il">ag38-il - AG38</option>
+<option value="ag44ct02r-il">ag44ct02r-il - AG44ct -02f</option>
+<option value="ag455ct02r-il">ag455ct02r-il - AG455ct -02f rot.</option>
+<option value="ag45c03-il">ag45c03-il - AG45c -03f</option>
+<option value="ag45ct02r-il">ag45ct02r-il - AG45ct -02f</option>
+<option value="ag46c03-il">ag46c03-il - AG46c -03f</option>
+<option value="ag46ct02r-il">ag46ct02r-il - AG46ct  -02f rot.</option>
+<option value="ag47c03-il">ag47c03-il - AG47c -03f</option>
+<option value="ag47ct02r-il">ag47ct02r-il - AG47ct  -02f rot.</option>
+<option value="ah21-7-il">ah21-7-il - AH21 7% version (Andrew Hollom)</option>
+<option value="ah21-9-il">ah21-9-il - AH21 9% version (Andrew Hollom)</option>
+<option value="ah63k127-il">ah63k127-il - AH 63-K-127/24</option>
+<option value="ah6407-il">ah6407-il - AH-6-40-7 AIRFOIL</option>
+<option value="ah7476-il">ah7476-il - AH-7-47-6 AIRFOIL</option>
+<option value="ah79100a-il">ah79100a-il - AH 79-100 A AIRFOIL</option>
+<option value="ah79100b-il">ah79100b-il - AH 79-100 B AIRFOIL</option>
+<option value="ah79100c-il">ah79100c-il - AH 79-100 C AIRFOIL</option>
+<option value="ah79k132-il">ah79k132-il - AH 79-K-132/20</option>
+<option value="ah79k135-il">ah79k135-il - AH 79-K-135/20 B</option>
+<option value="ah79k143-il">ah79k143-il - AH 79-K-143/18</option>
+<option value="ah80129-il">ah80129-il - AH 80-129</option>
+<option value="ah80136-il">ah80136-il - AH 80-136</option>
+<option value="ah80140-il">ah80140-il - AH 80-140</option>
+<option value="ah81131-il">ah81131-il - AH 81-131</option>
+<option value="ah81k144-il">ah81k144-il - AH 81-K-144/17</option>
+<option value="ah81k144wfklappe-il">ah81k144wfklappe-il - AH 81-K-144 W-F KLAPPE</option>
+<option value="ah82150a-il">ah82150a-il - AH 82-150 A</option>
+<option value="ah82150f-il">ah82150f-il - AH 82-150 F</option>
+<option value="ah83150q-il">ah83150q-il - AH 83-150 Q</option>
+<option value="ah83159-il">ah83159-il - AH 83-159</option>
+<option value="ah85l120-il">ah85l120-il - AH 85-L-120/17</option>
+<option value="ah88k130-il">ah88k130-il - AH 88-K-130/20</option>
+<option value="ah88k136-il">ah88k136-il - AH 88-K-136/16</option>
+<option value="ah93156-il">ah93156-il - AH 93-156</option>
+<option value="ah93157-il">ah93157-il - AH 93-157</option>
+<option value="ah93k130-il">ah93k130-il - AH 93-K-130/15</option>
+<option value="ah93k131-il">ah93k131-il - AH 93-K-131/15</option>
+<option value="ah93k132-il">ah93k132-il - AH 93-K-132/15</option>
+<option value="ah93w145-il">ah93w145-il - AH 93-W-145</option>
+<option value="ah93w174-il">ah93w174-il - AH 93-W-174</option>
+<option value="ah93w215-il">ah93w215-il - AH 93-W-215</option>
+<option value="ah93w257-il">ah93w257-il - AH 93-W-257</option>
+<option value="ah93w300-il">ah93w300-il - AH 93-W-300</option>
+<option value="ah93w480b-il">ah93w480b-il - AH 93-W-480B</option>
+<option value="ah94145-il">ah94145-il - AH 94-145</option>
+<option value="ah94156-il">ah94156-il - AH 94-156</option>
+<option value="ah94w301-il">ah94w301-il - AH 94-W-301</option>
+<option value="ah95160-il">ah95160-il - AH 95-160</option>
+<option value="ames01-il">ames01-il - NASA/AMES A-01 AIRFOIL</option>
+<option value="ames02-il">ames02-il - NASA/AMES A-02 AIRFOIL</option>
+<option value="ames03-il">ames03-il - NASA/AMES A-03 AIRFOIL</option>
+<option value="amsoil1-il">amsoil1-il - RUTAN CANARD AIRFOIL</option>
+<option value="amsoil2-il">amsoil2-il - RUTAN WING AIRFOIL</option>
+<option value="apex16-il">apex16-il - Apex 16 (normalized using XFOIL date021206)</option>
+<option value="aquilasm-il">aquilasm-il - AQUILA 9.3% smoothed</option>
+<option value="arad10-il">arad10-il - ARA-D 10% AIRFOIL</option>
+<option value="arad13-il">arad13-il - ARA-D 13% AIRFOIL</option>
+<option value="arad20-il">arad20-il - ARA-D 20% AIRFOIL</option>
+<option value="arad6-il">arad6-il - ARA-D 6% AIRFOIL</option>
+<option value="as5045-il">as5045-il - AS5045 (15%)</option>
+<option value="as5046-il">as5046-il - AS5046 (16%)</option>
+<option value="as5048-il">as5048-il - AS5048 (18%)</option>
+<option value="atr72sm-il">atr72sm-il - Smoothed ATR airfoil coordinates obtained  using AFSMO (Harry Morgan&#039;s NASA smoothing program)</option>
+<option value="august160-il">august160-il - AUGUST 160</option>
+<option value="avistar-il">avistar-il - AVISTAR</option>
+<option value="b29root-il">b29root-il - B-29 ROOT AIRFOIL</option>
+<option value="b29tip-il">b29tip-il - B-29 TIP AIRFOIL</option>
+<option value="b540ols-il">b540ols-il - BELL 540 AIRFOIL (MODIFIED NACA 0012)</option>
+<option value="b707a-il">b707a-il - BOEING 707 .08 SPAN AIRFOIL</option>
+<option value="b707b-il">b707b-il - BOEING 707 .19 SPAN AIRFOIL</option>
+<option value="b707c-il">b707c-il - BOEING 707 .40 SPAN AIRFOIL</option>
+<option value="b707d-il">b707d-il - BOEING 707 .54 SPAN AIRFOIL</option>
+<option value="b707e-il">b707e-il - BOEING 707 .99 SPAN AIRFOIL</option>
+<option value="b737a-il">b737a-il - BOEING 737 ROOT AIRFOIL</option>
+<option value="b737b-il">b737b-il - BOEING 737 MIDSPAN AIRFOIL</option>
+<option value="b737c-il">b737c-il - BOEING 737 MIDSPAN AIRFOIL</option>
+<option value="b737d-il">b737d-il - BOEING 737 OUTBOARD AIRFOIL</option>
+<option value="bacj-il">bacj-il - BOEING AIRFOIL J (no closed TE)</option>
+<option value="bacnlf-il">bacnlf-il - BOEING HSNLF AIRFOIL</option>
+<option value="bacxxx-il">bacxxx-il - BOEING BACXXX AIRFOIL</option>
+<option value="bambino6-il">bambino6-il - Bambino 6</option>
+<option value="be50-il">be50-il - BE50 (original)</option>
+<option value="be50sm-il">be50sm-il - BE50 (smoothed)</option>
+<option value="boe103-il">boe103-il - BOEING 103 AIRFOIL</option>
+<option value="boe106-il">boe106-il - BOEING 106 AIRFOIL</option>
+<option value="bqm34-il">bqm34-il - RYAN BQM-34 FIREBEE WING AIRFOIL</option>
+<option value="bw3-il">bw3-il - Bergey BW-3  (smoothed)</option>
+<option value="c141a-il">c141a-il - LOCKHEED C-141 BL0 AIRFOIL</option>
+<option value="c141b-il">c141b-il - LOCKHEED C-141 BL113.6 AIRFOIL</option>
+<option value="c141c-il">c141c-il - LOCKHEED C-141 BL426.57 AIRFOIL</option>
+<option value="c141d-il">c141d-il - LOCKHEED C-141 BL610.61 AIRFOIL</option>
+<option value="c141e-il">c141e-il - LOCKHEED C-141 BL761.11 AIRFOIL</option>
+<option value="c141f-il">c141f-il - LOCKHEED C-141 BL958.89 AIRFOIL</option>
+<option value="c5a-il">c5a-il - LOCKHEED C-5A BL0 AIRFOIL</option>
+<option value="c5b-il">c5b-il - LOCKHEED C-5A BL488.2 AIRFOIL</option>
+<option value="c5c-il">c5c-il - LOCKHEED C-5A BL576 AIRFOIL</option>
+<option value="c5d-il">c5d-il - LOCKHEED C-5A BL758.6 AIRFOIL</option>
+<option value="c5e-il">c5e-il - LOCKHEED C-5A BL1256 AIRFOIL</option>
+<option value="cap21c-il">cap21c-il - CAP 21   (TraCFoil)</option>
+<option value="cast102-il">cast102-il - CAST 10-2/DOA 2 AIRFOIL</option>
+<option value="ch10sm-il">ch10sm-il - CH10 (smoothed)</option>
+<option value="chen-il">chen-il - CHEN AIRFOIL</option>
+<option value="clarkk-il">clarkk-il - CLARK K AIRFOIL</option>
+<option value="clarkv-il">clarkv-il - CLARK V AIRFOIL</option>
+<option value="clarkw-il">clarkw-il - CLARK W AIRFOIL</option>
+<option value="clarkx-il">clarkx-il - CLARK X AIRFOIL</option>
+<option value="clarky-il">clarky-il - CLARK Y AIRFOIL</option>
+<option value="clarkyh-il">clarkyh-il - CLARK YH AIRFOIL</option>
+<option value="clarkys-il">clarkys-il - CLARK YS AIRFOIL</option>
+<option value="clarkysm-il">clarkysm-il - CLARK-Y 11.7% smoothed</option>
+<option value="clarkz-il">clarkz-il - CLARK Z AIRFOIL</option>
+<option value="clarym15-il">clarym15-il - CLARK YM-15 AIRFOIL</option>
+<option value="clarym18-il">clarym18-il - CLARK YM-18 AIRFOIL</option>
+<option value="coanda1-il">coanda1-il - Coanda 1</option>
+<option value="coanda2-il">coanda2-il - Coanda 2</option>
+<option value="coanda3-il">coanda3-il - Coanda 3</option>
+<option value="cootie-il">cootie-il - WACO COOTIE AIRFOIL</option>
+<option value="cp-060-050-gn">cp-060-050-gn - Cambered plate C=6% T=5% R=2.11</option>
+<option value="cp-080-050-gn">cp-080-050-gn - Cambered plate C=8% T=5% R=1.6</option>
+<option value="cp-100-050-gn">cp-100-050-gn - Cambered plate C=10% T=5% R=1.3</option>
+<option value="cp-120-050-gn">cp-120-050-gn - Cambered plate C=12% T=5% R=1.1</option>
+<option value="cp-140-050-gn">cp-140-050-gn - Cambered plate C=14% T=5% R=0.96</option>
+<option value="cp-160-050-gn">cp-160-050-gn - Cambered plate C=16% T=5% R=0.86</option>
+<option value="cp-180-050-gn">cp-180-050-gn - Cambered plate C=18% T=5% R=0.78</option>
+<option value="cr001sm-il">cr001sm-il - cr001sm</option>
+<option value="cr1-il">cr1-il - CURTISS CR-1 AIRFOIL</option>
+<option value="curtisc72-il">curtisc72-il - Curtis C-72</option>
+<option value="dae11-il">dae11-il - DAE-11 AIRFOIL</option>
+<option value="dae21-il">dae21-il - DAE-21 AIRFOIL</option>
+<option value="dae31-il">dae31-il - DAE-31 AIRFOIL</option>
+<option value="dae51-il">dae51-il - DAE-51 AIRFOIL</option>
+<option value="davis-corrected-il">davis-corrected-il - DAVIS BASIC B-24 WING AIRFOIL</option>
+<option value="davis-il">davis-il - Davis AIRFOIL</option>
+<option value="davissm-il">davissm-il - davissm</option>
+<option value="daytonwright6-il">daytonwright6-il - Dayton-Wright 6</option>
+<option value="daytonwrightt1-il">daytonwrightt1-il - Dayton-Wright T-1</option>
+<option value="dbln526-il">dbln526-il - SIKORSKY DBLN-526 AIRFOIL</option>
+<option value="defcnd1-il">defcnd1-il - DEFIANT CANARD BL20 AIRFOIL</option>
+<option value="defcnd2-il">defcnd2-il - DEFIANT CANARD BL110 AIRFOIL</option>
+<option value="defcnd3-il">defcnd3-il - DEFIANT CANARD BL145 AIRFOIL</option>
+<option value="df101-il">df101-il - DF 101 AIRFOIL</option>
+<option value="df102-il">df102-il - DF102</option>
+<option value="dfvlrr4-il">dfvlrr4-il - DFVLR R-4 AIRFOIL</option>
+<option value="dga1138-il">dga1138-il - D.G.A. 1138</option>
+<option value="dga1182-il">dga1182-il - D.G.A. 1182</option>
+<option value="dh4009sm-il">dh4009sm-il - dh4009sm</option>
+<option value="doa5-il">doa5-il - DORNIER A-5 AIRFOIL</option>
+<option value="dormoy-il">dormoy-il - Dormoy</option>
+<option value="drgnfly-il">drgnfly-il - DRAGONFLY CANARD</option>
+<option value="dsma523a-il">dsma523a-il - DSMA-523A AIRFOIL</option>
+<option value="dsma523b-il">dsma523b-il - DSMA-523B AIRFOIL</option>
+<option value="du06-w-200-dt">du06-w-200-dt - DU 06-W-200  VAWT airfoil</option>
+<option value="du84132v-il">du84132v-il - DELFT DU84-132V3 AIRFOIL (MEASURED)</option>
+<option value="du8608418-il">du8608418-il - DU86-084/18 8.44%</option>
+<option value="du861372-il">du861372-il - DU 86-137/25 AIRFOIL</option>
+<option value="e1098-il">e1098-il - EPPLER 1098 AIRFOIL</option>
+<option value="e1200-il">e1200-il - EPPLER 1200 AIRFOIL</option>
+<option value="e1210-il">e1210-il - EPPLER 1210 AIRFOIL</option>
+<option value="e1211-il">e1211-il - EPPLER 1211 AIRFOIL</option>
+<option value="e1212-il">e1212-il - EPPLER E1212 AIRFOIL</option>
+<option value="e1212mod-il">e1212mod-il - EPPLER E1212MOD AIRFOIL</option>
+<option value="e1213-il">e1213-il - EPPLER 1213 AIRFOIL</option>
+<option value="e1214-il">e1214-il - EPPLER 1214 AIRFOIL</option>
+<option value="e1230-il">e1230-il - EPPLER 1230 AIRFOIL</option>
+<option value="e1233-il">e1233-il - EPPLER 1233 AIRFOIL</option>
+<option value="e168-il">e168-il - E168  (12.45%)</option>
+<option value="e169-il">e169-il - E169  (14.4%)</option>
+<option value="e171-il">e171-il - (Dicke 12.28%)</option>
+<option value="e174-il">e174-il - E174  (Dicke 8.92%)</option>
+<option value="e176-il">e176-il - E176  (8.83%)</option>
+<option value="e178-il">e178-il - E178  (8.69%)</option>
+<option value="e180-il">e180-il - E180  (8.59%)</option>
+<option value="e182-il">e182-il - E182 (8.47%)</option>
+<option value="e184-il">e184-il - E184  (8.33%)</option>
+<option value="e186-il">e186-il - E186  (10.27%)</option>
+<option value="e193-il">e193-il - E193  (10.22%)</option>
+<option value="e195-il">e195-il - E195  (11.82%)</option>
+<option value="e197-il">e197-il - E197  (13.49%)</option>
+<option value="e201-il">e201-il - E201  (11.88%)</option>
+<option value="e203-il">e203-il - E203  (13.64%)</option>
+<option value="e205-il">e205-il - E205  (10.48%)</option>
+<option value="e207-il">e207-il - E207  (12.04%)</option>
+<option value="e209-il">e209-il - E209  (13.72%)</option>
+<option value="e210-il">e210-il - E210  (13.64%)</option>
+<option value="e211-il">e211-il - E211  (10.96%)</option>
+<option value="e212-il">e212-il - E212  (10.55%)</option>
+<option value="e214-il">e214-il - E214  (11.1%)</option>
+<option value="e216-il">e216-il - E216  (10.4%)</option>
+<option value="e220-il">e220-il - E220  (11.48%)</option>
+<option value="e221-il">e221-il - E221  (9.39%)</option>
+<option value="e222-il">e222-il - E222  (10.17%)</option>
+<option value="e224-il">e224-il - E224  (10.17%)</option>
+<option value="e226-il">e226-il - E226  (10.19%)</option>
+<option value="e228-il">e228-il - E10(08%)</option>
+<option value="e230-il">e230-il - E230  (9.96%)</option>
+<option value="e231-il">e231-il - E231</option>
+<option value="e266-il">e266-il - EPPLER 266 AIRFOIL</option>
+<option value="e297-il">e297-il - EPPLER 297 AIRFOIL</option>
+<option value="e325-il">e325-il - EPPLER 325 AIRFOIL</option>
+<option value="e326-il">e326-il - EPPLER 326 AIRFOIL</option>
+<option value="e327-il">e327-il - EPPLER 327 AIRFOIL</option>
+<option value="e328-il">e328-il - EPPLER 328 AIRFOIL</option>
+<option value="e329-il">e329-il - EPPLER 329 AIRFOIL</option>
+<option value="e330-il">e330-il - EPPLER 330 AIRFOIL</option>
+<option value="e331-il">e331-il - EPPLER 331 AIRFOIL</option>
+<option value="e332-il">e332-il - EPPLER 332 AIRFOIL</option>
+<option value="e333-il">e333-il - EPPLER 333 AIRFOIL</option>
+<option value="e334-il">e334-il - EPPLER 334 AIRFOIL</option>
+<option value="e335-il">e335-il - EPPLER 335 AIRFOIL</option>
+<option value="e336-il">e336-il - EPPLER 336 AIRFOIL</option>
+<option value="e337-il">e337-il - EPPLER 337 AIRFOIL</option>
+<option value="e338-il">e338-il - EPPLER 338 AIRFOIL</option>
+<option value="e339-il">e339-il - EPPLER 339 AIRFOIL</option>
+<option value="e340-il">e340-il - EPPLER 340 AIRFOIL</option>
+<option value="e341-il">e341-il - EPPLER 341 AIRFOIL</option>
+<option value="e342-il">e342-il - EPPLER 342 AIRFOIL</option>
+<option value="e343-il">e343-il - EPPLER 343 AIRFOIL</option>
+<option value="e344-il">e344-il - EPPLER 344 AIRFOIL</option>
+<option value="e360-il">e360-il - EPPLER 360 AIRFOIL</option>
+<option value="e361-il">e361-il - EPPLER 361 AIRFOIL</option>
+<option value="e374-il">e374-il - E374</option>
+<option value="e376-il">e376-il - EPPLER 376 AIRFOIL</option>
+<option value="e377-il">e377-il - EPPLER 377 AIRFOIL</option>
+<option value="e377m-il">e377m-il - EPPLER 377 (MODIFIED) AIRFOIL</option>
+<option value="e378-il">e378-il - EPPLER 378 AIRFOIL</option>
+<option value="e379-il">e379-il - EPPLER 379 AIRFOIL</option>
+<option value="e385-il">e385-il - E385  (8.41%)</option>
+<option value="e387-il">e387-il - E387</option>
+<option value="e392-il">e392-il - E392  (10.15%)</option>
+<option value="e393-il">e393-il - EPPLER 393 AIRFOIL</option>
+<option value="e395-il">e395-il - EPPLER 395 AIRFOIL</option>
+<option value="e396-il">e396-il - EPPLER 396 AIRFOIL</option>
+<option value="e397-il">e397-il - EPPLER 397 AIRFOIL</option>
+<option value="e398-il">e398-il - EPPLER 398 AIRFOIL</option>
+<option value="e399-il">e399-il - EPPLER 399 AIRFOIL</option>
+<option value="e403-il">e403-il - EPPLER 403 AIRFOIL</option>
+<option value="e407-il">e407-il - EPPLER 407 AIRFOIL</option>
+<option value="e417-il">e417-il - EPPLER 417 AIRFOIL</option>
+<option value="e420-il">e420-il - EPPLER 420 AIRFOIL</option>
+<option value="e421-il">e421-il - EPPLER 421 AIRFOIL</option>
+<option value="e422-il">e422-il - EPPLER 422 AIRFOIL</option>
+<option value="e423-il">e423-il - E423</option>
+<option value="e426-il">e426-il - EPPLER 426 AIRFOIL</option>
+<option value="e428-il">e428-il - EPPLER 428 AIRFOIL</option>
+<option value="e431-il">e431-il - EPPLER 431 AIRFOIL</option>
+<option value="e432-il">e432-il - EPPLER 432 AIRFOIL</option>
+<option value="e433-il">e433-il - EPPLER 433 AIRFOIL</option>
+<option value="e434-il">e434-il - EPPLER 434 AIRFOIL</option>
+<option value="e435-il">e435-il - EPPLER 435 AIRFOIL</option>
+<option value="e471-il">e471-il - E471  (6.25%)</option>
+<option value="e472-il">e472-il - EPPLER 472 AIRFOIL</option>
+<option value="e473-il">e473-il - EPPLER 473 AIRFOIL</option>
+<option value="e474-il">e474-il - E474  (14.09%)</option>
+<option value="e475-il">e475-il - E475  (15.01%)</option>
+<option value="e479-il">e479-il - EPPLER 479 AIRFOIL</option>
+<option value="e485-il">e485-il - EPPLER 485 AIRFOIL</option>
+<option value="e49-il">e49-il - EPPLER 49 AIRFOIL</option>
+<option value="e502-il">e502-il - EPPLER 502 AIRFOIL</option>
+<option value="e520-il">e520-il - EPPLER 520 AIRFOIL</option>
+<option value="e521-il">e521-il - EPPLER 521 AIRFOIL</option>
+<option value="e540-il">e540-il - EPPLER 540 AIRFOIL</option>
+<option value="e541-il">e541-il - EPPLER 541 AIRFOIL</option>
+<option value="e542-il">e542-il - EPPLER 542 AIRFOIL</option>
+<option value="e543-il">e543-il - EPPLER 543 AIRFOIL</option>
+<option value="e544-il">e544-il - EPPLER 544 AIRFOIL</option>
+<option value="e545-il">e545-il - EPPLER 545 AIRFOIL</option>
+<option value="e546-il">e546-il - EPPLER 546 AIRFOIL</option>
+<option value="e547-il">e547-il - EPPLER 547 AIRFOIL</option>
+<option value="e548-il">e548-il - EPPLER 548 AIRFOIL</option>
+<option value="e549-il">e549-il - EPPLER 549 AIRFOIL</option>
+<option value="e550-il">e550-il - EPPLER 550 AIRFOIL</option>
+<option value="e551-il">e551-il - EPPLER 551 AIRFOIL</option>
+<option value="e552-il">e552-il - EPPLER 552 AIRFOIL</option>
+<option value="e553-il">e553-il - EPPLER 553 AIRFOIL</option>
+<option value="e554-il">e554-il - EPPLER 554 AIRFOIL</option>
+<option value="e555-il">e555-il - EPPLER 555 AIRFOIL</option>
+<option value="e556-il">e556-il - EPPLER 556 AIRFOIL</option>
+<option value="e557-il">e557-il - EPPLER 557 AIRFOIL</option>
+<option value="e558-il">e558-il - EPPLER 558 AIRFOIL</option>
+<option value="e559-il">e559-il - EPPLER 559 AIRFOIL</option>
+<option value="e560-il">e560-il - EPPLER 560 AIRFOIL</option>
+<option value="e561-il">e561-il - EPPLER 561 AIRFOIL</option>
+<option value="e562-il">e562-il - EPPLER 562 AIRFOIL</option>
+<option value="e58-il">e58-il - EPPLER 58 AIRFOIL</option>
+<option value="e580-il">e580-il - EPPLER 580 AIRFOIL</option>
+<option value="e582-il">e582-il - EPPLER 582 AIRFOIL</option>
+<option value="e583-il">e583-il - EPPLER 583 AIRFOIL</option>
+<option value="e584-il">e584-il - EPPLER 584 AIRFOIL</option>
+<option value="e585-il">e585-il - EPPLER 585 AIRFOIL</option>
+<option value="e587-il">e587-il - EPPLER 587 AIRFOIL</option>
+<option value="e59-il">e59-il - EPPLER 59 AIRFOIL</option>
+<option value="e591-il">e591-il - E591</option>
+<option value="e593-il">e593-il - EPPLER 593 AIRFOIL</option>
+<option value="e598-il">e598-il - EPPLER 598 AIRFOIL</option>
+<option value="e603-il">e603-il - EPPLER 603 AIRFOIL</option>
+<option value="e604-il">e604-il - EPPLER 604 AIRFOIL</option>
+<option value="e61-il">e61-il - E61  (5.64%)</option>
+<option value="e62-il">e62-il - E62  (5.62%)</option>
+<option value="e625-il">e625-il - EPPLER 625 AIRFOIL</option>
+<option value="e63-il">e63-il - E63  (4.25%)</option>
+<option value="e635-il">e635-il - EPPLER 635 AIRFOIL</option>
+<option value="e636-il">e636-il - EPPLER 636 AIRFOIL</option>
+<option value="e637-il">e637-il - EPPLER 637 AIRFOIL</option>
+<option value="e638-il">e638-il - EPPLER 638 AIRFOIL</option>
+<option value="e639-il">e639-il - EPPLER 639 AIRFOIL</option>
+<option value="e64-il">e64-il - E64  (8.45%)</option>
+<option value="e642-il">e642-il - EPPLER 642 AIRFOIL</option>
+<option value="e654-il">e654-il - EPPLER 654 AIRFOIL</option>
+<option value="e655-il">e655-il - EPPLER 655 AIRFOIL</option>
+<option value="e656-il">e656-il - EPPLER 656 AIRFOIL</option>
+<option value="e657-il">e657-il - EPPLER 657 AIRFOIL</option>
+<option value="e66-il">e66-il - EPPLER 66 AIRFOIL</option>
+<option value="e662-il">e662-il - EPPLER E662 AIRFOIL</option>
+<option value="e664-il">e664-il - EPPLER 664 AIRFOIL</option>
+<option value="e668-il">e668-il - EPPLER 668 AIRFOIL</option>
+<option value="e67-il">e67-il - EPPLER 67 AIRFOIL</option>
+<option value="e678-il">e678-il - EPPLER 678 AIRFOIL</option>
+<option value="e68-il">e68-il - EPPLER 68 AIRFOIL</option>
+<option value="e682-il">e682-il - EPPLER 682 AIRFOIL</option>
+<option value="e694-il">e694-il - EPPLER 694 AIRFOIL</option>
+<option value="e71-il">e71-il - E71  (5.15%)</option>
+<option value="e715-il">e715-il - EPPLER 715 AIRFOIL</option>
+<option value="e748-il">e748-il - EPPLER 748 AIRFOIL</option>
+<option value="e793-il">e793-il - EPPLER 793 AIRFOIL</option>
+<option value="e817-il">e817-il - EPPLER 817 HYDROFOIL AIRFOIL</option>
+<option value="e818-il">e818-il - EPPLER 818 HYDROFOIL AIRFOIL</option>
+<option value="e836-il">e836-il - EPPLER E836 HYDROFOIL AIRFOIL</option>
+<option value="e837-il">e837-il - EPPLER E837 HYDROFOIL AIRFOIL</option>
+<option value="e838-il">e838-il - EPPLER E838 HYDROFOIL AIRFOIL</option>
+<option value="e850-il">e850-il - EPPLER E850 AIRFOIL</option>
+<option value="e851-il">e851-il - EPPLER E851 AIRFOIL</option>
+<option value="e852-il">e852-il - EPPLER E852 AIRFOIL</option>
+<option value="e853-il">e853-il - EPPLER E853 AIRFOIL</option>
+<option value="e854-il">e854-il - EPPLER E854 AIRFOIL</option>
+<option value="e855-il">e855-il - EPPLER 855 AIRFOIL</option>
+<option value="e856-il">e856-il - EPPLER 856 AIRFOIL</option>
+<option value="e857-il">e857-il - EPPLER 857 AIRFOIL</option>
+<option value="e858-il">e858-il - EPPLER 858 AIRFOIL</option>
+<option value="e862-il">e862-il - EPPLER 862 STRUT AIRFOIL</option>
+<option value="e863-il">e863-il - EPPLER 863 STRUT AIRFOIL</option>
+<option value="e864-il">e864-il - EPPLER 864 STRUT AIRFOIL</option>
+<option value="e874-il">e874-il - EPPLER 874 HYDROFOIL AIRFOIL</option>
+<option value="e904-il">e904-il - EPPLER 904 AIRFOIL</option>
+<option value="e908-il">e908-il - EPPLER 908 AIRFOIL</option>
+<option value="ea61009-il">ea61009-il - EPPLER EA 6(-1)-009 AIRFOIL</option>
+<option value="ea61012-il">ea61012-il - EPPLER EA 6(-1)-012 AIRFOIL</option>
+<option value="ea81006-il">ea81006-il - EPPLER EA 8(-1)-006 AIRFOIL</option>
+<option value="ebambino7-il">ebambino7-il - E. Bambino</option>
+<option value="ec863914-il">ec863914-il - EPPLER EC 86(-3)-914 AIRFOIL</option>
+<option value="eh0009-il">eh0009-il - EH 0.0/9.0</option>
+<option value="eh1070-il">eh1070-il - Eh 1.0/7.0</option>
+<option value="eh1090-il">eh1090-il - EH 1.0/9.0</option>
+<option value="eh1590-il">eh1590-il - EH 1.5/9.0</option>
+<option value="eh2010-il">eh2010-il - EH 2.0/10</option>
+<option value="eh2012-il">eh2012-il - EH 2.0/12</option>
+<option value="eh2070-il">eh2070-il - EH 2.0/7.0</option>
+<option value="eh2510-il">eh2510-il - EH 2.5/10</option>
+<option value="eh3012-il">eh3012-il - EH 3.0/12</option>
+<option value="eiffel10-il">eiffel10-il - Eiffel 10 (Wright) - 1903 Wright Flyer airfoil</option>
+<option value="eiffel371-il">eiffel371-il - Eiffel 371 (Monge)</option>
+<option value="eiffel385-il">eiffel385-il - Eiffel 385 (S.T. Ae)</option>
+<option value="eiffel428-il">eiffel428-il - Eiffel 428 (Bleriot)</option>
+<option value="eiffel430-il">eiffel430-il - Eiffel 430 (Lachassgne)</option>
+<option value="esa40-il">esa40-il - ESA40</option>
+<option value="falcon-il">falcon-il - Falcon</option>
+<option value="fauvel-il">fauvel-il - FAUVEL 14% AIRFOIL</option>
+<option value="fg1-il">fg1-il - Fage &amp; Collins 1</option>
+<option value="fg2-il">fg2-il - Fage &amp; Collins 2</option>
+<option value="fg3-il">fg3-il - Fage &amp; Collins 3</option>
+<option value="fg4-il">fg4-il - Fage &amp; Collins 4</option>
+<option value="fx049915-il">fx049915-il - WORTMANN FX 049-915 AIRFOIL</option>
+<option value="fx05188-il">fx05188-il - WORTMANN FX 05-188 AIRFOIL</option>
+<option value="fx05191-il">fx05191-il - WORTMANN FX 05-191 AIRFOIL</option>
+<option value="fx057816-il">fx057816-il - WORTMANN FX 057-816</option>
+<option value="fx05h126-il">fx05h126-il - WORTMANN FX 05-H-126 AIRFOIL</option>
+<option value="fx082512-il">fx082512-il - WORTMANN FX 082-512 AIRFOIL</option>
+<option value="fx08s176-il">fx08s176-il - WORTMANN FX 08-S-176 AIRFOIL</option>
+<option value="fx2-il">fx2-il - WORTMANN FX 2 AIRFOIL</option>
+<option value="fx3-il">fx3-il - WORTMANN FX 3 AIRFOIL</option>
+<option value="fx38153-il">fx38153-il - FX 38-153 AIRFOIL</option>
+<option value="fx60100-il">fx60100-il - FX 60-100 AIRFOIL</option>
+<option value="fx601001-il" selected="selected">fx601001-il - FX 60-100 (126) AIRFOIL</option>
+<option value="fx60100sm-il">fx60100sm-il - FX60-100 10.0% smoothed</option>
+<option value="fx60126-il">fx60126-il - WORTMANN FX 60-126 AIRFOIL</option>
+<option value="fx601261-il">fx601261-il - WORTMANN FX 60-126/1 AIRFOIL</option>
+<option value="fx60157-il">fx60157-il - FX 60-157 AIRFOIL</option>
+<option value="fx60160-il">fx60160-il - FX 60-160 AIRFOIL</option>
+<option value="fx60177-il">fx60177-il - FX 60-177 AIRFOIL</option>
+<option value="fx61140-il">fx61140-il - FX 61-140 AIRFOIL</option>
+<option value="fx61147-il">fx61147-il - FX 61-147 AIRFOIL</option>
+<option value="fx61163-il">fx61163-il - FX 61-163 AIRFOIL</option>
+<option value="fx61168-il">fx61168-il - FX 61-168 AIRFOIL</option>
+<option value="fx61184-il">fx61184-il - FX 61-184 AIRFOIL</option>
+<option value="fx62k131-il">fx62k131-il - WORTMANN FX 62-K-131 AIRFOIL</option>
+<option value="fx62k153-il">fx62k153-il - FX 62-K-153/20 AIRFOIL</option>
+<option value="fx63100-il">fx63100-il - FX 63-100 AIRFOIL</option>
+<option value="fx63110-il">fx63110-il - FX 63-110 AIRFOIL</option>
+<option value="fx63120-il">fx63120-il - FX 63-120 AIRFOIL</option>
+<option value="fx63137-il">fx63137-il - WORTMANN FX 63-137 AIRFOIL</option>
+<option value="fx63137sm-il">fx63137sm-il - FX 63-137 13.7% smoothed</option>
+<option value="fx63143-il">fx63143-il - FX 63-143 AIRFOIL</option>
+<option value="fx63145-il">fx63145-il - FX 63-145 AIRFOIL</option>
+<option value="fx63147-il">fx63147-il - FX 63-147 AIRFOIL</option>
+<option value="fx63158-il">fx63158-il - FX 63-158 AIRFOIL</option>
+<option value="fx6617a2-il">fx6617a2-il - FX 66-17AII-182 AIRFOIL</option>
+<option value="fx6617ai-il">fx6617ai-il - WORTMANN FX 66-17AII-182 AIRFOIL (AS TESTED AT NASA)</option>
+<option value="fx66182-il">fx66182-il - FX 66-182 AIRFOIL</option>
+<option value="fx66196v-il">fx66196v-il - FX 66-S-196 V1 AIRFOIL</option>
+<option value="fx66a175-il">fx66a175-il - WORTMANN FX 66-17A-175 AIRFOIL</option>
+<option value="fx66h60-il">fx66h60-il - FX 66-H-60</option>
+<option value="fx66h80-il">fx66h80-il - FX 66-H-80</option>
+<option value="fx66s161-il">fx66s161-il - FX 66-S-161 AIRFOIL</option>
+<option value="fx66s171-il">fx66s171-il - FX 66-S-171 AIRFOIL</option>
+<option value="fx66s196-il">fx66s196-il - FX 66-S-196 AIRFOIL</option>
+<option value="fx67k150-il">fx67k150-il - FX 67-K-150/17 AIRFOIL</option>
+<option value="fx67k170-il">fx67k170-il - FX 67-K-170/17 AIRFOIL</option>
+<option value="fx68h120-il">fx68h120-il - FX 68-H-120</option>
+<option value="fx69274-il">fx69274-il - WORTMANN FX 69-274</option>
+<option value="fx69h083-il">fx69h083-il - BELL/WORTMANN FX 69-H-083 AIRFOIL</option>
+<option value="fx69h098-il">fx69h098-il - BELL/WORTMANN FX 69-H-098 AIRFOIL</option>
+<option value="fx69pr281-il">fx69pr281-il - FX 69-PR-281</option>
+<option value="fx71089a-il">fx71089a-il - WORTMANN FX 71-089A AIRFOIL</option>
+<option value="fx71120-il">fx71120-il - WORTMANN FX 71-120 AIRFOIL</option>
+<option value="fx711520-il">fx711520-il - FX 71-L-150/20 AIRFOIL</option>
+<option value="fx711525-il">fx711525-il - FX 71-L-150/25 AIRFOIL</option>
+<option value="fx711530-il">fx711530-il - FX 71-L-150/30 AIRFOIL</option>
+<option value="fx71l150-il">fx71l150-il - FX 71-L-150/30 AIRFOIL</option>
+<option value="fx72150a-il">fx72150a-il - WORTMANN FX 72-MS-150A AIRFOIL</option>
+<option value="fx72150b-il">fx72150b-il - WORTMANN FX 72-MS-150B AIRFOIL</option>
+<option value="fx72ls160-il">fx72ls160-il - FX 72-LS-160</option>
+<option value="fx73170-il">fx73170-il - WORTMANN FX 73-170</option>
+<option value="fx73170a-il">fx73170a-il - WORTMANN FX 73-170 A</option>
+<option value="fx73cl1152-il">fx73cl1152-il - FX 73-CL1-152</option>
+<option value="fx73cl2152-il">fx73cl2152-il - FX 73-CL2-152</option>
+<option value="fx73cl3152-il">fx73cl3152-il - FX 73-CL3-152</option>
+<option value="fx73k170-il">fx73k170-il - FX 73-K-170/22</option>
+<option value="fx74080-il">fx74080-il - WORTMANN FX 74-080</option>
+<option value="fx74130wp1-il">fx74130wp1-il - FX 74-130 WP1</option>
+<option value="fx74130wp2-il">fx74130wp2-il - 74-130 WP2</option>
+<option value="fx74130wp2mod-il">fx74130wp2mod-il - 74-130 WP2 MOD</option>
+<option value="fx74cl5140-il">fx74cl5140-il - FX74_CL5_140</option>
+<option value="fx74cl6140-il">fx74cl6140-il - FX 74-CL6-140</option>
+<option value="fx74modsm-il">fx74modsm-il - FX 74-Cl5-140 MOD  (smoothed)</option>
+<option value="fx75141-il">fx75141-il - WORTMANN FX 75-141</option>
+<option value="fx75193-il">fx75193-il - WORTMANN FX 75-193</option>
+<option value="fx75vg166-il">fx75vg166-il - FX 75-VG-166/22</option>
+<option value="fx76100-il">fx76100-il - WORTMANN FX 76-100</option>
+<option value="fx76120-il">fx76120-il - WORTMANN FX 76-120</option>
+<option value="fx76mp120-il">fx76mp120-il - FX 76-MP-120</option>
+<option value="fx76mp140-il">fx76mp140-il - FX 76-MP-140</option>
+<option value="fx76mp160-il">fx76mp160-il - FX 76-MP-160</option>
+<option value="fx77080-il">fx77080-il - WORTMANN FX 77-080</option>
+<option value="fx77w121-il">fx77w121-il - FX 77-W-121</option>
+<option value="fx77w153-il">fx77w153-il - WORTMANN FX 77-W-153 AIRFOIL</option>
+<option value="fx77w258-il">fx77w258-il - WORTMANN FX 77-W-258 AIRFOIL</option>
+<option value="fx77w270-il">fx77w270-il - FX 77-W-270</option>
+<option value="fx77w270s-il">fx77w270s-il - FX 77-W-270S</option>
+<option value="fx77w343-il">fx77w343-il - WORTMANN FX 77-W-343 AIRFOIL</option>
+<option value="fx78k140-il">fx78k140-il - FX 78-K-140/20</option>
+<option value="fx78k140a20-il">fx78k140a20-il - FX 78-K-140 A/20</option>
+<option value="fx78k150-il">fx78k150-il - FX 78-K-150/20</option>
+<option value="fx78k161-il">fx78k161-il - FX 78-K-161</option>
+<option value="fx78pk188-il">fx78pk188-il - FX 78-PK-188/20</option>
+<option value="fx79k144-il">fx79k144-il - WORTMANN FX 79-K-144/17 AIRFOIL</option>
+<option value="fx79l100-il">fx79l100-il - FX 79-L-100</option>
+<option value="fx79l120-il">fx79l120-il - FX 79-L-120</option>
+<option value="fx79w151a-il">fx79w151a-il - FX 79-W-151 A</option>
+<option value="fx79w470a-il">fx79w470a-il - FX 79-W-470A</option>
+<option value="fx79w660a-il">fx79w660a-il - FX 79-W-660A</option>
+<option value="fx80080-il">fx80080-il - WORTMANN FX 80-080</option>
+<option value="fx83w108-il">fx83w108-il - FX 83-W-108</option>
+<option value="fx83w160-il">fx83w160-il - FX 83-W-160</option>
+<option value="fx83w227-il">fx83w227-il - FX 83-W-227</option>
+<option value="fx84w097-il">fx84w097-il - FX 84-W-097</option>
+<option value="fx84w127-il">fx84w127-il - FX 84-W-127</option>
+<option value="fx84w140-il">fx84w140-il - FX 84-W-140</option>
+<option value="fx84w150-il">fx84w150-il - FX 84-W-150</option>
+<option value="fx84w175-il">fx84w175-il - FX 84-W-175</option>
+<option value="fx84w218-il">fx84w218-il - FX 84-W-218</option>
+<option value="fxl142k-il">fxl142k-il - FX LIII-142 K 25 AIRFOIL</option>
+<option value="fxlv152-il">fxlv152-il - WORTMANN FX L V-152 AIRFOIL</option>
+<option value="fxm2-il">fxm2-il - WORTMANN FX M2 AIRFOIL</option>
+<option value="fxs02196-il">fxs02196-il - FX S 02-196 AIRFOIL</option>
+<option value="fxs03182-il">fxs03182-il - FX S 03-182 AIRFOIL</option>
+<option value="fxs21158-il">fxs21158-il - FX S 02/1-158 AIRFOIL</option>
+<option value="geminism-il">geminism-il - GEMINI (smoothed)</option>
+<option value="giiia-il">giiia-il - GIII BL0 AIRFOIL</option>
+<option value="giiib-il">giiib-il - GIII BL45 AIRFOIL</option>
+<option value="giiic-il">giiic-il - GIII BL75 AIRFOIL</option>
+<option value="giiid-il">giiid-il - GIII BL86 AIRFOIL (modified line 31)</option>
+<option value="giiie-il">giiie-il - GIII BL126 AIRFOIL</option>
+<option value="giiif-il">giiif-il - GIII BL145 AIRFOIL</option>
+<option value="giiig-il">giiig-il - GIII BL167 AIRFOIL</option>
+<option value="giiih-il">giiih-il - GIII BL207 AIRFOIL</option>
+<option value="giiii-il">giiii-il - GIII BL288 AIRFOIL</option>
+<option value="giiij-il">giiij-il - GIII BL332 AIRFOIL</option>
+<option value="giiik-il">giiik-il - GIII BL369 AIRFOIL</option>
+<option value="giiil-il">giiil-il - GIII BL387 AIRFOIL</option>
+<option value="giiim-il">giiim-il - GIII BL430 AIRFOIL</option>
+<option value="giiin-il">giiin-il - GIII BL450 AIRFOIL</option>
+<option value="glennmartin2-il">glennmartin2-il - Glenn Martin 2</option>
+<option value="glennmartin3-il">glennmartin3-il - Glenn Martin 3</option>
+<option value="glennmartin4-il">glennmartin4-il - Glenn Martin 4</option>
+<option value="gm15sm-il">gm15sm-il - GM15 (smoothed)</option>
+<option value="goe05k-il">goe05k-il - GOE 5K AIRFOIL</option>
+<option value="goe06k-il">goe06k-il - GOE 6K AIRFOIL</option>
+<option value="goe07k-il">goe07k-il - GOE 7K AIRFOIL</option>
+<option value="goe08k-il">goe08k-il - GOE 8K AIRFOIL</option>
+<option value="goe09k-il">goe09k-il - GOE 9K AIRFOIL</option>
+<option value="goe100-il">goe100-il - GOE 100 (SOPWITH) AIRFOIL</option>
+<option value="goe101-il">goe101-il - GOE 101 AIRFOIL</option>
+<option value="goe10k-il">goe10k-il - GOE 10K AIRFOIL</option>
+<option value="goe113-il">goe113-il - GOE 113 AIRFOIL</option>
+<option value="goe114-il">goe114-il - GOE 114 (MVA MK.1) AIRFOIL</option>
+<option value="goe115-il">goe115-il - GOE 115 (MVA MK.2) AIRFOIL</option>
+<option value="goe116-il">goe116-il - GOE 116 (MVA MK.3) AIRFOIL</option>
+<option value="goe117-il">goe117-il - GOE 117 (MVA MK.4) AIRFOIL</option>
+<option value="goe118-il">goe118-il - GOE 118 (MVA MK.7) AIRFOIL</option>
+<option value="goe11k-il">goe11k-il - GOE 11K AIRFOIL</option>
+<option value="goe121-il">goe121-il - GOE 121 (MVA H.1) AIRFOIL</option>
+<option value="goe122-il">goe122-il - GOE 122 (MVA H.2) AIRFOIL</option>
+<option value="goe123-il">goe123-il - GOE 123 AIRFOIL</option>
+<option value="goe124-il">goe124-il - GOE 124 (MVA H.4) AIRFOIL</option>
+<option value="goe12k-il">goe12k-il - GOE 12K AIRFOIL</option>
+<option value="goe133-il">goe133-il - GOE 133 (MVA H.11) AIRFOIL</option>
+<option value="goe134-il">goe134-il - GOE 134 (MVA H.12) AIRFOIL</option>
+<option value="goe137-il">goe137-il - GOE 137 (MVA H.15) AIRFOIL</option>
+<option value="goe13k-il">goe13k-il - GOE 13K AIRFOIL</option>
+<option value="goe14-il">goe14-il - GOE 14 AIRFOIL</option>
+<option value="goe140-il">goe140-il - GOE 140 (MVA H.17) AIRFOIL</option>
+<option value="goe142-il">goe142-il - GOE 142 (MVA H.19) AIRFOIL</option>
+<option value="goe143-il">goe143-il - GOE 143 (MVA H.20) AIRFOIL</option>
+<option value="goe144-il">goe144-il - GOE 144 (MVA H.21) AIRFOIL</option>
+<option value="goe147-il">goe147-il - GOE 147 (MVA H.6) AIRFOIL</option>
+<option value="goe14k-il">goe14k-il - GOE 14K AIRFOIL</option>
+<option value="goe15-il">goe15-il - GOE 15 AIRFOIL</option>
+<option value="goe155-il">goe155-il - GOE 155 (SSW D.1) AIRFOIL</option>
+<option value="goe15k-il">goe15k-il - GOE 15K AIRFOIL</option>
+<option value="goe164-il">goe164-il - GOE 164 (MVA MK.10) AIRFOIL</option>
+<option value="goe165-il">goe165-il - GOE 165 (MVA MK.11) AIRFOIL</option>
+<option value="goe167-il">goe167-il - GOE 167 (V.KARMAN PROP.2) AIRFOIL</option>
+<option value="goe16k-il">goe16k-il - GOE 16K AIRFOIL</option>
+<option value="goe173-il">goe173-il - GOE 173 (ALBATROS 6020) AIRFOIL</option>
+<option value="goe174-il">goe174-il - GOE 174 (ALBATROS 5020) AIRFOIL</option>
+<option value="goe176-il">goe176-il - GOE 176 (ALBATROS 7020) AIRFOIL</option>
+<option value="goe177-il">goe177-il - GOE 177 AIRFOIL</option>
+<option value="goe178-il">goe178-il - GOE 178 AIRFOIL</option>
+<option value="goe180-il">goe180-il - GOE 180 (MVA H.26) AIRFOIL</option>
+<option value="goe182-il">goe182-il - GOE 182 (MVA H.27) AIRFOIL</option>
+<option value="goe184-il">goe184-il - GOE 184 (MVA H.29) AIRFOIL</option>
+<option value="goe187-il">goe187-il - GOE 187 (SCHTTE-LANZ 2U10) AIRFOIL</option>
+<option value="goe188-il">goe188-il - GOE 188 (SCHTTE-LANZ 3U10) AIRFOIL</option>
+<option value="goe190-il">goe190-il - GOE 190 (MVA MK.18) AIRFOIL</option>
+<option value="goe195-il">goe195-il - GOE 195 AIRFOIL</option>
+<option value="goe198-il">goe198-il - GOE 198 (L.F.G. 5294) AIRFOIL</option>
+<option value="goe199-il">goe199-il - GOE 199 (L.F.G. 5406) AIRFOIL</option>
+<option value="goe207-il">goe207-il - GOE 207 (AVIATIK V8) AIRFOIL</option>
+<option value="goe210-il">goe210-il - GOE 210 (DAIMLER) AIRFOIL</option>
+<option value="goe217-il">goe217-il - GOE 217 (MVA MK.12) AIRFOIL</option>
+<option value="goe222-il">goe222-il - GOE 222 (MVA H.33) AIRFOIL</option>
+<option value="goe223-il">goe223-il - GOE 223 (MVA H.34) AIRFOIL</option>
+<option value="goe225-il">goe225-il - GOE 225 (MVA H.35) AIRFOIL</option>
+<option value="goe226-il">goe226-il - GOE 226 (MVA H.36) AIRFOIL</option>
+<option value="goe227-il">goe227-il - GOE 227 (MVA H.37) AIRFOIL</option>
+<option value="goe228-il">goe228-il - GOE 228 (MVA H.38) AIRFOIL</option>
+<option value="goe229-il">goe229-il - GOE 229 (MVA H.39) AIRFOIL</option>
+<option value="goe233-il">goe233-il - GOE 233 (MVA CA4) AIRFOIL</option>
+<option value="goe234-il">goe234-il - GOE 234 (MVA CA5) AIRFOIL</option>
+<option value="goe235-il">goe235-il - GOE 235 (SCHTTE-LANZ) AIRFOIL</option>
+<option value="goe238-il">goe238-il - GOE 238 (HANSA-BRANDENBURG) AIRFOIL</option>
+<option value="goe239-il">goe239-il - GOE 239 (MVA H.31) AIRFOIL</option>
+<option value="goe240-il">goe240-il - GOE 240 (KOLLER) AIRFOIL</option>
+<option value="goe241-il">goe241-il - GOE 241 (MVA PR.1) AIRFOIL</option>
+<option value="goe242-il">goe242-il - GOE 242 (MVA PR.2) AIRFOIL</option>
+<option value="goe243-il">goe243-il - GOE 243 (MVA PR.3) AIRFOIL</option>
+<option value="goe244-il">goe244-il - GOE 244 (MVA PR.4) AIRFOIL</option>
+<option value="goe255-il">goe255-il - GOE 255 (MVA CA.6) AIRFOIL</option>
+<option value="goe256-il">goe256-il - GOE 256 (JUNKERS E) AIRFOIL</option>
+<option value="goe257-il">goe257-il - GOE 257 AIRFOIL</option>
+<option value="goe264-il">goe264-il - GOE 264 AIRFOIL</option>
+<option value="goe265-il">goe265-il - GOE 265 AIRFOIL</option>
+<option value="goe269-il">goe269-il - GOE 269 AIRFOIL</option>
+<option value="goe274-il">goe274-il - GOE 274 (DAIMLER V) AIRFOIL</option>
+<option value="goe275-il">goe275-il - GOE 275 (DAIMLER VI) AIRFOIL</option>
+<option value="goe276-il">goe276-il - GOE 276 (DAIMLER VII) AIRFOIL</option>
+<option value="goe277-il">goe277-il - GOE 277 (DAIMLER VIII) AIRFOIL</option>
+<option value="goe278-il">goe278-il - GOE 278 (DAIMLER IX) AIRFOIL</option>
+<option value="goe279-il">goe279-il - GOE 279 (DAIMLER X) AIRFOIL</option>
+<option value="goe280-il">goe280-il - GOE 280 (DAIMLER XI) AIRFOIL</option>
+<option value="goe281-il">goe281-il - GOE 281 (DAIMLER XII) AIRFOIL</option>
+<option value="goe282-il">goe282-il - GOE 282 (DAIMLER XIII) AIRFOIL</option>
+<option value="goe284-il">goe284-il - GOE 284 AIRFOIL</option>
+<option value="goe285-il">goe285-il - GOE 285 AIRFOIL</option>
+<option value="goe286-il">goe286-il - GOE 286 AIRFOIL</option>
+<option value="goe287-il">goe287-il - GOE 287 AIRFOIL</option>
+<option value="goe288-il">goe288-il - GOE 288 AIRFOIL</option>
+<option value="goe289-il">goe289-il - GOE 289 (MVA 289) AIRFOIL</option>
+<option value="goe290-il">goe290-il - GOE 290 (MVA 290) AIRFOIL</option>
+<option value="goe298-il">goe298-il - GOE 298 AIRFOIL</option>
+<option value="goe29b-il">goe29b-il - GOE 29B AIRFOIL</option>
+<option value="goe300-il">goe300-il - GOE 300 (FRIEDRICHSHAFEN G20) AIRFOIL</option>
+<option value="goe301-il">goe301-il - GOE 301 (FRIEDRICHSHAFEN G 13) AIRFOIL</option>
+<option value="goe303-il">goe303-il - GOE 303 (FRIEDRICHSHAFEN G03) AIRFOIL</option>
+<option value="goe304-il">goe304-il - GOE 304 (FRIEDRICHSHAFEN G02) AIRFOIL</option>
+<option value="goe308-il">goe308-il - GOE 308 (MVA H.40) AIRFOIL</option>
+<option value="goe309-il">goe309-il - GOE 309 (MVA H.41) AIRFOIL</option>
+<option value="goe310-il">goe310-il - GOE 310 (MVA H.42) AIRFOIL</option>
+<option value="goe311-il">goe311-il - GOE 311 (MVA H.43) AIRFOIL</option>
+<option value="goe314-il">goe314-il - GOE 314 (HANSA-BRANDENBURG) AIRFOIL</option>
+<option value="goe315-il">goe315-il - GOE 315 (HANSA-BRANDENBURG III.5) AIRFOIL</option>
+<option value="goe316-il">goe316-il - GOE 316 (HANSA-BRANDENBURG IV.5) AIRFOIL</option>
+<option value="goe318-il">goe318-il - GOE 318 (HANSA-BRANDENBURG VI.5) AIRFOIL</option>
+<option value="goe319-il">goe319-il - GOE 319 (HANSA-BRANDENBURG II) AIRFOIL</option>
+<option value="goe320-il">goe320-il - GOE 320 (HANSA-BRANDENBURG II.1) AIRFOIL</option>
+<option value="goe321-il">goe321-il - GOE 321 (HANSA-BRANDENBURG III.1) AIRFOIL</option>
+<option value="goe322-il">goe322-il - GOE 322 (HANSA-BRANDENBURG IV.1) AIRFOIL</option>
+<option value="goe323-il">goe323-il - GOE 323 (HANSA-BRANDENBURG V.1) AIRFOIL</option>
+<option value="goe324-il">goe324-il - GOE 324 (HANSA-BRANDENBURG) AIRFOIL</option>
+<option value="goe325-il">goe325-il - GOE 325 (PFALZ 54) AIRFOIL</option>
+<option value="goe326-il">goe326-il - GOE 326 (PFALZ 55) AIRFOIL</option>
+<option value="goe328-il">goe328-il - GOE 328 AIRFOIL</option>
+<option value="goe329-il">goe329-il - GOE 329 (PFALZ 58) AIRFOIL</option>
+<option value="goe330-il">goe330-il - GOE 330 (PFALZ 59) AIRFOIL</option>
+<option value="goe331-il">goe331-il - GOE 331 (PFALZ 60) AIRFOIL</option>
+<option value="goe332-il">goe332-il - GOE 332 (PFALZ 61) AIRFOIL</option>
+<option value="goe335-il">goe335-il - GOE 335 (D.F.W.) AIRFOIL</option>
+<option value="goe336-il">goe336-il - GOE 336 (MVA H.44) AIRFOIL</option>
+<option value="goe342-il">goe342-il - GOE 342 AIRFOIL</option>
+<option value="goe344-il">goe344-il - GOE 344 (PFALZ 71) AIRFOIL</option>
+<option value="goe346-il">goe346-il - GOE 346 (FRIEDRICHSHAFEN-STAAKEN) AIRFOIL</option>
+<option value="goe358-il">goe358-il - GOE 358 AIRFOIL</option>
+<option value="goe359-il">goe359-il - GOE 359 AIRFOIL</option>
+<option value="goe360-il">goe360-il - GOE 360 AIRFOIL</option>
+<option value="goe361-il">goe361-il - GOE 361 AIRFOIL</option>
+<option value="goe362-il">goe362-il - GOE 362 AIRFOIL</option>
+<option value="goe363-il">goe363-il - GOE 363 AIRFOIL</option>
+<option value="goe364-il">goe364-il - GOE 364 AIRFOIL</option>
+<option value="goe365-il">goe365-il - GOE 365 AIRFOIL</option>
+<option value="goe366-il">goe366-il - GOE 366 AIRFOIL</option>
+<option value="goe367-il">goe367-il - GOE 367 AIRFOIL</option>
+<option value="goe368-il">goe368-il - GOE 368 AIRFOIL</option>
+<option value="goe369-il">goe369-il - GOE 369 AIRFOIL</option>
+<option value="goe370-il">goe370-il - GOE 370 AIRFOIL</option>
+<option value="goe371-il">goe371-il - GOE 371 AIRFOIL</option>
+<option value="goe372-il">goe372-il - GOE 372 AIRFOIL</option>
+<option value="goe373-il">goe373-il - GOE 373 AIRFOIL</option>
+<option value="goe374-il">goe374-il - GOE 374 AIRFOIL</option>
+<option value="goe375-il">goe375-il - GOE 375 AIRFOIL</option>
+<option value="goe376-il">goe376-il - GOE 376 AIRFOIL</option>
+<option value="goe377-il">goe377-il - GOE 377 AIRFOIL</option>
+<option value="goe379-il">goe379-il - GOE 379 AIRFOIL</option>
+<option value="goe380-il">goe380-il - GOE 380 AIRFOIL</option>
+<option value="goe381-il">goe381-il - GOE 381 AIRFOIL</option>
+<option value="goe382-il">goe382-il - GOE 382 AIRFOIL</option>
+<option value="goe383-il">goe383-il - GOE 383 AIRFOIL</option>
+<option value="goe384-il">goe384-il - GOE 384 AIRFOIL</option>
+<option value="goe385-il">goe385-il - GOE 385 AIRFOIL</option>
+<option value="goe386-il">goe386-il - GOE 386 AIRFOIL</option>
+<option value="goe387-il">goe387-il - GOE 387 AIRFOIL</option>
+<option value="goe388-il">goe388-il - GOE 388 AIRFOIL</option>
+<option value="goe389-il">goe389-il - GOE 389 AIRFOIL</option>
+<option value="goe390-il">goe390-il - GOE 390 AIRFOIL</option>
+<option value="goe391-il">goe391-il - GOE 391 AIRFOIL</option>
+<option value="goe392-il">goe392-il - GOE 392 AIRFOIL</option>
+<option value="goe393-il">goe393-il - GOE 393 AIRFOIL</option>
+<option value="goe394-il">goe394-il - GOE 394 AIRFOIL</option>
+<option value="goe395-il">goe395-il - GOE 395 AIRFOIL</option>
+<option value="goe396-il">goe396-il - GOE 396 AIRFOIL</option>
+<option value="goe397-il">goe397-il - GOE 397 AIRFOIL</option>
+<option value="goe398-il">goe398-il - GOE 398 AIRFOIL</option>
+<option value="goe399-il">goe399-il - GOE 399 AIRFOIL</option>
+<option value="goe400-il">goe400-il - GOE 400 AIRFOIL</option>
+<option value="goe401-il">goe401-il - GOE 401 AIRFOIL</option>
+<option value="goe402-il">goe402-il - GOE 402 AIRFOIL</option>
+<option value="goe403-il">goe403-il - GOE 403 AIRFOIL</option>
+<option value="goe404-il">goe404-il - GOE 404 AIRFOIL</option>
+<option value="goe405-il">goe405-il - GOE 405 AIRFOIL</option>
+<option value="goe406-il">goe406-il - GOE 406 AIRFOIL</option>
+<option value="goe407-il">goe407-il - GOE 407 AIRFOIL</option>
+<option value="goe408-il">goe408-il - GOE 408 AIRFOIL</option>
+<option value="goe409-il">goe409-il - GOE 409 AIRFOIL</option>
+<option value="goe410-il">goe410-il - GOE 410 AIRFOIL</option>
+<option value="goe411-il">goe411-il - GOE 411 AIRFOIL</option>
+<option value="goe412-il">goe412-il - GOE 412 AIRFOIL</option>
+<option value="goe413-il">goe413-il - GOE 413 AIRFOIL</option>
+<option value="goe414-il">goe414-il - GOE 414 AIRFOIL</option>
+<option value="goe415-il">goe415-il - GOE 415 AIRFOIL</option>
+<option value="goe416a-il">goe416a-il - GOE 416A AIRFOIL</option>
+<option value="goe417-il">goe417-il - GOE 417 AIRFOIL</option>
+<option value="goe417a-il">goe417a-il - GOE 417A (GEW. PLATTE) AIRFOIL</option>
+<option value="goe418-il">goe418-il - GOE 418 AIRFOIL</option>
+<option value="goe419-il">goe419-il - GOE 419 AIRFOIL</option>
+<option value="goe420-il">goe420-il - GOE 420 AIRFOIL</option>
+<option value="goe421-il">goe421-il - GOE 421 AIRFOIL</option>
+<option value="goe422-il">goe422-il - GOE 422 AIRFOIL</option>
+<option value="goe423-il">goe423-il - GOE 423 AIRFOIL</option>
+<option value="goe424-il">goe424-il - GOE 424 AIRFOIL</option>
+<option value="goe425-il">goe425-il - GOE 425 AIRFOIL</option>
+<option value="goe426-il">goe426-il - GOE 426 AIRFOIL</option>
+<option value="goe427-il">goe427-il - GOE 427 AIRFOIL</option>
+<option value="goe428-il">goe428-il - GOE 428 AIRFOIL</option>
+<option value="goe429-il">goe429-il - GOE 429 AIRFOIL</option>
+<option value="goe430-il">goe430-il - GOE 430 AIRFOIL</option>
+<option value="goe431-il">goe431-il - GOE 431 AIRFOIL</option>
+<option value="goe432-il">goe432-il - GOE 432 AIRFOIL</option>
+<option value="goe433-il">goe433-il - GOE 433 AIRFOIL</option>
+<option value="goe434-il">goe434-il - GOE 434 AIRFOIL</option>
+<option value="goe435-il">goe435-il - GOE 435 AIRFOIL</option>
+<option value="goe436-il">goe436-il - GOE 436 AIRFOIL</option>
+<option value="goe437-il">goe437-il - GOE 437 AIRFOIL</option>
+<option value="goe438-il">goe438-il - GOE 438 AIRFOIL</option>
+<option value="goe439-il">goe439-il - GOE 439 AIRFOIL</option>
+<option value="goe440-il">goe440-il - GOE 440 AIRFOIL</option>
+<option value="goe441-il">goe441-il - GOE 441 AIRFOIL</option>
+<option value="goe442-il">goe442-il - GOE 442 AIRFOIL</option>
+<option value="goe443-il">goe443-il - GOE 443 AIRFOIL</option>
+<option value="goe444-il">goe444-il - GOE 444 AIRFOIL</option>
+<option value="goe445-il">goe445-il - GOE 445 AIRFOIL</option>
+<option value="goe446-il">goe446-il - GOE 446 AIRFOIL</option>
+<option value="goe447-il">goe447-il - GOE 447 AIRFOIL</option>
+<option value="goe448-il">goe448-il - GOE 448 AIRFOIL</option>
+<option value="goe449-il">goe449-il - GOE 449 AIRFOIL</option>
+<option value="goe450-il">goe450-il - GOE 450 AIRFOIL</option>
+<option value="goe451-il">goe451-il - GOE 451 AIRFOIL (modified line 6)</option>
+<option value="goe456-il">goe456-il - GOE 456 AIRFOIL</option>
+<option value="goe457-il">goe457-il - GOE 457 AIRFOIL</option>
+<option value="goe458-il">goe458-il - GOE 458 AIRFOIL</option>
+<option value="goe459-il">goe459-il - GOE 459 AIRFOIL</option>
+<option value="goe460-il">goe460-il - GOE 460 AIRFOIL</option>
+<option value="goe462-il">goe462-il - GOE 462 AIRFOIL</option>
+<option value="goe464-il">goe464-il - GOE 464 AIRFOIL</option>
+<option value="goe474-il">goe474-il - GOE 474 AIRFOIL</option>
+<option value="goe476-il">goe476-il - GOE 476 AIRFOIL</option>
+<option value="goe477-il">goe477-il - GOE 477 AIRFOIL</option>
+<option value="goe478-il">goe478-il - GOE 478 AIRFOIL</option>
+<option value="goe479-il">goe479-il - GOE 479 AIRFOIL</option>
+<option value="goe480-il">goe480-il - GOE 480 AIRFOIL</option>
+<option value="goe481-il">goe481-il - GOE 481 AIRFOIL</option>
+<option value="goe481a-il">goe481a-il - GOE 481A AIRFOIL</option>
+<option value="goe482-il">goe482-il - GOE 482 AIRFOIL</option>
+<option value="goe483-il">goe483-il - GOE 483 AIRFOIL</option>
+<option value="goe484-il">goe484-il - GOE 484 AIRFOIL</option>
+<option value="goe488-il">goe488-il - GOE 488 AIRFOIL</option>
+<option value="goe490-il">goe490-il - GOE 490 AIRFOIL</option>
+<option value="goe491-il">goe491-il - GOE 491 AIRFOIL</option>
+<option value="goe492-il">goe492-il - GOE 492 AIRFOIL</option>
+<option value="goe493-il">goe493-il - GOE 493 AIRFOIL</option>
+<option value="goe494-il">goe494-il - GOE 494 AIRFOIL</option>
+<option value="goe495-il">goe495-il - GOE 495 AIRFOIL</option>
+<option value="goe496-il">goe496-il - GOE 496 AIRFOIL</option>
+<option value="goe497-il">goe497-il - GOE 497 AIRFOIL</option>
+<option value="goe498-il">goe498-il - GOE 498 AIRFOIL</option>
+<option value="goe499-il">goe499-il - GOE 499 AIRFOIL</option>
+<option value="goe500-il">goe500-il - GOE 500 AIRFOIL</option>
+<option value="goe501-il">goe501-il - GOE 501 AIRFOIL</option>
+<option value="goe502-il">goe502-il - GOE 502 AIRFOIL</option>
+<option value="goe503-il">goe503-il - GOE 503 AIRFOIL</option>
+<option value="goe504-il">goe504-il - GOE 504 AIRFOIL</option>
+<option value="goe505-il">goe505-il - GOE 505 AIRFOIL</option>
+<option value="goe506-il">goe506-il - GOE 506 AIRFOIL</option>
+<option value="goe507-il">goe507-il - GOE 507 AIRFOIL</option>
+<option value="goe508-il">goe508-il - GOE 508 AIRFOIL</option>
+<option value="goe509-il">goe509-il - GOE 509 AIRFOIL</option>
+<option value="goe510-il">goe510-il - GOE 510 AIRFOIL</option>
+<option value="goe511-il">goe511-il - GOE 511 AIRFOIL</option>
+<option value="goe512-il">goe512-il - GOE 512 AIRFOIL</option>
+<option value="goe513-il">goe513-il - GOE 513 AIRFOIL</option>
+<option value="goe514-il">goe514-il - GOE 514 AIRFOIL</option>
+<option value="goe515-il">goe515-il - GOE 515 AIRFOIL</option>
+<option value="goe517-il">goe517-il - GOE 517 AIRFOIL</option>
+<option value="goe518-il">goe518-il - GOE 518 AIRFOIL</option>
+<option value="goe522-il">goe522-il - GOE 522 AIRFOIL</option>
+<option value="goe523-il">goe523-il - GOE 523 AIRFOIL</option>
+<option value="goe525-il">goe525-il - GOE 525 AIRFOIL</option>
+<option value="goe526-il">goe526-il - GOE 526 AIRFOIL</option>
+<option value="goe527-il">goe527-il - GOE 527 AIRFOIL</option>
+<option value="goe528-il">goe528-il - GOE 528 AIRFOIL</option>
+<option value="goe529-il">goe529-il - GOE 529 AIRFOIL</option>
+<option value="goe530-il">goe530-il - GOE 530 AIRFOIL</option>
+<option value="goe531-il">goe531-il - GOE 531 AIRFOIL</option>
+<option value="goe532-il">goe532-il - GOE 532 AIRFOIL</option>
+<option value="goe533-il">goe533-il - GOE 533 AIRFOIL</option>
+<option value="goe534-il">goe534-il - GOE 534 AIRFOIL</option>
+<option value="goe535-il">goe535-il - GOE 535 AIRFOIL</option>
+<option value="goe54-il">goe54-il - GOE 54 AIRFOIL</option>
+<option value="goe546-il">goe546-il - GOE 546 AIRFOIL</option>
+<option value="goe547-il">goe547-il - GOE 547 AIRFOIL</option>
+<option value="goe548-il">goe548-il - GOE 548 AIRFOIL</option>
+<option value="goe549-il">goe549-il - GOE 549 AIRFOIL</option>
+<option value="goe55-il">goe55-il - GOE 55 AIRFOIL</option>
+<option value="goe550-il">goe550-il - GOE 550 AIRFOIL</option>
+<option value="goe553-il">goe553-il - GOE 553 AIRFOIL</option>
+<option value="goe559-il">goe559-il - GOE 559 AIRFOIL</option>
+<option value="goe561-il">goe561-il - GOE 561 AIRFOIL</option>
+<option value="goe562-il">goe562-il - GOE 562 AIRFOIL</option>
+<option value="goe563-il">goe563-il - GOE 563 AIRFOIL</option>
+<option value="goe564-il">goe564-il - GOE 564 AIRFOIL</option>
+<option value="goe565-il">goe565-il - GOE 565 AIRFOIL</option>
+<option value="goe566-il">goe566-il - GOE 566 AIRFOIL</option>
+<option value="goe567-il">goe567-il - GOE 567 AIRFOIL</option>
+<option value="goe57-il">goe57-il - GOE 57 AIRFOIL</option>
+<option value="goe570-il">goe570-il - GOE 570 AIRFOIL</option>
+<option value="goe571-il">goe571-il - GOE 571 AIRFOIL</option>
+<option value="goe572-il">goe572-il - GOE 572 AIRFOIL</option>
+<option value="goe573-il">goe573-il - GOE 573 AIRFOIL</option>
+<option value="goe574-il">goe574-il - GOE 574 AIRFOIL</option>
+<option value="goe575-il">goe575-il - GOE 575 AIRFOIL</option>
+<option value="goe584-il">goe584-il - GOE 584 AIRFOIL</option>
+<option value="goe585-il">goe585-il - GOE 585 AIRFOIL</option>
+<option value="goe587-il">goe587-il - GOE 587 AIRFOIL</option>
+<option value="goe590-il">goe590-il - GOE 590 AIRFOIL</option>
+<option value="goe591-il">goe591-il - GOE 591 AIRFOIL</option>
+<option value="goe592-il">goe592-il - GOE 592 AIRFOIL</option>
+<option value="goe593-il">goe593-il - GOE 593 AIRFOIL</option>
+<option value="goe595-il">goe595-il - GOE 595 AIRFOIL</option>
+<option value="goe596-il">goe596-il - GOE 596 AIRFOIL</option>
+<option value="goe598-il">goe598-il - GOE 598 AIRFOIL</option>
+<option value="goe599-il">goe599-il - GOE 599 AIRFOIL</option>
+<option value="goe600-il">goe600-il - GOE 600 AIRFOIL</option>
+<option value="goe601-il">goe601-il - GOE 601 AIRFOIL</option>
+<option value="goe602-il">goe602-il - GOE 602 AIRFOIL</option>
+<option value="goe602m-il">goe602m-il - GOE 602 MOD. AIRFOIL</option>
+<option value="goe604-il">goe604-il - GOE 604 AIRFOIL</option>
+<option value="goe610b-il">goe610b-il - GOE 610 B AIRFOIL</option>
+<option value="goe610bm-il">goe610bm-il - GOE 610-B MOD. AIRFOIL</option>
+<option value="goe611-il">goe611-il - GOE 611 AIRFOIL</option>
+<option value="goe612-il">goe612-il - GOE 612 AIRFOIL</option>
+<option value="goe613-il">goe613-il - GOE 613 AIRFOIL</option>
+<option value="goe614-il">goe614-il - GOE 614 AIRFOIL</option>
+<option value="goe615-il">goe615-il - GOE 615 AIRFOIL</option>
+<option value="goe617-il">goe617-il - GOE 617 AIRFOIL</option>
+<option value="goe619-il">goe619-il - GOE 619 AIRFOIL</option>
+<option value="goe620-il">goe620-il - GOE 620 AIRFOIL</option>
+<option value="goe621-il">goe621-il - GOE 621 AIRFOIL</option>
+<option value="goe622-il">goe622-il - GOE 622 AIRFOIL</option>
+<option value="goe623-il">goe623-il - GOE 623 AIRFOIL</option>
+<option value="goe624-il">goe624-il - GOE 624 AIRFOIL</option>
+<option value="goe625-il">goe625-il - GOE 625 AIRFOIL</option>
+<option value="goe626-il">goe626-il - GOE 626 AIRFOIL</option>
+<option value="goe627-il">goe627-il - GOE 627 AIRFOIL</option>
+<option value="goe628-il">goe628-il - GOE 628 AIRFOIL</option>
+<option value="goe629-il">goe629-il - GOE 629 AIRFOIL</option>
+<option value="goe63-il">goe63-il - GOE 63 AIRFOIL</option>
+<option value="goe630-il">goe630-il - GOE 630 AIRFOIL</option>
+<option value="goe632-il">goe632-il - GOE 632 AIRFOIL</option>
+<option value="goe633-il">goe633-il - GOE 633 AIRFOIL</option>
+<option value="goe645-il">goe645-il - GOE 645 AIRFOIL</option>
+<option value="goe646-il">goe646-il - GOE 646 AIRFOIL</option>
+<option value="goe647-il">goe647-il - GOE 647 AIRFOIL</option>
+<option value="goe648-il">goe648-il - GOE 648 AIRFOIL</option>
+<option value="goe650-il">goe650-il - GOE 650 AIRFOIL</option>
+<option value="goe652-il">goe652-il - GOE 652 AIRFOIL</option>
+<option value="goe654-il">goe654-il - GOE 654 AIRFOIL</option>
+<option value="goe655-il">goe655-il - GOE 655 AIRFOIL</option>
+<option value="goe670-il">goe670-il - GOE 670 AIRFOIL</option>
+<option value="goe673-il">goe673-il - GOE 673 AIRFOIL</option>
+<option value="goe675-il">goe675-il - GOE 675 AIRFOIL</option>
+<option value="goe676-il">goe676-il - GOE 676 (= M 12) AIRFOIL</option>
+<option value="goe677-il">goe677-il - GOE 677 (= M 6) AIRFOIL</option>
+<option value="goe679-il">goe679-il - GOE 679 AIRFOIL</option>
+<option value="goe681-il">goe681-il - GOE 681 AIRFOIL</option>
+<option value="goe682-il">goe682-il - GOE 682 AIRFOIL</option>
+<option value="goe683-il">goe683-il - GOE 683 AIRFOIL</option>
+<option value="goe685-il">goe685-il - GOE 685 AIRFOIL</option>
+<option value="goe692-il">goe692-il - GOE 692 AIRFOIL</option>
+<option value="goe693-il">goe693-il - GOE 693 AIRFOIL</option>
+<option value="goe701-il">goe701-il - GOE 701 AIRFOIL</option>
+<option value="goe702-il">goe702-il - GOE 702 AIRFOIL</option>
+<option value="goe703-il">goe703-il - GOE 703 AIRFOIL</option>
+<option value="goe704-il">goe704-il - GOE 704 AIRFOIL</option>
+<option value="goe711-il">goe711-il - GOE 711 AIRFOIL</option>
+<option value="goe723-il">goe723-il - GOE 723 AIRFOIL</option>
+<option value="goe735-il">goe735-il - GOE 735 AIRFOIL</option>
+<option value="goe738-il">goe738-il - GOE 738 AIRFOIL</option>
+<option value="goe741-il">goe741-il - GOE 741 AIRFOIL</option>
+<option value="goe744-il">goe744-il - GOE 744 AIRFOIL</option>
+<option value="goe746-il">goe746-il - GOE 746 AIRFOIL</option>
+<option value="goe758-il">goe758-il - GOE 758 AIRFOIL</option>
+<option value="goe765-il">goe765-il - Gottingen 765 airfoil (recovered). Thick: .144 LE radius: 0.02062 LE slope: 0.17300</option>
+<option value="goe766-il">goe766-il - GOE 766 AIRFOIL</option>
+<option value="goe767-il">goe767-il - GOE 767 AIRFOIL</option>
+<option value="goe769-il">goe769-il - GOE 769 AIRFOIL</option>
+<option value="goe770-il">goe770-il - GOE 770 AIRFOIL</option>
+<option value="goe775-il">goe775-il - GOE 775 AIRFOIL</option>
+<option value="goe776-il">goe776-il - GOE 776 AIRFOIL</option>
+<option value="goe777-il">goe777-il - GOE 777 AIRFOIL</option>
+<option value="goe780-il">goe780-il - GOE 780 AIRFOIL</option>
+<option value="goe79-il">goe79-il - GOE 79 (PFALZ 11) AIRFOIL</option>
+<option value="goe795-il">goe795-il - GOE 795 AIRFOIL</option>
+<option value="goe795sm-il">goe795sm-il - GOE 795 smoothed</option>
+<option value="goe796-il">goe796-il - GOE 796 AIRFOIL</option>
+<option value="goe797-il">goe797-il - GOE 797 AIRFOIL</option>
+<option value="goe798-il">goe798-il - GOE 798 AIRFOIL</option>
+<option value="goe801-il">goe801-il - GOE 801 (MVA 301) AIRFOIL</option>
+<option value="goe802-il">goe802-il - GOE 802 AIRFOIL</option>
+<option value="goe802a-il">goe802a-il - GOE 802 A AIRFOIL</option>
+<option value="goe802b-il">goe802b-il - GOE 802 B AIRFOIL</option>
+<option value="goe803h-il">goe803h-il - GOE 803 (HACKLINGER) AIRFOIL</option>
+<option value="goe804-il">goe804-il - GOE 804 (EA 8) AIRFOIL</option>
+<option value="goe81-il">goe81-il - GOE 81 AIRFOIL</option>
+<option value="goe92-il">goe92-il - GOE 92 AIRFOIL</option>
+<option value="griffith30symsuction-il">griffith30symsuction-il - Griffith 30% Suction Airfoil</option>
+<option value="gs1-il">gs1-il - SIKORSKY GS-1 AIRFOIL</option>
+<option value="gu255118-il">gu255118-il - UNIVERSITY OF GLASGOW GU25-5(11)8 AIRFOIL</option>
+<option value="hh02-il">hh02-il - HUGHES HELICOPTERS HH-02 AIRFOIL</option>
+<option value="hobie-il">hobie-il - HOBIE</option>
+<option value="hobiesm-il">hobiesm-il - HOBIESMO1.DAT</option>
+<option value="hor04-il">hor04-il - ONERA HOR04 AIRFOIL</option>
+<option value="hor07-il">hor07-il - ONERA HOR07 AIRFOIL</option>
+<option value="hor12-il">hor12-il - ONERA HOR12 AIRFOIL</option>
+<option value="hor20-il">hor20-il - ONERA HOR20 AIRFOIL</option>
+<option value="hq010-il">hq010-il - HQ 0/10 AIRFOIL</option>
+<option value="hq07-il">hq07-il - HQ 0/7 AIRFOIL</option>
+<option value="hq09-il">hq09-il - HQ 0/9 AIRFOIL</option>
+<option value="hq1010-il">hq1010-il - HQ 1.0/10 AIRFOIL</option>
+<option value="hq1012-il">hq1012-il - HQ 1.0/12 AIRFOIL</option>
+<option value="hq108-il">hq108-il - HQ 1.0/8 AIRFOIL</option>
+<option value="hq109-il">hq109-il - HQ 1.0/9 AIRFOIL</option>
+<option value="hq1510-il">hq1510-il - HQ 1.5/10 AIRFOIL</option>
+<option value="hq1511-il">hq1511-il - HQ 1.5/11 AIRFOIL</option>
+<option value="hq1512-il">hq1512-il - HQ 1.5/12 AIRFOIL</option>
+<option value="hq158-il">hq158-il - HQ 1.5/8 AIRFOIL</option>
+<option value="hq1585-il">hq1585-il - HQ 1.5/8.5 AIRFOIL</option>
+<option value="hq159-il">hq159-il - HQ 1.5/9 AIRFOIL</option>
+<option value="hq159b-il">hq159b-il - HQ 1.5/9 B AIRFOIL</option>
+<option value="hq17-il">hq17-il - HORSTMANN AND QUAST HQ-17/14.38 AIRFOIL (MEASURED)</option>
+<option value="hq2010-il">hq2010-il - HQ 2.0/10 AIRFOIL</option>
+<option value="hq2012-il">hq2012-il - HQ 2.0/12 AIRFOIL</option>
+<option value="hq208-il">hq208-il - HQ 2.0/8 AIRFOIL</option>
+<option value="hq209-il">hq209-il - HQ 2.0/9 AIRFOIL</option>
+<option value="hq2090sm-il">hq2090sm-il - HQ-2.0/9  9.0%   smoothed</option>
+<option value="hq2195-il">hq2195-il - HQ 2.1/9.5 AIRFOIL</option>
+<option value="hq2510-il">hq2510-il - HQ 2.5/10 AIRFOIL</option>
+<option value="hq2511-il">hq2511-il - HQ 2.5/11 AIRFOIL</option>
+<option value="hq2512-il">hq2512-il - HQ 2.5/12 AIRFOIL</option>
+<option value="hq258-il">hq258-il - HQ 2.5/8 AIRFOIL</option>
+<option value="hq259-il">hq259-il - HQ 2.5/9 AIRFOIL</option>
+<option value="hq2590sm-il">hq2590sm-il - HQ 2.5/9.0 smoothed by Eppler</option>
+<option value="hq259b-il">hq259b-il - HQ 2.5/9 B AIRFOIL</option>
+<option value="hq300gd2-il">hq300gd2-il - HORSTMANN AND QUAST HQ-300 GD(MOD 2) AIRFOIL</option>
+<option value="hq3010-il">hq3010-il - HQ 3.0/10 AIRFOIL</option>
+<option value="hq3011-il">hq3011-il - HQ 3.0/11 AIRFOIL</option>
+<option value="hq3012-il">hq3012-il - HQ 3.0/12 AIRFOIL</option>
+<option value="hq3013-il">hq3013-il - HQ 3.0/13 AIRFOIL</option>
+<option value="hq3014-il">hq3014-il - HQ 3.0/14 AIRFOIL</option>
+<option value="hq3015-il">hq3015-il - HQ 3.0/15 AIRFOIL</option>
+<option value="hq308-il">hq308-il - HQ 3.0/8 AIRFOIL</option>
+<option value="hq309-il">hq309-il - HQ 3.0/9 AIRFOIL</option>
+<option value="hq3510-il">hq3510-il - HQ 3.5/10 AIRFOIL</option>
+<option value="hq3512-il">hq3512-il - HQ 3.5/12 AIRFOIL</option>
+<option value="hq3513-il">hq3513-il - HQ 3.5/13 AIRFOIL</option>
+<option value="hq3514-il">hq3514-il - HQ 3.5/14 AIRFOIL</option>
+<option value="hq3518-il">hq3518-il - HQ 3.5/18 AIRFOIL</option>
+<option value="hq358-il">hq358-il - HQ 3.5/8 AIRFOIL</option>
+<option value="hq359-il">hq359-il - HQ 3.5/9 AIRFOIL</option>
+<option value="hs1404-il">hs1404-il - HAM-STD HS1-404 AIRFOIL</option>
+<option value="hs1430-il">hs1430-il - HAM-STD HS1-430 AIRFOIL</option>
+<option value="hs1606-il">hs1606-il - HAM-STD HS1-606 AIRFOIL</option>
+<option value="hs1620-il">hs1620-il - HAM-STD HS1-620 AIRFOIL</option>
+<option value="hs1708-il">hs1708-il - HAM-STD HS1-708 AIRFOIL</option>
+<option value="hs1712-il">hs1712-il - HAM-STD HS1-712 AIRFOIL</option>
+<option value="hsnlf213-il">hsnlf213-il - HSNLF(1)-0213 AIRFOIL</option>
+<option value="ht05-il">ht05-il - HT05</option>
+<option value="ht08-il">ht08-il - HT08</option>
+<option value="ht12-il">ht12-il - HT12</option>
+<option value="ht22-il">ht22-il - HT22</option>
+<option value="ht23-il">ht23-il - HT23</option>
+<option value="isa571-il">isa571-il - I.S.A. 571</option>
+<option value="isa960-il">isa960-il - I.S.A. 960</option>
+<option value="isa961-il">isa961-il - I.S.A. 961</option>
+<option value="isa962-il">isa962-il - I.S.A. 962</option>
+<option value="j5012-il">j5012-il - J5012   12%</option>
+<option value="jn153-il">jn153-il - JN-153 AIRFOIL</option>
+<option value="joukowsk-il">joukowsk-il - 12% JOUKOWSKI AIRFOIL</option>
+<option value="joukowsk0009-jf">joukowsk0009-jf - Joukovsky f=0% t=9%</option>
+<option value="joukowsk0015-jf">joukowsk0015-jf - Joukovsky f=0% t=15%</option>
+<option value="joukowsk0018-jf">joukowsk0018-jf - Joukovsky f=0% t=18%</option>
+<option value="joukowsk0021-jf">joukowsk0021-jf - Joukovsky f=0% t=21%</option>
+<option value="k1-il">k1-il - NYU/GRUMMAN K-1 AIRFOIL</option>
+<option value="k2-il">k2-il - GRUMMAN K-2 AIRFOIL</option>
+<option value="k3-il">k3-il - GRUMMAN K-3 AIRFOIL</option>
+<option value="k3311-il">k3311-il - K3311  (original)</option>
+<option value="k3311sm-il">k3311sm-il - K3311 (smoothed)</option>
+<option value="kc135a-il">kc135a-il - KC-135 BL52.44 AIRFOIL</option>
+<option value="kc135b-il">kc135b-il - KC-135 BL124.32 AIRFOIL</option>
+<option value="kc135c-il">kc135c-il - KC-135 BL200.76 AIRFOIL</option>
+<option value="kc135d-il">kc135d-il - KC-135 BL351.6 AIRFOIL</option>
+<option value="kc135winglet-il">kc135winglet-il - KC-135 Winglet (supercritical Whitcomb)</option>
+<option value="kenmar-il">kenmar-il - KENNEDY AND MARSDEN AIRFOIL</option>
+<option value="l1003-il">l1003-il - LIEBECK L1003 AIRFOIL</option>
+<option value="l188root-il">l188root-il - LOCKHEED L-188 ROOT AIRFOIL</option>
+<option value="l188tip-il">l188tip-il - LOCKHEED L-188 TIP AIRFOIL</option>
+<option value="l7769-il">l7769-il - LISSAMAN 7769 AIRFOIL</option>
+<option value="la203a-il">la203a-il - DOUGLAS LA203A AIRFOIL</option>
+<option value="la2573a-il">la2573a-il - LA2573A</option>
+<option value="la5055-il">la5055-il - LIEBECK LA5055 AIRFOIL</option>
+<option value="lds2-il">lds2-il - LDS-2 AIRFOIL</option>
+<option value="lg10sc-il">lg10sc-il - LOCKHEED-GEORGIA SUPERCRITICAL AIRFOIL</option>
+<option value="lnv109a-il">lnv109a-il - LNV109A</option>
+<option value="lrn1007-il">lrn1007-il - lrn1007</option>
+<option value="lrn1015-il">lrn1015-il - NASA LRN 1015 (NASA TM 102840)</option>
+<option value="ls013-il">ls013-il - NASA/LANGLEY LS(1)-0013 AIRFOIL</option>
+<option value="ls413-il">ls413-il - NASA/LANGLEY LS(1)-0413 (GA(W)-2) AIRFOIL</option>
+<option value="ls413mod-il">ls413mod-il - NASA/LANGLEY LS(1)-0413MOD AIRFOIL</option>
+<option value="ls417-il">ls417-il - NASA/LANGLEY LS(1)-0417 (GA(W)-1) AIRFOIL</option>
+<option value="ls417mod-il">ls417mod-il - NASA/LANGLEY LS(1)-0417MOD AIRFOIL</option>
+<option value="ls421-il">ls421-il - NASA/LANGLEY LS(1)-0421 AIRFOIL</option>
+<option value="ls421mod-il">ls421mod-il - NASA/LANGLEY LS(1)-0421MOD AIRFOIL</option>
+<option value="lwk79100-il">lwk79100-il - LWK 79-100</option>
+<option value="lwk80080-il">lwk80080-il - LWK 80-080</option>
+<option value="lwk80100-il">lwk80100-il - LWK 80-100</option>
+<option value="lwk80120k25-il">lwk80120k25-il - LWK 80-120/K25</option>
+<option value="lwk80150k25-il">lwk80150k25-il - LWK 80-150/K25</option>
+<option value="m1-il">m1-il - NACA-M1 AIRFOIL</option>
+<option value="m10-il">m10-il - NACA M10 AIRFOIL</option>
+<option value="m11-il">m11-il - NACA M11 AIRFOIL</option>
+<option value="m12-il">m12-il - NACA M12 AIRFOIL</option>
+<option value="m13-il">m13-il - NACA M13 AIRFOIL</option>
+<option value="m14-il">m14-il - NACA M14 AIRFOIL</option>
+<option value="m15-il">m15-il - NACA M15 AIRFOIL</option>
+<option value="m16-il">m16-il - NACA M16 AIRFOIL</option>
+<option value="m17-il">m17-il - NACA M17 AIRFOIL</option>
+<option value="m18-il">m18-il - NACA M18 AIRFOIL</option>
+<option value="m19-il">m19-il - NACA M19 AIRFOIL</option>
+<option value="m2-il">m2-il - NACA M2 AIRFOIL</option>
+<option value="m20-il">m20-il - NACA M20 AIRFOIL</option>
+<option value="m21-il">m21-il - NACA M21 AIRFOIL</option>
+<option value="m22-il">m22-il - NACA M22 AIRFOIL</option>
+<option value="m23-il">m23-il - NACA M23 AIRFOIL</option>
+<option value="m24-il">m24-il - NACA M24 AIRFOIL</option>
+<option value="m25-il">m25-il - NACA M25 AIRFOIL</option>
+<option value="m26-il">m26-il - NACA M26 AIRFOIL</option>
+<option value="m27-il">m27-il - NACA M27 AIRFOIL</option>
+<option value="m3-il">m3-il - NACA M3 AIRFOIL</option>
+<option value="m4-il">m4-il - NACA M4 AIRFOIL</option>
+<option value="m5-il">m5-il - NACA M5 AIRFOIL</option>
+<option value="m6-il">m6-il - NACA M6 AIRFOIL</option>
+<option value="m665-il">m665-il - M6 (65%)</option>
+<option value="m685-il">m685-il - M6 (85%)</option>
+<option value="m7-il">m7-il - NACA M7 AIRFOIL</option>
+<option value="m8-il">m8-il - NACA M8 AIRFOIL</option>
+<option value="m9-il">m9-il - NACA M9 AIRFOIL</option>
+<option value="ma409-il">ma409-il - MA409 (original) (modified line 7)</option>
+<option value="ma409sm-il">ma409sm-il - MA409 (smoothed)</option>
+<option value="marsden-il">marsden-il - Marsden</option>
+<option value="marske1-il">marske1-il - MARSKE XM-1D AIRFOIL (F14-3.0)</option>
+<option value="marske2-il">marske2-il - MARSKE PIONEER IA AIRFOIL (NACA 23112/43012A HYBRID)</option>
+<option value="marske3-il">marske3-il - MARSKE PIONEER IID ROOT AIRFOIL (NACA 431012A/24112 HYBRID)</option>
+<option value="marske4-il">marske4-il - MARSKE PIONEER IID TIP AIRFOIL (NACA 431012A*.833 HYBRID)</option>
+<option value="marske5-il">marske5-il - MARSKE MONARCH AIRFOIL (NACA 43012A)</option>
+<option value="marske7-il">marske7-il - RONCZ LOW DRAG FLYING WING AIRFOIL</option>
+<option value="mb253515sm-il">mb253515sm-il - MB253515 15.0% smoothed</option>
+<option value="mh102-il">mh102-il - MH 102  16.99%</option>
+<option value="mh104-il">mh104-il - MH 104  15.28%</option>
+<option value="mh106-il">mh106-il - MH 106  13.07%</option>
+<option value="mh108-il">mh108-il - MH 108  11.98%</option>
+<option value="mh110-il">mh110-il - MH 110  10.01%</option>
+<option value="mh112-il">mh112-il - MH 112  Airfoil</option>
+<option value="mh113-il">mh113-il - MH 113  14.62%</option>
+<option value="mh114-il">mh114-il - MH 114  13.02%</option>
+<option value="mh115-il">mh115-il - MH 115  11.06%</option>
+<option value="mh116-il">mh116-il - MH 116  9.84%</option>
+<option value="mh117-il">mh117-il - MH 117  9.8%</option>
+<option value="mh120-il">mh120-il - MH 120  11.57%</option>
+<option value="mh121-il">mh121-il - MH 121  8.76%</option>
+<option value="mh122-il">mh122-il - MH 122  9.32%</option>
+<option value="mh150-il">mh150-il - MH 150  23.89%</option>
+<option value="mh18-il">mh18-il - MH 18  11.16%</option>
+<option value="mh20-il">mh20-il - MH 20  9.01%</option>
+<option value="mh200-il">mh200-il - MH 200  12.97%</option>
+<option value="mh201-il">mh201-il - MH 201  13.08%</option>
+<option value="mh22-il">mh22-il - MH 22  7.2%</option>
+<option value="mh23-il">mh23-il - MH 23  8%</option>
+<option value="mh24-il">mh24-il - MH 24  9.01%</option>
+<option value="mh25-il">mh25-il - MH 25  9.98%</option>
+<option value="mh26-il">mh26-il - MH 26  10.99%</option>
+<option value="mh27-il">mh27-il - MH 27  11.99%</option>
+<option value="mh30-il">mh30-il - MH 30  7.84%</option>
+<option value="mh32-il">mh32-il - MH 32  8.7%</option>
+<option value="mh33-il">mh33-il - MH33</option>
+<option value="mh38-il">mh38-il - MH 38  9.68%</option>
+<option value="mh42-il">mh42-il - MH 42  8.94%</option>
+<option value="mh43-il">mh43-il - MH 43  8.5%</option>
+<option value="mh44-il">mh44-il - MH 44  9.66%</option>
+<option value="mh45-il">mh45-il - MH 45  9.85%</option>
+<option value="mh46-il">mh46-il - MH 46  9.1%</option>
+<option value="mh60-il">mh60-il - MH 60  10.08%</option>
+<option value="mh61-il">mh61-il - MH 61  10.26%</option>
+<option value="mh62-il">mh62-il - MH 62  9.3%</option>
+<option value="mh64-il">mh64-il - MH 64  8.59%</option>
+<option value="mh70-il">mh70-il - MH 70  11.08%</option>
+<option value="mh78-il">mh78-il - MH 78  14.47%</option>
+<option value="mh80-il">mh80-il - MH 80  12.72%</option>
+<option value="mh81-il">mh81-il - MH 81  13%</option>
+<option value="mh82-il">mh82-il - MH 82  13.31%</option>
+<option value="mh83-il">mh83-il - MH 83  13.29%</option>
+<option value="mh84-il">mh84-il - MH 84  13.69%</option>
+<option value="mh91-il">mh91-il - MH 91  14.98%</option>
+<option value="mh92-il">mh92-il - MH 92  15.49%</option>
+<option value="mh93-il">mh93-il - MH 93  15.98%</option>
+<option value="mh94-il">mh94-il - MH 94  16.03%</option>
+<option value="mh95-il">mh95-il - MH 95  15.86%</option>
+<option value="miley-il">miley-il - MILEY M06-13-128</option>
+<option value="mrc-16-il">mrc-16-il - MRC-16</option>
+<option value="mrc-20-il">mrc-20-il - MRC-20</option>
+<option value="ms313-il">ms313-il - NASA/LANGLEY MS(1)-0313 AIRFOIL</option>
+<option value="ms317-il">ms317-il - NASA/LANGLEY MS(1)-0317 AIRFOIL</option>
+<option value="mue139-il">mue139-il - MUE 139</option>
+<option value="n0009sm-il">n0009sm-il - NACA-0009 9.0% smoothed</option>
+<option value="n0011sc-il">n0011sc-il - NACA/LANGLEY SYMMETRICAL</option>
+<option value="n0012-il">n0012-il - NACA 0012 AIRFOILS</option>
+<option value="n10-il">n10-il - N-10</option>
+<option value="n11-il">n11-il - N-11</option>
+<option value="n11h9-il">n11h9-il - NACA 11-H-09 AIRFOIL</option>
+<option value="n12-il">n12-il - N-12</option>
+<option value="n13-il">n13-il - N-13</option>
+<option value="n14-il">n14-il - N-14</option>
+<option value="n1h15-il">n1h15-il - NACA 1-H-15 AIRFOIL</option>
+<option value="n22-il">n22-il - N-22</option>
+<option value="n24-il">n24-il - N-24</option>
+<option value="n2414-il">n2414-il - NACA 2414</option>
+<option value="n2415-il">n2415-il - NACA 2415</option>
+<option value="n2h15-il">n2h15-il - NACA 2-H-15 AIRFOIL</option>
+<option value="n5h10-il">n5h10-il - NACA 5-H-10 AIRFOIL</option>
+<option value="n5h15-il">n5h15-il - NACA 5-H-15 AIRFOIL</option>
+<option value="n5h20-il">n5h20-il - NACA 5-H-20 AIRFOIL</option>
+<option value="n63010a-il">n63010a-il - NACA 63A010 AIRFOIL</option>
+<option value="n63012a-il">n63012a-il - NACA 63012A AIRFOIL</option>
+<option value="n63015a-il">n63015a-il - NACA 63-015A AIRFOIL</option>
+<option value="n63210-il">n63210-il - NACA 63-210 AIRFOIL</option>
+<option value="n63212-il">n63212-il - NACA 63-212 AIRFOIL</option>
+<option value="n63215-il">n63215-il - NACA 63-215 AIRFOIL</option>
+<option value="n63215b-il">n63215b-il - NACA 63(2)-215 MOD B</option>
+<option value="n63412-il">n63412-il - NACA 63-412 AIRFOIL</option>
+<option value="n63415-il">n63415-il - NACA 63-415 AIRFOIL</option>
+<option value="n64008a-il">n64008a-il - NACA 64-008A AIRFOIL</option>
+<option value="n64012-il">n64012-il - NASA/LANGLEY 64-012 AIRFOIL</option>
+<option value="n64012a-il">n64012a-il - NACA 64-012A AIRFOIL</option>
+<option value="n64015-il">n64015-il - NACA 642-015 AIRFOIL</option>
+<option value="n64015a-il">n64015a-il - NACA 642-015A AIRFOIL</option>
+<option value="n6409-il">n6409-il - NACA6409 9%</option>
+<option value="n64108-il">n64108-il - NACA 64-108 AIRFOIL</option>
+<option value="n64110-il">n64110-il - NACA 64-110 AIRFOIL</option>
+<option value="n64212-il">n64212-il - NACA 64(1)-212</option>
+<option value="n64212ma-il">n64212ma-il - NACA 64(1)-212 MOD A</option>
+<option value="n64212mb-il">n64212mb-il - NACA 64(1)-212 MOD B</option>
+<option value="n64215-il">n64215-il - NACA 64-215 AIRFOIL</option>
+<option value="n66021-il">n66021-il - NACA 66-021 AIRFOIL</option>
+<option value="n6h10-il">n6h10-il - NACA 6-H-10 AIRFOIL</option>
+<option value="n6h15-il">n6h15-il - NACA 6-H-15 AIRFOIL</option>
+<option value="n6h20-il">n6h20-il - NACA 6-H-20 AIRFOIL</option>
+<option value="n8h12-il">n8h12-il - NACA 8-H-12 AIRFOIL</option>
+<option value="n9-il">n9-il - N-9</option>
+<option value="naca0006-il">naca0006-il - NACA 0006</option>
+<option value="naca0008-il">naca0008-il - NACA 0008</option>
+<option value="naca000834-il">naca000834-il - NACA 0008-34</option>
+<option value="naca0010-il">naca0010-il - NACA 0010</option>
+<option value="naca001034-il">naca001034-il - NACA 0010-34</option>
+<option value="naca001034a08cli02-il">naca001034a08cli02-il - NACA 0010-34 a=0.8 c(li)=0.2</option>
+<option value="naca001035-il">naca001035-il - NACA 0010-35</option>
+<option value="naca001064-il">naca001064-il - NACA 0010-64</option>
+<option value="naca001065-il">naca001065-il - NACA 0010-65</option>
+<option value="naca001066-il">naca001066-il - NACA 0010-66</option>
+<option value="naca001234-il">naca001234-il - NACA 0012-34</option>
+<option value="naca001264-il">naca001264-il - NACA 0012-64</option>
+<option value="naca001264a08cli02-il">naca001264a08cli02-il - NACA 0012-64 a=0.8 c(li)=0.2</option>
+<option value="naca0012h-sa">naca0012h-sa - NACA0012H for VAWT from Sandia report SAND80-2114</option>
+<option value="naca0015-il">naca0015-il - NACA 0015</option>
+<option value="naca0018-il">naca0018-il - NACA 0018</option>
+<option value="naca0021-il">naca0021-il - NACA 0021</option>
+<option value="naca0024-il">naca0024-il - NACA 0024</option>
+<option value="naca1408-il">naca1408-il - NACA 1408</option>
+<option value="naca1410-il">naca1410-il - NACA 1410</option>
+<option value="naca1412-il">naca1412-il - NACA 1412</option>
+<option value="naca16006-il">naca16006-il - NACA 16-006</option>
+<option value="naca16009-il">naca16009-il - NACA 16009</option>
+<option value="naca16012-il">naca16012-il - NACA 16-012</option>
+<option value="naca16015-il">naca16015-il - NACA 16-015</option>
+<option value="naca16018-il">naca16018-il - NACA 16-018</option>
+<option value="naca16021-il">naca16021-il - NACA 16-021</option>
+<option value="naca22112-jf">naca22112-jf - NACA 22112</option>
+<option value="naca23012-il">naca23012-il - NACA 23012  12%</option>
+<option value="naca23015-il">naca23015-il - NACA 23015</option>
+<option value="naca23018-il">naca23018-il - NACA 23018</option>
+<option value="naca23021-il">naca23021-il - NACA 23021</option>
+<option value="naca23024-il">naca23024-il - NACA 23024</option>
+<option value="naca23112-jf">naca23112-jf - NACA 23112</option>
+<option value="naca2408-il">naca2408-il - NACA 2408</option>
+<option value="naca2410-il">naca2410-il - NACA 2410</option>
+<option value="naca2411-il">naca2411-il - NACA 2.5411</option>
+<option value="naca24112-jf">naca24112-jf - NACA 24112</option>
+<option value="naca2412-il">naca2412-il - NACA 2412</option>
+<option value="naca2415-il">naca2415-il - NACA 2415</option>
+<option value="naca2418-il">naca2418-il - NACA 2418</option>
+<option value="naca2421-il">naca2421-il - NACA 2421</option>
+<option value="naca2424-il">naca2424-il - NACA 2424</option>
+<option value="naca25112-jf">naca25112-jf - NACA 25112</option>
+<option value="naca4412-il">naca4412-il - NACA 4412</option>
+<option value="naca4415-il">naca4415-il - NACA 4415</option>
+<option value="naca4418-il">naca4418-il - NACA 4418</option>
+<option value="naca4421-il">naca4421-il - NACA 4421</option>
+<option value="naca4424-il">naca4424-il - NACA 4424</option>
+<option value="naca63206-il">naca63206-il - NACA 63-206</option>
+<option value="naca63209-il">naca63209-il - NACA 63-209</option>
+<option value="naca632615-il">naca632615-il - NACA 63(2)-615</option>
+<option value="naca632a015-il">naca632a015-il - NACA 63(2)A-015</option>
+<option value="naca633018-il">naca633018-il - NACA 63(3)-018</option>
+<option value="naca633218-il">naca633218-il - NACA 63(3)-218</option>
+<option value="naca633418-il">naca633418-il - NACA 63</option>
+<option value="naca633618-il">naca633618-il - NACA 63(3)-618</option>
+<option value="naca634221-il">naca634221-il - NACA 63(4)-221</option>
+<option value="naca634421-il">naca634421-il - NACA 63(4)-421</option>
+<option value="naca63a210-il">naca63a210-il - NACA 63A210</option>
+<option value="naca641112-il">naca641112-il - NACA 64(1)-112</option>
+<option value="naca6412-il">naca6412-il - NACA 6412</option>
+<option value="naca64206-il">naca64206-il - NACA 64-206</option>
+<option value="naca64208-il">naca64208-il - NACA 64-208</option>
+<option value="naca64209-il">naca64209-il - NACA 64-209</option>
+<option value="naca64210-il">naca64210-il - NACA 64-210</option>
+<option value="naca642215-il">naca642215-il - NACA 64(2)-215</option>
+<option value="naca642415-il">naca642415-il - NACA 64(2)-415</option>
+<option value="naca643218-il">naca643218-il - NACA 64(3)-218</option>
+<option value="naca643418-il">naca643418-il - NACA 64(3)-418</option>
+<option value="naca643618-il">naca643618-il - NACA 64(3)-618</option>
+<option value="naca644221-il">naca644221-il - NACA 64(4)-221</option>
+<option value="naca644421-il">naca644421-il - NACA 64(4)-421</option>
+<option value="naca64a010-il">naca64a010-il - NACA 64A-010 10.0%</option>
+<option value="naca64a210-il">naca64a210-il - NACA 64A210</option>
+<option value="naca64a410-il">naca64a410-il - NACA 64A410</option>
+<option value="naca651212-il">naca651212-il - NACA 65(1)-212</option>
+<option value="naca651212a06-il">naca651212a06-il - NACA 65(1)-212 a=0.6</option>
+<option value="naca651412-il">naca651412-il - NACA 65(1)-412</option>
+<option value="naca65206-il">naca65206-il - NACA 65-206</option>
+<option value="naca65209-il">naca65209-il - NACA 65-209</option>
+<option value="naca65210-il">naca65210-il - NACA 65-210</option>
+<option value="naca652215-il">naca652215-il - NACA 65(2)-215</option>
+<option value="naca652415-il">naca652415-il - NACA 65(2)-415</option>
+<option value="naca652415a05-il">naca652415a05-il - NACA 65(2)-415 a=0.5</option>
+<option value="naca653218-il">naca653218-il - NACA 65(3)-218</option>
+<option value="naca653618-il">naca653618-il - NACA 65(3)-618</option>
+<option value="naca65410-il">naca65410-il - NACA 65-410</option>
+<option value="naca654221-il">naca654221-il - NACA 65(4)-221</option>
+<option value="naca654421-il">naca654421-il - NACA 65(4)-421</option>
+<option value="naca654421a05-il">naca654421a05-il - NACA 65(4)-421 a=0.5</option>
+<option value="naca66-018-il">naca66-018-il - NACA 66-018</option>
+<option value="naca661212-il">naca661212-il - NACA 66(1)-212</option>
+<option value="naca66206-il">naca66206-il - NACA 66-206</option>
+<option value="naca66209-il">naca66209-il - NACA 66-209</option>
+<option value="naca66210-il">naca66210-il - NACA 66-210</option>
+<option value="naca662215-il">naca662215-il - NACA 66(2)-215</option>
+<option value="naca662415-il">naca662415-il - NACA 66(2)-415</option>
+<option value="naca663218-il">naca663218-il - NACA 66(3)-218</option>
+<option value="naca663418-il">naca663418-il - NACA 66(3)-418</option>
+<option value="naca664221-il">naca664221-il - NACA 66(4)-221</option>
+<option value="naca671215-il">naca671215-il - NACA 67</option>
+<option value="naca747a315-il">naca747a315-il - NACA 747A315</option>
+<option value="naca747a415-il">naca747a415-il - NACA 747A415</option>
+<option value="nacacyh-il">nacacyh-il - NACA CYH</option>
+<option value="nacam12-il">nacam12-il - NACA M12</option>
+<option value="nacam18-il">nacam18-il - NACA M18</option>
+<option value="nacam2-il">nacam2-il - NACA M2</option>
+<option value="nacam3-il">nacam3-il - NACA M3</option>
+<option value="nacam6-il">nacam6-il - NACA M6</option>
+<option value="nasasc2-0714-il">nasasc2-0714-il - SC(2)-0714 Supercritical airfoil (coordinates from Raymer w/ one correction)</option>
+<option value="ncambre-il">ncambre-il - ONERA NACA CAMBRE AIRFOIL</option>
+<option value="nl722343-il">nl722343-il - NLR-7223-43 AIRFOIL</option>
+<option value="nl722362-il">nl722362-il - NLR-7223-62 AIRFOIL</option>
+<option value="nlf0115-il">nlf0115-il - NLF(1)-0115</option>
+<option value="nlf0215f-il">nlf0215f-il - NASA/LANGLEY NLF(1)-0215F AIRFOIL</option>
+<option value="nlf1015-il">nlf1015-il - NASA  NLF1015</option>
+<option value="nlf414f-il">nlf414f-il - NASA/LANGLEY NLF 0414F AIRFOIL</option>
+<option value="nlf415-il">nlf415-il - NASA/LANGLEY NLF(2)-0415 AIRFOIL</option>
+<option value="nlf416-il">nlf416-il - NASA/LANGLEY NLF(1)-0416 AIRFOIL</option>
+<option value="nlr1t-il">nlr1t-il - NLR-1T AIRFOIL</option>
+<option value="nlr7301-il">nlr7301-il - NLR-7301 AIRFOIL</option>
+<option value="nn7mk20-il">nn7mk20-il - NN7 MK20</option>
+<option value="npl9510-il">npl9510-il - NPL 9510 AIRFOIL</option>
+<option value="npl9615-il">npl9615-il - NPL 9615 AIRFOIL</option>
+<option value="npl9626-il">npl9626-il - NPL 9626 AIRFOIL</option>
+<option value="npl9627-il">npl9627-il - NPL 9627 AIRFOIL</option>
+<option value="npl9660-il">npl9660-il - NPL 9660 AIRFOIL</option>
+<option value="nplx-il">nplx-il - NPL AIRFOIL FROM ARC CP 1372</option>
+<option value="oa206-il">oa206-il - ONERA OA206 AIRFOIL</option>
+<option value="oa209-il">oa209-il - ONERA OA209 AIRFOIL</option>
+<option value="oa212-il">oa212-il - ONERA OA212 AIRFOIL</option>
+<option value="oa213-il">oa213-il - ONERA OA213 AIRFOIL</option>
+<option value="oaf095-il">oaf095-il - OAF095 AIRFOIL</option>
+<option value="oaf102-il">oaf102-il - OAF102 AIRFOIL</option>
+<option value="oaf117-il">oaf117-il - OAF117 AIRFOIL</option>
+<option value="oaf128-il">oaf128-il - OAF128 AIRFOIL</option>
+<option value="oaf139-il">oaf139-il - OAF139 AIRFOIL</option>
+<option value="p51droot-il">p51droot-il - P-51D ROOT (BL17.5) AIRFOIL</option>
+<option value="p51dtip-il">p51dtip-il - P-51D TIP (BL215) AIRFOIL</option>
+<option value="p51hroot-il">p51hroot-il - NACA 66</option>
+<option value="p51htip-il">p51htip-il - NACA 66</option>
+<option value="pfcm-il">pfcm-il - PROPFAN CRUISE MISSILE WING AIRFOIL</option>
+<option value="pmc19sm-il">pmc19sm-il - PMC19 Smoothed</option>
+<option value="prandtl-d-root-ns">prandtl-d-root-ns - Prandtl-D root - NASA Preliminary Research Aerodynamic Design To Lower Drag</option>
+<option value="prandtl-d-tip-ns">prandtl-d-tip-ns - Prandtl-D tip - NASA Preliminary Research Aerodynamic Design To Lower Drag</option>
+<option value="psu-90-125wl-il">psu-90-125wl-il - PSU-90-125WL</option>
+<option value="psu94097-il">psu94097-il - PSU 94-097 (AIAA 2001-2478)</option>
+<option value="pt40-il">pt40-il - PT40</option>
+<option value="pw106-pw">pw106-pw - PW106</option>
+<option value="pw1211-pw">pw1211-pw - PW1211</option>
+<option value="pw51-pw">pw51-pw - PW51</option>
+<option value="pw75-pw">pw75-pw - PW75</option>
+<option value="pw98mod-pw">pw98mod-pw - PW98-mod</option>
+<option value="r1046-il">r1046-il - RONCZ 1046 VOYAGER CANARD AIRFOIL</option>
+<option value="r1080-il">r1080-il - RONCZ 1080 VOYAGER INNER AFT WING AIRFOIL</option>
+<option value="r1082-il">r1082-il - RONCZ 1082 VOYAGER ROOT OUTER AFT WING AIRFOIL</option>
+<option value="r1082t-il">r1082t-il - RONCZ 1082T VOYAGER TIP OUTER AFT WING AIRFOIL</option>
+<option value="r140-il">r140-il - R140 (original)</option>
+<option value="r140sm-il">r140sm-il - R140  12.04% (smoothed)</option>
+<option value="rae100-il">rae100-il - RAE 100 AIRFOIL</option>
+<option value="rae101-il">rae101-il - RAE 101 AIRFOIL</option>
+<option value="rae102-il">rae102-il - RAE 102 AIRFOIL</option>
+<option value="rae103-il">rae103-il - RAE 103 AIRFOIL</option>
+<option value="rae104-il">rae104-il - RAE 104 AIRFOIL</option>
+<option value="rae2822-il">rae2822-il - RAE 2822 AIRFOIL</option>
+<option value="rae5212-il">rae5212-il - RAE(NPL) 5212 AIRFOIL</option>
+<option value="rae5213-il">rae5213-il - RAE(NPL) 5213 AIRFOIL</option>
+<option value="rae5214-il">rae5214-il - RAE 5214 AIRFOIL</option>
+<option value="rae5215-il">rae5215-il - RAE 5215 AIRFOIL</option>
+<option value="rae69ck-il">rae69ck-il - RAE6-9CK AIRFOIL</option>
+<option value="raf15-il">raf15-il - RAF 15 AIRFOIL</option>
+<option value="raf19-il">raf19-il - RAF 19 AIRFOIL</option>
+<option value="raf25-il">raf25-il - RAF 25 AIRFOIL</option>
+<option value="raf26-il">raf26-il - RAF 26 AIRFOIL</option>
+<option value="raf27-il">raf27-il - RAF 27 AIRFOIL</option>
+<option value="raf28-il">raf28-il - RAF 28 AIRFOIL</option>
+<option value="raf30-il">raf30-il - RAF 30 AIRFOIL</option>
+<option value="raf30md-il">raf30md-il - RAF 30 MOD AIRFOIL</option>
+<option value="raf31-il">raf31-il - RAF 31 AIRFOIL</option>
+<option value="raf32-il">raf32-il - RAF 32 AIRFOIL</option>
+<option value="raf32md-il">raf32md-il - RAF 32 MOD AIRFOIL</option>
+<option value="raf33-il">raf33-il - RAF 33 AIRFOIL</option>
+<option value="raf34-il">raf34-il - RAF 34 AIRFOIL</option>
+<option value="raf38-il">raf38-il - RAF 38 AIRFOIL</option>
+<option value="raf48-il">raf48-il - RAF-48 AIRFOIL</option>
+<option value="raf6-il">raf6-il - RAF 6 AIRFOIL</option>
+<option value="raf69-il">raf69-il - RAF 69 AIRFOIL</option>
+<option value="raf89-il">raf89-il - RAF 89 AIRFOIL</option>
+<option value="rc0864c-il">rc0864c-il - NASA/LANGLEY RC08-64C AIRFOIL</option>
+<option value="rc08b3-il">rc08b3-il - NASA/LANGLEY RC-08(B)3 AIRFOIL</option>
+<option value="rc08n1-il">rc08n1-il - NASA/LANGLEY RC-08(N)1 AIRFOIL</option>
+<option value="rc1064c-il">rc1064c-il - NASA/LANGLEY RC10-64C AIRFOIL</option>
+<option value="rc10b3-il">rc10b3-il - NASA/LANGLEY RC-10(B)3 AIRFOIL</option>
+<option value="rc10n1-il">rc10n1-il - NASA/LANGLEY RC-10(N)1 AIRFOIL</option>
+<option value="rc1264c-il">rc1264c-il - NASA/LANGLEY RC12-64C AIRFOIL</option>
+<option value="rc12b3-il">rc12b3-il - NASA/LANGLEY RC-12(B)3 AIRFOIL</option>
+<option value="rc12n1-il">rc12n1-il - NASA/LANGLEY RC-12(N)1 AIRFOIL</option>
+<option value="rc410-il">rc410-il - NASA RC(4)-10 AIRFOIL</option>
+<option value="rc510-il">rc510-il - NASA RC(5)-10 AIRFOIL</option>
+<option value="rcsc2-il">rcsc2-il - NASA/LANGLEY RC-SC2 AIRFOIL</option>
+<option value="rg12-il">rg12-il - RG-12</option>
+<option value="rg12a-il">rg12a-il - AIRFOIL PROFILE12A 9.00%</option>
+<option value="rg12a189-il">rg12a189-il - RG 12A-1.8/9.0 AIRFOIL</option>
+<option value="rg14-il">rg14-il - RG 14 AIRFOIL</option>
+<option value="rg1410-il">rg1410-il - RG 14 10% AIRFOIL</option>
+<option value="rg149-il">rg149-il - RG 14 9% AIRFOIL</option>
+<option value="rg1495-il">rg1495-il - RG 14 9.5% AIRFOIL</option>
+<option value="rg14a147-il">rg14a147-il - RG 14A-1.4/7.0 AIRFOIL</option>
+<option value="rg15-il">rg15-il - RG-15 8.9%</option>
+<option value="rg15a111-il">rg15a111-il - RG 15A-1.8/11.0 AIRFOIL</option>
+<option value="rg15a213-il">rg15a213-il - RG 15A 2.5/13.0 AIRFOIL</option>
+<option value="rg8-il">rg8-il - RG 8 AIRFOIL</option>
+<option value="rhodesg30-il">rhodesg30-il - Rhode St. Genese 30</option>
+<option value="rhodesg32-il">rhodesg32-il - Rhode St. Genese 32</option>
+<option value="rhodesg34-il">rhodesg34-il - Rhode St. Genese 34</option>
+<option value="rhodesg36-il">rhodesg36-il - Rhode St. Genese 36</option>
+<option value="s1010-il">s1010-il - S1010 HPV airfoil</option>
+<option value="s1012-il">s1012-il - S1012</option>
+<option value="s1014-il">s1014-il - S1014</option>
+<option value="s1016-il">s1016-il - S1016</option>
+<option value="s1020-il">s1020-il - Ornithopter airfoil.</option>
+<option value="s102b-il">s102b-il - SOMERS S102 AIRFOIL (BLUNT)</option>
+<option value="s102s-il">s102s-il - SOMERS S102 AIRFOIL (SHARP)</option>
+<option value="s1046-il">s1046-il - S1046 17% (Danny Howell)</option>
+<option value="s1048-il">s1048-il - S1048 14% (Danny Howell)</option>
+<option value="s1091-il">s1091-il - S1091</option>
+<option value="s1210-il">s1210-il - S1210 12%</option>
+<option value="s1221-flap-il">s1221-flap-il - S1221  w/ 4 deg flap</option>
+<option value="s1221-il">s1221-il - S1221  w/o flap</option>
+<option value="s1223-il">s1223-il - S1223</option>
+<option value="s1223rtl-il">s1223rtl-il - S1223 RTL</option>
+<option value="s2027-il">s2027-il - S2027</option>
+<option value="s2046-il">s2046-il - S2046</option>
+<option value="s2048-il">s2048-il - S2048</option>
+<option value="s2050-il">s2050-il - S2050 8.93%</option>
+<option value="s2055-il">s2055-il - S2055</option>
+<option value="s2060-il">s2060-il - S2060 8%</option>
+<option value="s2062-il">s2062-il - S2062 8%</option>
+<option value="s2091-il">s2091-il - S2091-101-83</option>
+<option value="s3-il">s3-il - REPUBLIC S-3 AIRFOIL</option>
+<option value="s3002-il">s3002-il - SELIG 3002-099-83</option>
+<option value="s3010-il">s3010-il - S3010-103-84</option>
+<option value="s3014-il">s3014-il - S3014-095-85</option>
+<option value="s3016-il">s3016-il - S3016-095-87</option>
+<option value="s3021-il">s3021-il - S3021-095-84</option>
+<option value="s3024-il">s3024-il - AIRFOIL 3024    9.84%</option>
+<option value="s3025-il">s3025-il - S3025 9.38%</option>
+<option value="s4022-il">s4022-il - S4022</option>
+<option value="s4053-il">s4053-il - S4053</option>
+<option value="s4061-il">s4061-il - S4061-096-84</option>
+<option value="s4062-il">s4062-il - S4062-095-87</option>
+<option value="s4083-il">s4083-il - S4083 (8%)</option>
+<option value="s4094-il">s4094-il - S4094 (root airfoil designed for and used on the E-flite UMX ASK-21 scale RC sailplane)</option>
+<option value="s4095-il">s4095-il - S4095 (designed for the E-flite UMX ASK-21 scale RC sailplane)</option>
+<option value="s4096-il">s4096-il - S4096 (designed for the E-flite UMX ASK-21 scale RC sailplane)</option>
+<option value="s4110-il">s4110-il - S4110</option>
+<option value="s4158-il">s4158-il - S4158</option>
+<option value="s4180-il">s4180-il - S4180-098-84</option>
+<option value="s4233-il">s4233-il - S4233-136-84</option>
+<option value="s4310-il">s4310-il - S4310</option>
+<option value="s4320-il">s4320-il - S4320</option>
+<option value="s5010-il">s5010-il - S5010</option>
+<option value="s5020-il">s5020-il - S5020</option>
+<option value="s6061-il">s6061-il - S6061 9%</option>
+<option value="s6062-il">s6062-il - S6062 8%</option>
+<option value="s6063-il">s6063-il - S6063 7.05%</option>
+<option value="s7012-il">s7012-il - S7012 8.75%</option>
+<option value="s7055-il">s7055-il - S7055 (10.5%) Flat-Bottomed</option>
+<option value="s7075-il">s7075-il - S7075 (9%)</option>
+<option value="s801-nr">s801-nr - NREL&#039;s S801 Airfoil</option>
+<option value="s802-nr">s802-nr - NREL&#039;s S802 Airfoil</option>
+<option value="s8025-il">s8025-il - S8025 (8%)</option>
+<option value="s803-nr">s803-nr - NREL&#039;s S803 Airfoil</option>
+<option value="s8035-il">s8035-il - S8035 for RC aerobatic  14% thick</option>
+<option value="s8036-il">s8036-il - S8036 (16%)</option>
+<option value="s8037-il">s8037-il - S8037 (16%)</option>
+<option value="s8038-il">s8038-il - S8038 (13%)</option>
+<option value="s804-nr">s804-nr - NREL&#039;s S804 Airfoil</option>
+<option value="s8052-il">s8052-il - S8052 (11.88%)</option>
+<option value="s8055-il">s8055-il - S8055 (12%)</option>
+<option value="s805a-nr">s805a-nr - NREL&#039;s S805A Airfoil</option>
+<option value="s8064-il">s8064-il - S8064</option>
+<option value="s8065-il">s8065-il - S8065 (11% version of S8064)</option>
+<option value="s8066-il">s8066-il - S8066 (10% version of S8065 w/ lower surface aerodynamically similar)</option>
+<option value="s806a-nr">s806a-nr - NREL&#039;s S806A Airfoil (modified line 35)</option>
+<option value="s807-nr">s807-nr - NREL&#039;s S807 Airfoil</option>
+<option value="s808-nr">s808-nr - NREL&#039;s S808 Airfoil</option>
+<option value="s809-nr">s809-nr - NREL&#039;s S809 Airfoil</option>
+<option value="s810-nr">s810-nr - NREL&#039;s S810 Airfoil</option>
+<option value="s811-nr">s811-nr - NREL&#039;s S811 Airfoil</option>
+<option value="s812-nr">s812-nr - NREL&#039;s S812 Airfoil</option>
+<option value="s813-nr">s813-nr - NREL&#039;s S813 Airfoil</option>
+<option value="s814-nr">s814-nr - NREL&#039;s S814 Airfoil</option>
+<option value="s815-nr">s815-nr - NREL&#039;s S815 Airfoil</option>
+<option value="s816-nr">s816-nr - NREL&#039;s S816 Airfoil</option>
+<option value="s817-nr">s817-nr - NREL&#039;s S817 Airfoil</option>
+<option value="s818-nr">s818-nr - NREL&#039;s S818 Airfoil</option>
+<option value="s819-nr">s819-nr - NREL&#039;s S819 Airfoil</option>
+<option value="s820-nr">s820-nr - NREL&#039;s S820 Airfoil</option>
+<option value="s821-nr">s821-nr - NREL&#039;s S821 Airfoil</option>
+<option value="s822-nr">s822-nr - NREL&#039;s S822 Airfoil</option>
+<option value="s823-nr">s823-nr - NREL&#039;s S823 Airfoil</option>
+<option value="s825-nr">s825-nr - NREL&#039;s S825 Airfoil</option>
+<option value="s826-nr">s826-nr - NREL&#039;s S826 Airfoil</option>
+<option value="s827-nr">s827-nr - NREL&#039;s S827 Airfoil</option>
+<option value="s828-nr">s828-nr - NREL&#039;s S828 Airfoil</option>
+<option value="s829-nr">s829-nr - NREL&#039;s S829 Airfoil</option>
+<option value="s830-nr">s830-nr - NREL&#039;s S830 Airfoil</option>
+<option value="s831-nr">s831-nr - NREL&#039;s S831 Airfoil</option>
+<option value="s832-nr">s832-nr - NREL&#039;s S832 Airfoil</option>
+<option value="s833-nr">s833-nr - NREL&#039;s S833 Airfoil</option>
+<option value="s834-nr">s834-nr - NREL&#039;s S834 Airfoil</option>
+<option value="s835-nr">s835-nr - NREL&#039;s S835 Airfoil</option>
+<option value="s9000-il">s9000-il - S9000 (9%)</option>
+<option value="s9026-il">s9026-il - S9026 (9.5%)</option>
+<option value="s9027-il">s9027-il - S9027 (8%)</option>
+<option value="s9032-il">s9032-il - S9032 (9%)</option>
+<option value="s9033-il">s9033-il - S9033 (7.5%)</option>
+<option value="s9037-il">s9037-il - S9037 (9%)</option>
+<option value="sa7024-il">sa7024-il - SA7024</option>
+<option value="sa7025-il">sa7025-il - SA7025</option>
+<option value="sa7026-il">sa7026-il - SA7026</option>
+<option value="sa7035-il">sa7035-il - SA7035</option>
+<option value="sa7036-il">sa7036-il - SA7036</option>
+<option value="sa7038-il">sa7038-il - SA7038</option>
+<option value="saratov-il">saratov-il - SARATOV AIRFOIL</option>
+<option value="sc1012r8-il">sc1012r8-il - SIKORSKY SC1012R8 AIRFOIL</option>
+<option value="sc1094r8-il">sc1094r8-il - SIKORSKY SC1094 R8 AIRFOIL</option>
+<option value="sc1095-il">sc1095-il - SIKORSKY SC1095 AIRFOIL</option>
+<option value="sc1095r8-il">sc1095r8-il - SIKORSKY SC1094R8 AIRFOIL</option>
+<option value="sc20010-il">sc20010-il - NASA SC(2)-0010 AIRFOIL</option>
+<option value="sc20012-il">sc20012-il - NASA SC(2)-0012 AIRFOIL</option>
+<option value="sc20402-il">sc20402-il - NASA SC(2)-0402 AIRFOIL</option>
+<option value="sc20403-il">sc20403-il - NASA SC(2)-0403 AIRFOIL</option>
+<option value="sc20404-il">sc20404-il - NASA SC(2)-0404 AIRFOIL</option>
+<option value="sc20406-il">sc20406-il - NASA SC(2)-0406 AIRFOIL</option>
+<option value="sc20410-il">sc20410-il - NASA SC(2)-0410 AIRFOIL</option>
+<option value="sc20412-il">sc20412-il - NASA SC(2)-0412 AIRFOIL</option>
+<option value="sc20414-il">sc20414-il - NASA SC(2)-0414 AIRFOIL</option>
+<option value="sc20503-il">sc20503-il - NASA SC(2)-0503 AIRFOIL</option>
+<option value="sc20518-il">sc20518-il - NASA SC(2)-0518 AIRFOIL</option>
+<option value="sc20606-il">sc20606-il - NASA SC(2)-0606 AIRFOIL</option>
+<option value="sc20610-il">sc20610-il - NASA SC(2)-0610 AIRFOIL</option>
+<option value="sc20612-il">sc20612-il - NASA SC(2)-0612 AIRFOIL</option>
+<option value="sc20614-il">sc20614-il - NASA SC(2)-0614 AIRFOIL</option>
+<option value="sc20706-il">sc20706-il - NASA SC(2)-0706 AIRFOIL</option>
+<option value="sc20710-il">sc20710-il - NASA SC(2)-0710 AIRFOIL</option>
+<option value="sc20712-il">sc20712-il - NASA SC(2)-0712 AIRFOIL</option>
+<option value="sc20714-il">sc20714-il - NASA SC(2)-0714 AIRFOIL</option>
+<option value="sc21006-il">sc21006-il - NASA SC(2)-1006 AIRFOIL</option>
+<option value="sc21010-il">sc21010-il - NASA SC(2)-1010 AIRFOIL</option>
+<option value="sc2110-il">sc2110-il - SIKORSKY SC2110 AIRFOIL</option>
+<option value="sd2030-il">sd2030-il - SD2030-086-88</option>
+<option value="sd2083-il">sd2083-il - SD2083 (9.0%)</option>
+<option value="sd5060-il">sd5060-il - SD5060 (9.5%)</option>
+<option value="sd6060-il">sd6060-il - SD6060-104-88</option>
+<option value="sd6080-il">sd6080-il - SD6080 (9.2%)</option>
+<option value="sd7003-il">sd7003-il - SD7003-085-88</option>
+<option value="sd7032-il">sd7032-il - SD7032-099-88</option>
+<option value="sd7034-il">sd7034-il - SD7034</option>
+<option value="sd7037-il">sd7037-il - SD7037-092-88</option>
+<option value="sd7043-il">sd7043-il - SD7043 (9.1%)</option>
+<option value="sd7062-il">sd7062-il - SD7062 (14%)</option>
+<option value="sd7080-il">sd7080-il - SD7080 (9.2%)</option>
+<option value="sd7084-il">sd7084-il - SD7084 (9.6%)</option>
+<option value="sd7090-il">sd7090-il - SD7090 (10%)</option>
+<option value="sd8000-il">sd8000-il - SD8000-089-88</option>
+<option value="sd8020-il">sd8020-il - SD8020-010-88</option>
+<option value="sd8040-il">sd8040-il - SD8040 (10%)</option>
+<option value="sg6040-il">sg6040-il - SG6040</option>
+<option value="sg6041-il">sg6041-il - SG6041</option>
+<option value="sg6042-il">sg6042-il - SG6042</option>
+<option value="sg6043-il">sg6043-il - SG6043</option>
+<option value="sg6050-il">sg6050-il - SG6050</option>
+<option value="sg6051-il">sg6051-il - SG6051</option>
+<option value="sm701-il">sm701-il - SM701</option>
+<option value="sokolov-il">sokolov-il - SOKOLOV AIRFOIL</option>
+<option value="sp4621hp-po">sp4621hp-po - SP4621HP</option>
+<option value="sp4721la-po">sp4721la-po - SP4721LA</option>
+<option value="spicasm-il">spicasm-il - SPICA  11.73% smoothed</option>
+<option value="ssca07-il">ssca07-il - SIKORSKY SSC-A07 AIRFOIL</option>
+<option value="ssca09-il">ssca09-il - SIKORSKY SSC-A09  AIRFOIL</option>
+<option value="stcyr171-il">stcyr171-il - St. CYR 171 (Royer)</option>
+<option value="stcyr172-il">stcyr172-il - St. CYR 172 (Royer)</option>
+<option value="stcyr234-il">stcyr234-il - St. CYR 234 (Bartel 17-IC)</option>
+<option value="stcyr24-il">stcyr24-il - St. CYR 24 (Bartel 35-IIIC)</option>
+<option value="ste87151-il">ste87151-il - EPPLER STE 871-514 AIRFOIL</option>
+<option value="ste87391-il">ste87391-il - EPPLER STE 87(-3)-914 AIRFOIL</option>
+<option value="stf86361-il">stf86361-il - EPPLER STF 863-615 AIRFOIL</option>
+<option value="strand-il">strand-il - STRAND AIRFOIL</option>
+<option value="supermarine371i-il">supermarine371i-il - Supermarine 371-I (root)</option>
+<option value="supermarine371ii-il">supermarine371ii-il - Supermarine 371-II (tip)</option>
+<option value="tempest1-il">tempest1-il - HAWKER TEMPEST 37.5% SEMISPAN AIRFOIL</option>
+<option value="tempest2-il">tempest2-il - HAWKER TEMPEST 61% SEMISPAN AIRFOIL</option>
+<option value="tempest3-il">tempest3-il - HAWKER TEMPEST 96.77% SEMISPAN AIRFOIL</option>
+<option value="th25816-il">th25816-il - TH 25816 HALE AIRFOIL</option>
+<option value="trainer60-il">trainer60-il - TRAINER60</option>
+<option value="tsagi-r-3a-il">tsagi-r-3a-il - TsAGI R-3a (12%)</option>
+<option value="tsagi12-il">tsagi12-il - TSAGI 12% AIRFOIL</option>
+<option value="tsagi8-il">tsagi8-il - TSAGI 8% AIRFOIL</option>
+<option value="ua2-180-il">ua2-180-il - UA(2)-180 (University of Alberta/Marsden)</option>
+<option value="ua2-180sm-il">ua2-180sm-il - UA(2)-180 smoothed</option>
+<option value="ua79sf18-il">ua79sf18-il - UNIVERSITY OF ALBERTA UA 79-SF-187 AIRFOIL</option>
+<option value="ua79sff-il">ua79sff-il - UNIVERSITY OF ALBERTA UA 79-SF-187 AIRFOIL MAIN ELEMENT</option>
+<option value="ua79sfm-il">ua79sfm-il - UNIVERSITY OF ALBERTA UA 79-SF-187 AIRFOIL MAIN ELEMENT</option>
+<option value="uag8814320-il">uag8814320-il - UAG 88-143/20</option>
+<option value="ui1720-il">ui1720-il - UNIVERSITY OF ILLINOIS UI-1720 AIRFOIL</option>
+<option value="ultimate-il">ultimate-il - ULTIMATE</option>
+<option value="us1000root-il">us1000root-il - US1000ROOT</option>
+<option value="usa22-il">usa22-il - USA 22 AIRFOIL</option>
+<option value="usa25-il">usa25-il - USA 25 AIRFOIL</option>
+<option value="usa26-il">usa26-il - USA 26 AIRFOIL</option>
+<option value="usa27-il">usa27-il - USA 27 AIRFOIL</option>
+<option value="usa27m2-il">usa27m2-il - USA 27 mod. AIRFOIL</option>
+<option value="usa28-il">usa28-il - USA 28 AIRFOIL</option>
+<option value="usa29-il">usa29-il - USA 29 AIRFOIL</option>
+<option value="usa31-il">usa31-il - USA 31 AIRFOIL</option>
+<option value="usa32-il">usa32-il - USA 32 AIRFOIL</option>
+<option value="usa33-il">usa33-il - USA 33 AIRFOIL</option>
+<option value="usa34-il">usa34-il - USA 34 AIRFOIL</option>
+<option value="usa35-il">usa35-il - USA 35 AIRFOIL</option>
+<option value="usa35a-il">usa35a-il - USA 35 A AIRFOIL</option>
+<option value="usa35b-il">usa35b-il - USA-35B AIRFOIL</option>
+<option value="usa40-il">usa40-il - USA 40 AIRFOIL</option>
+<option value="usa40b-il">usa40b-il - USA 40 B AIRFOIL</option>
+<option value="usa41-il">usa41-il - USA 41 AIRFOIL</option>
+<option value="usa45-il">usa45-il - USA 45 AIRFOIL</option>
+<option value="usa45m-il">usa45m-il - USA 45 M AIRFOIL</option>
+<option value="usa46-il">usa46-il - USA 46 AIRFOIL</option>
+<option value="usa48-il">usa48-il - USA 48 AIRFOIL</option>
+<option value="usa49-il">usa49-il - USA 49 AIRFOIL</option>
+<option value="usa5-il">usa5-il - USA 5 AIRFOIL</option>
+<option value="usa50-il">usa50-il - USA 50 AIRFOIL</option>
+<option value="usa51-il">usa51-il - USA 51 AIRFOIL</option>
+<option value="usa98-il">usa98-il - USA 98 AIRFOIL</option>
+<option value="usnps4-il">usnps4-il - USNPS4 (smoothed)</option>
+<option value="v13006-il">v13006-il - BOEING VERTOL V13006-.7 AIRFOIL</option>
+<option value="v13009-il">v13009-il - BOEING VERTOL V(1.95)3009-1.25 AIRFOIL</option>
+<option value="v23010-il">v23010-il - BOEING-VERTOL V23010-1.58 AIRFOIL</option>
+<option value="v43012-il">v43012-il - BOEING VERTOL V43012-1.58 AIRFOIL</option>
+<option value="v43015-il">v43015-il - BOEING VERTOL V43015-2.48 AIRFOIL</option>
+<option value="vr1-il">vr1-il - BOEING-VERTOL VR-1 AIRFOIL</option>
+<option value="vr11x-il">vr11x-il - BOEING-VERTOL VR-11X AIRFOIL</option>
+<option value="vr12-il">vr12-il - BOEING-VERTOL VR-12 AIRFOIL</option>
+<option value="vr13-il">vr13-il - BOEING-VERTOL VR-13 AIRFOIL</option>
+<option value="vr14-il">vr14-il - BOEING-VERTOL VR-14 AIRFOIL</option>
+<option value="vr15-il">vr15-il - BOEING-VERTOL VR-15 AIRFOIL</option>
+<option value="vr5-il">vr5-il - BOEING-VERTOL VR-5 AIRFOIL</option>
+<option value="vr7-il">vr7-il - BOEING-VERTOL VR-7 AIRFOIL</option>
+<option value="vr7b-il">vr7b-il - BOEING-VERTOL VR-7 AIRFOIL WITH TAB</option>
+<option value="vr8-il">vr8-il - BOEING-VERTOL VR-8 AIRFOIL</option>
+<option value="vr8b-il">vr8b-il - BOEING-VERTOL VR-8 AIRFOIL WITH TAB</option>
+<option value="vr9-il">vr9-il - BOEING-VERTOL VR-9 AIRFOIL</option>
+<option value="waspsm-il">waspsm-il - WASP (smoothed)</option>
+<option value="wb13535sm-il">wb13535sm-il - WB-135/35  13.5%  smoothed</option>
+<option value="wb140-il">wb140-il - WB-140/35/FB 14%</option>
+<option value="whitcomb-il">whitcomb-il - WHITCOMB INTEGRAL SUPERCRITICAL AIRFOIL</option>
+<option value="ys900-il">ys900-il - YS-900</option>
+<option value="ys915-il">ys915-il - YS-915</option>
+<option value="ys930-il">ys930-il - YS-930</option>
+</optgroup>
+</select></td><td class="dataTableDesc"><div class="errorMessage" id="MAirfoilPlotterForm_airfoilKey_em_" style="display:none"></div>Choose from database list or add you own airfoils <a href="/userairfoil/index">here</a>.</td></tr>
+<tr class="dataTableRow"><td class="dataTableTitle"><label for="MAirfoilPlotterForm_chord">Chord (mm)</label></td><td class="dataTableValue"><input type="text" name="MAirfoilPlotterForm[chord]" id="MAirfoilPlotterForm_chord" value="100" /></td><td class="dataTableDesc"><div class="errorMessage" id="MAirfoilPlotterForm_chord_em_" style="display:none"></div>Chord width in millimetres. (1 inch = 25.40mm)</td></tr>
+<tr class="dataTableRow"><td class="dataTableTitle"><label for="MAirfoilPlotterForm_radius">Radius (mm)</label></td><td class="dataTableValue"><input type="text" name="MAirfoilPlotterForm[radius]" id="MAirfoilPlotterForm_radius" value="0" /></td><td class="dataTableDesc"><div class="errorMessage" id="MAirfoilPlotterForm_radius_em_" style="display:none"></div>Radius of camber in millimetres, Zero for no curve</td></tr>
+<tr class="dataTableRow"><td class="dataTableTitle"><label for="MAirfoilPlotterForm_thickness">Thickness (%)</label></td><td class="dataTableValue"><input type="text" name="MAirfoilPlotterForm[thickness]" id="MAirfoilPlotterForm_thickness" value="100" /></td><td class="dataTableDesc"><div class="errorMessage" id="MAirfoilPlotterForm_thickness_em_" style="display:none"></div>Thickness adjustment.100% is normal thickness. 50% is half. 200% is double</td></tr>
+<tr class="dataTableRow"><td class="dataTableTitle"><label for="MAirfoilPlotterForm_origin">Origin (%)</label></td><td class="dataTableValue"><input type="text" name="MAirfoilPlotterForm[origin]" id="MAirfoilPlotterForm_origin" value="0" /></td><td class="dataTableDesc"><div class="errorMessage" id="MAirfoilPlotterForm_origin_em_" style="display:none"></div>Adjust the position of the origin e.g. 50% is mid chord</td></tr>
+<tr class="dataTableRow"><td class="dataTableTitle"><label for="MAirfoilPlotterForm_pitch">Pitch (degrees)</label></td><td class="dataTableValue"><input type="text" name="MAirfoilPlotterForm[pitch]" id="MAirfoilPlotterForm_pitch" value="0" /></td><td class="dataTableDesc"><div class="errorMessage" id="MAirfoilPlotterForm_pitch_em_" style="display:none"></div>Pitch or angle of attack. 180 flips the plot</td></tr>
+<tr class="dataTableRow"><td class="dataTableTitle"><label for="MAirfoilPlotterForm_halo">Halo (mm)</label></td><td class="dataTableValue"><input type="text" name="MAirfoilPlotterForm[halo]" id="MAirfoilPlotterForm_halo" value="0" /></td><td class="dataTableDesc"><div class="errorMessage" id="MAirfoilPlotterForm_halo_em_" style="display:none"></div>Line parallel to airfoil for wing covering or jig. Negative values are external, positive internal.</td></tr>
+<tr class="dataTableRow"><td class="dataTableTitle"><label for="MAirfoilPlotterForm_halo2">Halo (mm)</label></td><td class="dataTableValue"><input type="text" name="MAirfoilPlotterForm[halo2]" id="MAirfoilPlotterForm_halo2" value="0" /></td><td class="dataTableDesc"><div class="errorMessage" id="MAirfoilPlotterForm_halo2_em_" style="display:none"></div>Second line parallel to airfoil as above</td></tr>
+<tr class="dataTableRow"><td class="dataTableTitle"><label for="MAirfoilPlotterForm_colour">Colour</label></td><td class="dataTableValue"><select name="MAirfoilPlotterForm[colour]" id="MAirfoilPlotterForm_colour">
+<option value="0" selected="selected">Colour</option>
+<option value="1">Black &amp; white</option>
+</select></td><td class="dataTableDesc"><div class="errorMessage" id="MAirfoilPlotterForm_colour_em_" style="display:none"></div>Colour palette or black & white</td></tr>
+<tr class="dataTableRow"><td class="dataTableTitle"><label for="MAirfoilPlotterForm_lineWidth">Line thickness (%)</label></td><td class="dataTableValue"><input type="text" name="MAirfoilPlotterForm[lineWidth]" id="MAirfoilPlotterForm_lineWidth" value="100" /></td><td class="dataTableDesc"><div class="errorMessage" id="MAirfoilPlotterForm_lineWidth_em_" style="display:none"></div>Scale the line thickness (10% to 500%)</td></tr>
+<tr class="dataTableRow"><td class="dataTableTitle"><label for="MAirfoilPlotterForm_reverse">Reverse</label></td><td class="dataTableValue"><input id="ytMAirfoilPlotterForm_reverse" type="hidden" value="0" name="MAirfoilPlotterForm[reverse]" /><input type="checkbox" name="MAirfoilPlotterForm[reverse]" id="MAirfoilPlotterForm_reverse" value="1" /></td><td class="dataTableDesc"><div class="errorMessage" id="MAirfoilPlotterForm_reverse_em_" style="display:none"></div>Plot a mirror image</td></tr>
+<tr class="dataTableRow"><td class="dataTableTitle"><label for="MAirfoilPlotterForm_databox">Data box</label></td><td class="dataTableValue"><input id="ytMAirfoilPlotterForm_databox" type="hidden" value="0" name="MAirfoilPlotterForm[databox]" /><input type="checkbox" name="MAirfoilPlotterForm[databox]" id="MAirfoilPlotterForm_databox" value="1" checked="checked" /></td><td class="dataTableDesc"><div class="errorMessage" id="MAirfoilPlotterForm_databox_em_" style="display:none"></div>Print the airfoil data on the image</td></tr>
+<tr class="dataTableRow"><td class="dataTableTitle"><label for="MAirfoilPlotterForm_camberline">Camber line</label></td><td class="dataTableValue"><input id="ytMAirfoilPlotterForm_camberline" type="hidden" value="0" name="MAirfoilPlotterForm[camberline]" /><input type="checkbox" name="MAirfoilPlotterForm[camberline]" id="MAirfoilPlotterForm_camberline" value="1" /></td><td class="dataTableDesc"><div class="errorMessage" id="MAirfoilPlotterForm_camberline_em_" style="display:none"></div>Show camber line on image</td></tr>
+<tr class="dataTableRow"><td class="dataTableTitle"><label for="MAirfoilPlotterForm_xGrid">X grid (mm)</label></td><td class="dataTableValue"><input type="text" name="MAirfoilPlotterForm[xGrid]" id="MAirfoilPlotterForm_xGrid" value="10" /></td><td class="dataTableDesc"><div class="errorMessage" id="MAirfoilPlotterForm_xGrid_em_" style="display:none"></div>X grid size in millimetres</td></tr>
+<tr class="dataTableRow"><td class="dataTableTitle"><label for="MAirfoilPlotterForm_yGrid">Y grid (mm)</label></td><td class="dataTableValue"><input type="text" name="MAirfoilPlotterForm[yGrid]" id="MAirfoilPlotterForm_yGrid" value="10" /></td><td class="dataTableDesc"><div class="errorMessage" id="MAirfoilPlotterForm_yGrid_em_" style="display:none"></div>Y grid size in millimetres</td></tr>
+<tr class="dataTableRow"><td class="dataTableTitle"><label for="MAirfoilPlotterForm_xPage">Paper width (mm)</label></td><td class="dataTableValue"><input type="text" name="MAirfoilPlotterForm[xPage]" id="MAirfoilPlotterForm_xPage" value="280" /></td><td class="dataTableDesc"><div class="errorMessage" id="MAirfoilPlotterForm_xPage_em_" style="display:none"></div>Used for printing plan. A4 landscape approx 280mm</td></tr>
+<tr class="dataTableRow"><td class="dataTableTitle"><label for="MAirfoilPlotterForm_yPage">Paper height (mm)</label></td><td class="dataTableValue"><input type="text" name="MAirfoilPlotterForm[yPage]" id="MAirfoilPlotterForm_yPage" value="180" /></td><td class="dataTableDesc"><div class="errorMessage" id="MAirfoilPlotterForm_yPage_em_" style="display:none"></div>Used for printing plan. A4 landscape approx 180mm</td></tr>
+<tr class="dataTableRow"><td class="dataTableTitle"><input type="submit" name="yt0" value="Plot" /></td><td class="dataTableValue"></td><td class="dataTableDesc"></td></tr>
+</table>
+</form><div class="center" style="width:468px;"><script type="text/javascript"><!--
+google_ad_client = "pub-2601928470036827";
+google_ad_slot = "5812856135";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+<br/>
+<p> Please refer to the <a href="?r=airfoil/index#parsing">information page</a> for details of how the
+dat files are parsed and any parser warnings that appear in the  form above.
+
+<h2>Plotter transformations</h2>
+<p>The tranformations are applied in the following order.<p>
+<ol>
+<li>Thickness - The dat file Y coordinate is multiplied by the thickness / 100</li>
+<li>Reverse - If the reverse tick box is set the Y coordinate is reversed (Y = -Y) to invert the image about the X axis</li>
+<li>Origin - The X coordinate is adjusted to move the position of the origin (X = X - (origin / 100) )</li>
+<li>Chord width - The X and Y coordinates are multiplied by the chord width to convert the values to millimetres</li>
+<li>Radius - If the radius is non zero the X and Y coordinates are transformed around a circle with a centre at X=0 and Y=(radius value)</li>
+<li>Pitch - The X and Y coordinates are rotated about the origin by the pitch angle. </li>
+</ol>
+
+<div class="centerad"><script type="text/javascript"><!--
+google_ad_client = "pub-2601928470036827";
+google_ad_slot = "1060366263";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+</div><!-- content -->
+
+</td></tr>
+</table>	
+	<div class="clear"></div>
+
+	<div id="footer">
+		Copyright &copy; 2025 All Rights Reserved.<br/>
+		No content or images on this web site should be reproduced without permission.<br/>
+		
+	</div><!-- footer -->
+
+</div><!-- page -->
+
+<script type="text/javascript">
+/*<![CDATA[*/
+jQuery(function($) {
+$('#design-form').yiiactiveform({'validateOnSubmit':true,'attributes':[{'id':'MAirfoilPlotterForm_airfoilKey','inputID':'MAirfoilPlotterForm_airfoilKey','errorID':'MAirfoilPlotterForm_airfoilKey_em_','model':'MAirfoilPlotterForm','name':'airfoilKey','enableAjaxValidation':false},{'id':'MAirfoilPlotterForm_chord','inputID':'MAirfoilPlotterForm_chord','errorID':'MAirfoilPlotterForm_chord_em_','model':'MAirfoilPlotterForm','name':'chord','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Chord (mm) cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/^\s*[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\s*$/)) {
+	messages.push("Chord (mm) must be a number.");
+}
+
+if(value<5) {
+	messages.push("Chord (mm) is too small (minimum is 5).");
+}
+
+if(value>20000) {
+	messages.push("Chord (mm) is too big (maximum is 20000).");
+}
+
+}
+
+}},{'id':'MAirfoilPlotterForm_radius','inputID':'MAirfoilPlotterForm_radius','errorID':'MAirfoilPlotterForm_radius_em_','model':'MAirfoilPlotterForm','name':'radius','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Radius (mm) cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/^\s*[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\s*$/)) {
+	messages.push("Radius (mm) must be a number.");
+}
+
+if(value<0) {
+	messages.push("Radius (mm) is too small (minimum is 0).");
+}
+
+if(value>200000) {
+	messages.push("Radius (mm) is too big (maximum is 200000).");
+}
+
+}
+
+}},{'id':'MAirfoilPlotterForm_thickness','inputID':'MAirfoilPlotterForm_thickness','errorID':'MAirfoilPlotterForm_thickness_em_','model':'MAirfoilPlotterForm','name':'thickness','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Thickness (%) cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/^\s*[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\s*$/)) {
+	messages.push("Thickness (%) must be a number.");
+}
+
+if(value<1) {
+	messages.push("Thickness (%) is too small (minimum is 1).");
+}
+
+if(value>1000) {
+	messages.push("Thickness (%) is too big (maximum is 1000).");
+}
+
+}
+
+}},{'id':'MAirfoilPlotterForm_origin','inputID':'MAirfoilPlotterForm_origin','errorID':'MAirfoilPlotterForm_origin_em_','model':'MAirfoilPlotterForm','name':'origin','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Origin (%) cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/^\s*[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\s*$/)) {
+	messages.push("Origin (%) must be a number.");
+}
+
+if(value<0) {
+	messages.push("Origin (%) is too small (minimum is 0).");
+}
+
+if(value>100) {
+	messages.push("Origin (%) is too big (maximum is 100).");
+}
+
+}
+
+}},{'id':'MAirfoilPlotterForm_pitch','inputID':'MAirfoilPlotterForm_pitch','errorID':'MAirfoilPlotterForm_pitch_em_','model':'MAirfoilPlotterForm','name':'pitch','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Pitch (degrees) cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/^\s*[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\s*$/)) {
+	messages.push("Pitch (degrees) must be a number.");
+}
+
+if(value<-360) {
+	messages.push("Pitch (degrees) is too small (minimum is -360).");
+}
+
+if(value>360) {
+	messages.push("Pitch (degrees) is too big (maximum is 360).");
+}
+
+}
+
+}},{'id':'MAirfoilPlotterForm_halo','inputID':'MAirfoilPlotterForm_halo','errorID':'MAirfoilPlotterForm_halo_em_','model':'MAirfoilPlotterForm','name':'halo','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Halo (mm) cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/^\s*[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\s*$/)) {
+	messages.push("Halo (mm) must be a number.");
+}
+
+if(value<-10000) {
+	messages.push("Halo (mm) is too small (minimum is -10000).");
+}
+
+if(value>10000) {
+	messages.push("Halo (mm) is too big (maximum is 10000).");
+}
+
+}
+
+}},{'id':'MAirfoilPlotterForm_halo2','inputID':'MAirfoilPlotterForm_halo2','errorID':'MAirfoilPlotterForm_halo2_em_','model':'MAirfoilPlotterForm','name':'halo2','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Halo (mm) cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/^\s*[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\s*$/)) {
+	messages.push("Halo (mm) must be a number.");
+}
+
+if(value<-10000) {
+	messages.push("Halo (mm) is too small (minimum is -10000).");
+}
+
+if(value>10000) {
+	messages.push("Halo (mm) is too big (maximum is 10000).");
+}
+
+}
+
+}},{'id':'MAirfoilPlotterForm_colour','inputID':'MAirfoilPlotterForm_colour','errorID':'MAirfoilPlotterForm_colour_em_','model':'MAirfoilPlotterForm','name':'colour','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Colour cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/^\s*[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\s*$/)) {
+	messages.push("Colour must be a number.");
+}
+
+if(value<0) {
+	messages.push("Colour is too small (minimum is 0).");
+}
+
+if(value>1) {
+	messages.push("Colour is too big (maximum is 1).");
+}
+
+}
+
+}},{'id':'MAirfoilPlotterForm_lineWidth','inputID':'MAirfoilPlotterForm_lineWidth','errorID':'MAirfoilPlotterForm_lineWidth_em_','model':'MAirfoilPlotterForm','name':'lineWidth','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Line thickness (%) cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/^\s*[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\s*$/)) {
+	messages.push("Line thickness (%) must be a number.");
+}
+
+if(value<10) {
+	messages.push("Line thickness (%) is too small (minimum is 10).");
+}
+
+if(value>500) {
+	messages.push("Line thickness (%) is too big (maximum is 500).");
+}
+
+}
+
+}},{'id':'MAirfoilPlotterForm_reverse','inputID':'MAirfoilPlotterForm_reverse','errorID':'MAirfoilPlotterForm_reverse_em_','model':'MAirfoilPlotterForm','name':'reverse','enableAjaxValidation':false},{'id':'MAirfoilPlotterForm_databox','inputID':'MAirfoilPlotterForm_databox','errorID':'MAirfoilPlotterForm_databox_em_','model':'MAirfoilPlotterForm','name':'databox','enableAjaxValidation':false},{'id':'MAirfoilPlotterForm_camberline','inputID':'MAirfoilPlotterForm_camberline','errorID':'MAirfoilPlotterForm_camberline_em_','model':'MAirfoilPlotterForm','name':'camberline','enableAjaxValidation':false},{'id':'MAirfoilPlotterForm_xGrid','inputID':'MAirfoilPlotterForm_xGrid','errorID':'MAirfoilPlotterForm_xGrid_em_','model':'MAirfoilPlotterForm','name':'xGrid','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("X grid (mm) cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/^\s*[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\s*$/)) {
+	messages.push("X grid (mm) must be a number.");
+}
+
+if(value<5) {
+	messages.push("X grid (mm) is too small (minimum is 5).");
+}
+
+if(value>1000) {
+	messages.push("X grid (mm) is too big (maximum is 1000).");
+}
+
+}
+
+}},{'id':'MAirfoilPlotterForm_yGrid','inputID':'MAirfoilPlotterForm_yGrid','errorID':'MAirfoilPlotterForm_yGrid_em_','model':'MAirfoilPlotterForm','name':'yGrid','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Y grid (mm) cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/^\s*[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\s*$/)) {
+	messages.push("Y grid (mm) must be a number.");
+}
+
+if(value<5) {
+	messages.push("Y grid (mm) is too small (minimum is 5).");
+}
+
+if(value>1000) {
+	messages.push("Y grid (mm) is too big (maximum is 1000).");
+}
+
+}
+
+}},{'id':'MAirfoilPlotterForm_xPage','inputID':'MAirfoilPlotterForm_xPage','errorID':'MAirfoilPlotterForm_xPage_em_','model':'MAirfoilPlotterForm','name':'xPage','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Paper width (mm) cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/^\s*[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\s*$/)) {
+	messages.push("Paper width (mm) must be a number.");
+}
+
+if(value<10) {
+	messages.push("Paper width (mm) is too small (minimum is 10).");
+}
+
+if(value>20000) {
+	messages.push("Paper width (mm) is too big (maximum is 20000).");
+}
+
+}
+
+}},{'id':'MAirfoilPlotterForm_yPage','inputID':'MAirfoilPlotterForm_yPage','errorID':'MAirfoilPlotterForm_yPage_em_','model':'MAirfoilPlotterForm','name':'yPage','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Paper height (mm) cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/^\s*[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\s*$/)) {
+	messages.push("Paper height (mm) must be a number.");
+}
+
+if(value<10) {
+	messages.push("Paper height (mm) is too small (minimum is 10).");
+}
+
+if(value>20000) {
+	messages.push("Paper height (mm) is too big (maximum is 20000).");
+}
+
+}
+
+}}]});
+});
+/*]]>*/
+</script>
+</body>
+</html>

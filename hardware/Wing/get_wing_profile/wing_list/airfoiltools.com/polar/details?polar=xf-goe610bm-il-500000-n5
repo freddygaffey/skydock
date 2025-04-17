@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V1CCJ4RLRS"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-V1CCJ4RLRS');</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1">
+<meta name="robots" content="all" />
+<meta name="keywords" content="goe610bm-il,GOE 610-B MOD. AIRFOIL,Xfoil prediction,polar diagram,coefficient of drag,cl,cd,alpha,angle of attack,reynolds number 500,000,mach,airfoil,aerofoil" />
+<meta name="description" content="Polar details for airfoil (aerofoil)GOE 610-B MOD. AIRFOIL(goe610bm-il) Xfoil prediction at Reynolds number 500,000 and Ncrit 5" />
+<link rel="apple-touch-icon" sizes="57x57" href="http://airfoiltools.com/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="http://airfoiltools.com/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://airfoiltools.com/apple-touch-icon-114x114.png" />
+<link rel="stylesheet" type="text/css" href="/css/screen.css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="/css/ie.css" media="screen, projection" />
+<![endif]-->
+
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" href="/css/form.css" />
+<style type="text/css">
+/*<![CDATA[*/
+table.details {width:auto;vertical-align:top;}
+table.details td {vertical-align:top;text-align:left;}
+table.details td  {font-size:0.8em;}table.details .cell1 {width:220px;}table.details .cell2 {width:500px;}table.details th {font-size:1.0em;font-weight:normal;}table.tabdata{vertical-align:top;margin:auto;width:auto;border-style:solid;border-width:1px;}
+table.tabdata td, table.tabdata th {font-size:0.8em;width:70px;border-style:solid;border-width:1px;text-align:right;padding:1px 10px 1px 1px;}table.tabdata th {font-size:1.0em;background-color:#ddd}
+/*]]>*/
+</style>
+<style type="text/css">
+/*<![CDATA[*/
+.mvisible:focus, .mvisible:hover {color:#00c;cursor:pointer;} 
+
+/*]]>*/
+</style>
+<script type="text/javascript" src="/assets/780cfc96/jquery.min.js"></script>
+<title>GOE 610-B MOD. AIRFOIL (goe610bm-il) Xfoil prediction polar at RE=500,000 Ncrit=5</title>
+	
+
+
+</head>
+<body>
+<div id="cookies" style="display:none;width:1026px;background:#ddbbbb;margin:auto;text-align:center;"></div>
+<div style="width:1024px;margin:auto;background:white; border: 1px solid #000000;">
+	<div style="width:100%;height:75px;color:#ffffff;background:#303090;padding:0px;margin:0px;border:0px">
+
+		<div style="display:inline-block;float:left;padding:0 0 0 20px;text-align:left;">
+		<span style="font-size:23pt;">Airfoil Tools</span><br/><span style="font-size:1.1em;padding:0 30px 0 0;">Search 1638 airfoils</span>
+<a href="http://plus.google.com/105890010939518182070?prsrc=3" rel="publisher" style="text-decoration:none;"><img src="http://ssl.gstatic.com/images/icons/gplus-32.png" alt="Google+" style="border:0;width:21px;height:21px;"/></a>
+<a href="https://twitter.com/share" class="twitter-share-button"  data-url="http://airfoiltools.com/index">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2FAirfoilTools.com&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+		</div>
+		<div style="display:inline-block;float:right;padding:8px;padding-top:4px;margin:0px;border:0px;text-align:left;">
+		<div style="font-size:0.9em;height:33px;width:360px">
+		You have 0 airfoils loaded.<br/>Your Reynold number range is 50,000 to 1,000,000. (<a href="/userairfoil/index">set</a>)		</div>
+		<form action="http://airfoiltools.com/site/search" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-2601928470036827:5136476429" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="30" />
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+		</div>
+	</div>
+<table>
+<tr><td class="mmenu" style="vertical-align:top;">
+
+<nav>
+<h3 class="mmenu">Applications</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/search/index"><b>Airfoil database search</b></a></li>
+<li class="mmenu"><a href="/userairfoil/index"><b>My airfoils</b></a></li>
+<li class="mmenu"><a href="/plotter/index"><b>Airfoil plotter</b></a></li>
+<li class="mmenu"><a href="/compare/index"><b>Airfoil comparison</b></a></li>
+<li class="mmenu"><a href="/calculator/reynoldsnumber"><b>Reynolds number calc</b></a></li>
+<li class="mmenu"><a href="/airfoil/naca4digit"><b>NACA 4 digit generator</b></a></li>
+<li class="mmenu"><a href="/airfoil/naca5digit"><b>NACA 5 digit generator</b></a></li>
+</ul>
+<h3 class="mmenu">Information</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/airfoil/index"><b>Airfoil data</b></a></li>
+<li class="mmenu"><a href="/polar/index"><b>Lift/drag polars</b></a></li>
+<li class="mmenu"><a href="/airfoil/generated"><b>Generated airfoil shapes</b></a></li>
+</ul>
+<h3 class="mmenu">Searches</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/search/index?m%5BmaxCamber%5D=0&amp;m%5Bsort%5D=5"><b>Symmetrical airfoils</b></a></li>
+<li class="mmenu"><a href="/search/index?m%5Bgrp%5D=naca4d&amp;m%5Bsort%5D=1"><b>NACA 4 digit airfoils</b></a></li>
+<li class="mmenu"><a href="/search/index?m%5Bgrp%5D=naca5d&amp;m%5Bsort%5D=1"><b>NACA 5 digit airfoils</b></a></li>
+<li class="mmenu"><a href="/search/index?m%5Bgrp%5D=naca6&amp;m%5Bsort%5D=1"><b>NACA 6 series airfoils</b></a></li>
+</ul>
+<h3 class="mmenu">Airfoils A to Z</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/search/list?page=a&amp;no=0"><b>A</b> a18 to avistar (88)</a></li>
+<li class="mmenu"><a href="/search/list?page=b&amp;no=0"><b>B</b> b29root to bw3 (22)</a></li>
+<li class="mmenu"><a href="/search/list?page=c&amp;no=0"><b>C</b> c141a to curtisc72 (40)</a></li>
+<li class="mmenu"><a href="/search/list?page=d&amp;no=0"><b>D</b> dae11 to du861372 (28)</a></li>
+<li class="mmenu"><a href="/search/list?page=e&amp;no=0"><b>E</b> e1098 to esa40 (209)</a></li>
+<li class="mmenu"><a href="/search/list?page=f&amp;no=0"><b>F</b> falcon to fxs21158 (121)</a></li>
+<li class="mmenu"><a href="/search/list?page=g&amp;no=0"><b>G</b> geminism to gu255118 (419)</a></li>
+<li class="mmenu"><a href="/search/list?page=h&amp;no=0"><b>H</b> hh02 to ht23 (63)</a></li>
+<li class="mmenu"><a href="/search/list?page=i&amp;no=0"><b>I</b> isa571 to isa962 (4)</a></li>
+<li class="mmenu"><a href="/search/list?page=j&amp;no=0"><b>J</b> j5012 to joukowsk0021 (7)</a></li>
+<li class="mmenu"><a href="/search/list?page=k&amp;no=0"><b>K</b> k1 to kenmar (11)</a></li>
+<li class="mmenu"><a href="/search/list?page=l&amp;no=0"><b>L</b> l1003 to lwk80150k25 (24)</a></li>
+<li class="mmenu"><a href="/search/list?page=m&amp;no=0"><b>M</b> m1 to mue139 (95)</a></li>
+<li class="mmenu"><a href="/search/list?page=n&amp;no=0"><b>N</b> n0009sm to nplx (174)</a></li>
+<li class="mmenu"><a href="/search/list?page=o&amp;no=0"><b>O</b> oa206 to oaf139 (9)</a></li>
+<li class="mmenu"><a href="/search/list?page=p&amp;no=0"><b>P</b> p51droot to pw98mod (16)</a></li>
+<li class="mmenu"><a href="/search/list?page=r&amp;no=0"><b>R</b> r1046 to rhodesg36 (63)</a></li>
+<li class="mmenu"><a href="/search/list?page=s&amp;no=0"><b>S</b> s1010 to supermarine371ii (176)</a></li>
+<li class="mmenu"><a href="/search/list?page=t&amp;no=0"><b>T</b> tempest1 to tsagi8 (8)</a></li>
+<li class="mmenu"><a href="/search/list?page=u&amp;no=0"><b>U</b> ua2 to usnps4 (36)</a></li>
+<li class="mmenu"><a href="/search/list?page=v&amp;no=0"><b>V</b> v13006 to vr9 (17)</a></li>
+<li class="mmenu"><a href="/search/list?page=w&amp;no=0"><b>W</b> waspsm to whitcomb (4)</a></li>
+<li class="mmenu"><a href="/search/list?page=y&amp;no=0"><b>Y</b> ys900 to ys930 (3)</a></li>
+<li class="mmenu"><a href="/search/airfoils">List of all airfoils</a></li>
+</ul>
+<h3 class="mmenu">Site</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/index">Home</a></li>
+<li class="mmenu"><a href="/site/contact">Contact</a></li>
+<li class="mmenu"><a href="/site/privacy">Privacy Policy</a></li>
+</ul>
+</nav>
+<div style="width:30px;height:20px;">&nbsp;</div><script type="text/javascript"><!--
+google_ad_client = "pub-2601928470036827";
+google_ad_slot = "8324848737";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</td><td class="content" style="vertical-align:top;">
+	<div id="content">
+	
+<h1>GOE 610-B MOD. AIRFOIL (goe610bm-il) Xfoil prediction polar at RE=500,000 Ncrit=5</h1><div class="centerad">
+<script type="text/javascript"><!--
+google_ad_client = "pub-2601928470036827";
+google_ad_slot = "3945031462";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<br/>
+
+<table class="details">
+<tr>
+<th class="cell1" ><b>Details</b></th>
+<th class="cell2"><b>Polar file</b></th>
+</tr>
+<tr>
+<td  class="cell1">
+<b>Airfoil:</b> <a href="/airfoil/details?airfoil=goe610bm-il">GOE 610-B MOD. AIRFOIL (goe610bm-il)</a><br /><b>Reynolds number:</b> 500,000<br /><b>Max Cl/Cd:</b> 107.29 at &alpha;=4.5&deg;<br /><b>Description:</b> Mach=0 Ncrit=5<br /><b>Source:</b> <a href="?r=polar/index/#xfoil">Xfoil prediction</a><br /><b>Download polar:</b> <a href="/polar/text?polar=xf-goe610bm-il-500000-n5">xf-goe610bm-il-500000-n5.txt</a><br /><b>Download as CSV file:</b> <a href="/polar/csv?polar=xf-goe610bm-il-500000-n5">xf-goe610bm-il-500000-n5.csv</a><br /><br /></td>
+<td  class="cell2">
+<pre style="height:250px;overflow:auto;text-align:left;background-color:#ddd">
+  
+       XFOIL         Version 6.96
+  
+ Calculated polar for: GOE 610-B MOD. AIRFOIL                          
+  
+ 1 1 Reynolds number fixed          Mach number fixed         
+  
+ xtrf =   1.000 (top)        1.000 (bottom)  
+ Mach =   0.000     Re =     0.500 e 6     Ncrit =   5.000
+  
+   alpha    CL        CD       CDp       CM     Top_Xtr  Bot_Xtr
+  ------ -------- --------- --------- -------- -------- --------
+  -7.750  -0.2689   0.09236   0.09020  -0.0334   0.9404   0.0074
+  -7.500  -0.2600   0.09039   0.08820  -0.0341   0.9263   0.0081
+  -7.250  -0.2536   0.08751   0.08529  -0.0354   0.9130   0.0084
+  -6.750  -0.2367   0.07801   0.07572  -0.0434   0.8884   0.0069
+  -6.500  -0.2221   0.07407   0.07174  -0.0476   0.8765   0.0069
+  -6.250  -0.2045   0.06974   0.06736  -0.0527   0.8649   0.0069
+  -6.000  -0.1833   0.06477   0.06231  -0.0590   0.8531   0.0070
+  -5.750  -0.1587   0.05975   0.05723  -0.0659   0.8401   0.0072
+  -5.500  -0.1322   0.05593   0.05331  -0.0715   0.8272   0.0074
+  -5.250  -0.1028   0.05192   0.04919  -0.0774   0.8153   0.0078
+  -5.000  -0.0709   0.04779   0.04493  -0.0834   0.8038   0.0085
+  -4.750  -0.0279   0.04003   0.03692  -0.0936   0.7934   0.0096
+  -4.500   0.0236   0.02912   0.02548  -0.1051   0.7844   0.0107
+  -4.250   0.0736   0.01599   0.01092  -0.1133   0.7777   0.0152
+  -4.000   0.1009   0.01659   0.01152  -0.1132   0.7665   0.0158
+  -3.750   0.1286   0.01686   0.01175  -0.1133   0.7560   0.0166
+  -3.500   0.1574   0.01646   0.01117  -0.1136   0.7461   0.0182
+  -3.250   0.1875   0.01547   0.00985  -0.1141   0.7368   0.0212
+  -3.000   0.2170   0.01500   0.00916  -0.1144   0.7279   0.0225
+  -2.750   0.2468   0.01384   0.00772  -0.1151   0.7191   0.0244
+  -2.500   0.2758   0.01338   0.00713  -0.1155   0.7093   0.0256
+  -2.250   0.3049   0.01297   0.00658  -0.1158   0.6999   0.0269
+  -2.000   0.3338   0.01265   0.00614  -0.1161   0.6903   0.0285
+  -1.750   0.3630   0.01219   0.00553  -0.1163   0.6792   0.0296
+  -1.500   0.3921   0.01178   0.00499  -0.1166   0.6666   0.0304
+  -1.250   0.4210   0.01142   0.00451  -0.1168   0.6523   0.0309
+  -1.000   0.4498   0.01111   0.00408  -0.1170   0.6356   0.0312
+  -0.750   0.4784   0.01092   0.00376  -0.1171   0.6142   0.0319
+  -0.500   0.5067   0.01075   0.00344  -0.1173   0.5891   0.0322
+  -0.250   0.5352   0.01058   0.00313  -0.1174   0.5675   0.0321
+   0.000   0.5638   0.01045   0.00288  -0.1176   0.5514   0.0320
+   0.250   0.5923   0.01036   0.00269  -0.1178   0.5383   0.0320
+   0.500   0.6209   0.01030   0.00255  -0.1180   0.5271   0.0321
+   0.750   0.6495   0.01026   0.00244  -0.1182   0.5176   0.0323
+   1.000   0.6780   0.01024   0.00237  -0.1184   0.5099   0.0328
+   1.250   0.7065   0.01025   0.00233  -0.1186   0.5022   0.0334
+   1.500   0.7348   0.01028   0.00233  -0.1187   0.4954   0.0342
+   1.750   0.7634   0.01029   0.00229  -0.1189   0.4889   0.0401
+   2.250   0.8206   0.01009   0.00250  -0.1196   0.4769   0.2272
+   2.500   0.8487   0.00926   0.00278  -0.1203   0.4696   0.7168
+   3.000   0.8985   0.00896   0.00285  -0.1189   0.4511   1.0000
+   3.250   0.9263   0.00911   0.00295  -0.1190   0.4416   1.0000
+   3.500   0.9542   0.00925   0.00306  -0.1191   0.4346   1.0000
+   3.750   0.9821   0.00939   0.00319  -0.1192   0.4276   1.0000
+   4.000   1.0098   0.00954   0.00332  -0.1193   0.4195   1.0000
+   4.250   1.0372   0.00971   0.00347  -0.1193   0.4102   1.0000
+   4.500   1.0643   0.00992   0.00363  -0.1193   0.3928   1.0000
+   4.750   1.0906   0.01024   0.00381  -0.1192   0.3623   1.0000
+   5.000   1.1163   0.01064   0.00404  -0.1191   0.3260   1.0000
+   5.250   1.1388   0.01154   0.00450  -0.1187   0.2496   1.0000
+   5.500   1.1580   0.01295   0.00534  -0.1178   0.1498   1.0000
+   5.750   1.1797   0.01390   0.00597  -0.1173   0.0982   1.0000
+   6.000   1.1976   0.01536   0.00693  -0.1161   0.0204   1.0000
+   6.250   1.2224   0.01576   0.00738  -0.1157   0.0136   1.0000
+   6.500   1.2470   0.01617   0.00788  -0.1153   0.0120   1.0000
+   6.750   1.2708   0.01666   0.00847  -0.1148   0.0105   1.0000
+   7.000   1.2931   0.01733   0.00926  -0.1140   0.0089   1.0000
+   7.250   1.3161   0.01784   0.00984  -0.1133   0.0080   1.0000
+   7.500   1.3383   0.01842   0.01050  -0.1126   0.0073   1.0000
+   7.750   1.3595   0.01908   0.01126  -0.1117   0.0067   1.0000
+   8.000   1.3792   0.01985   0.01211  -0.1106   0.0062   1.0000
+   8.250   1.3943   0.02104   0.01340  -0.1088   0.0058   1.0000
+   8.500   1.4125   0.02182   0.01427  -0.1074   0.0055   1.0000
+   8.750   1.4300   0.02261   0.01514  -0.1060   0.0050   1.0000
+   9.000   1.4451   0.02351   0.01612  -0.1042   0.0046   1.0000
+   9.250   1.4572   0.02455   0.01724  -0.1020   0.0044   1.0000
+   9.500   1.4672   0.02562   0.01840  -0.0995   0.0042   1.0000
+   9.750   1.4723   0.02680   0.01970  -0.0963   0.0041   1.0000
+  10.000   1.4758   0.02823   0.02122  -0.0932   0.0039   1.0000
+  10.250   1.4752   0.03013   0.02323  -0.0900   0.0038   1.0000
+  10.500   1.4742   0.03226   0.02547  -0.0871   0.0037   1.0000
+  10.750   1.4767   0.03422   0.02756  -0.0849   0.0036   1.0000
+  11.000   1.4784   0.03640   0.02986  -0.0828   0.0035   1.0000
+  11.250   1.4789   0.03879   0.03238  -0.0808   0.0035   1.0000
+  11.500   1.4791   0.04134   0.03505  -0.0791   0.0034   1.0000
+  11.750   1.4790   0.04401   0.03785  -0.0774   0.0033   1.0000
+  12.000   1.4792   0.04674   0.04072  -0.0759   0.0032   1.0000
+  12.250   1.4797   0.04951   0.04362  -0.0746   0.0031   1.0000
+  12.500   1.4805   0.05227   0.04651  -0.0735   0.0030   1.0000
+  12.750   1.4808   0.05514   0.04951  -0.0727   0.0029   1.0000
+  13.000   1.4807   0.05811   0.05261  -0.0721   0.0028   1.0000
+  13.250   1.4797   0.06123   0.05585  -0.0718   0.0027   1.0000
+  13.500   1.4774   0.06460   0.05936  -0.0716   0.0026   1.0000
+  13.750   1.4745   0.06816   0.06308  -0.0717   0.0025   1.0000
+  14.000   1.4706   0.07197   0.06703  -0.0719   0.0025   1.0000
+  14.250   1.4656   0.07605   0.07125  -0.0723   0.0025   1.0000
+  14.500   1.4597   0.08040   0.07574  -0.0730   0.0024   1.0000
+  14.750   1.4530   0.08501   0.08050  -0.0739   0.0024   1.0000
+  15.000   1.4449   0.08993   0.08557  -0.0749   0.0024   1.0000
+  15.250   1.4359   0.09511   0.09089  -0.0763   0.0024   1.0000
+  15.500   1.4254   0.10068   0.09661  -0.0779   0.0023   1.0000
+  15.750   1.4141   0.10657   0.10267  -0.0798   0.0023   1.0000
+  16.250   1.3887   0.11938   0.11581  -0.0848   0.0023   1.0000
+  16.500   1.3765   0.12613   0.12274  -0.0880   0.0023   1.0000
+</pre>
+</td>
+</tr>
+</table>
+<a href="/airfoil/details?airfoil=goe610bm-il">&lt;&lt Back to GOE 610-B MOD. AIRFOIL (goe610bm-il)</a><h2>Polar data table <span id="_link0" title="Show" class="mvisible">(+)</span></h2><div id="_block0" style="display:none;"><table class="tabdata"><tr><th>Alpha</th><th>Cl</th><th>Cd</th><th>Cdp</th><th>Cm</th><th>Top Xtr</th><th>Btm Xtr</th>
+</tr><tr><td>-7.7500</td><td>-0.2689</td><td>0.0924</td><td>0.0902</td><td>-0.0334</td><td>0.9404</td><td>0.0074</td>
+</tr><tr><td>-7.5000</td><td>-0.2600</td><td>0.0904</td><td>0.0882</td><td>-0.0341</td><td>0.9263</td><td>0.0081</td>
+</tr><tr><td>-7.2500</td><td>-0.2536</td><td>0.0875</td><td>0.0853</td><td>-0.0354</td><td>0.9130</td><td>0.0084</td>
+</tr><tr><td>-6.7500</td><td>-0.2367</td><td>0.0780</td><td>0.0757</td><td>-0.0434</td><td>0.8884</td><td>0.0069</td>
+</tr><tr><td>-6.5000</td><td>-0.2221</td><td>0.0741</td><td>0.0717</td><td>-0.0476</td><td>0.8765</td><td>0.0069</td>
+</tr><tr><td>-6.2500</td><td>-0.2045</td><td>0.0697</td><td>0.0674</td><td>-0.0527</td><td>0.8649</td><td>0.0069</td>
+</tr><tr><td>-6.0000</td><td>-0.1833</td><td>0.0648</td><td>0.0623</td><td>-0.0590</td><td>0.8531</td><td>0.0070</td>
+</tr><tr><td>-5.7500</td><td>-0.1587</td><td>0.0597</td><td>0.0572</td><td>-0.0659</td><td>0.8401</td><td>0.0072</td>
+</tr><tr><td>-5.5000</td><td>-0.1322</td><td>0.0559</td><td>0.0533</td><td>-0.0715</td><td>0.8272</td><td>0.0074</td>
+</tr><tr><td>-5.2500</td><td>-0.1028</td><td>0.0519</td><td>0.0492</td><td>-0.0774</td><td>0.8153</td><td>0.0078</td>
+</tr><tr><td>-5.0000</td><td>-0.0709</td><td>0.0478</td><td>0.0449</td><td>-0.0834</td><td>0.8038</td><td>0.0085</td>
+</tr><tr><td>-4.7500</td><td>-0.0279</td><td>0.0400</td><td>0.0369</td><td>-0.0936</td><td>0.7934</td><td>0.0096</td>
+</tr><tr><td>-4.5000</td><td>0.0236</td><td>0.0291</td><td>0.0255</td><td>-0.1051</td><td>0.7844</td><td>0.0107</td>
+</tr><tr><td>-4.2500</td><td>0.0736</td><td>0.0160</td><td>0.0109</td><td>-0.1133</td><td>0.7777</td><td>0.0152</td>
+</tr><tr><td>-4.0000</td><td>0.1009</td><td>0.0166</td><td>0.0115</td><td>-0.1132</td><td>0.7665</td><td>0.0158</td>
+</tr><tr><td>-3.7500</td><td>0.1286</td><td>0.0169</td><td>0.0118</td><td>-0.1133</td><td>0.7560</td><td>0.0166</td>
+</tr><tr><td>-3.5000</td><td>0.1574</td><td>0.0165</td><td>0.0112</td><td>-0.1136</td><td>0.7461</td><td>0.0182</td>
+</tr><tr><td>-3.2500</td><td>0.1875</td><td>0.0155</td><td>0.0098</td><td>-0.1141</td><td>0.7368</td><td>0.0212</td>
+</tr><tr><td>-3.0000</td><td>0.2170</td><td>0.0150</td><td>0.0092</td><td>-0.1144</td><td>0.7279</td><td>0.0225</td>
+</tr><tr><td>-2.7500</td><td>0.2468</td><td>0.0138</td><td>0.0077</td><td>-0.1151</td><td>0.7191</td><td>0.0244</td>
+</tr><tr><td>-2.5000</td><td>0.2758</td><td>0.0134</td><td>0.0071</td><td>-0.1155</td><td>0.7093</td><td>0.0256</td>
+</tr><tr><td>-2.2500</td><td>0.3049</td><td>0.0130</td><td>0.0066</td><td>-0.1158</td><td>0.6999</td><td>0.0269</td>
+</tr><tr><td>-2.0000</td><td>0.3338</td><td>0.0126</td><td>0.0061</td><td>-0.1161</td><td>0.6903</td><td>0.0285</td>
+</tr><tr><td>-1.7500</td><td>0.3630</td><td>0.0122</td><td>0.0055</td><td>-0.1163</td><td>0.6792</td><td>0.0296</td>
+</tr><tr><td>-1.5000</td><td>0.3921</td><td>0.0118</td><td>0.0050</td><td>-0.1166</td><td>0.6666</td><td>0.0304</td>
+</tr><tr><td>-1.2500</td><td>0.4210</td><td>0.0114</td><td>0.0045</td><td>-0.1168</td><td>0.6523</td><td>0.0309</td>
+</tr><tr><td>-1.0000</td><td>0.4498</td><td>0.0111</td><td>0.0041</td><td>-0.1170</td><td>0.6356</td><td>0.0312</td>
+</tr><tr><td>-0.7500</td><td>0.4784</td><td>0.0109</td><td>0.0038</td><td>-0.1171</td><td>0.6142</td><td>0.0319</td>
+</tr><tr><td>-0.5000</td><td>0.5067</td><td>0.0107</td><td>0.0034</td><td>-0.1173</td><td>0.5891</td><td>0.0322</td>
+</tr><tr><td>-0.2500</td><td>0.5352</td><td>0.0106</td><td>0.0031</td><td>-0.1174</td><td>0.5675</td><td>0.0321</td>
+</tr><tr><td>0.0000</td><td>0.5638</td><td>0.0104</td><td>0.0029</td><td>-0.1176</td><td>0.5514</td><td>0.0320</td>
+</tr><tr><td>0.2500</td><td>0.5923</td><td>0.0104</td><td>0.0027</td><td>-0.1178</td><td>0.5383</td><td>0.0320</td>
+</tr><tr><td>0.5000</td><td>0.6209</td><td>0.0103</td><td>0.0026</td><td>-0.1180</td><td>0.5271</td><td>0.0321</td>
+</tr><tr><td>0.7500</td><td>0.6495</td><td>0.0103</td><td>0.0024</td><td>-0.1182</td><td>0.5176</td><td>0.0323</td>
+</tr><tr><td>1.0000</td><td>0.6780</td><td>0.0102</td><td>0.0024</td><td>-0.1184</td><td>0.5099</td><td>0.0328</td>
+</tr><tr><td>1.2500</td><td>0.7065</td><td>0.0103</td><td>0.0023</td><td>-0.1186</td><td>0.5022</td><td>0.0334</td>
+</tr><tr><td>1.5000</td><td>0.7348</td><td>0.0103</td><td>0.0023</td><td>-0.1187</td><td>0.4954</td><td>0.0342</td>
+</tr><tr><td>1.7500</td><td>0.7634</td><td>0.0103</td><td>0.0023</td><td>-0.1189</td><td>0.4889</td><td>0.0401</td>
+</tr><tr><td>2.2500</td><td>0.8206</td><td>0.0101</td><td>0.0025</td><td>-0.1196</td><td>0.4769</td><td>0.2272</td>
+</tr><tr><td>2.5000</td><td>0.8487</td><td>0.0093</td><td>0.0028</td><td>-0.1203</td><td>0.4696</td><td>0.7168</td>
+</tr><tr><td>3.0000</td><td>0.8985</td><td>0.0090</td><td>0.0029</td><td>-0.1189</td><td>0.4511</td><td>1.0000</td>
+</tr><tr><td>3.2500</td><td>0.9263</td><td>0.0091</td><td>0.0029</td><td>-0.1190</td><td>0.4416</td><td>1.0000</td>
+</tr><tr><td>3.5000</td><td>0.9542</td><td>0.0092</td><td>0.0031</td><td>-0.1191</td><td>0.4346</td><td>1.0000</td>
+</tr><tr><td>3.7500</td><td>0.9821</td><td>0.0094</td><td>0.0032</td><td>-0.1192</td><td>0.4276</td><td>1.0000</td>
+</tr><tr><td>4.0000</td><td>1.0098</td><td>0.0095</td><td>0.0033</td><td>-0.1193</td><td>0.4195</td><td>1.0000</td>
+</tr><tr><td>4.2500</td><td>1.0372</td><td>0.0097</td><td>0.0035</td><td>-0.1193</td><td>0.4102</td><td>1.0000</td>
+</tr><tr><td>4.5000</td><td>1.0643</td><td>0.0099</td><td>0.0036</td><td>-0.1193</td><td>0.3928</td><td>1.0000</td>
+</tr><tr><td>4.7500</td><td>1.0906</td><td>0.0102</td><td>0.0038</td><td>-0.1192</td><td>0.3623</td><td>1.0000</td>
+</tr><tr><td>5.0000</td><td>1.1163</td><td>0.0106</td><td>0.0040</td><td>-0.1191</td><td>0.3260</td><td>1.0000</td>
+</tr><tr><td>5.2500</td><td>1.1388</td><td>0.0115</td><td>0.0045</td><td>-0.1187</td><td>0.2496</td><td>1.0000</td>
+</tr><tr><td>5.5000</td><td>1.1580</td><td>0.0129</td><td>0.0053</td><td>-0.1178</td><td>0.1498</td><td>1.0000</td>
+</tr><tr><td>5.7500</td><td>1.1797</td><td>0.0139</td><td>0.0060</td><td>-0.1173</td><td>0.0982</td><td>1.0000</td>
+</tr><tr><td>6.0000</td><td>1.1976</td><td>0.0154</td><td>0.0069</td><td>-0.1161</td><td>0.0204</td><td>1.0000</td>
+</tr><tr><td>6.2500</td><td>1.2224</td><td>0.0158</td><td>0.0074</td><td>-0.1157</td><td>0.0136</td><td>1.0000</td>
+</tr><tr><td>6.5000</td><td>1.2470</td><td>0.0162</td><td>0.0079</td><td>-0.1153</td><td>0.0120</td><td>1.0000</td>
+</tr><tr><td>6.7500</td><td>1.2708</td><td>0.0167</td><td>0.0085</td><td>-0.1148</td><td>0.0105</td><td>1.0000</td>
+</tr><tr><td>7.0000</td><td>1.2931</td><td>0.0173</td><td>0.0093</td><td>-0.1140</td><td>0.0089</td><td>1.0000</td>
+</tr><tr><td>7.2500</td><td>1.3161</td><td>0.0178</td><td>0.0098</td><td>-0.1133</td><td>0.0080</td><td>1.0000</td>
+</tr><tr><td>7.5000</td><td>1.3383</td><td>0.0184</td><td>0.0105</td><td>-0.1126</td><td>0.0073</td><td>1.0000</td>
+</tr><tr><td>7.7500</td><td>1.3595</td><td>0.0191</td><td>0.0113</td><td>-0.1117</td><td>0.0067</td><td>1.0000</td>
+</tr><tr><td>8.0000</td><td>1.3792</td><td>0.0198</td><td>0.0121</td><td>-0.1106</td><td>0.0062</td><td>1.0000</td>
+</tr><tr><td>8.2500</td><td>1.3943</td><td>0.0210</td><td>0.0134</td><td>-0.1088</td><td>0.0058</td><td>1.0000</td>
+</tr><tr><td>8.5000</td><td>1.4125</td><td>0.0218</td><td>0.0143</td><td>-0.1074</td><td>0.0055</td><td>1.0000</td>
+</tr><tr><td>8.7500</td><td>1.4300</td><td>0.0226</td><td>0.0151</td><td>-0.1060</td><td>0.0050</td><td>1.0000</td>
+</tr><tr><td>9.0000</td><td>1.4451</td><td>0.0235</td><td>0.0161</td><td>-0.1042</td><td>0.0046</td><td>1.0000</td>
+</tr><tr><td>9.2500</td><td>1.4572</td><td>0.0245</td><td>0.0172</td><td>-0.1020</td><td>0.0044</td><td>1.0000</td>
+</tr><tr><td>9.5000</td><td>1.4672</td><td>0.0256</td><td>0.0184</td><td>-0.0995</td><td>0.0042</td><td>1.0000</td>
+</tr><tr><td>9.7500</td><td>1.4723</td><td>0.0268</td><td>0.0197</td><td>-0.0963</td><td>0.0041</td><td>1.0000</td>
+</tr><tr><td>10.0000</td><td>1.4758</td><td>0.0282</td><td>0.0212</td><td>-0.0932</td><td>0.0039</td><td>1.0000</td>
+</tr><tr><td>10.2500</td><td>1.4752</td><td>0.0301</td><td>0.0232</td><td>-0.0900</td><td>0.0038</td><td>1.0000</td>
+</tr><tr><td>10.5000</td><td>1.4742</td><td>0.0323</td><td>0.0255</td><td>-0.0871</td><td>0.0037</td><td>1.0000</td>
+</tr><tr><td>10.7500</td><td>1.4767</td><td>0.0342</td><td>0.0276</td><td>-0.0849</td><td>0.0036</td><td>1.0000</td>
+</tr><tr><td>11.0000</td><td>1.4784</td><td>0.0364</td><td>0.0299</td><td>-0.0828</td><td>0.0035</td><td>1.0000</td>
+</tr><tr><td>11.2500</td><td>1.4789</td><td>0.0388</td><td>0.0324</td><td>-0.0808</td><td>0.0035</td><td>1.0000</td>
+</tr><tr><td>11.5000</td><td>1.4791</td><td>0.0413</td><td>0.0350</td><td>-0.0791</td><td>0.0034</td><td>1.0000</td>
+</tr><tr><td>11.7500</td><td>1.4790</td><td>0.0440</td><td>0.0379</td><td>-0.0774</td><td>0.0033</td><td>1.0000</td>
+</tr><tr><td>12.0000</td><td>1.4792</td><td>0.0467</td><td>0.0407</td><td>-0.0759</td><td>0.0032</td><td>1.0000</td>
+</tr><tr><td>12.2500</td><td>1.4797</td><td>0.0495</td><td>0.0436</td><td>-0.0746</td><td>0.0031</td><td>1.0000</td>
+</tr><tr><td>12.5000</td><td>1.4805</td><td>0.0523</td><td>0.0465</td><td>-0.0735</td><td>0.0030</td><td>1.0000</td>
+</tr><tr><td>12.7500</td><td>1.4808</td><td>0.0551</td><td>0.0495</td><td>-0.0727</td><td>0.0029</td><td>1.0000</td>
+</tr><tr><td>13.0000</td><td>1.4807</td><td>0.0581</td><td>0.0526</td><td>-0.0721</td><td>0.0028</td><td>1.0000</td>
+</tr><tr><td>13.2500</td><td>1.4797</td><td>0.0612</td><td>0.0558</td><td>-0.0718</td><td>0.0027</td><td>1.0000</td>
+</tr><tr><td>13.5000</td><td>1.4774</td><td>0.0646</td><td>0.0594</td><td>-0.0716</td><td>0.0026</td><td>1.0000</td>
+</tr><tr><td>13.7500</td><td>1.4745</td><td>0.0682</td><td>0.0631</td><td>-0.0717</td><td>0.0025</td><td>1.0000</td>
+</tr><tr><td>14.0000</td><td>1.4706</td><td>0.0720</td><td>0.0670</td><td>-0.0719</td><td>0.0025</td><td>1.0000</td>
+</tr><tr><td>14.2500</td><td>1.4656</td><td>0.0761</td><td>0.0712</td><td>-0.0723</td><td>0.0025</td><td>1.0000</td>
+</tr><tr><td>14.5000</td><td>1.4597</td><td>0.0804</td><td>0.0757</td><td>-0.0730</td><td>0.0024</td><td>1.0000</td>
+</tr><tr><td>14.7500</td><td>1.4530</td><td>0.0850</td><td>0.0805</td><td>-0.0739</td><td>0.0024</td><td>1.0000</td>
+</tr><tr><td>15.0000</td><td>1.4449</td><td>0.0899</td><td>0.0856</td><td>-0.0749</td><td>0.0024</td><td>1.0000</td>
+</tr><tr><td>15.2500</td><td>1.4359</td><td>0.0951</td><td>0.0909</td><td>-0.0763</td><td>0.0024</td><td>1.0000</td>
+</tr><tr><td>15.5000</td><td>1.4254</td><td>0.1007</td><td>0.0966</td><td>-0.0779</td><td>0.0023</td><td>1.0000</td>
+</tr><tr><td>15.7500</td><td>1.4141</td><td>0.1066</td><td>0.1027</td><td>-0.0798</td><td>0.0023</td><td>1.0000</td>
+</tr><tr><td>16.2500</td><td>1.3887</td><td>0.1194</td><td>0.1158</td><td>-0.0848</td><td>0.0023</td><td>1.0000</td>
+</tr><tr><td>16.5000</td><td>1.3765</td><td>0.1261</td><td>0.1227</td><td>-0.0880</td><td>0.0023</td><td>1.0000</td>
+</tr></table></div><h2>Polar graphs</h2>
+<iframe id="plot" src="/polar/plot?a=xf-goe610bm-il-500000-n5_4bb2c5&amp;v=1743665365&amp;max=&amp;min=&amp;maxcd=
+" scrolling="no" width="810" height="1245" frameborder="0"></iframe><br /><a href="/airfoil/details?airfoil=goe610bm-il">&lt;&lt Back to GOE 610-B MOD. AIRFOIL (goe610bm-il)</a><br /><br />
+<div style="width:480px;margin:auto;"><script type="text/javascript"><!--
+google_ad_client = "pub-2601928470036827";
+google_ad_slot = "4043024604";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div><!-- content -->
+
+</td></tr>
+</table>	
+	<div class="clear"></div>
+
+	<div id="footer">
+		Copyright &copy; 2025 All Rights Reserved.<br/>
+		No content or images on this web site should be reproduced without permission.<br/>
+		
+	</div><!-- footer -->
+
+</div><!-- page -->
+
+<script type="text/javascript">
+/*<![CDATA[*/
+jQuery(window).load(function() {
+$('#_link0').click(function() { 
+$('#_block0').toggle(200, function() { 
+var vis=$('#_block0:hidden').length; 
+if (vis > 0) {
+$('#_link0').html('(+)');
+ $('#_link0').attr('title','Show');
+} else { 
+ $('#_link0').html('(-)');
+$('#_link0').attr('title','hide');
+}}) 
+ });
+});
+/*]]>*/
+</script>
+</body>
+</html>

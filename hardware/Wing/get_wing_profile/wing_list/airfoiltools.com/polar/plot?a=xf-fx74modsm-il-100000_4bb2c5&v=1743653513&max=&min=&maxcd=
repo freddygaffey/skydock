@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="/assets/62ff72f1/jquery.jqplot.min.css" media="screen, projection, print" />
+<style type="text/css">
+/*<![CDATA[*/
+.jqplot-title {font-size:1.8em;padding:3px;}.jqplot-xaxis {font-size:0.8em;padding-top:3px;}.jqplot-yaxis {font-size:0.8em;padding-right:3px;}
+/*]]>*/
+</style>
+<!--[if lt IE 9]><script type="text/javascript" src="/assets/62ff72f1/excanvas.min.js"></script></script><![endif]-->
+<script type="text/javascript" src="/assets/780cfc96/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/62ff72f1/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/62ff72f1/jquery.jqplot.min.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+var jqplots = [];
+
+/*]]>*/
+</script>
+<title>Airfoil polar plot</title>
+<meta http-equiv="Content-Language" content="en-gb"/>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
+<meta content="none" name="robots" />
+<meta name="copyright" content="Copyright 2010-2013. All Rights Reserved" />
+</head>
+<body>
+
+<table style="width:800px;">
+<tr><td>
+<div id="liftdrag" style="height:400px;width:398px;margin:auto;display:inline-block;"></div>
+</td><td>
+<div id="liftaoa" style="height:400px;width:398px;margin:auto;display:inline-block;"></div>
+</td></tr>
+<tr><td>
+<div id="effaoa" style="height:400px;width:398px;margin:auto;display:inline-block;"></div>
+</td><td>
+<div id="dragaoa" style="height:400px;width:398px;margin:auto;display:inline-block;"></div>
+</td></tr>
+<tr><td>
+<div id="momentaoa" style="height:400px;width:398px;margin:auto;display:inline-block;"></div>
+</td><td>
+</td></tr>
+
+</table>
+<script type="text/javascript">
+/*<![CDATA[*/
+jQuery(window).load(function() {
+var p = $.jqplot('liftdrag',[[[0.10914,0.1944],[0.10850,0.2101],[0.10760,0.2242],[0.09897,0.2509],[0.09514,0.2693],[0.09244,0.2849],[0.09023,0.2975],[0.08836,0.3076],[0.08654,0.3191],[0.08551,0.3269],[0.08586,0.3289],[0.08604,0.3399],[0.08389,0.3497],[0.07828,0.3608],[0.07600,0.3725],[0.07428,0.3833],[0.07268,0.3996],[0.07339,0.4316],[0.06920,0.4359],[0.06707,0.4402],[0.06522,0.4540],[0.06064,0.5172],[0.05874,0.5237],[0.05497,0.5918],[0.05409,0.5861],[0.05115,0.6349],[0.04864,0.6725],[0.04742,0.6958],[0.04538,0.7435],[0.04347,0.7800],[0.03501,0.9906],[0.03253,1.0601],[0.03191,1.1006],[0.03147,1.1365],[0.03193,1.1534],[0.03175,1.1829],[0.03122,1.2176],[0.03180,1.2406],[0.03249,1.2628],[0.03135,1.2864],[0.03149,1.3144],[0.03314,1.3256],[0.03431,1.3431],[0.03458,1.3740],[0.03477,1.4079],[0.03796,1.3964],[0.03904,1.4148],[0.03901,1.4493],[0.03886,1.4871],[0.05807,1.2787],[0.05447,1.3460],[0.05053,1.4269],[0.04465,1.5417],[0.06052,1.3740],[0.05733,1.4385],[0.05389,1.5144],[0.11760,1.0244],[0.11768,1.0423],],],
+{"title":"Cl v Cd","sortData":false,"legend":{"show":false,"placement":"insideGrid","location":"ne"},"series":[{"showLabel":true,"index":0,"showLine":true,"trendline":{"type":"none","show":false},"color":"#4bb2c5"}],"show":"$.jqplot.config.enablePlugins","axes":{"xaxis":{"max":0.12,"min":0,"tickInterval":0.02,"tickOptions":{"formatString":"%.2f"},"forceTickAt0":true,"rendererOptions":{"forceTickAt0":true}},"yaxis":{"max":1.6,"min":0,"tickInterval":0.2,"tickOptions":{"formatString":"%.2f"},"forceTickAt0":true,"rendererOptions":{"forceTickAt0":true}}},"seriesDefaults":{"lineWidth":1,"showLabel":true,"markerOptions":{"size":5,"show":false}}});
+jqplots.push(p);
+
+var p = $.jqplot('liftaoa',[[[-9.250,0.1944],[-9.000,0.2101],[-8.750,0.2242],[-8.500,0.2509],[-8.250,0.2693],[-8.000,0.2849],[-7.750,0.2975],[-7.500,0.3076],[-7.250,0.3191],[-7.000,0.3269],[-6.750,0.3289],[-6.500,0.3399],[-6.250,0.3497],[-6.000,0.3608],[-5.750,0.3725],[-5.500,0.3833],[-5.250,0.3996],[-5.000,0.4316],[-4.750,0.4359],[-4.500,0.4402],[-4.250,0.4540],[-3.750,0.5172],[-3.500,0.5237],[-3.250,0.5918],[-3.000,0.5861],[-2.750,0.6349],[-2.500,0.6725],[-2.250,0.6958],[-2.000,0.7435],[-1.750,0.7800],[-0.750,0.9906],[-0.500,1.0601],[-0.250,1.1006],[0.000,1.1365],[0.250,1.1534],[0.500,1.1829],[0.750,1.2176],[1.000,1.2406],[1.250,1.2628],[1.500,1.2864],[1.750,1.3144],[2.000,1.3256],[2.250,1.3431],[2.500,1.3740],[2.750,1.4079],[3.000,1.3964],[3.250,1.4148],[3.500,1.4493],[3.750,1.4871],[4.000,1.2787],[4.250,1.3460],[4.500,1.4269],[4.750,1.5417],[5.000,1.3740],[5.250,1.4385],[5.500,1.5144],[5.750,1.0244],[6.000,1.0423],],],
+{"title":"Cl v Alpha","sortData":false,"legend":{"show":false,"placement":"insideGrid","location":"ne"},"series":[{"showLabel":true,"index":0,"showLine":true,"trendline":{"type":"none","show":false},"color":"#4bb2c5"}],"show":"$.jqplot.config.enablePlugins","axes":{"xaxis":{"max":6,"min":-10,"tickInterval":2,"tickOptions":{"formatString":"%.1f"},"forceTickAt0":true,"rendererOptions":{"forceTickAt0":true}},"yaxis":{"max":1.6,"min":0,"tickInterval":0.2,"tickOptions":{"formatString":"%.2f"},"forceTickAt0":true,"rendererOptions":{"forceTickAt0":true}}},"seriesDefaults":{"lineWidth":1,"showLabel":true,"markerOptions":{"size":5,"show":false}}});
+jqplots.push(p);
+
+var p = $.jqplot('momentaoa',[[[-9.250,-0.1208],[-9.000,-0.1272],[-8.750,-0.1327],[-8.500,-0.1318],[-8.250,-0.1329],[-8.000,-0.1346],[-7.750,-0.1359],[-7.500,-0.1369],[-7.250,-0.1384],[-7.000,-0.1400],[-6.750,-0.1418],[-6.500,-0.1473],[-6.250,-0.1494],[-6.000,-0.1433],[-5.750,-0.1427],[-5.500,-0.1434],[-5.250,-0.1467],[-5.000,-0.1626],[-4.750,-0.1576],[-4.500,-0.1535],[-4.250,-0.1540],[-3.750,-0.1714],[-3.500,-0.1673],[-3.250,-0.1857],[-3.000,-0.1795],[-2.750,-0.1897],[-2.500,-0.1945],[-2.250,-0.1974],[-2.000,-0.2052],[-1.750,-0.2084],[-0.750,-0.2379],[-0.500,-0.2452],[-0.250,-0.2471],[0.000,-0.2484],[0.250,-0.2471],[0.500,-0.2475],[0.750,-0.2487],[1.000,-0.2483],[1.250,-0.2480],[1.500,-0.2468],[1.750,-0.2464],[2.000,-0.2445],[2.250,-0.2434],[2.500,-0.2440],[2.750,-0.2450],[3.000,-0.2404],[3.250,-0.2394],[3.500,-0.2404],[3.750,-0.2418],[4.000,-0.2186],[4.250,-0.2211],[4.500,-0.2260],[4.750,-0.2357],[5.000,-0.2166],[5.250,-0.2191],[5.500,-0.2237],[5.750,-0.2105],[6.000,-0.2089],],],
+{"title":"Cm v Alpha","sortData":false,"legend":{"show":false,"placement":"insideGrid","location":"ne"},"series":[{"showLabel":true,"index":0,"showLine":true,"trendline":{"type":"none","show":false},"color":"#4bb2c5"}],"show":"$.jqplot.config.enablePlugins","axes":{"xaxis":{"max":6,"min":-10,"tickInterval":2,"tickOptions":{"formatString":"%.1f"},"forceTickAt0":true,"rendererOptions":{"forceTickAt0":true}},"yaxis":{"max":0,"min":-0.25,"tickInterval":0.05,"tickOptions":{"formatString":"%.2f"},"forceTickAt0":true,"rendererOptions":{"forceTickAt0":true}}},"seriesDefaults":{"lineWidth":1,"showLabel":true,"markerOptions":{"size":5,"show":false}}});
+jqplots.push(p);
+
+var p = $.jqplot('dragaoa',[[[-9.250,0.10914],[-9.000,0.10850],[-8.750,0.10760],[-8.500,0.09897],[-8.250,0.09514],[-8.000,0.09244],[-7.750,0.09023],[-7.500,0.08836],[-7.250,0.08654],[-7.000,0.08551],[-6.750,0.08586],[-6.500,0.08604],[-6.250,0.08389],[-6.000,0.07828],[-5.750,0.07600],[-5.500,0.07428],[-5.250,0.07268],[-5.000,0.07339],[-4.750,0.06920],[-4.500,0.06707],[-4.250,0.06522],[-3.750,0.06064],[-3.500,0.05874],[-3.250,0.05497],[-3.000,0.05409],[-2.750,0.05115],[-2.500,0.04864],[-2.250,0.04742],[-2.000,0.04538],[-1.750,0.04347],[-0.750,0.03501],[-0.500,0.03253],[-0.250,0.03191],[0.000,0.03147],[0.250,0.03193],[0.500,0.03175],[0.750,0.03122],[1.000,0.03180],[1.250,0.03249],[1.500,0.03135],[1.750,0.03149],[2.000,0.03314],[2.250,0.03431],[2.500,0.03458],[2.750,0.03477],[3.000,0.03796],[3.250,0.03904],[3.500,0.03901],[3.750,0.03886],[4.000,0.05807],[4.250,0.05447],[4.500,0.05053],[4.750,0.04465],[5.000,0.06052],[5.250,0.05733],[5.500,0.05389],[5.750,0.11760],[6.000,0.11768],],],
+{"title":"Cd v Alpha","sortData":false,"legend":{"show":false,"placement":"insideGrid","location":"ne"},"series":[{"showLabel":true,"index":0,"showLine":true,"trendline":{"type":"none","show":false},"color":"#4bb2c5"}],"show":"$.jqplot.config.enablePlugins","axes":{"xaxis":{"max":6,"min":-10,"tickInterval":2,"tickOptions":{"formatString":"%.1f"},"forceTickAt0":true,"rendererOptions":{"forceTickAt0":true}},"yaxis":{"max":0.12,"min":0,"tickInterval":0.02,"tickOptions":{"formatString":"%.2f"},"forceTickAt0":true,"rendererOptions":{"forceTickAt0":true}}},"seriesDefaults":{"lineWidth":1,"showLabel":true,"markerOptions":{"size":5,"show":false}}});
+jqplots.push(p);
+
+var p = $.jqplot('effaoa',[[[-9.250,1.7811984606927],[-9.000,1.9364055299539],[-8.750,2.0836431226766],[-8.500,2.5351116499949],[-8.250,2.8305654824469],[-8.000,3.0819991345738],[-7.750,3.2971295577967],[-7.500,3.481213218651],[-7.250,3.6873122255604],[-7.000,3.8229446848322],[-6.750,3.830654553925],[-6.500,3.9504881450488],[-6.250,4.1685540588866],[-6.000,4.60909555442],[-5.750,4.9013157894737],[-5.500,5.1602046311255],[-5.250,5.4980737479362],[-5.000,5.8809102057501],[-4.750,6.2991329479769],[-4.500,6.5632920828985],[-4.250,6.9610548911377],[-3.750,8.5290237467018],[-3.500,8.9155600953354],[-3.250,10.765872293979],[-3.000,10.835644296543],[-2.750,12.412512218964],[-2.500,13.826069078947],[-2.250,14.673133698861],[-2.000,16.383869546056],[-1.750,17.943409247757],[-0.750,28.294772922022],[-0.500,32.588379956963],[-0.250,34.490755249138],[0.000,36.113759135685],[0.250,36.122768556217],[0.500,37.256692913386],[0.750,39.00064061499],[1.000,39.012578616352],[1.250,38.867343798092],[1.500,41.033492822967],[1.750,41.740234995237],[2.000,40],[2.250,39.146021568056],[2.500,39.733950260266],[2.750,40.491803278689],[3.000,36.786090621707],[3.250,36.239754098361],[3.500,37.152012304537],[3.750,38.268142048379],[4.000,22.019975891166],[4.250,24.710850009179],[4.500,28.238670096972],[4.750,34.528555431131],[5.000,22.70323859881],[5.250,25.091575091575],[5.500,28.101688624977],[5.750,8.7108843537415],[6.000,8.8570700203943],],],
+{"title":"Cl\/Cd v Alpha","sortData":false,"legend":{"show":false,"placement":"insideGrid","location":"ne"},"series":[{"showLabel":true,"index":0,"showLine":true,"trendline":{"type":"none","show":false},"color":"#4bb2c5"}],"show":"$.jqplot.config.enablePlugins","axes":{"xaxis":{"max":6,"min":-10,"tickInterval":2,"tickOptions":{"formatString":"%.1f"},"forceTickAt0":true,"rendererOptions":{"forceTickAt0":true}},"yaxis":{"max":45,"min":0,"tickInterval":5,"tickOptions":{"formatString":"%.1f"},"forceTickAt0":true,"rendererOptions":{"forceTickAt0":true}}},"seriesDefaults":{"lineWidth":1,"showLabel":true,"markerOptions":{"size":5,"show":false}}});
+jqplots.push(p);
+
+});
+/*]]>*/
+</script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V1CCJ4RLRS"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-V1CCJ4RLRS');</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1">
+<meta name="robots" content="all" />
+<meta name="description" content="Manage the user&#039;s airfoils that can then be displayed in the airfoil plotter and comparison applications" />
+<link rel="apple-touch-icon" sizes="57x57" href="http://airfoiltools.com/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="http://airfoiltools.com/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://airfoiltools.com/apple-touch-icon-114x114.png" />
+<link rel="stylesheet" type="text/css" href="/css/screen.css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="/css/ie.css" media="screen, projection" />
+<![endif]-->
+
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" href="/css/form.css" />
+<style type="text/css">
+/*<![CDATA[*/
+td.cell1 {width:360px;padding:0;}
+td.cell2 {width:240px;text-align:left;font-size:0.8em;}
+td.cell3 {width:140px;text-align:left;font-size:0.8em;}
+
+/*]]>*/
+</style>
+<style type="text/css">
+/*<![CDATA[*/
+div.errorMessage {color: red;}
+
+/*]]>*/
+</style>
+<script type="text/javascript" src="/assets/780cfc96/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/780cfc96/jquery.yiiactiveform.js"></script>
+<title>User airfoil management</title>
+	
+
+
+</head>
+<body>
+<div id="cookies" style="display:none;width:1026px;background:#ddbbbb;margin:auto;text-align:center;"></div>
+<div style="width:1024px;margin:auto;background:white; border: 1px solid #000000;">
+	<div style="width:100%;height:75px;color:#ffffff;background:#303090;padding:0px;margin:0px;border:0px">
+
+		<div style="display:inline-block;float:left;padding:0 0 0 20px;text-align:left;">
+		<span style="font-size:23pt;">Airfoil Tools</span><br/><span style="font-size:1.1em;padding:0 30px 0 0;">Search 1638 airfoils</span>
+<a href="http://plus.google.com/105890010939518182070?prsrc=3" rel="publisher" style="text-decoration:none;"><img src="http://ssl.gstatic.com/images/icons/gplus-32.png" alt="Google+" style="border:0;width:21px;height:21px;"/></a>
+<a href="https://twitter.com/share" class="twitter-share-button"  data-url="http://airfoiltools.com/index">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2FAirfoilTools.com&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+		</div>
+		<div style="display:inline-block;float:right;padding:8px;padding-top:4px;margin:0px;border:0px;text-align:left;">
+		<div style="font-size:0.9em;height:33px;width:360px">
+		You have 6 airfoils loaded.<br/>Your Reynold number range is 50,000 to 1,000,000. (<a href="/userairfoil/index">set</a>)		</div>
+		<form action="http://airfoiltools.com/site/search" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-2601928470036827:5136476429" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="30" />
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+		</div>
+	</div>
+<table>
+<tr><td class="mmenu" style="vertical-align:top;">
+
+<nav>
+<h3 class="mmenu">Applications</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/search/index"><b>Airfoil database search</b></a></li>
+<li class="mmenu"><a href="/userairfoil/index"><b>My airfoils</b></a></li>
+<li class="mmenu"><a href="/plotter/index"><b>Airfoil plotter</b></a></li>
+<li class="mmenu"><a href="/compare/index"><b>Airfoil comparison</b></a></li>
+<li class="mmenu"><a href="/calculator/reynoldsnumber"><b>Reynolds number calc</b></a></li>
+<li class="mmenu"><a href="/airfoil/naca4digit"><b>NACA 4 digit generator</b></a></li>
+<li class="mmenu"><a href="/airfoil/naca5digit"><b>NACA 5 digit generator</b></a></li>
+</ul>
+<h3 class="mmenu">Information</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/airfoil/index"><b>Airfoil data</b></a></li>
+<li class="mmenu"><a href="/polar/index"><b>Lift/drag polars</b></a></li>
+<li class="mmenu"><a href="/airfoil/generated"><b>Generated airfoil shapes</b></a></li>
+</ul>
+<h3 class="mmenu">Searches</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/search/index?m%5BmaxCamber%5D=0&amp;m%5Bsort%5D=5"><b>Symmetrical airfoils</b></a></li>
+<li class="mmenu"><a href="/search/index?m%5Bgrp%5D=naca4d&amp;m%5Bsort%5D=1"><b>NACA 4 digit airfoils</b></a></li>
+<li class="mmenu"><a href="/search/index?m%5Bgrp%5D=naca5d&amp;m%5Bsort%5D=1"><b>NACA 5 digit airfoils</b></a></li>
+<li class="mmenu"><a href="/search/index?m%5Bgrp%5D=naca6&amp;m%5Bsort%5D=1"><b>NACA 6 series airfoils</b></a></li>
+</ul>
+<h3 class="mmenu">Airfoils A to Z</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/search/list?page=a&amp;no=0"><b>A</b> a18 to avistar (88)</a></li>
+<li class="mmenu"><a href="/search/list?page=b&amp;no=0"><b>B</b> b29root to bw3 (22)</a></li>
+<li class="mmenu"><a href="/search/list?page=c&amp;no=0"><b>C</b> c141a to curtisc72 (40)</a></li>
+<li class="mmenu"><a href="/search/list?page=d&amp;no=0"><b>D</b> dae11 to du861372 (28)</a></li>
+<li class="mmenu"><a href="/search/list?page=e&amp;no=0"><b>E</b> e1098 to esa40 (209)</a></li>
+<li class="mmenu"><a href="/search/list?page=f&amp;no=0"><b>F</b> falcon to fxs21158 (121)</a></li>
+<li class="mmenu"><a href="/search/list?page=g&amp;no=0"><b>G</b> geminism to gu255118 (419)</a></li>
+<li class="mmenu"><a href="/search/list?page=h&amp;no=0"><b>H</b> hh02 to ht23 (63)</a></li>
+<li class="mmenu"><a href="/search/list?page=i&amp;no=0"><b>I</b> isa571 to isa962 (4)</a></li>
+<li class="mmenu"><a href="/search/list?page=j&amp;no=0"><b>J</b> j5012 to joukowsk0021 (7)</a></li>
+<li class="mmenu"><a href="/search/list?page=k&amp;no=0"><b>K</b> k1 to kenmar (11)</a></li>
+<li class="mmenu"><a href="/search/list?page=l&amp;no=0"><b>L</b> l1003 to lwk80150k25 (24)</a></li>
+<li class="mmenu"><a href="/search/list?page=m&amp;no=0"><b>M</b> m1 to mue139 (95)</a></li>
+<li class="mmenu"><a href="/search/list?page=n&amp;no=0"><b>N</b> n0009sm to nplx (174)</a></li>
+<li class="mmenu"><a href="/search/list?page=o&amp;no=0"><b>O</b> oa206 to oaf139 (9)</a></li>
+<li class="mmenu"><a href="/search/list?page=p&amp;no=0"><b>P</b> p51droot to pw98mod (16)</a></li>
+<li class="mmenu"><a href="/search/list?page=r&amp;no=0"><b>R</b> r1046 to rhodesg36 (63)</a></li>
+<li class="mmenu"><a href="/search/list?page=s&amp;no=0"><b>S</b> s1010 to supermarine371ii (176)</a></li>
+<li class="mmenu"><a href="/search/list?page=t&amp;no=0"><b>T</b> tempest1 to tsagi8 (8)</a></li>
+<li class="mmenu"><a href="/search/list?page=u&amp;no=0"><b>U</b> ua2 to usnps4 (36)</a></li>
+<li class="mmenu"><a href="/search/list?page=v&amp;no=0"><b>V</b> v13006 to vr9 (17)</a></li>
+<li class="mmenu"><a href="/search/list?page=w&amp;no=0"><b>W</b> waspsm to whitcomb (4)</a></li>
+<li class="mmenu"><a href="/search/list?page=y&amp;no=0"><b>Y</b> ys900 to ys930 (3)</a></li>
+<li class="mmenu"><a href="/search/airfoils">List of all airfoils</a></li>
+</ul>
+<h3 class="mmenu">Site</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/index">Home</a></li>
+<li class="mmenu"><a href="/site/contact">Contact</a></li>
+<li class="mmenu"><a href="/site/privacy">Privacy Policy</a></li>
+</ul>
+</nav>
+</td><td class="content" style="vertical-align:top;">
+	<div id="content">
+	<h1>My airfoils</h1>
+<ul>
+<li>Add your own airfoils here so thay can be used in the plotter and comparison applications.
+Your airfoils will appear at the top of the drop down menu lists.
+</li>
+<li>Set the Reynolds number range you are interested in so only the relevant polar diagrams will
+be shown in the details and comparison pages.
+</li>
+</ul>
+<b>Note</b> This information is stored in the browser session and will be lost when the browser is closed.
+Keep a local copy of the data if required.
+<h2>Reynolds number range and ncrit values </h2>
+<form id="design-form" action="/userairfoil/index" method="post"><table style="width:500px;margin:auto;" class="dataTable"><tr class="dataTableRow"><td class="dataTableTitle"><label for="MUserAirfoilRecord_lowRe">Low Reynolds number</label></td><td class="dataTableValue"><select name="MUserAirfoilRecord[lowRe]" id="MUserAirfoilRecord_lowRe">
+<option value="50000" selected="selected">50,000</option>
+<option value="100000">100,000</option>
+<option value="200000">200,000</option>
+<option value="500000">500,000</option>
+<option value="1000000">1,000,000</option>
+<option value="2000000">2,000,000</option>
+<option value="5000000">5,000,000</option>
+</select></td><td class="dataTableDesc"><div class="errorMessage" id="MUserAirfoilRecord_lowRe_em_" style="display:none"></div>Lowest Re# range of interest</td></tr>
+<tr class="dataTableRow"><td class="dataTableTitle"><label for="MUserAirfoilRecord_hiRe">High Reynolds number</label></td><td class="dataTableValue"><select name="MUserAirfoilRecord[hiRe]" id="MUserAirfoilRecord_hiRe">
+<option value="50000">50,000</option>
+<option value="100000">100,000</option>
+<option value="200000">200,000</option>
+<option value="500000">500,000</option>
+<option value="1000000" selected="selected">1,000,000</option>
+<option value="2000000">2,000,000</option>
+<option value="5000000">5,000,000</option>
+</select></td><td class="dataTableDesc"><div class="errorMessage" id="MUserAirfoilRecord_hiRe_em_" style="display:none"></div>Highest Re# range of interest</td></tr>
+<tr class="dataTableRow"><td class="dataTableTitle"><label for="MUserAirfoilRecord_lowNcrit">Low ncrit value</label></td><td class="dataTableValue"><select name="MUserAirfoilRecord[lowNcrit]" id="MUserAirfoilRecord_lowNcrit">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7" selected="selected">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select></td><td class="dataTableDesc"><div class="errorMessage" id="MUserAirfoilRecord_lowNcrit_em_" style="display:none"></div>Lowest ncrit value (1->12)</td></tr>
+<tr class="dataTableRow"><td class="dataTableTitle"><label for="MUserAirfoilRecord_hiNcrit">High ncrit value</label></td><td class="dataTableValue"><select name="MUserAirfoilRecord[hiNcrit]" id="MUserAirfoilRecord_hiNcrit">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9" selected="selected">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select></td><td class="dataTableDesc"><div class="errorMessage" id="MUserAirfoilRecord_hiNcrit_em_" style="display:none"></div>Highest ncrit value (1->12)</td></tr>
+<tr class="dataTableRow"><td class="dataTableTitle"><input type="submit" name="yt0" value="Update" /></td><td class="dataTableValue"><a href="/calculator/reynoldsnumber">Reynolds number calculator</a></td><td class="dataTableDesc"></td></tr>
+</table>
+</form>
+<h2>Airfoils</h2>
+
+<table>
+<tr>
+<td class="cell1"><form action="/userairfoil/add" method="get"><input type="submit" name="yt1" value="Add new airfoil" /></form></td>
+<td class="cell2">&nbsp;</td>
+<td class="cell3"><a href="/userairfoil/clear">Clear all</a></td>
+</tr>
+
+
+<tr><td><h3 class="cell1">(user-000) NACA 2412 Airfoil M=2.0% P=40.0% T=12.0%</h3></td><td class="cell2">NACA 2412 Airfoil using the NACA 4 digit airfoil generator<br/>Max thickness 12% at 30.7% chord<br>Max camber 2% at 38.3% chord<br>Source: User input<br /></td><td class="cell3"><a href="/airfoil/details?airfoil=user-000">Airfoil details</a><br /><a href="/plotter/index?airfoil=user-000">Send to airfoil plotter</a><br /><a href="/compare/add?airfoil=user-000">Add to comparison</a><br /><a target="_blank" href="/airfoil/lednicerdatfile?airfoil=user-000">Lednicer format dat file</a><br /><a target="_blank" href="/airfoil/seligdatfile?airfoil=user-000">Selig format dat file</a><br /><a href="/userairfoil/delete?airfoil=user-000">Delete</a><br /></td></tr>
+<tr><td><h3 class="cell1">(user-001) NACA 2412 Airfoil M=2.0% P=40.0% T=12.0%</h3></td><td class="cell2">NACA 2412 Airfoil using the NACA 4 digit airfoil generator<br/>Max thickness 12% at 30.7% chord<br>Max camber 2% at 38.3% chord<br>Source: User input<br /></td><td class="cell3"><a href="/airfoil/details?airfoil=user-001">Airfoil details</a><br /><a href="/plotter/index?airfoil=user-001">Send to airfoil plotter</a><br /><a href="/compare/add?airfoil=user-001">Add to comparison</a><br /><a target="_blank" href="/airfoil/lednicerdatfile?airfoil=user-001">Lednicer format dat file</a><br /><a target="_blank" href="/airfoil/seligdatfile?airfoil=user-001">Selig format dat file</a><br /><a href="/userairfoil/delete?airfoil=user-001">Delete</a><br /></td></tr>
+<tr><td><h3 class="cell1">(user-002) NACA 2412 Airfoil M=2.0% P=40.0% T=12.0%</h3></td><td class="cell2">NACA 2412 Airfoil using the NACA 4 digit airfoil generator<br/>Max thickness 12% at 30.7% chord<br>Max camber 2% at 38.3% chord<br>Source: User input<br /></td><td class="cell3"><a href="/airfoil/details?airfoil=user-002">Airfoil details</a><br /><a href="/plotter/index?airfoil=user-002">Send to airfoil plotter</a><br /><a href="/compare/add?airfoil=user-002">Add to comparison</a><br /><a target="_blank" href="/airfoil/lednicerdatfile?airfoil=user-002">Lednicer format dat file</a><br /><a target="_blank" href="/airfoil/seligdatfile?airfoil=user-002">Selig format dat file</a><br /><a href="/userairfoil/delete?airfoil=user-002">Delete</a><br /></td></tr>
+<tr><td><h3 class="cell1">(user-003) NACA 24012 Airfoil cl=0.30 T=12.0% P=20.0%</h3></td><td class="cell2">naca24012 Airfoil using the NACA 5 digit airfoil generator<br/>Max thickness 12% at 30.7% chord<br>Max camber 0.9% at 23.8% chord<br>Source: User input<br /></td><td class="cell3"><a href="/airfoil/details?airfoil=user-003">Airfoil details</a><br /><a href="/plotter/index?airfoil=user-003">Send to airfoil plotter</a><br /><a href="/compare/add?airfoil=user-003">Add to comparison</a><br /><a target="_blank" href="/airfoil/lednicerdatfile?airfoil=user-003">Lednicer format dat file</a><br /><a target="_blank" href="/airfoil/seligdatfile?airfoil=user-003">Selig format dat file</a><br /><a href="/userairfoil/delete?airfoil=user-003">Delete</a><br /></td></tr>
+<tr><td><h3 class="cell1">(user-004) NACA 24012 Airfoil cl=0.30 T=12.0% P=20.0%</h3></td><td class="cell2">naca24012 Airfoil using the NACA 5 digit airfoil generator<br/>Max thickness 12% at 30.7% chord<br>Max camber 0.9% at 23.8% chord<br>Source: User input<br /></td><td class="cell3"><a href="/airfoil/details?airfoil=user-004">Airfoil details</a><br /><a href="/plotter/index?airfoil=user-004">Send to airfoil plotter</a><br /><a href="/compare/add?airfoil=user-004">Add to comparison</a><br /><a target="_blank" href="/airfoil/lednicerdatfile?airfoil=user-004">Lednicer format dat file</a><br /><a target="_blank" href="/airfoil/seligdatfile?airfoil=user-004">Selig format dat file</a><br /><a href="/userairfoil/delete?airfoil=user-004">Delete</a><br /></td></tr>
+<tr><td><h3 class="cell1">(user-005) NACA 24012 Airfoil cl=0.30 T=12.0% P=20.0%</h3></td><td class="cell2">naca24012 Airfoil using the NACA 5 digit airfoil generator<br/>Max thickness 12% at 30.7% chord<br>Max camber 0.9% at 23.8% chord<br>Source: User input<br /></td><td class="cell3"><a href="/airfoil/details?airfoil=user-005">Airfoil details</a><br /><a href="/plotter/index?airfoil=user-005">Send to airfoil plotter</a><br /><a href="/compare/add?airfoil=user-005">Add to comparison</a><br /><a target="_blank" href="/airfoil/lednicerdatfile?airfoil=user-005">Lednicer format dat file</a><br /><a target="_blank" href="/airfoil/seligdatfile?airfoil=user-005">Selig format dat file</a><br /><a href="/userairfoil/delete?airfoil=user-005">Delete</a><br /></td></tr></table>
+
+
+
+
+
+
+</div><!-- content -->
+
+</td></tr>
+</table>	
+	<div class="clear"></div>
+
+	<div id="footer">
+		Copyright &copy; 2025 All Rights Reserved.<br/>
+		No content or images on this web site should be reproduced without permission.<br/>
+		
+	</div><!-- footer -->
+
+</div><!-- page -->
+
+<script type="text/javascript">
+/*<![CDATA[*/
+jQuery(function($) {
+$('#design-form').yiiactiveform({'validateOnSubmit':true,'attributes':[{'id':'MUserAirfoilRecord_lowRe','inputID':'MUserAirfoilRecord_lowRe','errorID':'MUserAirfoilRecord_lowRe_em_','model':'MUserAirfoilRecord','name':'lowRe','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Low Reynolds number cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/^\s*[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\s*$/)) {
+	messages.push("Low Reynolds number must be a number.");
+}
+
+if(value<0) {
+	messages.push("Low Reynolds number is too small (minimum is 0).");
+}
+
+if(value>20000000) {
+	messages.push("Low Reynolds number is too big (maximum is 20000000).");
+}
+
+}
+
+}},{'id':'MUserAirfoilRecord_hiRe','inputID':'MUserAirfoilRecord_hiRe','errorID':'MUserAirfoilRecord_hiRe_em_','model':'MUserAirfoilRecord','name':'hiRe','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("High Reynolds number cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/^\s*[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\s*$/)) {
+	messages.push("High Reynolds number must be a number.");
+}
+
+if(value<0) {
+	messages.push("High Reynolds number is too small (minimum is 0).");
+}
+
+if(value>20000000) {
+	messages.push("High Reynolds number is too big (maximum is 20000000).");
+}
+
+}
+
+}},{'id':'MUserAirfoilRecord_lowNcrit','inputID':'MUserAirfoilRecord_lowNcrit','errorID':'MUserAirfoilRecord_lowNcrit_em_','model':'MUserAirfoilRecord','name':'lowNcrit','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("Low ncrit value cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/^\s*[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\s*$/)) {
+	messages.push("Low ncrit value must be a number.");
+}
+
+if(value<1) {
+	messages.push("Low ncrit value is too small (minimum is 1).");
+}
+
+if(value>12) {
+	messages.push("Low ncrit value is too big (maximum is 12).");
+}
+
+}
+
+}},{'id':'MUserAirfoilRecord_hiNcrit','inputID':'MUserAirfoilRecord_hiNcrit','errorID':'MUserAirfoilRecord_hiNcrit_em_','model':'MUserAirfoilRecord','name':'hiNcrit','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if($.trim(value)=='') {
+	messages.push("High ncrit value cannot be blank.");
+}
+
+
+if($.trim(value)!='') {
+	
+if(!value.match(/^\s*[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\s*$/)) {
+	messages.push("High ncrit value must be a number.");
+}
+
+if(value<1) {
+	messages.push("High ncrit value is too small (minimum is 1).");
+}
+
+if(value>12) {
+	messages.push("High ncrit value is too big (maximum is 12).");
+}
+
+}
+
+}}]});
+});
+/*]]>*/
+</script>
+</body>
+</html>

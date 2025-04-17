@@ -1,0 +1,593 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V1CCJ4RLRS"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-V1CCJ4RLRS');</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1">
+<meta name="robots" content="all" />
+<meta name="keywords" content="pw51-pw,PW51,Peter Wick. Airfoil for plank model gliders,airfoil,aerofoil, airfoil camber, airfoil thickness" />
+<meta name="description" content="Details of airfoil (aerofoil)(pw51-pw) PW51 Peter Wick. Airfoil for plank model gliders" />
+<link rel="apple-touch-icon" sizes="57x57" href="http://airfoiltools.com/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="http://airfoiltools.com/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://airfoiltools.com/apple-touch-icon-114x114.png" />
+<link rel="stylesheet" type="text/css" href="/css/screen.css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="/css/ie.css" media="screen, projection" />
+<![endif]-->
+
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" href="/css/form.css" />
+<link rel="stylesheet" type="text/css" href="/assets/a9c046ed/jquery.fancybox-1.3.4.css" />
+<style type="text/css">
+/*<![CDATA[*/
+table.details {width:800px;vertical-align:top;margin:0px;}
+table.details td {vertical-align:top;text-align:left;font-size:0.8em;}
+table.details td.cell1 {width:280px;}
+table.details td.cell2, table.details pre {width:190px;}
+table.details td.cell3 {width:190px;}
+table.details td.cell4 {width:140px;}
+table.details td.cell1h, table.details td.cell2h, table.details td.cell3h, table.details td.cell4h {font-size:1.0em;}
+table.details div.parsererror {color: red; }
+
+/*]]>*/
+</style>
+<style type="text/css">
+/*<![CDATA[*/
+table.similar {padding:0;margin:0px;border:0px;font-size:0.8em;width:400px	;}
+table.similar td {padding:1px;margin:0px;border:0px;}
+table.similar td.c1 {width:220px;}
+table.similar td.c2 {width:80px;}
+table.similar td.c3 {width:80px;}
+
+/*]]>*/
+</style>
+<style type="text/css">
+/*<![CDATA[*/
+table.polar, table.range {width:750px;vertical-align:top;margin:auto;}
+table.range {border:1px solid black;padding:7px;margin:7px auto 3px auto;}
+table.polar td, table.range  td, table.range  input[type=text],table.range select {vertical-align:top;text-align:left;font-size:0.8em;padding:2px;}
+table.polar th, table.range  th  {vertical-align:top;text-align:left;font-size:1.0em;padding:2px;}
+table.polar .cell0 {width:5%;vertical-align:middle;font-size:1em;}
+table.polar .cell1 {width:15%;}
+table.polar .cell2 {width:10%;text-align:right;padding-right:0px;;}
+table.polar .cell3 {width:9%;text-align:right;padding-right:10px;;}
+table.polar .cell4 {width:20%;}
+table.polar .cell5 {width:15%;}
+table.polar .cell6 {width:15%;}
+table.polar .cell7 {width:9%;}
+table.polar tr.row0 {background-color:#f0f0f0;}
+
+/*]]>*/
+</style>
+<!--[if lt IE 9]><script src="/assets/195f7690/svg.js" data-path="/assets/195f7690" type="text/javascript" ></script><![endif]-->
+<script type="text/javascript" src="/assets/780cfc96/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/a9c046ed/jquery.fancybox-1.3.4.pack.js"></script>
+<script type="text/javascript" src="/assets/a9c046ed/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+function refreshiframe() {
+var on = [];
+  $("input.polaractive").each(function (i) {
+    if (this.checked) {
+      on.push(this.id);
+    }
+  });
+  var url='/polar/plot?a='+on;
+  $("#polarIframe").attr('src',url);
+}
+
+/*]]>*/
+</script>
+<title>PW51 (pw51-pw)</title>
+	
+
+
+</head>
+<body>
+<div id="cookies" style="display:none;width:1026px;background:#ddbbbb;margin:auto;text-align:center;"></div>
+<div style="width:1024px;margin:auto;background:white; border: 1px solid #000000;">
+	<div style="width:100%;height:75px;color:#ffffff;background:#303090;padding:0px;margin:0px;border:0px">
+
+		<div style="display:inline-block;float:left;padding:0 0 0 20px;text-align:left;">
+		<span style="font-size:23pt;">Airfoil Tools</span><br/><span style="font-size:1.1em;padding:0 30px 0 0;">Search 1638 airfoils</span>
+<a href="http://plus.google.com/105890010939518182070?prsrc=3" rel="publisher" style="text-decoration:none;"><img src="http://ssl.gstatic.com/images/icons/gplus-32.png" alt="Google+" style="border:0;width:21px;height:21px;"/></a>
+<a href="https://twitter.com/share" class="twitter-share-button"  data-url="http://airfoiltools.com/index">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2FAirfoilTools.com&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+		</div>
+		<div style="display:inline-block;float:right;padding:8px;padding-top:4px;margin:0px;border:0px;text-align:left;">
+		<div style="font-size:0.9em;height:33px;width:360px">
+		You have 0 airfoils loaded.<br/>Your Reynold number range is 50,000 to 1,000,000. (<a href="/userairfoil/index">set</a>)		</div>
+		<form action="http://airfoiltools.com/site/search" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-2601928470036827:5136476429" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="30" />
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+		</div>
+	</div>
+<table>
+<tr><td class="mmenu" style="vertical-align:top;">
+
+<nav>
+<h3 class="mmenu">Applications</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/search/index"><b>Airfoil database search</b></a></li>
+<li class="mmenu"><a href="/userairfoil/index"><b>My airfoils</b></a></li>
+<li class="mmenu"><a href="/plotter/index"><b>Airfoil plotter</b></a></li>
+<li class="mmenu"><a href="/compare/index"><b>Airfoil comparison</b></a></li>
+<li class="mmenu"><a href="/calculator/reynoldsnumber"><b>Reynolds number calc</b></a></li>
+<li class="mmenu"><a href="/airfoil/naca4digit"><b>NACA 4 digit generator</b></a></li>
+<li class="mmenu"><a href="/airfoil/naca5digit"><b>NACA 5 digit generator</b></a></li>
+</ul>
+<h3 class="mmenu">Information</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/airfoil/index"><b>Airfoil data</b></a></li>
+<li class="mmenu"><a href="/polar/index"><b>Lift/drag polars</b></a></li>
+<li class="mmenu"><a href="/airfoil/generated"><b>Generated airfoil shapes</b></a></li>
+</ul>
+<h3 class="mmenu">Searches</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/search/index?m%5BmaxCamber%5D=0&amp;m%5Bsort%5D=5"><b>Symmetrical airfoils</b></a></li>
+<li class="mmenu"><a href="/search/index?m%5Bgrp%5D=naca4d&amp;m%5Bsort%5D=1"><b>NACA 4 digit airfoils</b></a></li>
+<li class="mmenu"><a href="/search/index?m%5Bgrp%5D=naca5d&amp;m%5Bsort%5D=1"><b>NACA 5 digit airfoils</b></a></li>
+<li class="mmenu"><a href="/search/index?m%5Bgrp%5D=naca6&amp;m%5Bsort%5D=1"><b>NACA 6 series airfoils</b></a></li>
+</ul>
+<h3 class="mmenu">Airfoils A to Z</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/search/list?page=a&amp;no=0"><b>A</b> a18 to avistar (88)</a></li>
+<li class="mmenu"><a href="/search/list?page=b&amp;no=0"><b>B</b> b29root to bw3 (22)</a></li>
+<li class="mmenu"><a href="/search/list?page=c&amp;no=0"><b>C</b> c141a to curtisc72 (40)</a></li>
+<li class="mmenu"><a href="/search/list?page=d&amp;no=0"><b>D</b> dae11 to du861372 (28)</a></li>
+<li class="mmenu"><a href="/search/list?page=e&amp;no=0"><b>E</b> e1098 to esa40 (209)</a></li>
+<li class="mmenu"><a href="/search/list?page=f&amp;no=0"><b>F</b> falcon to fxs21158 (121)</a></li>
+<li class="mmenu"><a href="/search/list?page=g&amp;no=0"><b>G</b> geminism to gu255118 (419)</a></li>
+<li class="mmenu"><a href="/search/list?page=h&amp;no=0"><b>H</b> hh02 to ht23 (63)</a></li>
+<li class="mmenu"><a href="/search/list?page=i&amp;no=0"><b>I</b> isa571 to isa962 (4)</a></li>
+<li class="mmenu"><a href="/search/list?page=j&amp;no=0"><b>J</b> j5012 to joukowsk0021 (7)</a></li>
+<li class="mmenu"><a href="/search/list?page=k&amp;no=0"><b>K</b> k1 to kenmar (11)</a></li>
+<li class="mmenu"><a href="/search/list?page=l&amp;no=0"><b>L</b> l1003 to lwk80150k25 (24)</a></li>
+<li class="mmenu"><a href="/search/list?page=m&amp;no=0"><b>M</b> m1 to mue139 (95)</a></li>
+<li class="mmenu"><a href="/search/list?page=n&amp;no=0"><b>N</b> n0009sm to nplx (174)</a></li>
+<li class="mmenu"><a href="/search/list?page=o&amp;no=0"><b>O</b> oa206 to oaf139 (9)</a></li>
+<li class="mmenu"><a href="/search/list?page=p&amp;no=0"><b>P</b> p51droot to pw98mod (16)</a></li>
+<li class="mmenu"><a href="/search/list?page=r&amp;no=0"><b>R</b> r1046 to rhodesg36 (63)</a></li>
+<li class="mmenu"><a href="/search/list?page=s&amp;no=0"><b>S</b> s1010 to supermarine371ii (176)</a></li>
+<li class="mmenu"><a href="/search/list?page=t&amp;no=0"><b>T</b> tempest1 to tsagi8 (8)</a></li>
+<li class="mmenu"><a href="/search/list?page=u&amp;no=0"><b>U</b> ua2 to usnps4 (36)</a></li>
+<li class="mmenu"><a href="/search/list?page=v&amp;no=0"><b>V</b> v13006 to vr9 (17)</a></li>
+<li class="mmenu"><a href="/search/list?page=w&amp;no=0"><b>W</b> waspsm to whitcomb (4)</a></li>
+<li class="mmenu"><a href="/search/list?page=y&amp;no=0"><b>Y</b> ys900 to ys930 (3)</a></li>
+<li class="mmenu"><a href="/search/airfoils">List of all airfoils</a></li>
+</ul>
+<h3 class="mmenu">Site</h3>
+<ul class="mmenu"><li class="mmenu"><a href="/index">Home</a></li>
+<li class="mmenu"><a href="/site/contact">Contact</a></li>
+<li class="mmenu"><a href="/site/privacy">Privacy Policy</a></li>
+</ul>
+</nav>
+<div style="width:30px;height:80px;">&nbsp;</div><script type="text/javascript"><!--
+google_ad_client = "pub-2601928470036827";
+google_ad_slot = "8324848737";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</td><td class="content" style="vertical-align:top;">
+	<div id="content">
+	
+<h1>PW51 (pw51-pw)</h1><h2>PW51 - Peter Wick. Airfoil for plank model gliders</h2>
+<p>
+
+</p>
+<div class="centerad">
+<script type="text/javascript"><!--
+google_ad_client = "pub-2601928470036827";
+google_ad_slot = "3945031462";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<br/>
+<!--[if !IE]>-->
+<object width="800" height="112" data="?r=msvg/svg/raw&amp;name=MAirfoilDetailsForm&amp;z=32723" type="image/svg+xml"><!--<![endif]-->
+<!--[if lt IE 9]>
+<object width="800" height="112" src="?r=msvg/svg/raw&amp;name=MAirfoilDetailsForm&amp;z=32723" classid="image/svg+xml"><![endif]-->
+<!--[if gte IE 9]>
+<object width="800" height="112" data="?r=msvg/svg/raw&amp;name=MAirfoilDetailsForm&amp;z=32723" type="image/svg+xml"><![endif]-->
+Airfoil pw51-pw
+</object>
+
+
+<table class="details">
+<tr>
+<td class="cell1h" ><b>Details</b></td>
+<td class="cell2h"><b>Dat file</b></td>
+<td class="cell3h"><b>Parser</b></td>
+<td class="cell4h">&nbsp;</td>
+</tr>
+<tr>
+<td  class="cell1">
+(pw51-pw) PW51<br />Peter Wick. Airfoil for plank model gliders<br />Max thickness 8.9% at 27.5% chord.<br />Max camber 1.4% at 27.5% chord<br />Source <a rel="nofollow" target="_blank" onclick="_gaq.push([&#039;_trackEvent&#039;,&#039;external&#039;,&#039;http://www.rcgroups.com/forums/showthread.php?t=387891&#039;, &#039;&#039;]);return true;" href="http://www.rcgroups.com/forums/showthread.php?t=387891">RC Groups</a><br /><a rel="nofollow" target="_blank" onclick="_gaq.push([&#039;_trackEvent&#039;,&#039;external&#039;,&#039;http://www.rcgroups.com/forums/showthread.php?t=387891&#039;, &#039;&#039;]);return true;" href="http://www.rcgroups.com/forums/showthread.php?t=387891">Source dat file</a><br />The dat file is in Selig format<br /></td>
+<td  class="cell2">
+
+<pre style="height:100px;overflow:auto;text-align:left;background-color:#ddd">
+PW51 
+1.00000 0.00047
+0.99655 0.00054
+0.98638 0.00097
+0.96991 0.00199
+0.94761 0.0037
+0.91998 0.0061
+0.88752 0.00915
+0.85073 0.0128
+0.81018 0.01695
+0.76640 0.02148
+0.71996 0.02629
+0.67144 0.03128
+0.62141 0.0363
+0.57048 0.04119
+0.51920 0.04579
+0.46812 0.04992
+0.41776 0.05342
+0.36860 0.05612
+0.32105 0.05789
+0.27556 0.05865
+0.23256 0.05831
+0.19244 0.05682
+0.15550 0.05411
+0.12200 0.05023
+0.09220 0.04523
+0.06630 0.03926
+0.04448 0.03245
+0.02687 0.02502
+0.01357 0.01731
+0.00472 0.00967
+0.00042 0.00263
+0.00003 0.00096
+0.00000 0.00000
+0.00006 -0.00066
+0.00025 -0.00154
+0.00056 -0.00235
+0.00100 -0.00312
+0.00156 -0.00387
+0.00224 -0.00461
+0.00305 -0.00535
+0.00398 -0.00609
+0.00504 -0.00683
+0.00622 -0.00758
+0.00752 -0.00833
+0.00895 -0.00908
+0.01049 -0.00982
+0.01216 -0.01054
+0.01395 -0.01126
+0.01587 -0.01197
+0.01790 -0.01267
+0.02005 -0.01336
+0.02233 -0.01404
+0.02472 -0.01470
+0.02723 -0.01536
+0.02985 -0.01600
+0.03260 -0.01663
+0.03546 -0.01725
+0.03844 -0.01785
+0.04153 -0.01844
+0.04474 -0.01902
+0.04806 -0.01958
+0.05149 -0.02012
+0.05504 -0.02065
+0.05869 -0.02117
+0.06246 -0.02167
+0.06633 -0.02215
+0.07031 -0.02262
+0.07440 -0.02308
+0.07860 -0.02352
+0.08290 -0.02395
+0.08731 -0.02436
+0.09181 -0.02475
+0.09642 -0.02514
+0.10113 -0.02550
+0.10594 -0.02585
+0.11085 -0.02619
+0.11585 -0.02651
+0.12095 -0.02681
+0.12615 -0.02711
+0.13144 -0.02738
+0.13682 -0.02765
+0.14229 -0.02790
+0.14785 -0.02814
+0.15349 -0.02836
+0.15922 -0.02857
+0.16504 -0.02877
+0.17095 -0.02896
+0.17693 -0.02913
+0.18299 -0.02929
+0.18914 -0.02944
+0.19536 -0.02958
+0.20166 -0.02970
+0.20803 -0.02981
+0.21447 -0.02991
+0.22099 -0.03000
+0.22757 -0.03008
+0.23422 -0.03015
+0.24094 -0.03020
+0.24772 -0.03025
+0.25457 -0.03029
+0.26148 -0.03031
+0.26844 -0.03033
+0.27547 -0.03033
+0.28255 -0.03032
+0.28969 -0.03031
+0.29687 -0.03028
+0.30411 -0.03024
+0.31140 -0.03020
+0.31873 -0.03015
+0.32611 -0.03008
+0.33353 -0.03001
+0.34099 -0.02993
+0.34850 -0.02985
+0.35604 -0.02975
+0.36361 -0.02964
+0.37123 -0.02953
+0.37887 -0.02940
+0.38654 -0.02927
+0.39424 -0.02913
+0.40197 -0.02898
+0.40972 -0.02882
+0.41750 -0.02866
+0.42529 -0.02849
+0.43311 -0.02831
+0.44094 -0.02813
+0.44878 -0.02793
+0.45664 -0.02773
+0.46451 -0.02752
+0.47239 -0.02731
+0.48027 -0.02708
+0.48816 -0.02685
+0.49605 -0.02662
+0.50395 -0.02637
+0.51184 -0.02612
+0.51973 -0.02587
+0.52761 -0.02560
+0.53549 -0.02534
+0.54336 -0.02506
+0.55122 -0.02478
+0.55906 -0.02449
+0.56689 -0.02420
+0.57471 -0.02391
+0.58250 -0.02361
+0.59028 -0.02330
+0.59803 -0.02299
+0.60576 -0.02267
+0.61346 -0.02235
+0.62113 -0.02203
+0.62877 -0.02170
+0.63639 -0.02137
+0.64396 -0.02104
+0.65150 -0.02070
+0.65901 -0.02035
+0.66647 -0.02001
+0.67389 -0.01966
+0.68127 -0.01931
+0.68860 -0.01895
+0.69589 -0.01860
+0.70313 -0.01824
+0.71032 -0.01788
+0.71745 -0.01752
+0.72453 -0.01715
+0.73156 -0.01679
+0.73852 -0.01643
+0.74543 -0.01606
+0.75228 -0.01569
+0.75906 -0.01533
+0.76578 -0.01496
+0.77243 -0.01459
+0.77901 -0.01423
+0.78553 -0.01386
+0.79197 -0.01349
+0.79835 -0.01313
+0.80464 -0.01276
+0.81086 -0.01240
+0.81701 -0.01204
+0.82307 -0.01168
+0.82905 -0.01132
+0.83496 -0.01097
+0.84077 -0.01061
+0.84651 -0.01026
+0.85215 -0.00992
+0.85771 -0.00957
+0.86318 -0.00923
+0.86856 -0.00890
+0.87385 -0.00856
+0.87905 -0.00824
+0.88415 -0.00791
+0.88915 -0.00760
+0.89406 -0.00728
+0.89887 -0.00697
+0.90358 -0.00667
+0.90819 -0.00638
+0.91270 -0.00608
+0.91710 -0.00580
+0.92140 -0.00552
+0.92560 -0.00525
+0.92969 -0.00498
+0.93367 -0.00472
+0.93754 -0.00447
+0.94131 -0.00422
+0.94496 -0.00398
+0.94851 -0.00375
+0.95194 -0.00353
+0.95526 -0.00331
+0.95847 -0.00310
+0.96156 -0.00290
+0.96454 -0.00271
+0.96740 -0.00252
+0.97015 -0.00234
+0.97277 -0.00217
+0.97528 -0.00201
+0.97768 -0.00186
+0.97995 -0.00171
+0.98210 -0.00157
+0.98413 -0.00144
+0.98605 -0.00132
+0.98784 -0.00121
+0.98951 -0.00110
+0.99105 -0.00100
+0.99248 -0.00091
+0.99378 -0.00083
+0.99496 -0.00076
+0.99602 -0.00070
+0.99695 -0.00064
+0.99776 -0.00060
+0.99844 -0.00056
+0.99900 -0.00053
+0.99944 -0.00050
+0.99975 -0.00048
+0.99994 -0.00047
+1.00000 -0.00047</pre>
+
+</td>
+<td  class="cell3">
+No parser warnings</td>
+<td  class="cell4">
+<a href="/plotter/index?airfoil=pw51-pw">Send to airfoil plotter</a><br /><a href="/compare/add?airfoil=pw51-pw">Add to comparison</a><br /><a target="_blank" href="/airfoil/lednicerdatfile?airfoil=pw51-pw">Lednicer format dat file</a><br /><a target="_blank" href="/airfoil/seligdatfile?airfoil=pw51-pw">Selig format dat file</a><br /></td>
+</tr>
+</table>
+
+<table class="spage" style="width:780px;border:1px solid #000;margin:auto;padding:4px;"><tr><td id="simlist" style="padding:10px 25px;;"><h2>Similar airfoils</h2><table class="similar"><tr><td class="c1">EH 1.5/9.0</td><td class="c2"><a rel="alternate" href="/images/airfoil/eh1590-il_l.png">Preview</a></td><td class="c3"><a href="/airfoil/details?airfoil=eh1590-il">Details</a></td></tr>
+<tr><td class="c1">PW75</td><td class="c2"><a rel="alternate" href="/images/airfoil/pw75-pw_l.png">Preview</a></td><td class="c3"><a href="/airfoil/details?airfoil=pw75-pw">Details</a></td></tr>
+<tr><td class="c1">EH 1.0/9.0</td><td class="c2"><a rel="alternate" href="/images/airfoil/eh1090-il_l.png">Preview</a></td><td class="c3"><a href="/airfoil/details?airfoil=eh1090-il">Details</a></td></tr>
+<tr><td class="c1">PW98-mod</td><td class="c2"><a rel="alternate" href="/images/airfoil/pw98mod-pw_l.png">Preview</a></td><td class="c3"><a href="/airfoil/details?airfoil=pw98mod-pw">Details</a></td></tr>
+<tr><td class="c1">PW106</td><td class="c2"><a rel="alternate" href="/images/airfoil/pw106-pw_l.png">Preview</a></td><td class="c3"><a href="/airfoil/details?airfoil=pw106-pw">Details</a></td></tr>
+<tr><td class="c1">E221  (9.39%)</td><td class="c2"><a rel="alternate" href="/images/airfoil/e221-il_l.png">Preview</a></td><td class="c3"><a href="/airfoil/details?airfoil=e221-il">Details</a></td></tr>
+<tr><td class="c1">BOEING VERTOL V(1.95)3009-1.25</td><td class="c2"><a rel="alternate" href="/images/airfoil/v13009-il_l.png">Preview</a></td><td class="c3"><a href="/airfoil/details?airfoil=v13009-il">Details</a></td></tr>
+<tr><td class="c1">SIKORSKY SC1095 AIRFOIL</td><td class="c2"><a rel="alternate" href="/images/airfoil/sc1095-il_l.png">Preview</a></td><td class="c3"><a href="/airfoil/details?airfoil=sc1095-il">Details</a></td></tr>
+<tr><td class="c1">B-29 TIP AIRFOIL</td><td class="c2"><a rel="alternate" href="/images/airfoil/b29tip-il_l.png">Preview</a></td><td class="c3"><a href="/airfoil/details?airfoil=b29tip-il">Details</a></td></tr>
+<tr><td class="c1">S5020</td><td class="c2"><a rel="alternate" href="/images/airfoil/s5020-il_l.png">Preview</a></td><td class="c3"><a href="/airfoil/details?airfoil=s5020-il">Details</a></td></tr>
+</table>
+</td>
+<td><script type="text/javascript"><!--
+google_ad_client = "pub-2601928470036827";
+google_ad_slot = "1103705950";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</td>
+</tr>
+</table>
+<h2 id="polars">Polars for PW51 (pw51-pw)</h2><table class="polar"><tr><th class="cell0">Plot</th><th class="cell1">Airfoil</th><th class="cell2">Reynolds #</th><th class="cell3">Ncrit</th><th class="cell4">Max Cl/Cd</th><th class="cell5">Description</th><th class="cell6">Source</th><th class="cell7">&nbsp;</th></tr><tr class="row0"><td class="cell0"><span style="background-color:#4bb2c5;">&nbsp;&nbsp;&nbsp;</span><input class="polaractive" id="xf-pw51-pw-50000_4bb2c5" checked="checked" type="checkbox" value="1" name="active" /></td><td class="cell1">pw51-pw</td><td class="cell2">50,000</td><td class="cell3">9</td><td class="cell4">26.2 at &alpha;=6.5&deg;</td><td class="cell5">Mach=0 Ncrit=9</td><td class="cell6"><a href="?r=polar/index/#xfoil">Xfoil prediction</a></td><td class="cell7"><a href="/polar/details?polar=xf-pw51-pw-50000">Details</a></td></tr>
+<tr class="row1"><td class="cell0"><span style="background-color:#c5b47f;">&nbsp;&nbsp;&nbsp;</span><input class="polaractive" id="xf-pw51-pw-100000_c5b47f" checked="checked" type="checkbox" value="1" name="active" /></td><td class="cell1">pw51-pw</td><td class="cell2">100,000</td><td class="cell3">9</td><td class="cell4">41.2 at &alpha;=6.5&deg;</td><td class="cell5">Mach=0 Ncrit=9</td><td class="cell6"><a href="?r=polar/index/#xfoil">Xfoil prediction</a></td><td class="cell7"><a href="/polar/details?polar=xf-pw51-pw-100000">Details</a></td></tr>
+<tr class="row0"><td class="cell0"><span style="background-color:#EAA228;">&nbsp;&nbsp;&nbsp;</span><input class="polaractive" id="xf-pw51-pw-200000_EAA228" checked="checked" type="checkbox" value="1" name="active" /></td><td class="cell1">pw51-pw</td><td class="cell2">200,000</td><td class="cell3">9</td><td class="cell4">56.6 at &alpha;=6.75&deg;</td><td class="cell5">Mach=0 Ncrit=9</td><td class="cell6"><a href="?r=polar/index/#xfoil">Xfoil prediction</a></td><td class="cell7"><a href="/polar/details?polar=xf-pw51-pw-200000">Details</a></td></tr>
+<tr class="row1"><td class="cell0"><span style="background-color:#579575;">&nbsp;&nbsp;&nbsp;</span><input class="polaractive" id="xf-pw51-pw-500000_579575" checked="checked" type="checkbox" value="1" name="active" /></td><td class="cell1">pw51-pw</td><td class="cell2">500,000</td><td class="cell3">9</td><td class="cell4">76.6 at &alpha;=6.5&deg;</td><td class="cell5">Mach=0 Ncrit=9</td><td class="cell6"><a href="?r=polar/index/#xfoil">Xfoil prediction</a></td><td class="cell7"><a href="/polar/details?polar=xf-pw51-pw-500000">Details</a></td></tr>
+<tr class="row0"><td class="cell0"><span style="background-color:#839557;">&nbsp;&nbsp;&nbsp;</span><input class="polaractive" id="xf-pw51-pw-1000000_839557" checked="checked" type="checkbox" value="1" name="active" /></td><td class="cell1">pw51-pw</td><td class="cell2">1,000,000</td><td class="cell3">9</td><td class="cell4">90.8 at &alpha;=6.25&deg;</td><td class="cell5">Mach=0 Ncrit=9</td><td class="cell6"><a href="?r=polar/index/#xfoil">Xfoil prediction</a></td><td class="cell7"><a href="/polar/details?polar=xf-pw51-pw-1000000">Details</a></td></tr>
+<tr class="row1"><td class="cell0"><span style="background-color:#958c12;">&nbsp;&nbsp;&nbsp;</span><input class="polaractive" id="xf-pw51-pw-2000000_958c12" type="checkbox" value="1" name="active" /></td><td class="cell1">pw51-pw</td><td class="cell2">2,000,000</td><td class="cell3">9</td><td class="cell4">104.2 at &alpha;=6.25&deg;</td><td class="cell5">Mach=0 Ncrit=9</td><td class="cell6"><a href="?r=polar/index/#xfoil">Xfoil prediction</a></td><td class="cell7"><a href="/polar/details?polar=xf-pw51-pw-2000000">Details</a></td></tr>
+<tr class="row0"><td class="cell0"><span style="background-color:#953579;">&nbsp;&nbsp;&nbsp;</span><input class="polaractive" id="xf-pw51-pw-5000000_953579" type="checkbox" value="1" name="active" /></td><td class="cell1">pw51-pw</td><td class="cell2">5,000,000</td><td class="cell3">9</td><td class="cell4">119.9 at &alpha;=5.75&deg;</td><td class="cell5">Mach=0 Ncrit=9</td><td class="cell6"><a href="?r=polar/index/#xfoil">Xfoil prediction</a></td><td class="cell7"><a href="/polar/details?polar=xf-pw51-pw-5000000">Details</a></td></tr>
+<tr><td colspan="2"><input onclick="refreshiframe();" name="yt0" type="button" value="Update plots" /></td><td colspan="6"><a href="/calculator/reynoldsnumber">Reynolds number calculator</a></td></tr>
+</table>
+
+<form id="range" action="/userairfoil/index" method="post">
+
+<table class="range"><tr><th colspan="2">Set Reynolds number and Ncrit range</th><th>Low</th><th>High</th></tr>
+<tr><td rowspan="2"><input type="submit" name="yt1" value="Update Range" /><input name="MUserAirfoilRecord[redirect]" id="MUserAirfoilRecord_redirect" type="hidden" value="/airfoil/details?airfoil=pw51-pw#polars" /></td><td>Reynolds Number</td><td><select size="1" name="MUserAirfoilRecord[lowRe]" id="MUserAirfoilRecord_lowRe">
+<option value="50000" selected="selected">50,000</option>
+<option value="100000">100,000</option>
+<option value="200000">200,000</option>
+<option value="500000">500,000</option>
+<option value="1000000">1,000,000</option>
+<option value="2000000">2,000,000</option>
+<option value="5000000">5,000,000</option>
+</select></td><td><select size="1" name="MUserAirfoilRecord[hiRe]" id="MUserAirfoilRecord_hiRe">
+<option value="50000">50,000</option>
+<option value="100000">100,000</option>
+<option value="200000">200,000</option>
+<option value="500000">500,000</option>
+<option value="1000000" selected="selected">1,000,000</option>
+<option value="2000000">2,000,000</option>
+<option value="5000000">5,000,000</option>
+</select></td></tr>
+<tr><td>NCrit</td><td><select size="1" name="MUserAirfoilRecord[lowNcrit]" id="MUserAirfoilRecord_lowNcrit">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7" selected="selected">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select></td><td><select size="1" name="MUserAirfoilRecord[hiNcrit]" id="MUserAirfoilRecord_hiNcrit">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9" selected="selected">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select></td></tr>
+</table>
+
+</form>
+
+<iframe id="polarIframe" src="/polar/plot?a=xf-pw51-pw-50000_4bb2c5%2Cxf-pw51-pw-100000_c5b47f%2Cxf-pw51-pw-200000_EAA228%2Cxf-pw51-pw-500000_579575%2Cxf-pw51-pw-1000000_839557&amp;v=1743665433
+" scrolling="no" width="810" height="1245" frameborder="0"></iframe>
+<br />
+<div class="centerad"><script type="text/javascript"><!--
+google_ad_client = "pub-2601928470036827";
+google_ad_slot = "5338384101";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div><!-- content -->
+
+</td></tr>
+</table>	
+	<div class="clear"></div>
+
+	<div id="footer">
+		Copyright &copy; 2025 All Rights Reserved.<br/>
+		No content or images on this web site should be reproduced without permission.<br/>
+		
+	</div><!-- footer -->
+
+</div><!-- page -->
+
+<script type="text/javascript">
+/*<![CDATA[*/
+jQuery(function($) {
+
+			$('a[rel=alternate]').fancybox({'titlePosition':'inside','overlayColor':'#337','overlayOpacity':'0.25'});
+		
+});
+/*]]>*/
+</script>
+</body>
+</html>
