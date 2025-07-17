@@ -48,6 +48,63 @@ class Drone():
 # TODO: make self leaning to update the polinomial over time 
 # TODO: include any logic at all in it
 
+def quad_polys(self,num,poly_type):
+    if poly_type == "a":
+        a = 1
+        b = 0
+        c = 1
+        num = a*(num**2) + b*num + c
+        return num
+    if poly_type == "w":
+        a = 1
+        b = 0
+        c = 1
+        num = a*(num**2) + b*num + c
+        return num
+    
+    if poly_type == "g":
+        a = 1
+        b = 0
+        c = 1
+        num = a*(num**2) + b*num + c
+        return num
+    
+    if poly_type == "rpm":
+        a = 1
+        b = 0
+        c = 1
+        num = a*(num**2) + b*num + c
+        return num
+    
+def plane_polys(self,num,poly_type):
+    if poly_type == "a":
+        a = 1
+        b = 0
+        c = 1
+        num = a*(num**2) + b*num + c
+        return num
+    if poly_type == "w":
+        a = 1
+        b = 0
+        c = 1
+        num = a*(num**2) + b*num + c
+        return num
+    
+    if poly_type == "g":
+        a = 1
+        b = 0
+        c = 1
+        num = a*(num**2) + b*num + c
+        return num
+    
+    if poly_type == "rpm":
+        a = 1
+        b = 0
+        c = 1
+        num = a*(num**2) + b*num + c
+        return num
+
+
 def get_battery_range_quad_mode(self,mah_used,bat_max_mah,bat_volts,drone_weight,home_pos,wind_speed=0.0,wind_direction=0.0):
     """
     this function will return the max range for the drone at the best speed ignoring the energy to speed up and slow down in the drone mode
