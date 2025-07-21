@@ -3,10 +3,7 @@ import numpy as np
 import random
 import matplotlib.pyplot as mp
 import os
-# x,y,z = 100,0,0
-# xo,yo,zo = 0,0
-# cam_angle = [xo,yo]
-# cam_gps_pos = [x,y,z]
+import json
 
 def find_gps_from_angle_and_gps(cam_gps,cam_angle):
 
@@ -15,7 +12,7 @@ def find_gps_from_angle_and_gps(cam_gps,cam_angle):
         rtn.append(math.tan(math.radians(i))*cam_gps[-1])
 
     return (rtn[0],rtn[1],cam_gps[-1])
-\
+
 def get_the_arr_index_range_betwen_nums(min,max,arr_length):
     r = [-1,-1]
     increments = 1/arr_length
@@ -123,8 +120,22 @@ def scan_for_weeds(cam_gps,cam_angle,array_of_weeds_from_ai,horizontal_fov=22.3,
         #         # if jr[-1] >= 0.874:
         #         #     jr[-1] = 0
         #     print(jr)
+    try:    
         
-    file_csv = open(f"all_past_heatmaps/{TL_and_BR}.csv",'w')
+        file_csv = open(f"all_past_heatmaps/0.csv","x")
+        print("wrote to 0.csv")
+        json.dump(TL_and_BR,file_csv) 
+        file_csv.write("\n")    
+    except FileExistsError:
+        names = os.listdir("all_past_heatmaps")
+        name = 1
+        for i in names:
+            i = i.replace(".csv","")
+            name = max(name,int(i))
+        file_csv = open(f"all_past_heatmaps/{name + 1}.csv","x")
+        json.dump(TL_and_BR,file_csv)        
+        file_csv.write("\n")
+        
     for hmr in heat_map:
         csv_row = ""
         for hmc in hmr:
@@ -154,52 +165,73 @@ heat_map_final = (scan_for_weeds([0,0,300],[30,45],array_of_weeds_from_ai=data))
 #     file_csv.close()
         
 
-data = []
-for _ in range(30):
-    data.append([((random.random(),random.random()),(random.random(),random.random())),random.random()])
+# data = []
+# for _ in range(1):
+#     data.append([((random.random(),random.random()),(random.random(),random.random())),random.random()])
 
 heat_map = (scan_for_weeds([0,0,300],[30,45],array_of_weeds_from_ai=data))
 
         
-# for i in range(50):
-#     data = []
-#     for _ in range(30):
-#         data.append([((random.random(),random.random()),(random.random(),random.random())),random.random()])
+for i in range(1):
+    data = []
+    for _ in range(30):
+        data.append([((random.random(),random.random()),(random.random(),random.random())),random.random()])
     
-#     gps_arr = [random.randrange(-100000,100000)/3,random.randrange(-100000,100000)/3,random.randrange(0,300)]
-#     cam_arr = [random.randrange(-180,180),random.randrange(-180,180)]
-#     output = scan_for_weeds(gps_arr,cam_arr,array_of_weeds_from_ai=data)
-#     output = output[0]
-#     for i in output:
-#         for j in i:
-#             print(j[0],"\n",j[1])
+    gps_arr = [random.randrange(-100000,100000)/4,random.randrange(-100000,100000)/4,random.randrange(0,300)]
+    cam_arr = [random.randrange(-180,180),random.randrange(-180,180)]
+    output = scan_for_weeds(gps_arr,cam_arr,array_of_weeds_from_ai=data)
+    output = output[0]
+    for i in output:
+        for j in i:
+            print(j[0],"\n",j[1])
 
 
 # max,min,inc
 
 # global_heat_map = os.listdir
-names = os.listdir("all_past_heatmaps")
-names = names[1:]
-names = names[:-1]
-new_names = []
-for i in range(len(names)):
-    temp = names[i][0:-4]
-    # temp = eval(temp[i])
-    temp.replace("[[","")
-    temp.replace("]]","")
-    temp = eval(temp)
-    new_names.append(temp)
+names = []
+os.chdir("all_past_heatmaps")
+for i in os.listdir():
+    file = open(i)
+    name = file.readlines(1)
+    file.close()
+    name = name[0]
+    name = eval(name)
+    name = name[0]
+    names.append(name)    
+    print(name)
     
-names = new_names
+    
+    
+    
+# names = os.listdir()
+# names = names[1:]
+# names = names[:-1]
+# new_names = []
+# for i in range(len(names)):
+#     temp = names[i][0:-4]
+#     # temp = eval(temp[i])
+#     temp.replace("[[","")
+#     temp.replace("]]","")
+#     temp = eval(temp)
+#     new_names.append(temp)
+    
+# names = new_names
 
+print(names)
 
-max_x1 = names[0][0][0][0]
-max_x2 = names[0][0][1][0]
-max_y1 = names[0][0][0][1]
-max_y2 = names[0][0][1][1]
+# max_x1 = names[0][0][0][0]
+# max_x2 = names[0][0][1][0]
+# max_y1 = names[0][0][0][1]
+# max_y2 = names[0][0][1][1]
+
+max_x1 = names[0][0][0]
+max_x2 = names[0][1][0]
+max_y1 = names[0][0][1]
+max_y2 = names[0][1][1]
 
 for i in names:
-    i = i[0]
+    
     max_x1 = min(max_x1,i[0][0])
     max_x2 = max(max_x2,i[1][0])
     max_y1 = min(max_x1,i[0][1])
@@ -212,7 +244,7 @@ print("max y1",max_y1)
 print("max y2",max_y2)
 
 
-
+os.chdir("../")
 
 try:
     global_heat_map_file = open("global_heat_map.csv","x+")
@@ -224,22 +256,10 @@ try:
     del(to_write)
     global_heat_map = np.zeros(row_column := (int(abs(max_x1-max_x2)),int(abs(max_y1-max_y2))),dtype=float)
     txt_global_heat_map_file.close()
-    
-    
-    
-    
+
     global_heat_map_file.close()
 except FileExistsError:
     global_heat_map_file = open("global_heat_map.csv","r")
     txt_global_heat_map_file = open("global_heat_map.txt","r")
     global_heat_map_old = np.array(global_heat_map_file.readline())
-    
-    
-    
-    pass
-
-
-
-
 # global_heat_map = global_heat_map_file.readline()
-
