@@ -1,0 +1,4 @@
+- [ ] get the mavlink messages working in drone class for the getters 
+- [ ] update the battery polynomial for the drone
+- [ ] work out a way of doing the scaning algorithm
+- [ ] improve the commenting everywhere
