@@ -189,6 +189,7 @@ for i in range(1):
 # max,min,inc
 
 # global_heat_map = os.listdir
+def get_the_max_cords():
 names = []
 os.chdir("all_past_heatmaps")
 for i in os.listdir():
@@ -244,19 +245,25 @@ print("max y1",max_y1)
 print("max y2",max_y2)
 
 
+def conbine_arrays(og_array_file,add_array_file):
+    pass
+
+    
+
+
+
 os.chdir("../")
 
 try:
     global_heat_map_file = open("global_heat_map.csv","x+")
-    txt_global_heat_map_file = open("global_heat_map.txt","x+")
+    global_heat_map_file.writelines()
     print(max_x1,",",max_x2,"\n",max_x2,",",max_y1)
-    txt_global_heat_map_file.write("""max_x1,max_x2,max_x2,max_y1\n""")
+    global_heat_map_file.write("""max_x1,max_x2,max_x2,max_y1\n""")
     to_write = f"{max_x1},{max_x2},{max_x2},{max_y1}"
     txt_global_heat_map_file.write(to_write)
     del(to_write)
     global_heat_map = np.zeros(row_column := (int(abs(max_x1-max_x2)),int(abs(max_y1-max_y2))),dtype=float)
     txt_global_heat_map_file.close()
-
     global_heat_map_file.close()
 except FileExistsError:
     global_heat_map_file = open("global_heat_map.csv","r")

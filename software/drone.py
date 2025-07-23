@@ -88,106 +88,108 @@ class Drone():
 
     # TODO: give the polinomial a experimental value
 
-def quad_polys(num,poly_type):
-    if True:
-        if poly_type == "a":
-            a = 1
-            b = 0
-            c = 1
-            num = a*(num**2) + b*num + c
-            return num
-        if poly_type == "w":
-            a = 1
-            b = 0
-            c = 1
-            num = a*(num**2) + b*num + c
-            return num
-        
-        if poly_type == "g":
-            a = 1
-            b = 0
-            c = 1
-            num = a*(num**2) + b*num + c
-            return num
-        
-        if poly_type == "rpm":
-            a = 1
-            b = 0
-            c = 1
-            num = a*(num**2) + b*num + c
-            return num
-        
-def plane_polys(num,poly_type):
-    if True:
-        if poly_type == "a":
-            a = 1
-            b = 0
-            c = 1
-            num = a*(num**2) + b*num + c
-            return num
-        if poly_type == "w":
-            a = 1
-            b = 0
-            c = 1
-            num = a*(num**2) + b*num + c
-            return num
-        
-        if poly_type == "g":
-            a = 1
-            b = 0
-            c = 1
-            num = a*(num**2) + b*num + c
-            return num
-        
-        if poly_type == "rpm":
-            a = 1
-            b = 0
-            c = 1
-            num = a*(num**2) + b*num + c
-            return num
+    def quad_polys(num,poly_type):
+        if True:
+            if poly_type == "a":
+                a = 1
+                b = 0
+                c = 1
+                num = a*(num**2) + b*num + c
+                return num
+            if poly_type == "w":
+                a = 1
+                b = 0
+                c = 1
+                num = a*(num**2) + b*num + c
+                return num
+            
+            if poly_type == "g":
+                a = 1
+                b = 0
+                c = 1
+                num = a*(num**2) + b*num + c
+                return num
+            
+            if poly_type == "rpm":
+                a = 1
+                b = 0
+                c = 1
+                num = a*(num**2) + b*num + c
+                return num
+            
+    def plane_polys(num,poly_type):
+        if True:
+            if poly_type == "a":
+                a = 1
+                b = 0
+                c = 1
+                num = a*(num**2) + b*num + c
+                return num
+            if poly_type == "w":
+                a = 1
+                b = 0
+                c = 1
+                num = a*(num**2) + b*num + c
+                return num
+            
+            if poly_type == "g":
+                a = 1
+                b = 0
+                c = 1
+                num = a*(num**2) + b*num + c
+                return num
+            
+            if poly_type == "rpm":
+                a = 1
+                b = 0
+                c = 1
+                num = a*(num**2) + b*num + c
+                return num
 
-def get_battery_range_quad_mode(self,mah_used = 0 ,bat_max_mah = 6000 ,bat_volts = 16.3 ,drone_weight= 2000,home_pos=(0,0),wind_speed=0.0,wind_direction=0.0):
-    if True:
-        """
-        this function will return the max range for the drone at the best speed ignoring the energy to speed up and slow down in the drone mode
+    def get_battery_range_quad_mode(self,mah_used = 0 ,bat_max_mah = 6000 ,bat_volts = 16.3 ,drone_weight= 2000,home_pos=(0,0),wind_speed=0.0,wind_direction=0.0):
+        if True:
+            """
+            this function will return the max range for the drone at the best speed ignoring the energy to speed up and slow down in the drone mode
 
-        Args:
-            mah_used (float): the mah used from the amp sensor in the h743
-            bat_max_mah (float): from the drone class 
-            bat_volts (float): from the uav read the live batt volts
-            drone_weight (float): IN GRAMS sum the current spay quantity and the dry weight
-            wind_speed (float, optional): the wind speed in m/s. Defaults to 0.
-            wind_direction (float, optional): the true north compass bearing of the wind from the base station or ardupilot. Defaults to 0.
-            home_pos (tuple): (lon,lat) to home
-        """
-        bat_watts_remining = bat_volts * (bat_max_mah - mah_used)
-        thottle_dict = {}
-        for i in range(0,201):
-            i *= 0.5
-            ith_dict = {}
-            ith_dict["g"] = quad_polys(i,"g")
-            ith_dict["angle"] = math.acos(math.radians(quad_polys(i,"g")/drone_weight))
-            ith_dict["speed"] = math.asin(math.radians(quad_polys(i,"g")/drone_weight))
-            ith_dict["flight time"] = bat_watts_remining / quad_polys(i,"w") # TODO: work out units 
-            ith_dict["range"] = ith_dict["speed"] * ith_dict["flight time"] # TODO: work out units
-            thottle_dict[str(i)] = ith_dict
-            # print(ith_dict)
-        bests ={
-            "time":{"throttle":0,
-                    "time":0},
-            "range":{"throttle":0,
-                     "range":0}}
-        
-        for i in thottle_dict:
-            # print(thottle_dict[i])
-            if bests["time"]["time"] < thottle_dict[i]["flight time"]:
-                bests["time"]["time"] = thottle_dict[i]["flight time"] # TODO: work out units
-                bests["time"]["throttle"] = float(i)
-            if bests["range"]["range"] < thottle_dict[i]["range"]: # TODO: work out units
-                bests["range"]["range"] = thottle_dict[i]["range"] # TODO: work out units
-                bests["range"]["throttle"] = float(i)
-        print(bests)
-        return bests
+            Args:
+                mah_used (float): the mah used from the amp sensor in the h743
+                bat_max_mah (float): from the drone class 
+                bat_volts (float): from the uav read the live batt volts
+                drone_weight (float): IN GRAMS sum the current spay quantity and the dry weight
+                wind_speed (float, optional): the wind speed in m/s. Defaults to 0.
+                wind_direction (float, optional): the true north compass bearing of the wind from the base station or ardupilot. Defaults to 0.
+                home_pos (tuple): (lon,lat) to home
+            """
+            
+            # TODO: could insert some logic to use wind so that it is better 
+            bat_watts_remining = bat_volts * (bat_max_mah - mah_used)
+            thottle_dict = {}
+            for i in range(0,201):
+                i *= 0.5
+                ith_dict = {}
+                ith_dict["g"] = quad_polys(i,"g")
+                ith_dict["angle"] = math.acos(math.radians(quad_polys(i,"g")/drone_weight))
+                ith_dict["speed"] = math.asin(math.radians(quad_polys(i,"g")/drone_weight))
+                ith_dict["flight time"] = bat_watts_remining / quad_polys(i,"w") # TODO: work out units 
+                ith_dict["range"] = ith_dict["speed"] * ith_dict["flight time"] # TODO: work out units
+                thottle_dict[str(i)] = ith_dict
+                # print(ith_dict)
+            bests ={
+                "time":{"throttle":0,
+                        "time":0},
+                "range":{"throttle":0,
+                        "range":0}}
+            
+            for i in thottle_dict:
+                # print(thottle_dict[i])
+                if bests["time"]["time"] < thottle_dict[i]["flight time"]:
+                    bests["time"]["time"] = thottle_dict[i]["flight time"] # TODO: work out units
+                    bests["time"]["throttle"] = float(i)
+                if bests["range"]["range"] < thottle_dict[i]["range"]: # TODO: work out units
+                    bests["range"]["range"] = thottle_dict[i]["range"] # TODO: work out units
+                    bests["range"]["throttle"] = float(i)
+            print(bests)
+            return bests
 
     def get_battery_range_plane_mode(self,mah_used,bat_max_mah,bat_volts,drone_weight,home_pos,wind_speed=0.0,wind_direction=0.0):
 
@@ -203,8 +205,8 @@ def get_battery_range_quad_mode(self,mah_used = 0 ,bat_max_mah = 6000 ,bat_volts
             wind_direction (float, optional): the true north compass bearing of the wind from the base station or ardupilot. Defaults to 0.
             home_pos (tuple): (lon,lat) to home
         """
-        
-        
+            
+            
 
 
 
