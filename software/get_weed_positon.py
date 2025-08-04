@@ -5,15 +5,66 @@ import matplotlib.pyplot as mp
 import os
 import json
 
-def find_gps_from_angle_and_gps(cam_gps,cam_angle):
+"""
+this is a file that conteins the functons necercery to tun the output form a yolo model and the posston of the drones gimbel and in 3d space to work help define the weeds possiton both in scanning and in spraying
+"""
 
+def find_point_with_gps_and_angle(gps,angle):
+    """
+    Estimate the GPS coordinates of a point given the drone's position and gimbal angles.
+
+    Args:
+    gps (list): [latitude, longitude, height_above_ground] in meters
+    angle (list): [x_angle, y_angle] in degrees
+                    - x_angle (angle[0]): left/right relative to forward (positive = right)
+                    - y_angle (angle[1]): up/down (positive = down)
+
+    Returns:
+    list: [latitude, longitude] of the target point
+    """
+    x_pos_in_m = math.tan(math.radians(angle[0]))*gps[-1]
+    y_pos_in_m = math.tan(math.radians(angle[1]))*gps[-1]
+    
+    
+    
+    lat_rad = math.radians(gps[0])
+    deg_per_m_lat = 1 / 111320
+    deg_per_m_lon = 1 / (111320 * math.cos(lat_rad))
+        
+    new_lon = gps[1]+deg_per_m_lon*x_pos_in_m
+    new_lat =  gps[0]+deg_per_m_lat*y_pos_in_m
+    
+    return [new_lat,new_lon]
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# old code will do a rewrite
+#  -------------------------------------------------------------------------------------------
+exit()
+
+def find_gps_from_angle_and_gps(cam_gps,cam_angle):
     rtn = []
     for i in cam_angle:
         rtn.append(math.tan(math.radians(i))*cam_gps[-1])
 
-    return (rtn[0],rtn[1],cam_gps[-1])
+    return (rtn[0],rtn[1])
+
 
 def get_the_arr_index_range_betwen_nums(min,max,arr_length):
+    
     r = [-1,-1]
     increments = 1/arr_length
     poss = 0
@@ -49,7 +100,8 @@ def get_the_arr_index_range_betwen_nums(min,max,arr_length):
 #     Vertical	~16.8°
 #     Diagonal	~27.7°
 #     """
-# import opencv
+
+
 def scan_for_weeds(cam_gps,cam_angle,array_of_weeds_from_ai,horizontal_fov=22.3,vertical_fov=16.8,diagonal_fov=27.7):
     """_summary_
     Takes the gps and the cam angle (ashuming cam is pointing at the weed rel to a flat pane)
@@ -121,7 +173,6 @@ def scan_for_weeds(cam_gps,cam_angle,array_of_weeds_from_ai,horizontal_fov=22.3,
         #         #     jr[-1] = 0
         #     print(jr)
     try:    
-        
         file_csv = open(f"all_past_heatmaps/0.csv","x")
         print("wrote to 0.csv")
         json.dump(TL_and_BR,file_csv) 
@@ -189,17 +240,18 @@ for i in range(1):
 # max,min,inc
 
 # global_heat_map = os.listdir
-names = []
-os.chdir("all_past_heatmaps")
-for i in os.listdir():
-    file = open(i)
-    name = file.readlines(1)
-    file.close()
-    name = name[0]
-    name = eval(name)
-    name = name[0]
-    names.append(name)    
-    print(name)
+# def get_the_max_cords():
+# # names = []
+# os.chdir("all_past_heatmaps")
+# for i in os.listdir():
+#     file = open(i)
+#     name = file.readlines(1)
+#     file.close()
+#     name = name[0]
+#     name = eval(name)
+#     name = name[0]
+#     names.append(name)    
+#     print(name)
     
     
     
@@ -244,19 +296,25 @@ print("max y1",max_y1)
 print("max y2",max_y2)
 
 
+def conbine_arrays(og_array_file,add_array_file):
+    pass
+
+    
+
+
+
 os.chdir("../")
 
 try:
     global_heat_map_file = open("global_heat_map.csv","x+")
-    txt_global_heat_map_file = open("global_heat_map.txt","x+")
+    global_heat_map_file.writelines()
     print(max_x1,",",max_x2,"\n",max_x2,",",max_y1)
-    txt_global_heat_map_file.write("""max_x1,max_x2,max_x2,max_y1\n""")
+    global_heat_map_file.write("""max_x1,max_x2,max_x2,max_y1\n""")
     to_write = f"{max_x1},{max_x2},{max_x2},{max_y1}"
     txt_global_heat_map_file.write(to_write)
     del(to_write)
     global_heat_map = np.zeros(row_column := (int(abs(max_x1-max_x2)),int(abs(max_y1-max_y2))),dtype=float)
     txt_global_heat_map_file.close()
-
     global_heat_map_file.close()
 except FileExistsError:
     global_heat_map_file = open("global_heat_map.csv","r")

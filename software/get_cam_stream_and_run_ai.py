@@ -1,5 +1,7 @@
 from ultralytics import YOLO
 
+
+# the docs for hailo lib https://github.com/hailo-ai/hailo-apps-infra/blob/main/doc/README.md
 # Load model
 
 model = YOLO('yolo11n-seg.pt')  # Your segmentation model
@@ -11,6 +13,7 @@ results = model("../test_img/", stream=True)
 # For each detection
 bi = []
 for r in results:
+    print(r)
     arr_boxes = []
     boxes = r.boxes  # Bounding boxes object
     if boxes != None:
