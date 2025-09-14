@@ -15,24 +15,48 @@ class Drone_mvp():
     """this is a drone mvp will be renamed later to Drone"""
     
     def __init__(self):
+        self.battery_capacity = 4800 # in mah
         path_to_uav = "/dev/ttyACM1"
         self.connection = mavutil.mavlink_connection(path_to_uav, baud=115200)
         self.connection.wait_heartbeat()
-        self.set_a_message_interval("BATTERY_STATUS")
-        self.set_a_message_interval("GPS_RAW_INT")
+        # defing what command to stream
+        self.set_a_message_interval("BATTERY_STATUS",interval=1)
+        self.set_a_message_interval("GPS_RAW_INT",interval=10)
+        self.set_a_message_interval("SYS_STATUS",interval=10)
+        
+        # this will stream the rc chanels 
+        self.connection.mav.request_data_stream_send(
+            self.connection.target_system,
+            self.connection.target_component,
+            mavutil.mavlink.MAV_DATA_STREAM_RC_CHANNELS,  # stream for RC messages
+            2,  # Hz
+            1    # start streaming
+        )
+        
         
 
         
     def get_batt_v(self):
-        pass 
+        """this code works by converitng the msg to a dict then filtering"""
+        while True:
+            msg = self.connection.recv_msg()  
+            if msg is not None:
+                msg = msg.to_dict()
+                if msg["mavpackettype"] == "BATTERY_STATUS":
+                    return msg["voltages"][0]/1000
+                
+    def get_batt_mah_left(self):
+        """this code works by converitng the msg to a dict then filtering"""
+        while True:
+            msg = self.connection.recv_msg()  
+            if msg is not None:
+                msg = msg.to_dict()
+                if msg["mavpackettype"] == "BATTERY_STATUS":
+                    return self.battery_capacity - msg["current_consumed"]
+
+                
    
-   
-   
-#    try:
-#     altitude = the_connection.messages['GPS_RAW_INT'].alt  # Note, you can access message fields as attributes!
-#     timestamp = the_connection.time_since('GPS_RAW_INT')
-# except:
-#     print('No GPS_RAW_INT message received')
+
 
 
 
