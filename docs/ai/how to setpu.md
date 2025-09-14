@@ -1,83 +1,75 @@
-
 # SkyDock Project: Environment Setup and Dependencies
 
-This document outlines the setup process for the SkyDock project, including installing dependencies and preparing the virtual environment.
+This document outlines the setup process for the SkyDock project using the Hailo-8 AI accelerator and its pre-configured virtual environment.
 
 ---
 
 ## 1. Prerequisites
 
-Follow the guide from Core Electronics on installing YOLO object detection on the Raspberry Pi AI Hat:
+Follow the Core Electronics guide on YOLO object detection on the Raspberry Pi AI Hat:
 [YOLO Object Detection on the Raspberry Pi AI Hat](https://core-electronics.com.au/guides/raspberry-pi/yolo-object-detection-on-the-raspberry-pi-ai-hat-writing-custom-python/)
 
-This guide ensures all required software and drivers for the Hailo-8 AI accelerator are installed.
+> This guide installs all necessary Hailo tools, drivers, and automatically creates the Hailo virtual environment that will be used for the project.
 
 ---
 
-## 2. Virtual Environment
+## 2. Using the Hailo Virtual Environment
 
-We use a dedicated Python virtual environment for the project:
-
-```bash
-# Create the virtual environment (if not already created)
-python3 -m venv venv_hailo_rpi_examples
-
-# Activate the virtual environment
-source venv_hailo_rpi_examples/bin/activate
-```
-
-> The project should always be run inside the `(venv_hailo_rpi_examples)` virtual environment.
-
----
-
-## 3. Setting Up the Hailo RPi Examples
-
-Navigate to the Hailo RPi examples folder and run the setup script:
+The Hailo setup creates its own virtual environment inside the `hailo_rpi_examples` folder. Use this environment whenever working on the project:
 
 ```bash
+# Navigate to the Hailo examples folder
 cd ~/hailo_rpi_examples
+
+# Activate the environment and setup Hailo tools
 source setup.sh
 ```
 
-> This prepares the environment with necessary Hailo tools and configurations.
-> This step should be repeated whenever the project environment is refreshed.
+> The environment created here (`venv_hailo_rpi_examples`) is used as the main environment for running the SkyDock project.
+> This step should be run each time you start a new terminal session before working on the project.
 
 ---
 
-## 4. Installing Project Dependencies
+## 3. Installing SkyDock Project Dependencies
 
-Next, navigate to the SkyDock software directory and install the Python dependencies:
+After activating the Hailo environment, navigate to the SkyDock software folder and install the Python dependencies:
 
 ```bash
 cd ~/skydock/software
 pip install -r requirements.txt
 ```
 
-> Ensure this step is executed every time the virtual environment is recreated or updated.
+> This ensures all project-specific Python packages are installed on top of the Hailo virtual environment.
 
 ---
 
-## 5. Recommended Workflow
+## 4. Recommended Workflow
 
-Each time you start working on the project:
+Each time you begin working on the project:
 
-1. Activate the virtual environment:
-
-```bash
-source ~/venv_hailo_rpi_examples/bin/activate
-```
-
-2. Set up the Hailo RPi examples:
+1. Activate the Hailo virtual environment and setup Hailo tools:
 
 ```bash
 cd ~/hailo_rpi_examples
 source setup.sh
 ```
 
-3. Navigate to the SkyDock software directory:
+2. Navigate to the SkyDock software folder:
 
 ```bash
 cd ~/skydock/software
 ```
+
+3. Ensure project dependencies are installed:
+
+```bash
+pip install -r requirements.txt
+```
+
+> After completing these steps, you can run and develop SkyDock within the pre-configured Hailo virtual environment.
+
+---
+
+If you like, I can also make a **compact quickstart version** of this workflow so it’s just a few copy-paste commands to get going. It would exactly mirror your daily workflow with minimal steps. Do you want me to do that?
 
 note: thanks ChatGpt for making this doc nice 
