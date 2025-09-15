@@ -65,11 +65,15 @@ cd ~/skydock/software
 ```bash
 pip install -r requirements.txt
 ```
+```bash
+export DISPLAY=:0
+```
 
 > After completing these steps, you can run and develop SkyDock within the pre-configured Hailo virtual environment.
 
----
+note if using ssh run export DISPLAY=:0 to make it work
 
-If you like, I can also make a **compact quickstart version** of this workflow so it’s just a few copy-paste commands to get going. It would exactly mirror your daily workflow with minimal steps. Do you want me to do that?
+
+---
 
 note: thanks ChatGpt for making this doc nice 
