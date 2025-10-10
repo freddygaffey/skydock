@@ -303,12 +303,21 @@ def conbine_arrays(og_array_file,add_array_file):
 
 
 
+def conbine_arrays(og_array_file,add_array_file):
+    pass
+
+    
+
+
+
 os.chdir("../")
 
 try:
     global_heat_map_file = open("global_heat_map.csv","x+")
     global_heat_map_file.writelines()
+    global_heat_map_file.writelines()
     print(max_x1,",",max_x2,"\n",max_x2,",",max_y1)
+    global_heat_map_file.write("""max_x1,max_x2,max_x2,max_y1\n""")
     global_heat_map_file.write("""max_x1,max_x2,max_x2,max_y1\n""")
     to_write = f"{max_x1},{max_x2},{max_x2},{max_y1}"
     txt_global_heat_map_file.write(to_write)
