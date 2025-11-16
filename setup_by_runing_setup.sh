@@ -6,7 +6,7 @@ echo "you should run it with source for this to work"
 echo "you should run it with source for this to work"
 echo "you should run it with source for this to work"
 echo "you should run it with source for this to work"
-cd ~/hailo-rpi5-examples
-source setup_env.sh
+ls ~/skydock/software/hailo-apps-infra/
+source ~/skydock/software/hailo-apps-infra/venv_hailo_apps/bin/activate
 cd ~/skydock/software
 export DISPLAY=:0
