@@ -1,7 +1,7 @@
 from pymavlink import mavutil
 
 # Connect to the flight controller (STM32H743)
-master = mavutil.mavlink_connection('/dev/ttyACM1', baud=115200)
+master = mavutil.mavlink_connection('/dev/ttyACM0', baud=115200)
 
 try:
     # Wait for heartbeat confirmation
