@@ -14,7 +14,7 @@ from scipy.spatial.transform import Rotation as R # this is needed for the q
 # multi threading 
 # https://www.youtube.com/watch?v=STEOavXqXkQ
 
-class Drone_mvp():
+class Telemetry():
     """this is a drone mvp will be renamed later to Drone"""
     
     """for  quaternions I will use the [x, y, z, w] this is the convetoin for sicpy"""
@@ -29,7 +29,7 @@ class Drone_mvp():
         self.set_a_message_interval("BATTERY_STATUS",interval=1)
         self.set_a_message_interval("GPS_RAW_INT",interval=10)
         # self.set_a_message_interval("SYS_STATUS",interval=20)
-        self.set_a_message_interval("GIMBAL_DEVICE_ATTITUDE_STATUS",interval=0.25)
+        self.set_a_message_interval("GIMBAL_DEVICE_ATTITUDE_STATUS",interval=0.05)
         self.set_a_message_interval("ATTITUDE_QUATERNION",interval=0.25)
 
         
@@ -124,21 +124,7 @@ class Drone_mvp():
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+class Move():
 
     def see(self):
         

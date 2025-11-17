@@ -1,12 +1,12 @@
 import threading
 import time
 
-ai_storage_instance = None
 
 class ai_storage():
-
     def __init__(self):
         self._lock = threading.Lock()
+        self._app_thread = None
+
         self.detections = []
 
     def add_detection(self, label, confidence, bbox, track_id=None):
@@ -20,7 +20,9 @@ class ai_storage():
 
         with self._lock:
             self.detections.append(detection_data)
-            print(f"Saved: {label} (conf: {confidence:.2f})", flush=True)
+            # print(detection_data, flush=True)
+            # print("this is from the add detections")
+            # print(f"Saved: {label} (conf: {confidence:.2f})", flush=True)
     
     def get_last_frames(self,num_of_frames=1):
         with self._lock:
@@ -31,26 +33,34 @@ class ai_storage():
     def start_ai(self):
         from hailo_apps.hailo_app_python.apps.detection.detection import (
             app_callback,
-            user_app_callback_class,
-            ai_storage
+            user_app_callback_class
         )
         from hailo_apps.hailo_app_python.apps.detection.detection_pipeline import (
             GStreamerDetectionApp
         )
-        
-        
         user_data = user_app_callback_class()
         app = GStreamerDetectionApp(app_callback, user_data)
-        
-        app.run()
-    
 
-def get_ai_storage():
-    global ai_storage_instance
-    if ai_storage_instance is None:
-        ai_storage_instance = ai_storage()
-    return ai_storage_instance   
+        self._app_thread = threading.Thread(
+            target=app.run,
+            daemon=True           # allow program to exit even if thread is running
+        )
+        self._app_thread.start()
+
+
+# ---- SINGLETON INSTANCE CREATED ONCE ----
+ai_storage_instance = ai_storage()
+
 
 if __name__ == "__main__":
-    ai = ai_storage()
-    ai.start_ai()
+    from ai import ai_storage_instance
+    ai_storage_instance.start_ai()
+    while True:
+        # print(ai.__dict__)
+        # print(ai.detections)
+        # print(ai.get_last_frames(-1))
+        # print("this is from main")
+        time.sleep(0.2)
+
+        print(ai_storage_instance.get_last_frames(5))
+        
