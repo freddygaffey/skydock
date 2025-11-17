@@ -27,10 +27,10 @@ class Telemetry():
         
         # defing what command to stream
         self.set_a_message_interval("BATTERY_STATUS",interval=1)
-        self.set_a_message_interval("GPS_RAW_INT",interval=10)
+        self.set_a_message_interval("GPS_RAW_INT",interval=0.05)
         # self.set_a_message_interval("SYS_STATUS",interval=20)
         self.set_a_message_interval("GIMBAL_DEVICE_ATTITUDE_STATUS",interval=0.05)
-        self.set_a_message_interval("ATTITUDE_QUATERNION",interval=0.25)
+        self.set_a_message_interval("ATTITUDE_QUATERNION",interval=0.05)
 
         
         # this will stream the rc chanels thay are speshal
@@ -41,7 +41,7 @@ class Telemetry():
             2,  # Hz
             1)    # start streaming
         
-    def update():
+    def update(self):
         self.batt_v = self.get_batt_v()
         self.gimbal_attitude = self.get_gimbal_attitude()
         self.batt_mah_left = self.get_batt_mah_left()
