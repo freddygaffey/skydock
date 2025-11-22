@@ -49,12 +49,12 @@ class ai_storage():
 
 
 # ---- SINGLETON INSTANCE CREATED ONCE ----
-ai_storage_instance = ai_storage()
+ai_storage_singleton = ai_storage()
 
 
 if __name__ == "__main__":
-    from ai import ai_storage_instance
-    ai_storage_instance.start_ai()
+    from ai import ai_storage_singleton
+    ai_storage_singleton.start_ai()
     while True:
         # print(ai.__dict__)
         # print(ai.detections)
@@ -62,4 +62,4 @@ if __name__ == "__main__":
         # print("this is from main")
         time.sleep(0.2)
 
-        print(ai_storage_instance.get_last_frames(5))
+        print(ai_storage_singleton.get_last_frames(5))
