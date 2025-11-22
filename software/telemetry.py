@@ -122,7 +122,7 @@ class Telemetry():
         print(string_to_print)
 
 
-drone_tlem = Telemetry()
+telm_singleton = Telemetry()
 
 # class Move():
 

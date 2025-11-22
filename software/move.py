@@ -1,9 +1,9 @@
-from telemetry import Telemetry, drone_tlem
+from telemetry import Telemetry, telm_singleton
 import time
 
 class Move(Telemetry):
 
-    def __init__(self,drone_tlem.connection):
+    def __init__(self,telm_singleton.connection):
         self.connection = drone_connection
         self.move_mode = "STOP"
         self.mode_mapping = {'STABILIZE': 0,'ACRO': 1,'ALT_HOLD': 2,'AUTO': 3,'GUIDED': 4,'LOITER': 5,'RTL': 6,'CIRCLE': 7,'OF_LOITER': 10,'DRIFT': 11,'SPORT': 13,'FLIP': 14,'AUTOTUNE': 15,'POSHOLD': 16,'BRAKE': 17,'THROW': 18,'AVOID_ADSB': 19,'GUIDED_NOGPS': 20,'SMART_RTL': 21,'FLOWHOLD': 22,'FOLLOW': 23,'ZIGZAG': 24,'SYSTEMIDLE': 25,'AUTOTUNE': 26,'RALLY': 27}
@@ -115,3 +115,5 @@ class Move(Telemetry):
             self.send_volocity_command_yaw_stay_same(0,0,0,0,0)
         else:
             raise ValueError("not inputed the choice")
+
+move_singleton = Move()
