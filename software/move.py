@@ -1,9 +1,9 @@
 import threading
 from telemetry import telm_singleton
 import time
+from pymavlink import mavutil
 
 class Move():
-
     def __init__(self):
         self.connection = telm_singleton.connection
         self.mode_mapping = {'STABILIZE': 0,'ACRO': 1,'ALT_HOLD': 2,'AUTO': 3,'GUIDED': 4,'LOITER': 5,'RTL': 6,'CIRCLE': 7,'OF_LOITER': 10,'DRIFT': 11,'SPORT': 13,'FLIP': 14,'AUTOTUNE': 15,'POSHOLD': 16,'BRAKE': 17,'THROW': 18,'AVOID_ADSB': 19,'GUIDED_NOGPS': 20,'SMART_RTL': 21,'FLOWHOLD': 22,'FOLLOW': 23,'ZIGZAG': 24,'SYSTEMIDLE': 25,'AUTOTUNE': 26,'RALLY': 27}
@@ -11,7 +11,6 @@ class Move():
 
         self._v_thread = None
         self._v_thread_stop_event = threading.Event()
-
 
     def set_mode(self, mode):
         if mode not in self.mode_mapping.keys():
@@ -70,11 +69,11 @@ class Move():
         )
 
     def send_e_stop_command(self):
-        self.move_mode = "STOP"
         old_mode = self.get_mode()
         self.set_mode("BRAKE")
         time.sleep(3)
         self.set_mode(old_mode)
+        self.stop_volocity_command()
 
     def send_displacement_command_yaw_stay_same(self,mx,my,mz,bitmask=4088):
             self.connection.mav.set_position_target_local_ned_send(
@@ -88,6 +87,7 @@ class Move():
                 0, 0, 0,     # acceleration ignored
                 0, 0         # yaw and yaw_rate ignored
                 )
+
     def move_volocity_until_stop_or_max_time(self,direction,max_time,change_yaw=False):
         self.stop_volocity_command()
 

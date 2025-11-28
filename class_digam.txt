@@ -1,0 +1,61 @@
+this is made by chat gpt it is quite good and i will work off this it took a loot of propting to get right 
++----------------------------------------------------+
+|                    DroneManager                    |
++----------------------------------------------------+
+| - telemetry: Telemetry                             |
+| - mover: Move                                      |
+| - mission: MissionPlanner                          |
+| - vision: VisionAI                                 |
+| - behavior: BehaviorController                     |
++----------------------------------------------------+
+| + start_mission()                                  |
+| + update()                                         |
+| + emergency_stop()                                 |
++----------------------------------------------------+
+
+
++----------------------+         +-----------------------+
+|     Telemetry        |         |         Move          |
++----------------------+         +-----------------------+
+| + connect()          |         | + arm()               |
+| + get_altitude()     |         | + arm_and_takeoff()   |
+| + get_position()     |         | + move_velocity()     |
+| + get_mode()         |         | + goto_position()     |
++----------------------+         +-----------------------+
+
+
++----------------------------------------------------+
+|                  MissionPlanner                    |
++----------------------------------------------------+
+| - waypoints: list[(x,y,z)]                         |
+| - current_index: int                               |
++----------------------------------------------------+
+| + generate_search_grid(area)                       |
+| + get_next_waypoint()                              |
+| + resume_after_interrupt()                         |
++----------------------------------------------------+
+
+
++----------------------------------------------------+
+|                    VisionAI                         |
++----------------------------------------------------+
+| - model_path: str                                   |
+| - last_detection: (x_off, y_off, distance)          |
++----------------------------------------------------+
+| + detect_object(frame)                              |
+| + is_object_found()                                 |
++----------------------------------------------------+
+
+
++----------------------------------------------------+
+|               BehaviorController                    |
++----------------------------------------------------+
+| ENUM State: SEARCHING, APPROACHING, HOVERING, PATH |
+| - state: State                                      |
++----------------------------------------------------+
+| + update(drone_manager)                             |
+| + handle_searching()                                |
+| + handle_approaching()                              |
+| + handle_hovering()                                 |
+| + handle_resume_path()                              |
++----------------------------------------------------+

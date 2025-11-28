@@ -1,21 +1,47 @@
 import threading
 import time
 
+        # ai_storage_singleton.photo_taken(photo_path)
 
 class ai_storage():
     def __init__(self):
         self._lock = threading.Lock()
         self._app_thread = None
-
         self.detections = []
+        self.take_photo = True
+        self.__photo_not_taken = 0
+        self.time_last_photo_taken = round(time.time())
+        self.rate_take_photo = 1 # sec
 
-    def add_detection(self, label, confidence, bbox, track_id=None):
+    def photo_taken(self,photo_path):
+            self.take_photo = False
+
+    def photo_not_taken(self):
+        if round(time.time()) % self.rate_take_photo == 0 and self.time_last_photo_taken != round(time.time()):
+            self.take_photo = True
+        self.time_last_photo_taken = round(time.time())
+        
+        pass
+    #     self.__photo_not_taken +=1
+    #     if self.__photo_not_taken > 10:
+    #         self.take_photo = True 
+        
+        # logic around when to take photos
+
+
+    def add_detection(self, label, confidence, bbox, track_id=None,photo_path=None):
+        if photo_path is not None:
+            self.photo_taken(photo_path)
+        else:
+            self.photo_not_taken()
+
         detection_data = {
             'label': label,
             'confidence': float(confidence),
             'bbox': bbox,
             'track_id': track_id,
-            'time' : time.time_ns()
+            'time' : time.time_ns(),
+            'photo_path': photo_path
             }
 
         with self._lock:
@@ -56,10 +82,7 @@ if __name__ == "__main__":
     from ai import ai_storage_singleton
     ai_storage_singleton.start_ai()
     while True:
-        # print(ai.__dict__)
-        # print(ai.detections)
-        # print(ai.get_last_frames(-1))
-        # print("this is from main")
-        time.sleep(0.2)
+        time.sleep(0.1)
 
-        print(ai_storage_singleton.get_last_frames(5))
+        print(ai_storage_singleton.get_last_frames(1))
+

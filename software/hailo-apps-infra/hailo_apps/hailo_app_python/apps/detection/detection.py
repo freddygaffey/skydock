@@ -78,6 +78,8 @@ import gi
 gi.require_version('Gst', '1.0')
 from gi.repository import Gst
 import cv2
+import os
+import random
 
 # Local application-specific imports
 import hailo
@@ -88,7 +90,6 @@ from hailo_apps.hailo_app_python.apps.detection.detection_pipeline import GStrea
 
 from ai import ai_storage_singleton
 
-ai_storage = ai_storage_singleton
 # -----------------------------------------------------------------------------------------------
 # User-defined class to be used in the callback function
 # -----------------------------------------------------------------------------------------------
@@ -102,62 +103,121 @@ class user_app_callback_class(app_callback_class):
 # -----------------------------------------------------------------------------------------------
 
 # This is the callback function that will be called when data is available from the pipeline
+import datetime
+
 def app_callback(pad, info, user_data):
-    # Get the GstBuffer from the probe info
+    TAKE_PHOTO = ai_storage_singleton.take_photo  # use the singleton flag
+
     buffer = info.get_buffer()
-    # Check if the buffer is valid
     if buffer is None:
         return Gst.PadProbeReturn.OK
 
-    # Using the user_data to count the number of frames
     user_data.increment()
-    string_to_print = f"Frame count: {user_data.get_count()}\n"
 
-    # Get the caps from the pad
+    # Get video caps
     format, width, height = get_caps_from_pad(pad)
+    if not format or not width or not height:
+        return Gst.PadProbeReturn.OK
 
-    # If the user_data.use_frame is set to True, we can get the video frame from the buffer
-    frame = None
-    if user_data.use_frame and format is not None and width is not None and height is not None:
-        # Get video frame
-        frame = get_numpy_from_buffer(buffer, format, width, height)
+    # Extract the frame
+    frame = get_numpy_from_buffer(buffer, format, width, height)
+    if frame is None:
+        return Gst.PadProbeReturn.OK
 
-    # Get the detections from the buffer
+    # Convert RGB → BGR for OpenCV
+    frame_bgr = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
+
+    # Get detections
     roi = hailo.get_roi_from_buffer(buffer)
     detections = roi.get_objects_typed(hailo.HAILO_DETECTION)
 
-    # Parse the detections
-    detection_count = 0
-    for detection in detections:
-        label = detection.get_label()
-        bbox = detection.get_bbox()
-        confidence = detection.get_confidence()
+    detection_labels = []
+
+    # Draw all detections on the frame (human-readable style)
+    for d in detections:
+        label = d.get_label()
+        confidence = d.get_confidence()
+        bbox = d.get_bbox()
+        detection_labels.append(label)
+
+        # Convert bbox to pixel coordinates
+        x1 = int(bbox.xmin() * width) if bbox.xmin() <= 1 else int(bbox.xmin())
+        y1 = int(bbox.ymin() * height) if bbox.ymin() <= 1 else int(bbox.ymin())
+        x2 = int(bbox.xmax() * width) if bbox.xmax() <= 1 else int(bbox.xmax())
+        y2 = int(bbox.ymax() * height) if bbox.ymax() <= 1 else int(bbox.ymax())
+
+        # Clamp to frame
+        x1, y1 = max(0, x1), max(0, y1)
+        x2, y2 = min(width - 1, x2), min(height - 1, y2)
+
+        # Human-readable colors and thickness
+        box_color = (0, 165, 255)  # Orange (BGR)
+        box_thickness = 1
+
+        # Draw bounding box
+        cv2.rectangle(frame_bgr, (x1, y1), (x2, y2), box_color, box_thickness)
+
+        # Label + confidence
+        text = f"{label} {confidence:.2f}"
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        font_scale = 0.7
+        font_thickness = 2
+        (text_width, text_height), baseline = cv2.getTextSize(text, font, font_scale, font_thickness)
         
-        ai_storage.add_detection(
-            label=label,
-            confidence=confidence,
-            bbox=bbox,
+        # Draw semi-transparent background for text
+        overlay = frame_bgr.copy()
+        cv2.rectangle(overlay, (x1, y1 - text_height - 10), (x1 + text_width + 6, y1), box_color, -1)
+        alpha = 0.6  # transparency
+        frame_bgr = cv2.addWeighted(overlay, alpha, frame_bgr, 1 - alpha, 0)
+
+        # Draw text on top
+        cv2.putText(frame_bgr, text, (x1 + 3, y1 - 5), font, font_scale, (255, 255, 255), font_thickness)
+
+    # Ensure photos folder exists
+    photos_folder = "/home/fred/skydock/software/photos"
+    os.makedirs(photos_folder, exist_ok=True)
+
+    # Build filename
+    name_prefix = "_".join(detection_labels[:3]) if detection_labels else "none"  # first 3 detections
+    now = datetime.datetime.now()
+    timestamp = now.strftime("%H_%M_%S.%f")[:-3] + " " + now.strftime("%d-%m-%Y")
+    filename = f"{name_prefix} {timestamp}.jpg"
+    photo_path = f"{photos_folder}/{filename}"
+
+    # Save the image with all detections
+    if TAKE_PHOTO and detections:
+        cv2.imwrite(photo_path, frame_bgr)
+        print("Photo taken:", photo_path)
+    else:
+        photo_path = None
+
+    # Add all detections to ai_storage
+    for d in detections:
+        bbox = d.get_bbox()
+        # Normalize coordinates 0 → 1
+        x1 = bbox.xmin() / width if bbox.xmin() > 1 else bbox.xmin()
+        y1 = bbox.ymin() / height if bbox.ymin() > 1 else bbox.ymin()
+        x2 = bbox.xmax() / width if bbox.xmax() > 1 else bbox.xmax()
+        y2 = bbox.ymax() / height if bbox.ymax() > 1 else bbox.ymax()
+
+        # Clamp between 0 and 1
+        x1, y1 = min(max(x1, 0), 1), min(max(y1, 0), 1)
+        x2, y2 = min(max(x2, 0), 1), min(max(y2, 0), 1)
+
+        # Add to ai_storage
+        ai_storage_singleton.add_detection(
+            label=d.get_label(),
+            confidence=d.get_confidence(),
+            bbox=[(x1, y1), (x2, y2)],
+            photo_path=photo_path
         )
 
-    if user_data.use_frame:
-        # Note: using imshow will not work here, as the callback function is not running in the main thread
-        # Let's print the detection count to the frame
-        # cv2.putText(frame, f"Detections: {detection_count}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-        # Example of how to use the new_variable and new_function from the user_data
-        # Let's print the new_variable and the result of the new_function to the frame
-            # cv2.putText(frame, f"{user_data.new_function()} {user_data.new_variable}", (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-        # Convert the frame to BGR
-        frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
-        user_data.set_frame(frame)
-        cv2.imwrite("frame.jpg", frame)
-        with file = open("name.file","w"):
-            file.write(frame)
-
-    print(string_to_print)
     return Gst.PadProbeReturn.OK
 
 if __name__ == "__main__":
-    # Create an instance of the user app callback class
     user_data = user_app_callback_class()
+
+    user_data.use_frame = True
+
     app = GStreamerDetectionApp(app_callback, user_data)
     app.run()
