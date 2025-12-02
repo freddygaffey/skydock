@@ -187,30 +187,32 @@ def app_callback(pad, info, user_data):
     # Save the image with all detections
     if TAKE_PHOTO and detections:
         cv2.imwrite(photo_path, frame_bgr)
-        print("Photo taken:", photo_path)
+        # print("Photo taken:", photo_path)
     else:
         photo_path = None
 
     # Add all detections to ai_storage
     for d in detections:
-        bbox = d.get_bbox()
-        # Normalize coordinates 0 → 1
-        x1 = bbox.xmin() / width if bbox.xmin() > 1 else bbox.xmin()
-        y1 = bbox.ymin() / height if bbox.ymin() > 1 else bbox.ymin()
-        x2 = bbox.xmax() / width if bbox.xmax() > 1 else bbox.xmax()
-        y2 = bbox.ymax() / height if bbox.ymax() > 1 else bbox.ymax()
+        box = d.get_bbox()
+
+        x1 = box.xmin() if box.xmin() <= 1 else box.xmin() / width
+        y1 = box.ymin() if box.ymin() <= 1 else box.ymin() / height
+        x2 = box.xmax() if box.xmax() <= 1 else box.xmax() / width
+        y2 = box.ymax() if box.ymax() <= 1 else box.ymax() / height
 
         # Clamp between 0 and 1
-        x1, y1 = min(max(x1, 0), 1), min(max(y1, 0), 1)
-        x2, y2 = min(max(x2, 0), 1), min(max(y2, 0), 1)
+        x1 = min(max(x1, 0), 1)
+        y1 = min(max(y1, 0), 1)
+        x2 = min(max(x2, 0), 1)
+        y2 = min(max(y2, 0), 1)
 
-        # Add to ai_storage
         ai_storage_singleton.add_detection(
             label=d.get_label(),
             confidence=d.get_confidence(),
             bbox=[(x1, y1), (x2, y2)],
-            photo_path=photo_path
+            photo_path=photo_path,
         )
+
 
     return Gst.PadProbeReturn.OK
 

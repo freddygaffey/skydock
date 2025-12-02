@@ -4,6 +4,9 @@ import math
 import numpy as np
 from scipy.spatial.transform import Rotation as R # this is needed for the q
 
+import threading
+import time
+from drone_state_homing import drone_state
 
  
 # I found the videos from Intelligent Quads helpfull 
@@ -15,22 +18,25 @@ from scipy.spatial.transform import Rotation as R # this is needed for the q
 # https://www.youtube.com/watch?v=STEOavXqXkQ
 
 class Telemetry():
-    """this is a drone mvp will be renamed later to Drone"""
     
     """for  quaternions I will use the [x, y, z, w] this is the convetoin for sicpy"""
     
     def __init__(self):
+        
+        self.update_rate = 1/31 # slightly hight then the ai frame rate 
+
         self.battery_capacity = 4800 # in mah
         path_to_uav = "/dev/ttyACM0"
         self.connection = mavutil.mavlink_connection(path_to_uav, baud=115200)
         self.connection.wait_heartbeat()
+
         
         # defing what command to stream
         self.set_a_message_interval("BATTERY_STATUS",interval=1)
-        self.set_a_message_interval("GPS_RAW_INT",interval=0.05)
+        self.set_a_message_interval("GLOBAL_POSITION_INT",interval=self.update_rate)
         # self.set_a_message_interval("SYS_STATUS",interval=20)
-        self.set_a_message_interval("GIMBAL_DEVICE_ATTITUDE_STATUS",interval=0.05)
-        self.set_a_message_interval("ATTITUDE_QUATERNION",interval=0.05)
+        self.set_a_message_interval("GIMBAL_DEVICE_ATTITUDE_STATUS",interval=self.update_rate)
+        self.set_a_message_interval("ATTITUDE_QUATERNION",interval=self.update_rate)
 
         
         # this will stream the rc chanels thay are speshal
@@ -40,7 +46,11 @@ class Telemetry():
             mavutil.mavlink.MAV_DATA_STREAM_RC_CHANNELS,  # stream for RC messages
             2,  # Hz
             1)    # start streaming
-        
+
+        self.start_automatic_updates()
+
+
+
     def update(self):
         self.batt_v = self.get_batt_v()
         self.gimbal_attitude = self.get_gimbal_attitude()
@@ -48,7 +58,27 @@ class Telemetry():
         self.num_of_sats = self.get_num_of_sats()
         self.poss = self.get_poss()
         
-        
+    def start_automatic_updates(self):
+        def update():
+            while True:
+                drone_state.pass_msg(self.connection.recv_msg())
+
+                time.sleep(self.update_rate/2)
+        threading.Thread(target=update,daemon=True).start()
+
+    def print_all_msg(self,duration=100):
+        start_time = time.time()
+        # while time.time() < (start_time + time.time()):
+        while 1:
+            # msg = self.connection.recv_match(type="GLOBAL_POSITION_INT", blocking=True)
+            msg = self.connection.recv_msg()
+            if msg:
+                # print(msg)
+                print(msg)
+                # if msg._type == "GLOBAL_POSITION_INT":
+                #     print("true")
+
+
     def get_gimbal_attitude(self):
         """this uses QUETONIONS so BEWHERE"""
         # TODO: check if this is the correct global q
@@ -92,16 +122,15 @@ class Telemetry():
         return self.battery_capacity - msg["current_consumed"]
     
     def get_poss(self):
-        msg = self.connection.recv_match(type="GPS_RAW_INT", blocking=True)
+        msg = self.connection.recv_match(type="GLOBAL_POSITION_INT", blocking=True)
         msg = msg.to_dict()
         return {"lat":msg["lat"],"lon":msg["lon"]}
     
     def get_num_of_sats(self):
-        msg = self.connection.recv_match(type="GPS_RAW_INT", blocking=True)
+        msg = self.connection.recv_match(type="GLOBAL_POSITION_INT", blocking=True)
         msg = msg.to_dict()
         return msg["get_num_of_sats"]
-
-
+            
    
     def set_a_message_interval(self,message_name,interval=1):
         """interval in sec"""
@@ -123,6 +152,30 @@ class Telemetry():
 
 
 telm_singleton = Telemetry()
+
+
+if __name__ == '__main__':
+    from telemetry import telm_singleton
+    from drone_state_homing import drone_state
+
+    # telm_singleton.start_automatic_updates()
+    while True:
+        print(drone_state)
+
+    # telm_singleton.print_all_msg()
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # class Move():
 
