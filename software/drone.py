@@ -11,6 +11,11 @@ class drone():
 
     def home_over_weed(self):
         def one_homing_command():
+            pass
+        pass
             
 
 
+def get_x_dist_from_weed():
+    frame = ai_storage_singleton.get_last_frames()
+    frame.get_detection_to_center

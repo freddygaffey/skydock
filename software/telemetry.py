@@ -26,7 +26,7 @@ class Telemetry():
         self.update_rate = 1/31 # slightly hight then the ai frame rate 
 
         self.battery_capacity = 4800 # in mah
-        path_to_uav = "/dev/ttyACM0"
+        path_to_uav = "/dev/ttyACM1"
         self.connection = mavutil.mavlink_connection(path_to_uav, baud=115200)
         self.connection.wait_heartbeat()
 

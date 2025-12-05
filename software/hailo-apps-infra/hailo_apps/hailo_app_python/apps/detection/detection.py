@@ -80,6 +80,7 @@ from gi.repository import Gst
 import cv2
 import os
 import random
+import time
 
 # Local application-specific imports
 import hailo
@@ -174,7 +175,8 @@ def app_callback(pad, info, user_data):
         cv2.putText(frame_bgr, text, (x1 + 3, y1 - 5), font, font_scale, (255, 255, 255), font_thickness)
 
     # Ensure photos folder exists
-    photos_folder = "/home/fred/skydock/software/photos"
+    # photos_folder = "/home/fred/skydock/software/photos"
+    photos_folder = ai_storage_singleton.palth_to_save_photo
     os.makedirs(photos_folder, exist_ok=True)
 
     # Build filename
@@ -192,6 +194,9 @@ def app_callback(pad, info, user_data):
         photo_path = None
 
     # Add all detections to ai_storage
+
+    ai_storage_singleton.add_frame()
+    time.sleep(0.001)
     for d in detections:
         box = d.get_bbox()
 
