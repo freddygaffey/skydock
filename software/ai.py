@@ -89,6 +89,8 @@ class ai_storage():
 
         with self._lock:
             self.current_frame.append(detection_data)
+
+        return detection_data
     
     def get_last_frames(self,num_of_frames=1):
         with self._lock:
