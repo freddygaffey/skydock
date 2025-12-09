@@ -7,6 +7,7 @@ from scipy.spatial.transform import Rotation as R # this is needed for the q
 import threading
 import time
 from drone_state_homing import drone_state
+import serial
 
  
 # I found the videos from Intelligent Quads helpfull 
@@ -22,55 +23,62 @@ class Telemetry():
     """for  quaternions I will use the [x, y, z, w] this is the convetoin for sicpy"""
     
     def __init__(self):
-        
-        self.update_rate = 1/31 # slightly hight then the ai frame rate 
-
         self.battery_capacity = 4800 # in mah
-        path_to_uav = "/dev/ttyACM1"
+        path_to_uav = "/dev/ttyACM0"
         self.connection = mavutil.mavlink_connection(path_to_uav, baud=115200)
         self.connection.wait_heartbeat()
 
         
         # defing what command to stream
-        self.set_a_message_interval("BATTERY_STATUS",interval=1)
-        self.set_a_message_interval("GLOBAL_POSITION_INT",interval=self.update_rate)
-        # self.set_a_message_interval("SYS_STATUS",interval=20)
-        self.set_a_message_interval("GIMBAL_DEVICE_ATTITUDE_STATUS",interval=self.update_rate)
-        self.set_a_message_interval("ATTITUDE_QUATERNION",interval=self.update_rate)
+        # self.set_a_message_interval("BATTERY_STATUS",interval=1)
+        # self.set_a_message_interval("GLOBAL_POSITION_INT",interval=self.update_rate)
+        # self.set_a_message_interval("SYS_STATUS",interval=self.update_rate)
+        # self.set_a_message_interval("GIMBAL_DEVICE_ATTITUDE_STATUS",interval=self.update_rate)
+        # self.set_a_message_interval("ATTITUDE_QUATERNION",interval=self.update_rate)
+        # self.set_a_message_interval("SERVO_OUTPUT_RAW",interval=self.update_rate)
 
+        self.update_rate = 1/10 # slightly hight then the ai frame rate 
+
+        self.set_a_message_interval("SERVO_OUTPUT_RAW",interval=self.update_rate)
+        self.set_a_message_interval("GLOBAL_POSITION_INT",interval=self.update_rate)
         
         # this will stream the rc chanels thay are speshal
-        self.connection.mav.request_data_stream_send(
-            self.connection.target_system,
-            self.connection.target_component,
-            mavutil.mavlink.MAV_DATA_STREAM_RC_CHANNELS,  # stream for RC messages
-            2,  # Hz
-            1)    # start streaming
+        # self.connection.mav.request_data_stream_send(
+        #     self.connection.target_system,
+        #     self.connection.target_component,
+        #     mavutil.mavlink.MAV_DATA_STREAM_RC_CHANNELS,  # stream for RC messages
+        #     2,  # Hz
+        #     1)    # start streaming
 
         self.start_automatic_updates()
 
 
 
     def update(self):
-        self.batt_v = self.get_batt_v()
-        self.gimbal_attitude = self.get_gimbal_attitude()
-        self.batt_mah_left = self.get_batt_mah_left()
-        self.num_of_sats = self.get_num_of_sats()
-        self.poss = self.get_poss()
+        pass
+        # self.batt_v = self.get_batt_v()
+        # self.gimbal_attitude = self.get_gimbal_attitude()
+        # self.batt_mah_left = self.get_batt_mah_left()
+        # self.num_of_sats = self.get_num_of_sats()
+        # self.poss = self.get_poss()
         
     def start_automatic_updates(self):
         def update():
             while True:
-                drone_state.pass_msg(self.connection.recv_msg())
-
-                time.sleep(self.update_rate/2)
-        threading.Thread(target=update,daemon=True).start()
+                try:
+                    drone_state.pass_msg(self.connection.recv_msg())
+                except serial.SerialException:
+                    pass
+                
+                time.sleep(self.update_rate/1.99)
+        threading.Thread(target=update).start()
+        # threading.Thread(target=update,daemon=True).start()
 
     def print_all_msg(self,duration=100):
         start_time = time.time()
         # while time.time() < (start_time + time.time()):
         while 1:
-            # msg = self.connection.recv_match(type="GLOBAL_POSITION_INT", blocking=True)
+            # msg = self.connection.recv_match(type="RC_CHANNELS", blocking=True)
             msg = self.connection.recv_msg()
             if msg:
                 # print(msg)
@@ -131,7 +139,6 @@ class Telemetry():
         msg = msg.to_dict()
         return msg["get_num_of_sats"]
             
-   
     def set_a_message_interval(self,message_name,interval=1):
         """interval in sec"""
         # https://mavlink.io/en/mavgen_python/howto_requestmessages.html
@@ -159,8 +166,10 @@ if __name__ == '__main__':
     from drone_state_homing import drone_state
 
     # telm_singleton.start_automatic_updates()
+    # telm_singleton.print_all_msg()
     while True:
         print(drone_state)
+        time.sleep(0.2)
 
     # telm_singleton.print_all_msg()
 

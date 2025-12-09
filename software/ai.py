@@ -13,32 +13,28 @@ class Detection():
     photo_path: Optional[str] = None
 
     time_detected: int = field(default_factory=lambda: time.time_ns())
-    vector_to_center: Tuple[float, float] = field(init=False)  # computed after init
+    # vector_to_center: Tuple[float, float] = field(init=False)  # computed after init
 
-    def __post_init__(self):
-        self.vector_to_center = self.get_the_vector_center()
+    # def __post_init__(self):
+    #     self.vector_to_center = self.get_the_vector_center()
 
     def get_the_vector_center(self):
-        center_tuple = (0.5,0.5)
-        (cx,cy)  = center_tuple
+        cx = camera_prams.width / 2
+        cy = camera_prams.height / 2
 
-        center_of_bb = ((self.bbox[0][0] + self.bbox[1][0])/2 , (self.bbox[0][1] + self.bbox[1][1])/2) # this takes ave x and ave y 
-        (bbx, bby) = center_of_bb
+        bbx = (self.bbox[0][0] + self.bbox[1][0]) / 2
+        bby = (self.bbox[0][1] + self.bbox[1][1]) / 2
 
-        dx = cx - bbx
-        dy = cy - bby
-
-        mag = (dx**2 + dy**2)**0.5 # this is finding the mag with pythag 
-        if mag == 0:
-            return (0, 0)
-        
-        vector = (dx /mag, dy /mag)
-        return vector
+        return (bbx - cx, bby - cy) 
 
 @dataclass(frozen=True)
 class Camera:
-    fov_x = 27.4
-    fov_y = 21.0
+    x_dist_per_pix_per_meter: float = 0.0003792011843564136
+    y_dist_per_pix_per_meter: float = 0.0005137066016141622
+    fov_x: float = 27.4   # degrees
+    fov_y: float = 21.0   # degrees
+    width: int = 1280
+    height: int = 720
     
 class ai_storage():
     def __init__(self):
@@ -50,9 +46,8 @@ class ai_storage():
 
         # photo stuff
         self.take_photo = True
-        self.__photo_not_taken = 0
         self.time_last_photo_taken = round(time.time())
-        self.rate_take_photo = 8 # sec
+        self.rate_take_photo = 2 # sec
         self.palth_to_save_photo = "/home/fred/skydock/software/photos"
 
     def take_photo_function(self,palth):
@@ -60,7 +55,9 @@ class ai_storage():
         self.take_photo = True
 
     def photo_taken(self,photo_path):
-            self.take_photo = False
+        self.take_photo = False
+        self.time_last_photo_taken = round(time.time())
+
 
     def photo_not_taken(self):
         if round(time.time()) % self.rate_take_photo == 0 and self.time_last_photo_taken != round(time.time()):
@@ -74,7 +71,7 @@ class ai_storage():
                 self.current_frame = []
 
     def add_detection(self, label, confidence, bbox, track_id=None,photo_path=None):
-        if photo_path is not None:
+        if photo_path is not "NO_PHOTO_TAKEN":
             self.photo_taken(photo_path)
         else:
             self.photo_not_taken()

@@ -38,7 +38,6 @@ import datetime
 
 def app_callback(pad, info, user_data):
     TAKE_PHOTO = ai_storage_singleton.take_photo
-    TAKE_PHOTO = True
     PHOTO_PALTH = ai_storage_singleton.palth_to_save_photo
     if not TAKE_PHOTO:
         PHOTO_PALTH = "NO_PHOTO_TAKEN"
@@ -94,7 +93,7 @@ def app_callback(pad, info, user_data):
 
 def save_image(folder, image_bgr, frame_array,
                box_color=(255,0,0), box_thickness=2):
-    print(frame_array)
+
     # --- Build filename (cheap) ---
     detection_labels = [det.label for det in frame_array]
     name_prefix = "_".join(detection_labels[:3]) if detection_labels else "none"
@@ -135,6 +134,9 @@ def save_image(folder, image_bgr, frame_array,
             pass
 
         cv2.imwrite(path, img)
+        # print(f"image saved to {path}")
+        ai_storage_singleton.photo_taken(path)
+
 
     # --- Launch thread ---
     threading.Thread(

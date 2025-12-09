@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 @dataclass
 class DroneStateHoming:
     time_updated_GLOBAL_POSITION_INT: float = 0
@@ -11,6 +12,8 @@ class DroneStateHoming:
     velocity_x: float = 0.0
     velocity_y: float = 0.0
     velocity_z: float = 0.0
+
+    enabel_homing_and_autonomy: bool = False
 
     # gimble orintaion
 
@@ -35,5 +38,12 @@ class DroneStateHoming:
 
             # Heading 65535 = unknown)
             self.heading = msg.hdg / 100.0 if msg.hdg != 65535 else None
+
+        if msg._type == "SERVO_OUTPUT_RAW":
+            if msg.servo8_raw <= 1000:
+                self.enabel_homing_and_autonomy = False
+            if msg.servo8_raw > 1000:
+                self.enabel_homing_and_autonomy = True
+                
 
 drone_state = DroneStateHoming()

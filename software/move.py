@@ -114,7 +114,7 @@ class Move():
         if self._v_thread and self._v_thread.is_alive():
             self._v_thread_stop_event.set()
             self._v_thread.join()
-            self.send_volocity_command_yaw_stay_same(0,0,0)
+            # self.send_volocity_command_yaw_stay_same(0,0,0)
             self._v_thread = None 
 
     def arm(self): # dange UNTESTED
@@ -141,7 +141,5 @@ class Move():
                 0, 0, 0, 0, 0, 0, 0, hight
             )
 
-
-    
 
 move_singleton = Move()
