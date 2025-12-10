@@ -6,7 +6,7 @@ from scipy.spatial.transform import Rotation as R # this is needed for the q
 
 import threading
 import time
-from drone_state_homing import drone_state
+from drone_snapshots import drone_telm_stapshot, ground_station_commands
 import serial
 
  
@@ -19,7 +19,6 @@ import serial
 # https://www.youtube.com/watch?v=STEOavXqXkQ
 
 class Telemetry():
-    
     """for  quaternions I will use the [x, y, z, w] this is the convetoin for sicpy"""
     
     def __init__(self):
@@ -28,7 +27,8 @@ class Telemetry():
         self.connection = mavutil.mavlink_connection(path_to_uav, baud=115200)
         self.connection.wait_heartbeat()
 
-        
+        self.update_rate = 1/32 # slightly hight then the ai frame rate 
+
         # defing what command to stream
         # self.set_a_message_interval("BATTERY_STATUS",interval=1)
         # self.set_a_message_interval("GLOBAL_POSITION_INT",interval=self.update_rate)
@@ -37,42 +37,25 @@ class Telemetry():
         # self.set_a_message_interval("ATTITUDE_QUATERNION",interval=self.update_rate)
         # self.set_a_message_interval("SERVO_OUTPUT_RAW",interval=self.update_rate)
 
-        self.update_rate = 1/10 # slightly hight then the ai frame rate 
+        self.start_automatic_message_passer()
 
+    def start_automatic_message_passer(self):
         self.set_a_message_interval("SERVO_OUTPUT_RAW",interval=self.update_rate)
         self.set_a_message_interval("GLOBAL_POSITION_INT",interval=self.update_rate)
-        
-        # this will stream the rc chanels thay are speshal
-        # self.connection.mav.request_data_stream_send(
-        #     self.connection.target_system,
-        #     self.connection.target_component,
-        #     mavutil.mavlink.MAV_DATA_STREAM_RC_CHANNELS,  # stream for RC messages
-        #     2,  # Hz
-        #     1)    # start streaming
 
-        self.start_automatic_updates()
+        def message_in(message):
+            drone_telm_stapshot.pass_msg(message)
+            ground_station_commands.pass_message(message)
 
-
-
-    def update(self):
-        pass
-        # self.batt_v = self.get_batt_v()
-        # self.gimbal_attitude = self.get_gimbal_attitude()
-        # self.batt_mah_left = self.get_batt_mah_left()
-        # self.num_of_sats = self.get_num_of_sats()
-        # self.poss = self.get_poss()
-        
-    def start_automatic_updates(self):
-        def update():
+        def passer():
             while True:
                 try:
-                    drone_state.pass_msg(self.connection.recv_msg())
+                    msg = self.connection.recv_msg()
+                    if msg:message_in(msg)
                 except serial.SerialException:
                     pass
-                
-                time.sleep(self.update_rate/1.99)
-        threading.Thread(target=update).start()
-        # threading.Thread(target=update,daemon=True).start()
+
+        threading.Thread(target=passer).start()
 
     def print_all_msg(self,duration=100):
         start_time = time.time()
@@ -85,7 +68,6 @@ class Telemetry():
                 print(msg)
                 # if msg._type == "GLOBAL_POSITION_INT":
                 #     print("true")
-
 
     def get_gimbal_attitude(self):
         """this uses QUETONIONS so BEWHERE"""
@@ -116,29 +98,30 @@ class Telemetry():
             q_global = r_global.as_quat()
             return q_global
 
-            
-    def get_batt_v(self):
-        """this code works by converitng the msg to a dict then filtering"""
-        msg = self.connection.recv_match(type="BATTERY_STATUS", blocking=True)
-        msg = msg.to_dict()
-        if msg["mavpackettype"] == "BATTERY_STATUS":
-            return msg["voltages"][0]/1000
+    def run_pre_flight_checks(self):
+        """retun true if good to go
+        retun the arm fail message if not good to go"""
+        for _ in range(5):
+            self.connection.mav.command_long_send(
+                self.connection.target_system,       # target_system
+                self.connection.target_component,    # target_component
+                mavutil.mavlink.MAV_CMD_RUN_PREARM_CHECKS,  # command 401
+                0,                          # confirmation
+                0, 0, 0, 0, 0, 0, 0         # params 1-7 (not used)
+            )
 
-    def get_batt_mah_left(self):        
-        msg = self.connection.recv_match(type="BATTERY_STATUS", blocking=True)
-        msg = msg.to_dict()
-        return self.battery_capacity - msg["current_consumed"]
-    
-    def get_poss(self):
-        msg = self.connection.recv_match(type="GLOBAL_POSITION_INT", blocking=True)
-        msg = msg.to_dict()
-        return {"lat":msg["lat"],"lon":msg["lon"]}
-    
-    def get_num_of_sats(self):
-        msg = self.connection.recv_match(type="GLOBAL_POSITION_INT", blocking=True)
-        msg = msg.to_dict()
-        return msg["get_num_of_sats"]
-            
+            result = self.connection.recv_match(type='COMMAND_ACK', blocking=True,timeout=1)
+            if result.command == 401:
+                break 
+        
+        msg = self.connection.recv_match(type='STATUSTEXT', blocking=True, timeout=1)
+        if msg: return msg.text
+        if msg == None and result.command == 401:
+            return True
+        # example of fialing
+        # COMMAND_ACK {command : 401, result : 0, progress : 0, result_param2 : 0, target_system : 255, target_component : 0}
+        # PreArm: GPS 1: Bad fix 
+
     def set_a_message_interval(self,message_name,interval=1):
         """interval in sec"""
         # https://mavlink.io/en/mavgen_python/howto_requestmessages.html
@@ -157,63 +140,29 @@ class Telemetry():
         string_to_print = "set " + message_name + " to repeat every: " + str(interval/1000000) + " seconds"
         print(string_to_print)
 
+    def send_text_message(self,message:str):
+        if len(message) > 50-4:
+            raise ValueError("the send text message must be under 50 chars")
+        self.connection.mav.statustext_send(
+            mavutil.mavlink.MAV_SEVERITY_INFO, 
+            f"gc: {message}".encode("utf-8"))
 
 telm_singleton = Telemetry()
 
 
 if __name__ == '__main__':
-    from telemetry import telm_singleton
-    from drone_state_homing import drone_state
+    # from telemetry import telm_singleton
+    # from software.drone_snapshots import drone_telm_stapshot
 
-    # telm_singleton.start_automatic_updates()
+    # telm_singleton.start_automatic_updates_homing()
+    # while True: print(telm_singleton.run_pre_flight_checks())
+
+    
     # telm_singleton.print_all_msg()
     while True:
-        print(drone_state)
+        telm_singleton.send_text_message("hi this is a text message form the drone")
+        print("sent message")
+        # print(ground_station_commands)
         time.sleep(0.2)
 
     # telm_singleton.print_all_msg()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# class Move():
-
-#     def see(self):
-        
-#         """this fuction will return all relevent date for a conputor vison data"""
-#             # gps_poss, num_of_sats, gimbel_angle, ai_dict
-#             # this setup allow easer passing of files 
-            
-#         """see_input_dict = {
-#             "gps_poss":(x,y,z),
-#             "num_of_sats": int(NUM),
-#             "q_cam_rel_global": [x, y, z, w],
-#             "ai_dict": SEE BELOW
-            
-#             }"""
-        
-#         """ai_dict {
-#             "0": {
-#                 bbox: (top_left, bottom_right),
-#                 object: "name_of_thing_found",
-#                 confidence: float
-#             }
-            
-#             "1": {
-#                 bbox: (top_left, bottom_right),
-#                 object: "name_of_thing_found",
-#                 confidence: float
-#             }
-#         }"""
-
-#     pass

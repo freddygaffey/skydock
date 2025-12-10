@@ -2,7 +2,7 @@ import threading
 from telemetry import telm_singleton
 from move import move_singleton 
 from ai import ai_storage_singleton, camera_prams
-from drone_state_homing import drone_state
+from software.drone_snapshots import drone_telm_stapshot
 
 
 class drone():

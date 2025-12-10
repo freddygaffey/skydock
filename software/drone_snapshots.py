@@ -1,4 +1,5 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+import time
 
 @dataclass
 class DroneStateHoming:
@@ -46,4 +47,28 @@ class DroneStateHoming:
                 self.enabel_homing_and_autonomy = True
                 
 
-drone_state = DroneStateHoming()
+drone_telm_stapshot = DroneStateHoming()
+
+@dataclass
+class GroundStationCommands:
+    """
+    posiabel messages:
+    gc: takeoff
+    gc: takeoff {int < 10}
+    
+    """
+    commands: list = field(default_factory=list)
+    times: list = field(default_factory=list)
+    # commands: list = []
+    # times: list = []
+
+    def pass_message(self,message):
+        # STATUSTEXT {severity : 6, text : gc: this is a message from the gc, id : 0, chunk_seq : 0}
+        if message._type == "STATUSTEXT" and "gc:" in message.text:
+            self.times.insert(0, time.time_ns())
+            self.commands.insert(0,message.text)
+
+
+ground_station_commands = GroundStationCommands()
+
+
