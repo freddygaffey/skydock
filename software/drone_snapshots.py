@@ -1,8 +1,9 @@
 from dataclasses import dataclass, field
 import time
+import math
 
 @dataclass
-class DroneStateHoming:
+class DroneStateForHoming:
     time_updated_GLOBAL_POSITION_INT: float = 0
     # Global position in degrees/meters
     latitude: float = 0
@@ -46,8 +47,7 @@ class DroneStateHoming:
             if msg.servo8_raw > 1000:
                 self.enabel_homing_and_autonomy = True
                 
-
-drone_telm_stapshot = DroneStateHoming()
+drone_telm_stapshot = DroneStateForHoming()
 
 @dataclass
 class GroundStationCommands:
@@ -68,7 +68,75 @@ class GroundStationCommands:
             self.times.insert(0, time.time_ns())
             self.commands.insert(0,message.text)
 
-
 ground_station_commands = GroundStationCommands()
 
+@dataclass
+class Weed:
+    location: tuple[float,float]
+    confidence: int
+    sprayed: bool = False
+    path_to_photo: str = "have a look for it youself you lazzy person"
 
+class WeedStorage:
+    all_weeds = [] # array of weed obgects
+
+    @classmethod
+    def _haversine_distance(cls, p1, p2):
+        lon1, lat1 = p1
+        lon2, lat2 = p2
+        
+        R = 6371000  # Earth radius in meters
+
+        phi1, phi2 = math.radians(lat1), math.radians(lat2)
+        dphi = math.radians(lat2 - lat1)
+        dlon = math.radians(lon2 - lon1)
+
+        a = (math.sin(dphi/2)**2 +
+            math.cos(phi1) * math.cos(phi2) * math.sin(dlon/2)**2)
+
+        return R * (2 * math.atan2(math.sqrt(a), math.sqrt(1-a)))
+
+    @classmethod
+    def next_weed_to_spray(cls,drone_loc):
+        """this will retun the closet weed can be made more effint later"""
+        min_dist = float("inf")
+        weed = None
+
+        for i in cls.all_weeds:
+            if i.sprayed:
+                continue
+            if (dist := cls.__haversine_distance(i.location,drone_loc)) < min_dist:
+                min_dist = dist
+                weed = i
+        return weed
+                
+    @classmethod
+    def mark_as_sprayed(cls,weed_obj):
+        for i in range(len(cls.all_weeds)):
+            weed_enu = cls.all_weeds[i] 
+            if weed_obj is weed_enu:
+                weed_enu.sprayed = True
+                return weed_enu
+
+    @classmethod
+    def add_weed(cls,weed):
+        cls.all_weeds.append(weed)
+
+class Scanning:
+    def __init__(self,scan_path): 
+        self.scan_palth = scan_path # [(long,lat,alt_from_home),] this is on order of the scanning palth
+        self.scan_precision = 2 # in meter
+        self.points_visited = []
+
+    def next_point(self):
+        for i in self.scan_path:
+            if i not in self.points_visited:
+                return i
+
+
+    def point_compleate(self,point):
+        self.points_visited.append(point)
+
+
+        
+        

@@ -8,7 +8,7 @@ import threading
 import time
 from drone_snapshots import drone_telm_stapshot, ground_station_commands
 import serial
-
+from move import move_singleton
  
 # I found the videos from Intelligent Quads helpfull 
 # https://www.youtube.com/watch?v=kecnaxlUiTY
@@ -23,9 +23,18 @@ class Telemetry():
     
     def __init__(self):
         self.battery_capacity = 4800 # in mah
-        path_to_uav = "/dev/ttyACM0"
-        self.connection = mavutil.mavlink_connection(path_to_uav, baud=115200)
-        self.connection.wait_heartbeat()
+        try:
+            path_to_uav = "/dev/ttyACM1"
+            self.connection = mavutil.mavlink_connection(path_to_uav, baud=115200)
+            self.connection.wait_heartbeat()
+            move_singleton.connection = self.connection
+        except serial.serialutil.SerialException as e:
+            path_to_uav = "/dev/ttyACM0"
+            self.connection = mavutil.mavlink_connection(path_to_uav, baud=115200)
+            self.connection.wait_heartbeat()
+            move_singleton.connection = self.connection
+ 
+
 
         self.update_rate = 1/32 # slightly hight then the ai frame rate 
 
@@ -40,13 +49,15 @@ class Telemetry():
         self.start_automatic_message_passer()
 
     def start_automatic_message_passer(self):
+
         self.set_a_message_interval("SERVO_OUTPUT_RAW",interval=self.update_rate)
         self.set_a_message_interval("GLOBAL_POSITION_INT",interval=self.update_rate)
 
         def message_in(message):
             drone_telm_stapshot.pass_msg(message)
             ground_station_commands.pass_message(message)
-
+            move_singleton.msg_passer(message)
+            
         def passer():
             while True:
                 try:

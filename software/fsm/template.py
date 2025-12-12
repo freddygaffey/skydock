@@ -58,11 +58,13 @@ class TakeOff(DroneState):
     def exit(self):
         print("takeoff conpleate")
 
-        
-            
-    
 class Scaning(DroneState):
+    def enter(self):
+        pass
+
 class RetunToHome(DroneState):
+    def enter(self):
+        move_singleton.set_mode("RTH")
 
 class SprayFSM:
 class SprayFlyToPoint(DroneState):

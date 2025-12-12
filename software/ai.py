@@ -47,7 +47,7 @@ class ai_storage():
         # photo stuff
         self.take_photo = True
         self.time_last_photo_taken = round(time.time())
-        self.rate_take_photo = 2 # sec
+        self.rate_take_photo = 1000000000000 # sec
         self.palth_to_save_photo = "/home/fred/skydock/software/photos"
 
     def take_photo_function(self,palth):

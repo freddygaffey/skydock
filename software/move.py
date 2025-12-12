@@ -1,13 +1,14 @@
 import threading
-from telemetry import telm_singleton
 import time
 from pymavlink import mavutil
 
 class Move():
     def __init__(self):
-        self.connection = telm_singleton.connection
+        # self.connection = telm_singleton.connection
+        # ^^ this is done in the telemtry.py
+        self.connection = None
         self.mode_mapping = {'STABILIZE': 0,'ACRO': 1,'ALT_HOLD': 2,'AUTO': 3,'GUIDED': 4,'LOITER': 5,'RTL': 6,'CIRCLE': 7,'OF_LOITER': 10,'DRIFT': 11,'SPORT': 13,'FLIP': 14,'AUTOTUNE': 15,'POSHOLD': 16,'BRAKE': 17,'THROW': 18,'AVOID_ADSB': 19,'GUIDED_NOGPS': 20,'SMART_RTL': 21,'FLOWHOLD': 22,'FOLLOW': 23,'ZIGZAG': 24,'SYSTEMIDLE': 25,'AUTOTUNE': 26,'RALLY': 27}
-        self.current_mode = self.get_mode()
+        self.current_mode = None
 
         self._v_thread = None
         self._v_thread_stop_event = threading.Event()
@@ -26,9 +27,11 @@ class Move():
         )
 
     def get_mode(self):
+        return self.current_mode
+
+    def msg_passer(self,msg):
         """retuns the currnt mode (in eglish)"""
-        msg = self.connection.recv_match(type='HEARTBEAT', blocking=True)
-        if msg:
+        if msg._type == "HEARTBEAT":
             mode_id = msg.custom_mode
             current_mode = None
             for i in self.mode_mapping:
@@ -36,7 +39,8 @@ class Move():
                     current_mode = i
                     break
             if current_mode ==  None: raise Exception("mode not found (freddy)")
-        return current_mode
+            self.current_mode = current_mode
+        # return current_mode
 
     def send_displacement_command_yaw_stay_same(self,mx,my,mz,bitmask=4088):
             self.connection.mav.set_position_target_local_ned_send(
@@ -102,7 +106,7 @@ class Move():
             while time.time() < start_time + max_time and not self._v_thread_stop_event.is_set():
                 print("sending volocity command on thread")
                 self.send_volocity_command_yaw_stay_same(direction[0],direction[1],direction[2],bitmask)
-                time.sleep(0.3)
+                time.sleep(0.03)
                 
         if self._v_thread is None or not self._v_thread.is_alive(): # this will check if none like after init or later is not runing
             self._v_thread_stop_event.clear()

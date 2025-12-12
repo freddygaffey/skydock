@@ -1,6 +1,6 @@
 from ai import ai_storage_singleton, camera_prams
 from telemetry import telm_singleton
-from software.drone_snapshots import drone_telm_stapshot 
+from drone_snapshots import drone_telm_stapshot 
 from move import move_singleton
 
 import time
@@ -23,9 +23,9 @@ if "__main__" == __name__:
 
     ai_storage_singleton.start_ai()
     # telm_singleton.start_automatic_updates()
-
+    time.sleep(0.5)
     while True:
-        time.sleep(0.3)
+        time.sleep(0.07)
         detection = None
         last_frame = ai_storage_singleton.get_last_frames(1)
         try:
@@ -37,7 +37,8 @@ if "__main__" == __name__:
             if i.label in ["traffic light", "sports ball", "frisbee"]:
                 new_frame.append(i)
             else:
-                print(f"discarding {i.label}")
+                pass
+                # print(f"discarding {i.label}")
 
         last_frame = new_frame
 
@@ -56,21 +57,30 @@ if "__main__" == __name__:
 
         if detection.confidence < 0.4:
             continue 
-
+        print(ai_storage_singleton.get_last_frames(2),"the detection")
         print(detection.label)
-        dist_x = camera_prams.x_dist_per_pix_per_meter * detection.get_the_vector_center()[0]
-        dist_y = camera_prams.y_dist_per_pix_per_meter * detection.get_the_vector_center()[1]
-        print(f"{dist_x = }")
-        print(f"{dist_y = }")
-        vx = find_v_for_a_given_distance(dist_x)
-        vy = find_v_for_a_given_distance(dist_y)
+        # Transform camera coordinates to match the drone's NED coordinate system
+        dist_x_ned = camera_prams.y_dist_per_pix_per_meter * detection.get_the_vector_center()[1]  # Camera Y → Drone X
+        dist_y_ned = -camera_prams.x_dist_per_pix_per_meter * detection.get_the_vector_center()[0]  # -Camera X → Drone Y
+        print(f"{dist_x_ned = }")
+        print(f"{dist_y_ned = }")
+        vx = find_v_for_a_given_distance(dist_x_ned)
+        vy = find_v_for_a_given_distance(dist_y_ned)
 
         print(f"{vx = }")
         print(f"{vy = }")
         # move_singleton.send_volocity_command_yaw_stay_same(vx,vy,0)
         v_tuple = (vx,vy,0)
+
         if drone_telm_stapshot.enabel_homing_and_autonomy:
-            move_singleton.move_volocity_until_stop_or_max_time(v_tuple,1,change_yaw=False)
+            if move_singleton.get_mode() == "GUIDED":
+                pass
+            else:
+                move_singleton.set_mode("GUIDED")
+            ai_storage_singleton.take_photo()
+            move_singleton.move_volocity_until_stop_or_max_time(v_tuple,0.3,change_yaw=False)
+        else:
+            move_singleton.set_mode("POSHOLD")
 
 
         # move_singleton.send_displacement_command_yaw_stay_same(dist_x,dist_y,0)
