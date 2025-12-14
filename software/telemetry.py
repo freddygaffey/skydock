@@ -3,6 +3,8 @@ from pymavlink import mavutil
 import math 
 import numpy as np
 from scipy.spatial.transform import Rotation as R # this is needed for the q
+from dataclasses import dataclass
+import base64
 
 import threading
 import time
@@ -18,11 +20,72 @@ from move import move_singleton
 # multi threading 
 # https://www.youtube.com/watch?v=STEOavXqXkQ
 
+class GroundStaionMessages:
+    messages = []
+    messages_lock = threading.Lock()
+
+    @staticmethod
+    def encode_message(message):
+        # message = base64.b64encode(message.encode("utf-8")).decode("ascii")
+        return message  
+
+    @staticmethod
+    def decode_message(message):
+        # message = base64.b64decode(message.encode("ascii")).decode("utf-8")
+        return message
+
+    @staticmethod
+    def get_latest_message():
+        with GroundStaionMessages.messages_lock:
+            try:
+                return GroundStaionMessages.messages[-1]
+            except IndexError:
+                return GroundStaionMessages.messages
+
+    @staticmethod
+    def passer(message):
+        if message._type == "STATUSTEXT" and "gc:" in message.text:
+            message_text = message.text
+            message_text = GroundStaionMessages.decode_message(message_text)
+            message_text = message_text[3:]
+            message_array = eval(message_text)
+            message_array[0] = message_array[0][1:]
+            # print(message_array,"this from passer")
+
+            with GroundStaionMessages.messages_lock:
+                GroundStaionMessages.messages.append(message_array)
+                
+    @staticmethod
+    def ask_gc_question(question):
+        question_to_send = f"drone: {question}"
+        if len(question) >= 43:
+            raise ValueError("question is to long") 
+        
+        telm_singleton.send_text_message(GroundStaionMessages.encode_message(question_to_send))
+
+        def check_for_message_retun_ans():
+            while True:
+                time.sleep(0.5)
+                message = GroundStaionMessages.get_latest_message()
+
+                if len(message) == 0: continue
+                print(message[0],"message question")
+                print(question,"function question")
+                if question != message[0]: continue
+                elif "accepted" == message[1]: return True
+                elif "rejected" == message[1]: return False
+                else: raise ValueError("idk what happed")
+
+        return check_for_message_retun_ans()
+        # thed = threading.Thread(target=check_for_message_retun_ans,daemon=True).start()
+        
 class Telemetry():
     """for  quaternions I will use the [x, y, z, w] this is the convetoin for sicpy"""
     
     def __init__(self):
         self.battery_capacity = 4800 # in mah
+        self.most_recent_message = None
+
         try:
             path_to_uav = "/dev/ttyACM1"
             self.connection = mavutil.mavlink_connection(path_to_uav, baud=115200)
@@ -57,6 +120,8 @@ class Telemetry():
             drone_telm_stapshot.pass_msg(message)
             ground_station_commands.pass_message(message)
             move_singleton.msg_passer(message)
+            GroundStaionMessages.passer(message)
+            self.most_recent_message = message
             
         def passer():
             while True:
@@ -69,16 +134,14 @@ class Telemetry():
         threading.Thread(target=passer).start()
 
     def print_all_msg(self,duration=100):
-        start_time = time.time()
-        # while time.time() < (start_time + time.time()):
         while 1:
             # msg = self.connection.recv_match(type="RC_CHANNELS", blocking=True)
-            msg = self.connection.recv_msg()
+            msg = self.most_recent_message
             if msg:
                 # print(msg)
-                print(msg)
-                # if msg._type == "GLOBAL_POSITION_INT":
-                #     print("true")
+                # print(msg)
+                if msg._type == "STATUSTEXT":
+                    print(msg)
 
     def get_gimbal_attitude(self):
         """this uses QUETONIONS so BEWHERE"""
@@ -152,11 +215,12 @@ class Telemetry():
         print(string_to_print)
 
     def send_text_message(self,message:str):
-        if len(message) > 50-4:
-            raise ValueError("the send text message must be under 50 chars")
-        self.connection.mav.statustext_send(
-            mavutil.mavlink.MAV_SEVERITY_INFO, 
-            f"gc: {message}".encode("utf-8"))
+            if len(message) > 50-7:
+                raise ValueError("the send text message must be under 50 chars")
+            self.connection.mav.statustext_send(
+                mavutil.mavlink.MAV_SEVERITY_INFO, 
+                f"{message}".encode("utf-8"))
+            
 
 telm_singleton = Telemetry()
 
@@ -171,9 +235,11 @@ if __name__ == '__main__':
     
     # telm_singleton.print_all_msg()
     while True:
-        telm_singleton.send_text_message("hi this is a text message form the drone")
-        print("sent message")
+        print(GroundStaionMessages.ask_gc_question(input("> ")))
+
+        # telm_singleton.send_text_message("hi this is a text message form the drone")
+        # print("sent message")
         # print(ground_station_commands)
-        time.sleep(0.2)
+        # time.sleep(0.2)
 
     # telm_singleton.print_all_msg()

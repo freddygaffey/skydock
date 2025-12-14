@@ -2,7 +2,7 @@ from typing import Protocol
 import time
 
 
-from telemetry import telm_singleton
+from telemetry import telm_singleton, GroundStaionMessages
 from move import move_singleton 
 from ai import ai_storage_singleton, camera_prams
 from drone_snapshots import drone_telm_stapshot, ground_station_commands
@@ -27,7 +27,8 @@ class OnGroundState(DroneState):
         print("Drone is on the ground.")
     
     def update(self):
-        if telm_singleton.run_pre_flight_checks() == True and "takeoff" in ground_station_commands.commands[0]:
+        # if telm_singleton.run_pre_flight_checks() == True and "takeoff" in ground_station_commands.commands[0]:
+        if telm_singleton.run_pre_flight_checks() == True and GroundStaionMessages.ask_gc_question("Permission to move to takeoff state?"):
             try: 
                 hight = int(ground_station_commands.commands[0][-1])
             except ValueError:
@@ -44,6 +45,7 @@ class OnGroundState(DroneState):
 
 class TakeOff(DroneState):
     def enter(self):
+        if GroundStaionMessages.ask_gc_question(f"Permission to arm and takeoff to {Context.take_off_hight} m ?")
         move_singleton.arm_and_take_off_to_hight(Context.take_off_hight)
 
     def update(self):
@@ -61,6 +63,10 @@ class TakeOff(DroneState):
 class Scaning(DroneState):
     def enter(self):
         pass
+    def update(self):
+        ...
+    def exit(self):
+        ...
 
 class RetunToHome(DroneState):
     def enter(self):
