@@ -4,14 +4,12 @@ import time
 
 from telemetry import telm_singleton, GroundStaionMessages
 from move import move_singleton 
-from ai import ai_storage_singleton, camera_prams
-from drone_snapshots import drone_telm_stapshot, ground_station_commands
+from ai import ai_storage_singleton, Camera
+from drone_snapshots import drone_telm_stapshot, ScanningPlanner,WeedStorage,Weed
 
 class DroneState(Protocol):
     def enter(self): ...
-
     def update(self): ...
-
     def exit(self): ...
 
 class FSM:
@@ -29,12 +27,7 @@ class OnGroundState(DroneState):
     def update(self):
         # if telm_singleton.run_pre_flight_checks() == True and "takeoff" in ground_station_commands.commands[0]:
         if telm_singleton.run_pre_flight_checks() == True and GroundStaionMessages.ask_gc_question("Permission to move to takeoff state?"):
-            try: 
-                hight = int(ground_station_commands.commands[0][-1])
-            except ValueError:
-                hight = 2 # defaut take off hight 
-            Context.take_off_hight = hight
-            move_singleton.arm_and_take_off_to_hight(hight)
+            move_singleton.arm_and_take_off_to_hight(Context.take_off_hight)
             return TakeOff()
         else:
             time.sleep(3)
@@ -45,9 +38,9 @@ class OnGroundState(DroneState):
 
 class TakeOff(DroneState):
     def enter(self):
-        if GroundStaionMessages.ask_gc_question(f"Permission to arm and takeoff to {Context.take_off_hight} m ?")
-        move_singleton.arm_and_take_off_to_hight(Context.take_off_hight)
-
+        if GroundStaionMessages.ask_gc_question(f"Permission to arm and takeoff to {Context.take_off_hight} m ?"):
+            move_singleton.arm_and_take_off_to_hight(Context.take_off_hight)
+        
     def update(self):
         check_alt = round(drone_telm_stapshot.altitude_rel_home,1) == Context.take_off_hight
         if check_alt != True:
@@ -56,26 +49,56 @@ class TakeOff(DroneState):
             return Scaning()
         else:
             return SprayFSM()
-        
+
     def exit(self):
         print("takeoff conpleate")
 
 class Scaning(DroneState):
     def enter(self):
         pass
+
     def update(self):
-        ...
+        """
+        while true
+            fly to next scan point 
+            while scanning add detections 
+        """
+        # update poss
+        loc = drone_telm_stapshot.longitude , drone_telm_stapshot.latitude
+        next_point = ScanningPlanner.next_point(loc)
+        if next_point is None:
+            Context.scaning_complete = True
+            return Spraying()
+        move_singleton.fly_to_point(lat=loc[1],lon=loc[0],alt_above_home=ScanningPlanner.scan_alt)
+
+        # add weed detections
+        frame = ai_storage_singleton.get_frames_in_time_period(less_past=time.time_ns(),more_past=Weed.time_last_mass_updated)
+        new_weeds = Weed.retun_all_new_valid_weeds(drone_state=drone_telm_stapshot,frame=frame,camera=Camera)
+
+        WeedStorage.add_weed(new_weeds)
+
+
     def exit(self):
-        ...
+        pass
 
 class RetunToHome(DroneState):
+    @classmethod
+    def need_to_RTH(cls):
+        # TODO: actally do this
+        pass
+
     def enter(self):
         move_singleton.set_mode("RTH")
+    def update(self):
+        if move_singleton.get_mode() != "RTH":
+            move_singleton.set_mode("RTH")
+        
 
-class SprayFSM:
-class SprayFlyToPoint(DroneState):
-class SprayHomeOverWeed(DroneState):
-class SpraySpray(DroneState):
+class Spraying:
+# class SprayFSM:
+# class SprayFlyToPoint(DroneState):
+# class SprayHomeOverWeed(DroneState):
+# class SpraySpray(DroneState):
 
 
 

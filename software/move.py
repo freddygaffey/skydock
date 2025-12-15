@@ -9,6 +9,7 @@ class Move():
         self.connection = None
         self.mode_mapping = {'STABILIZE': 0,'ACRO': 1,'ALT_HOLD': 2,'AUTO': 3,'GUIDED': 4,'LOITER': 5,'RTL': 6,'CIRCLE': 7,'OF_LOITER': 10,'DRIFT': 11,'SPORT': 13,'FLIP': 14,'AUTOTUNE': 15,'POSHOLD': 16,'BRAKE': 17,'THROW': 18,'AVOID_ADSB': 19,'GUIDED_NOGPS': 20,'SMART_RTL': 21,'FLOWHOLD': 22,'FOLLOW': 23,'ZIGZAG': 24,'SYSTEMIDLE': 25,'AUTOTUNE': 26,'RALLY': 27}
         self.current_mode = None
+        self.arm_state = False
 
         self._v_thread = None
         self._v_thread_stop_event = threading.Event()
@@ -29,6 +30,10 @@ class Move():
     def get_mode(self):
         return self.current_mode
 
+    def is_armed(self):
+        # TODO: this is not garityed to work 
+        return self.arm_state
+
     def msg_passer(self,msg):
         """retuns the currnt mode (in eglish)"""
         if msg._type == "HEARTBEAT":
@@ -38,6 +43,11 @@ class Move():
                 if self.mode_mapping[i] == mode_id:
                     current_mode = i
                     break
+            if msg.base_mode & mavutil.mavlink.MAV_MODE_FLAG_SAFETY_ARMED:
+                self.arm_state = True
+            else: 
+                self.arm_state = False
+
             if current_mode ==  None: raise Exception("mode not found (freddy)")
             self.current_mode = current_mode
         # return current_mode
@@ -145,5 +155,19 @@ class Move():
                 0, 0, 0, 0, 0, 0, 0, hight
             )
 
+    def fly_to_point(self,lat,lon,alt_above_home,bitmask=3576):
+        lat = int(lat * 1e7)
+        lon = int(lon * 1e7)
 
+        self.connection.mav.set_position_target_global_int(
+            0,
+            self.connection.target_system,
+            self.connection.target_component,
+            mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT_INT,
+            bitmask,  # ignore velocity, acceleration, yaw/yaw_rate (position only)
+            lat, lon, alt_above_home,
+            0,0,0,  
+            0,0,0,  
+            0,0
+            )
 move_singleton = Move()
