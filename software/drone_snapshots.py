@@ -3,6 +3,7 @@ import time
 import math
 from ai import ai_storage_singleton
 
+
 @dataclass
 class DroneStateForHoming:
     time_updated_GLOBAL_POSITION_INT: float = 0
@@ -148,10 +149,11 @@ class WeedStorage:
         else: cls.all_weeds.append(weed)
 
 class ScanningPlanner:
+    from telemetry import GroundStaionMessages
     # self.scan_palth = scan_path # [(long,lat,alt_from_home),] this is on order of the scanning palth
-    scan_precision = 2 # in meter
+    scan_precision =  GroundStaionMessages.get_floats()["scan_precision"] # in meter
     points_visited = []
-    scan_alt = 10
+    scan_alt = GroundStaionMessages.get_floats()["scan_alt"]
         
 
     @classmethod
@@ -173,10 +175,8 @@ class ScanningPlanner:
     @classmethod
     def point_compleate(cls,point):
         cls.points_visited.append(point)
-        
 
-
-    def _haversine_distance(cls, p1, p2):
+    def _haversine_distance(p1, p2):
         lon1, lat1 = p1
         lon2, lat2 = p2
         
@@ -192,4 +192,5 @@ class ScanningPlanner:
         distance_between_the_2_points = R * (2 * math.atan2(math.sqrt(a), math.sqrt(1-a)))
         return distance_between_the_2_points
 
+print(ScanningPlanner.scan_precision)
         

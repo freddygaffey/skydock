@@ -1,3 +1,4 @@
+from tkinter import NO
 import pymavlink
 from pymavlink import mavutil
 import math 
@@ -5,10 +6,11 @@ import numpy as np
 from scipy.spatial.transform import Rotation as R # this is needed for the q
 from dataclasses import dataclass
 import base64
+import hashlib
 
 import threading
 import time
-from drone_snapshots import drone_telm_stapshot, ground_station_commands
+from drone_snapshots import drone_telm_stapshot
 import serial
 from move import move_singleton
  
@@ -22,8 +24,30 @@ from move import move_singleton
 
 class GroundStaionMessages:
     messages = []
+    ground_station_floats = {
+        "takeoff_hight": 0,
+        "scan_alt": 30,
+        "scan_precision": 2
+    }
+    
     messages_lock = threading.Lock()
+    floats_lock = threading.Lock()
 
+    @staticmethod 
+    def get_floats():
+        with GroundStaionMessages.floats_lock:
+            return GroundStaionMessages.ground_station_floats 
+
+    @staticmethod
+    def make_abv(messages_dict,char=10):
+        dickt = {}
+        for i in messages_dict:
+            string = hashlib.sha1(i.encode()).hexdigest()[:char -1] 
+            dickt[string] = i
+        return dickt
+            
+    abv_float = make_abv(get_floats(),10) 
+            
     @staticmethod
     def encode_message(message):
         # message = base64.b64encode(message.encode("utf-8")).decode("ascii")
@@ -31,6 +55,7 @@ class GroundStaionMessages:
 
     @staticmethod
     def decode_message(message):
+        
         # message = base64.b64decode(message.encode("ascii")).decode("utf-8")
         return message
 
@@ -50,10 +75,16 @@ class GroundStaionMessages:
             message_text = message_text[3:]
             message_array = eval(message_text)
             message_array[0] = message_array[0][1:]
-            # print(message_array,"this from passer")
 
             with GroundStaionMessages.messages_lock:
                 GroundStaionMessages.messages.append(message_array)
+
+        if message._type == "NAMED_VALUE_FLOAT":
+            name = GroundStaionMessages.abv_float[message.name]
+            GroundStaionMessages.get_floats[name] = message.value
+            print(f"updated the floats array value {name} to {message.value}")
+
+
                 
     @staticmethod
     def ask_gc_question(question):
@@ -92,13 +123,15 @@ class Telemetry():
             self.connection.wait_heartbeat()
             move_singleton.connection = self.connection
         except serial.serialutil.SerialException as e:
+            pass
+        try:
             path_to_uav = "/dev/ttyACM0"
             self.connection = mavutil.mavlink_connection(path_to_uav, baud=115200)
             self.connection.wait_heartbeat()
             move_singleton.connection = self.connection
+        except serial.serialutil.SerialException as e:
+            pass
  
-
-
         self.update_rate = 1/32 # slightly hight then the ai frame rate 
 
         # defing what command to stream
@@ -112,13 +145,13 @@ class Telemetry():
         self.start_automatic_message_passer()
 
     def start_automatic_message_passer(self):
-
         self.set_a_message_interval("SERVO_OUTPUT_RAW",interval=self.update_rate)
         self.set_a_message_interval("GLOBAL_POSITION_INT",interval=self.update_rate)
+        # self.set_a_message_interval("SERVO_OUTPUT_RAW",interval=100)
+        # self.set_a_message_interval("GLOBAL_POSITION_INT",interval=100)
 
         def message_in(message):
             drone_telm_stapshot.pass_msg(message)
-            ground_station_commands.pass_message(message)
             move_singleton.msg_passer(message)
             GroundStaionMessages.passer(message)
             self.most_recent_message = message
@@ -133,15 +166,26 @@ class Telemetry():
 
         threading.Thread(target=passer).start()
 
-    def print_all_msg(self,duration=100):
+    def print_msg(self,message_type=None,message_contains=None):
+        last_message = None
         while 1:
             # msg = self.connection.recv_match(type="RC_CHANNELS", blocking=True)
             msg = self.most_recent_message
-            if msg:
+            
+            if msg and msg != last_message:
+                last_message = msg
                 # print(msg)
+             
                 # print(msg)
-                if msg._type == "STATUSTEXT":
+                if message_type == None and message_contains == None:
                     print(msg)
+                    continue
+                if message_contains.lower() in msg._type.lower():
+                    print(msg)
+                    continue
+                if msg._type == message_type:
+                    print(msg)
+                    continue
 
     def get_gimbal_attitude(self):
         """this uses QUETONIONS so BEWHERE"""
@@ -235,7 +279,8 @@ if __name__ == '__main__':
     
     # telm_singleton.print_all_msg()
     while True:
-        print(GroundStaionMessages.ask_gc_question(input("> ")))
+        print(GroundStaionMessages.ground_station_floats)
+        # print(GroundStaionMessages.ask_gc_question(input("> ")))
 
         # telm_singleton.send_text_message("hi this is a text message form the drone")
         # print("sent message")
